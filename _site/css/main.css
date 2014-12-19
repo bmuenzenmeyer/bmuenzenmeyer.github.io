@@ -8,7 +8,7 @@ body {
   font: 16px/18px; }
   @media all and (min-width: 45em) {
     body {
-      width: 600px;
+      width: 800px;
       margin: 0 auto; } }
 
 .half {
@@ -19,4 +19,5 @@ body {
       width: 50%; } }
 
 nav a {
-  display: block; }
+  display: block;
+  margin: .5em auto; }

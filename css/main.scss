@@ -13,7 +13,7 @@ html{
 body{
 	font: 16px/18px;
 	@media all and (min-width: $sm-bp){
-		width: 600px;
+		width: 800px;
 		margin: 0 auto;
 	}
 }
@@ -27,5 +27,5 @@ body{
 
 nav a{
 	display: block;
-
+	margin: .5em auto;
 }
