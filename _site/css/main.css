@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font: 16px/18px; }
+  @media all and (min-width: 45em) {
+    body {
+      width: 600px;
+      margin: 0 auto; } }
+
+.half {
+  width: 100%;
+  float: left; }
+  @media all and (min-width: 45em) {
+    .half {
+      width: 50%; } }
+
+nav a {
+  display: block; }

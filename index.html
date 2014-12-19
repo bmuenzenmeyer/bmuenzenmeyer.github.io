@@ -3,6 +3,24 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
+<section class="half">
+	<img src="img/brian.jpg" alt="A picture of me in grey."/>
+	<nav>
+        <a href="https://twitter.com/bmuenzenmeyer">Twitter</a>
+        <a href="https://github.com/bmuenzenmeyer">Github</a>
+        <a href="http://codepen.io/bmuenzenmeyer/">Codepen</a>
+        <a href="http://www.pandora.com/profile/bmuenzenmeyer">Pandora</a>
+        <a href="http://grooveshark.com/#!/profile/Bmuenzenmeyer/18414918">Grooveshark</a>
+	</nav>
+	
+</section>
+<section class="half">
+	<a href="http://www.crunchyowl.com"><img src="img/owl.png" alt="My small design studio, Crunchy Owl"/></a>
+	<nav>
+		<a href="https://twitter.com/crunchy_owl">Twitter</a>
+	</nav>
+</section>
+
 <ul class="posts">
 {% for post in site.posts %}
   <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.subtitle }} &raquo; <span>{{ post.date | date_to_string }} | <a href="https://twitter.com/{{post.twitter}}">{{ post.author}}</a></span>
