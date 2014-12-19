@@ -1,0 +1,10 @@
+var bmz = {};
+bmz.get = 
+	{
+		"title": "Brian Muenzenmeyer",
+		"description": "The personal site of Brian Muenzenmeyer.",
+		"link": "http://brianmuenzenmeyer.com",
+		"posts" : [
+			
+		]
+	}

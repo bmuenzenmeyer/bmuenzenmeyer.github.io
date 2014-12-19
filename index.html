@@ -1,0 +1,12 @@
+---
+layout: default
+title: Brian Muenzenmeyer
+---
+
+<ul class="posts">
+{% for post in site.posts %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.subtitle }} &raquo; <span>{{ post.date | date_to_string }} | <a href="https://twitter.com/{{post.twitter}}">{{ post.author}}</a></span>
+  <div>{{ post.blurb }}</div>
+  </li>
+{% endfor %}
+</ul>

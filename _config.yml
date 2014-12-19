@@ -1,0 +1,10 @@
+url: http://brianmuenzenmeyer.com
+baseurl: 
+domain: brianmuenzenmeyer.com
+permalink: /:title
+name: Brian Muenzenmeyer
+description: 'The personal site of Brian Muenzenmeyer.'
+
+exclude:
+- node_modules
+- patternlab-node

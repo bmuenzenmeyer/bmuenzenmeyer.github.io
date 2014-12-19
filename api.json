@@ -1,0 +1,24 @@
+---
+layout: none
+---
+var bmz = {};
+bmz.get = 
+	{
+		"title": "{{ site.name }}",
+		"description": "{{ site.description }}",
+		"link": "{{ site.url }}",
+		"posts" : [
+			{% for post in site.posts limit:10 %}
+				{
+				"title": "{{ post.title }}",
+				"blurb": "{{ post.blurb }}",
+				"pubDate": "{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}",
+				"link": "{{ site.url }}{{ post.url }}"
+				{% if forloop.rindex > 1 %}
+				},
+				{% else %}
+				}
+				{% endif %}
+			{% endfor %}
+		]
+	}
