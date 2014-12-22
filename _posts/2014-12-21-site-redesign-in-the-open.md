@@ -27,3 +27,4 @@ My goals include:
 * Making a performant, mobile-first web-presence
 * Creating a hub for all things I care about
 
+As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment. Stay tuned!
