@@ -3,6 +3,15 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
+  <ul class="posts">
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.subtitle }} &raquo; <span>{{ post.date | date_to_string }}</span>
+    <div>{{ post.blurb }}</div>
+    </li>
+  {% endfor %}
+  </ul>
+
+
 <section class="half">
 	<img src="img/brian.jpg" alt="A picture of me in grey."/>
 	<nav>
@@ -23,17 +32,10 @@ title: Brian Muenzenmeyer
   </ul>
 	
 </section>
+
 <section class="half">
 	<a href="http://www.crunchyowl.com"><img src="img/owl.png" alt="My small design studio, Crunchy Owl"/></a>
 	<nav>
 		<a href="https://twitter.com/crunchy_owl">Twitter</a>
 	</nav>
 </section>
-
-<ul class="posts">
-{% for post in site.posts %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.subtitle }} &raquo; <span>{{ post.date | date_to_string }} | <a href="https://twitter.com/{{post.twitter}}">{{ post.author}}</a></span>
-  <div>{{ post.blurb }}</div>
-  </li>
-{% endfor %}
-</ul>

@@ -3,8 +3,17 @@ bmz.get =
 	{
 		"title": "Brian Muenzenmeyer",
 		"description": "The personal site of Brian Muenzenmeyer.",
-		"link": "http://brianmuenzenmeyer.com",
+		"link": "http://bmuenzenmeyer.github.io",
 		"posts" : [
+			
+				{
+				"title": "Site Redesign in the Open",
+				"blurb": "",
+				"pubDate": "Sun, 21 Dec 2014 00:00:00 -0600",
+				"link": "http://bmuenzenmeyer.github.io/site-redesign-in-the-open"
+				
+				}
+				
 			
 		]
 	}

@@ -3,8 +3,36 @@
 	<channel>
 		<title>Brian Muenzenmeyer</title>
 		<description>The personal site of Brian Muenzenmeyer.</description>
-		<link>http://brianmuenzenmeyer.com</link>
-		<atom:link href="http://brianmuenzenmeyer.com/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://bmuenzenmeyer.github.io</link>
+		<atom:link href="http://bmuenzenmeyer.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Site Redesign in the Open</title>
+				<description>&lt;h1 id=&quot;site-redesign-in-the-open&quot;&gt;Site Redesign in the Open&lt;/h1&gt;
+
+&lt;div class=&quot;meta&quot;&gt;12/21/14 - &lt;a href=&quot;https://twitter.com/bmuenzenmeyer&quot;&gt;Brian Muenzenmeyer&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s time for another reboot of &lt;a href=&quot;http://brianmuenzenmeyer.com&quot;&gt;brianmuenzenmeyer.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I put a lot of time into the current tumblr site - especially in crafting the masthead. But I find it limiting, and reactionary, crafted from one idea with little creative room to grow. It was essentially a one-off idea, not an identity I want to associate myself with or build a brand on. There was no system backing the concept, or allowing a cohesive vision to be designed, iterated on, or maintained. &lt;/p&gt;
+
+&lt;p&gt;So it’s time to start over - and this time to &lt;a href=&quot;http://bradfrost.com/blog/post/designing-in-the-open/&quot;&gt;do it in the open&lt;/a&gt;. What comes will be a reflective exercise in branding, atomic design, and process. Along the way I will try to share insights, challenges, and little tips along the way. I encourage a discussion.&lt;/p&gt;
+
+&lt;p&gt;My goals include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creating a development environment that is maintainable, flexible, and simple to blog and experiment on top of.&lt;/li&gt;
+  &lt;li&gt;Establishing a design system that build upon core principles and is representative of me across differing contexts.&lt;/li&gt;
+  &lt;li&gt;Making a performant, mobile-first web-presence&lt;/li&gt;
+  &lt;li&gt;Creating a hub for all things I care about&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As for now, the site it rather bare-bones - but intentionally so. We’ll probably start with a description of the development environment. Stay tuned!&lt;/p&gt;
+</description>
+				<pubDate>Sun, 21 Dec 2014 00:00:00 -0600</pubDate>
+				<link>http://bmuenzenmeyer.github.io/site-redesign-in-the-open</link>
+				<guid isPermaLink="true">http://bmuenzenmeyer.github.io/site-redesign-in-the-open</guid>
+			</item>
 		
 	</channel>
 </rss>

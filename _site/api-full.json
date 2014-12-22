@@ -1,8 +1,18 @@
 {
 	"title": "Brian Muenzenmeyer",
 	"description": "The personal site of Brian Muenzenmeyer.",
-	"link": "http://brianmuenzenmeyer.com",
+	"link": "http://bmuenzenmeyer.github.io",
 	"posts" : [
+		
+			{
+			"title": "Site Redesign in the Open",
+			"description": "<h1 id="site-redesign-in-the-open">Site Redesign in the Open</h1><br /><br /><div class="meta">12/21/14 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div><br /><br /><p>It’s time for another reboot of <a href="http://brianmuenzenmeyer.com">brianmuenzenmeyer.com</a>.</p><br /><br /><p>I put a lot of time into the current tumblr site - especially in crafting the masthead. But I find it limiting, and reactionary, crafted from one idea with little creative room to grow. It was essentially a one-off idea, not an identity I want to associate myself with or build a brand on. There was no system backing the concept, or allowing a cohesive vision to be designed, iterated on, or maintained. </p><br /><br /><p>So it’s time to start over - and this time to <a href="http://bradfrost.com/blog/post/designing-in-the-open/">do it in the open</a>. What comes will be a reflective exercise in branding, atomic design, and process. Along the way I will try to share insights, challenges, and little tips along the way. I encourage a discussion.</p><br /><br /><p>My goals include:</p><br /><br /><ul><br />  <li>Creating a development environment that is maintainable, flexible, and simple to blog and experiment on top of.</li><br />  <li>Establishing a design system that build upon core principles and is representative of me across differing contexts.</li><br />  <li>Making a performant, mobile-first web-presence</li><br />  <li>Creating a hub for all things I care about</li><br /></ul><br /><br /><p>As for now, the site it rather bare-bones - but intentionally so. We’ll probably start with a description of the development environment. Stay tuned!</p><br />",
+			"blurb": "",
+			"pubDate": "Sun, 21 Dec 2014 00:00:00 -0600",
+			"link": "http://bmuenzenmeyer.github.io/site-redesign-in-the-open"
+			
+			}
+			
 		
 	]
 }

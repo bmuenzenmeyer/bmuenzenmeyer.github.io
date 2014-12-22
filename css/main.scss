@@ -11,17 +11,10 @@ html{
 }
 
 body{
-	font: 16px/18px;
+	font: 16px/150% 'Lato', Arial, Tahoma, sans-serif;
 	@media all and (min-width: $sm-bp){
 		width: 800px;
 		margin: 0 auto;
-	}
-}
-.half{
-	width: 100%;
-	float: left;
-	@media all and (min-width: $sm-bp){
-		width: 50%;
 	}
 }
 
