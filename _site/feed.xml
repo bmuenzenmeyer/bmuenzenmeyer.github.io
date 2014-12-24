@@ -7,6 +7,31 @@
 		<atom:link href="http://bmuenzenmeyer.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>A Performant Foundation</title>
+				<description>&lt;h1 id=&quot;a-performant-foundation&quot;&gt;A Performant Foundation&lt;/h1&gt;
+
+&lt;div class=&quot;meta&quot;&gt;12/24/14 - &lt;a href=&quot;https://twitter.com/bmuenzenmeyer&quot;&gt;Brian Muenzenmeyer&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;A great thing about writing &lt;a href=&quot;http://brianmuenzenmeyer.com&quot;&gt;brianmuenzenmeyer.com&lt;/a&gt; from the ground up is the ability to keep an eye on performance from the onset.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://timkadlec.com/2013/01/setting-a-performance-budget/&quot;&gt;Tim Kadlec reminds us to set a performance budget&lt;/a&gt;, and with a new start and bare-bones content, interaction, and styling, there is nothing standing in the way delivering a performant experience to users.&lt;/p&gt;
+
+&lt;p&gt;Utilizing the excellent &lt;a href=&quot;http://www.webpagetest.org/&quot;&gt;webpagetest.org service&lt;/a&gt;, I ran &lt;a href=&quot;http://bmuenzenmeyer.github.io/&quot;&gt;bmuenzenmeyer.github.io/&lt;/a&gt; through a quick run to baseline some initial performance metrics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://bmuenzenmeyer.github.io/img/webpagetest_foundation.png&quot; alt=&quot;The webpagetest.org results for the site&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, I achieve sub-second results, but there are still things that could be improved. I am already taking quite the hit by serving uncompressed assets, and for that matter, I am not always serving them against an optimal rendering path.&lt;/p&gt;
+
+&lt;p&gt;I’ll be adding &lt;a href=&quot;https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io/issues&quot;&gt;github issues&lt;/a&gt; for each thing that comes out of this initial analysis - and I may update this post too.&lt;/p&gt;
+
+&lt;p&gt;Oh, and about that budget? I want to keep page load under 1.5 seconds if I can, and requests under 15. These are, for me, a bit arbitrary, but I’d rather have a target to start measuring against. If you want to learn more about performance, measured, or perceived, please watch my slidedeck on this topic at : &lt;a href=&quot;https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive&quot;&gt;https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive&lt;/a&gt;!&lt;/p&gt;
+</description>
+				<pubDate>Wed, 24 Dec 2014 00:00:00 -0600</pubDate>
+				<link>http://bmuenzenmeyer.github.io/a-performant-foundation</link>
+				<guid isPermaLink="true">http://bmuenzenmeyer.github.io/a-performant-foundation</guid>
+			</item>
+		
+			<item>
 				<title>Site Redesign in the Open</title>
 				<description>&lt;h1 id=&quot;site-redesign-in-the-open&quot;&gt;Site Redesign in the Open&lt;/h1&gt;
 
