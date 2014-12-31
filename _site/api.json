@@ -7,10 +7,10 @@ bmz.get =
 		"posts" : [
 			
 				{
-				"title": "The Technical Stack",
+				"title": "Code Highlighting Demo",
 				"blurb": "",
 				"pubDate": "Fri, 26 Dec 2014 00:00:00 -0600",
-				"link": "http://bmuenzenmeyer.github.io/the-technical-stack"
+				"link": "http://bmuenzenmeyer.github.io/code-highlighting-demo"
 				
 				},
 				

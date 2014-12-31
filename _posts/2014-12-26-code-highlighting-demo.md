@@ -1,7 +1,7 @@
 ---
 layout: post-code
 
-title: "The Technical Stack"
+title: "Code Highlighting Demo"
 tags: 'development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
@@ -13,6 +13,8 @@ comments: true
 ================
 
 <div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
+
+_this is just playing around with code highlighting for now_
 
 `Testing code`
 

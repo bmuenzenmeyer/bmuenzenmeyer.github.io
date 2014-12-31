@@ -7,10 +7,12 @@
 		<atom:link href="http://bmuenzenmeyer.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>The Technical Stack</title>
-				<description>&lt;h1 id=&quot;the-technical-stack&quot;&gt;The Technical Stack&lt;/h1&gt;
+				<title>Code Highlighting Demo</title>
+				<description>&lt;h1 id=&quot;code-highlighting-demo&quot;&gt;Code Highlighting Demo&lt;/h1&gt;
 
 &lt;div class=&quot;meta&quot;&gt;12/26/14 - &lt;a href=&quot;https://twitter.com/bmuenzenmeyer&quot;&gt;Brian Muenzenmeyer&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;this is just playing around with code highlighting for now&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Testing code&lt;/code&gt;&lt;/p&gt;
 
@@ -28,8 +30,8 @@
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
 				<pubDate>Fri, 26 Dec 2014 00:00:00 -0600</pubDate>
-				<link>http://bmuenzenmeyer.github.io/the-technical-stack</link>
-				<guid isPermaLink="true">http://bmuenzenmeyer.github.io/the-technical-stack</guid>
+				<link>http://bmuenzenmeyer.github.io/code-highlighting-demo</link>
+				<guid isPermaLink="true">http://bmuenzenmeyer.github.io/code-highlighting-demo</guid>
 			</item>
 		
 			<item>
@@ -264,10 +266,9 @@
 
 &lt;p&gt;Some digging revealed that mobile Safari overflow rendering rules are different, and that I should try the following CSS.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;html{
-    overflow-x: hidden;
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;overflow-x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Sure enough, fixed for all tested version of Safari.  Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.&lt;/p&gt;
 </description>

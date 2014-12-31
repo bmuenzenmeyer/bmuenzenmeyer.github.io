@@ -46,10 +46,9 @@
 
 <p>Some digging revealed that mobile Safari overflow rendering rules are different, and that I should try the following CSS.</p>
 
-<pre><code>html{
-    overflow-x: hidden;
-}
-</code></pre>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">html</span><span class="p">{</span>
+<span class="lineno">2</span>     <span class="k">overflow-x</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+<span class="lineno">3</span> <span class="p">}</span></code></pre></div>
 
 <p>Sure enough, fixed for all tested version of Safari.  Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.</p>
 
