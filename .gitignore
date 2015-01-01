@@ -1,3 +1,4 @@
+_site/
 _patternlab/
 _patternlab/node_modules/
 _patternlab/listeners/lib/Wrench/Exception/RateLimiterException.php
