@@ -27,4 +27,12 @@ My goals include:
 * Making a performant, mobile-first web-presence
 * Creating a hub for all things I care about
 
-As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment. Stay tuned!
+As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment. 
+
+####Update 1: The Development Environment
+
+[brianmuenzenmeyer.com](http://brianmuenzenmeyer.com) is built with Jekyll and hosted on Github Pages. I've enjoyed the simplicity of static-page generators since learning of them. Writing in Markdown is a dream, with its basic styling support keeping everything semantic and clean. Staying simple means I can work fast and keep complexity low. The [Github Pages](https://help.github.com/articles/user-organization-and-project-pages/) user and project structure allows me to build and deploy projects, labs, and smaller sections as fully version-controlled, open source repositories all under my custom domain name.
+
+I'll be using SASS, grunt, and [patternlab node](https://github.com/pattern-lab/patternlab-node) to supplement jekyll. A major part of the redesign will be utilizing atomic design principles to build a sustainable, consistent, and _maintainable_ platform. [This instance of patternlab](https://github.com/bmuenzenmeyer/patternlab) is housed as an ignored sub-directory of the main site. I'll be talking more about this setup soon.
+
+I'm using Sublime Text and the gem [SourceTree](http://www.sourcetreeapp.com/) to develop and manage code.
