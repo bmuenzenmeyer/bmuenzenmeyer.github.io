@@ -97,48 +97,31 @@ header, footer, nav, section, article, hgroup, figure {
   text-align: left;
 }
 
-/* Display Classes */
-@media all and (max-width: 46.8em) {
-  .hide-small {
-    display: none;
-  }
+* {
+  box-sizing: border-box;
 }
 
-@media all and (min-width: 46.8em) and (max-width: 50em) {
-  .hide-med {
-    display: none;
-  }
-}
-
-@media all and (min-width: 50em) {
-  .hide-large {
-    display: none;
-  }
-}
-
-.valid {
-  color: #089e00;
-}
-
-.error {
-  color: #f00;
+html {
+  font-size: 100%;
 }
 
 body {
   background: #fff;
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 16px/150% "Lato", Arial, Tahoma, sans-serif;
   -webkit-text-size-adjust: 100%;
-  color: #333;
+  color: #4c4c4c;
+}
+@media all and (min-width: 45em) {
+  body {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 
 /* Links */
-a {
-  color: #333;
-  text-decoration: none;
-  outline: 0;
-}
-a:hover, a:focus {
-  color: #808080;
+nav a {
+  display: block;
+  margin: 0.5rem auto;
 }
 
 /* Headings */
@@ -159,33 +142,6 @@ h3, .gamma {
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: normal;
-}
-
-/* Text-Related Elements */
-p {
-  margin-bottom: 1rem;
-}
-
-/* Blockquote */
-blockquote {
-  font-style: italic;
-  border-left: 1px solid #808080;
-  color: #808080;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Horizontal Rule */
-hr {
-  border: 0;
-  height: 2px;
-  background: #eee;
-  margin: 2rem 0;
-}
-
-abbr {
-  border-bottom: 1px dotted #808080;
-  cursor: help;
 }
 
 ol, ul {
@@ -233,151 +189,23 @@ figcaption {
 }
 
 /*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-form > div {
-  margin-bottom: 1rem;
-}
-
-form ol, form ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-label {
-  display: block;
-  padding-bottom: 0.25rem;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-}
-
-input, textarea {
-  width: 100%;
-  border: 1px solid #808080;
-  padding: 0.5rem 0.65rem;
-}
-
-input[type=text], input[type=search], input[type=url], input[type=number], textarea {
-  -webkit-appearance: none;
-}
-
-button, input[type="submit"] {
-  padding: 0.5rem;
-  background: #333;
-  border: 1px solid #808080;
-  cursor: pointer;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  margin-right: 0.3em;
-}
-
-input[type="search"] {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.field-container {
-  margin-bottom: 1rem;
-}
-
-.inline-form fieldset, .inline-form .inline-container {
-  position: relative;
-}
-.inline-form input[type=submit], .inline-form button, .inline-form .btn {
-  font-size: 0.875em;
-  padding: 0.65rem 1.3rem;
-  background: #333;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: auto;
-}
-.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
-  background: #808080;
-  color: #fff;
-}
-
-.inline-search-results-form {
-  width: 100%;
-}
-@media all and (min-width: 46.8em) {
-  .inline-search-results-form {
-    width: 82%;
-  }
-}
-.inline-search-results-form fieldset, .inline-search-results-form .inline-container {
-  position: relative;
-}
-.inline-search-results-form input[type=submit], .inline-search-results-form button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: auto;
-}
-
-/* Validation */
-.has-error {
-  border-color: #f00;
-}
-
-.is-valid {
-  border-color: #089e00;
-}
-
-/*------------------------------------*\
-    $SPECIFIC FORMS
-\*------------------------------------*/
-/* Search Form */
-.search-field {
-  padding-right: 3em;
-}
-
-.inline-form .search-submit {
-  background: none;
-  padding: 0.78em 1em;
-  border: 0;
-  border-left: 1px solid #808080;
-  color: #808080;
-}
-
-/*------------------------------------*\
     $Table
 \*------------------------------------*/
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #808080;
+  border: 1px solid #4c4c4c;
   width: 100%;
 }
 
 th {
   text-align: left;
-  border: 1px solid #808080;
+  border: 1px solid #666;
   padding: 0.2em;
 }
 
 td {
-  border: 1px solid #808080;
+  border: 1px solid #666;
   padding: 0.2em;
 }
 
