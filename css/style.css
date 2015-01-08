@@ -107,7 +107,7 @@ html {
 
 body {
   background: #fff;
-  font: 16px/150% "Lato", Arial, Tahoma, sans-serif;
+  font: 18px/150% "PT Sans Narrow", Arial, Tahoma, sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #4c4c4c;
 }
@@ -128,20 +128,43 @@ nav a {
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1, .alpha {
   line-height: 1.2;
+  font-size: 4rem;
+  font-weight: 300;
 }
 
 h2, .beta {
   line-height: 1.2;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 h3, .gamma {
   line-height: 1.2;
+  font-size: 2.25rem;
+  font-weight: 300;
 }
 
-/* Subheadings */
-.subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: normal;
+h4, .delta {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+h5, .epsilon {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+h6, .zeta {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+p + p {
+  margin-top: .5rem;
 }
 
 ol, ul {
@@ -227,5 +250,3 @@ td {
   -o-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
 }
-
-/*# sourceMappingURL=style.css.map */
