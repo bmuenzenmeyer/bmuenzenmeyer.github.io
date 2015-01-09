@@ -7,9 +7,6 @@
 /* CSS Transition
 	Usage: @include transition(width,0.3s,ease-out);
  */
-/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
-	Usage: @include font-size(1, large);
-*/
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -170,7 +167,6 @@ p + p {
 ol, ul {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 /* Definition Lists */
