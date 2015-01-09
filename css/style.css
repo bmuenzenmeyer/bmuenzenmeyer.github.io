@@ -116,6 +116,13 @@ body {
 }
 
 /* Links */
+a {
+  color: #4c4c4c;
+}
+a:hover, a:focus {
+  color: #000;
+}
+
 nav a {
   display: block;
   margin: 0.5rem auto;
@@ -127,33 +134,39 @@ h1, .alpha {
   line-height: 1.2;
   font-size: 4rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 h2, .beta {
   line-height: 1.2;
   font-size: 3rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 h3, .gamma {
   line-height: 1.2;
   font-size: 2.25rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 h4, .delta {
   font-size: 1.75rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 h5, .epsilon {
   font-size: 1.25rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 h6, .zeta {
   font-size: 1rem;
   font-weight: 300;
+  margin: 1rem auto;
 }
 
 p {
@@ -164,9 +177,13 @@ p + p {
   margin-top: .5rem;
 }
 
+blockquote {
+  background-color: #f2f2f2;
+}
+
 ol, ul {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 2rem;
 }
 
 /* Definition Lists */
