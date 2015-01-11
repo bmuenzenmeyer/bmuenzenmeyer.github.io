@@ -12,9 +12,7 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
-_This post is part of a series on the [open redesign of brianmuenzenmeyer.com](http://www.brianmuenzenmeyer.com/site-redesign-in-the-open/) using atomic design and Pattern Lab._
+{% include molecules-feature-redesign.html %}
 
 ###Why Pattern Lab
 

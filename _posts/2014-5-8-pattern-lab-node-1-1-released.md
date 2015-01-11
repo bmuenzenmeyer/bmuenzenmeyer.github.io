@@ -12,8 +12,6 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
 I've just published [Pattern Lab Node 1.1 to Github](https://github.com/pattern-lab/patternlab-node/releases/tag/v0.1.1). It comes at the onset of a journey toward adherence to the [pattern lab specification](https://github.com/pattern-lab/the-spec/blob/draft/SPEC.md) created by [@dmolsen](https://twitter.com/dmolsen)
 
 ## Changelog

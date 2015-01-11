@@ -12,9 +12,7 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
-_This post is part of a series on the [open redesign of brianmuenzenmeyer.com](http://www.brianmuenzenmeyer.com/site-redesign-in-the-open/)._
+{% include molecules-feature-redesign.html %}
 
 A major facet influencing the decision to redesign this site was a lackluster content strategy on my [tumblr](https://www.tumblr.com/blog/brianmuenzenmeyer). Some amount of restructuring could have gotten me closer to a desired state - but it would not have repaired a hastily-planned and executed design (see: the about section in the bottom!) Publishing convenience betrayed coherence of message. So, the itch grew, to consolidate and retake a stronger control on the publishing process, the structure, and the foundations of any good personal site - content that is relevant to me.
 

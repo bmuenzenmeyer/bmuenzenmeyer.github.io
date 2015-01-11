@@ -12,8 +12,6 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
 [Dave Rupert](https://twitter.com/davatron5000) sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.
 
 [Brad Frost](https://twitter.com/bradfrost) summed it up nicely:

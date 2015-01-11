@@ -12,8 +12,6 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
 Just pushed patternlab-node 1.2, check out the release [here](https://github.com/pattern-lab/patternlab-node/releases/tag/v0.1.2)
 
 Here is the changelog:

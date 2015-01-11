@@ -12,8 +12,6 @@ comments: true
 {{ page.title }}
 ================
 
-<div class="meta">{{ page.date | date: "%x" }} - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer</a></div>
-
 _This post refers to an old version of brianmuenzenmeyer.com, but the lesson is important._
 
 When creating the masthead for this site, I was quick to ensure support in Chrome, Firefox, and IE 10-8. It was easy, I suggest _too easy_, to test the fluid layout and media queries by resizing the window, or using a tool like [this one](http://we-are-gurus.com/tools/responsive-design-tester.php) to gut-check various viewports. 
