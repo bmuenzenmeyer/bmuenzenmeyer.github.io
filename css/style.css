@@ -232,6 +232,37 @@ dd {
   margin-left: 0;
 }
 
+/* Unordered lists */
+li.post {
+  border-left: 1em solid #B2F33C;
+  background-color: #CEF586;
+  margin-bottom: 5px;
+  height: 1.8em;
+}
+li.post:hover {
+  border-left: 1em solid #55731D;
+}
+li.post a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px;
+  float: left;
+}
+li.post span {
+  float: right;
+  color: white;
+  background-color: rgba(76, 76, 76, 0.2);
+  padding: 3px 1em;
+}
+
+ul.list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+  list-style: none;
+}
+
 /*------------------------------------*\
     $MEDIA ELEMENTS
 \*------------------------------------*/
