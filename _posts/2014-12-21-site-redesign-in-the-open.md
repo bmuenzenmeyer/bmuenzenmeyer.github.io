@@ -5,6 +5,7 @@ title: "Site Redesign in the Open"
 tags: 'design development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

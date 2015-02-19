@@ -5,6 +5,7 @@ title: "Code Highlighting Demo"
 tags: 'development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

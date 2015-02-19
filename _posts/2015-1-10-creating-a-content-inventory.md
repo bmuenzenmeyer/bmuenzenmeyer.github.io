@@ -5,6 +5,7 @@ title: "Creating a Content Inventory"
 tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

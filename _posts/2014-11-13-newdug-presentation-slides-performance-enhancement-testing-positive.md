@@ -5,6 +5,7 @@ title: "NEWDUG Presentation Slides: Performance Enhancement - Testing Positive"
 tags: 'performance'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

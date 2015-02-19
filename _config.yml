@@ -4,6 +4,7 @@ domain: bmuenzenmeyer.github.io
 permalink: /:title
 name: Brian Muenzenmeyer
 description: 'The personal site of Brian Muenzenmeyer.'
+paginate: 10
 
 exclude:
 - node_modules

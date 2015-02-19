@@ -5,6 +5,7 @@ title: "Design is Parenting"
 tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

@@ -5,6 +5,7 @@ title: "A Performant Foundation"
 tags: 'design development performance'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

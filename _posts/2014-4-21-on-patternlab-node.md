@@ -5,6 +5,7 @@ title: "On Pattern Lab - Node"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

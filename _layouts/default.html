@@ -8,13 +8,8 @@
   <title>{% if page.comments %} {{ page.title }} || Brian Muenzenmeyer {% else %} {{ page.title }} {% endif %} </title>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
   <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['PT Sans Narrow']
-      }
-    });
-  </script>
+
+
   <style>
     body{
       font-family:  Arial, Tahoma, sans-serif;
@@ -22,15 +17,40 @@
     .wf-active body{
       font-family: 'PT Sans Narrow', Arial, Tahoma, sans-serif;
     }
+    .wf-active .masthead h1{
+      font-family: 'Passion One', Arial, Tahoma, sans-serif;
+    }
   </style>
 </head>
 <body>
-<div class="site">
-  {% include organisms-header.html %}
-  <div role="main">
-    {{ content }}
-  </div>
-</div>
+
+{% include organisms-header.html %}
+
+<main role="main">
+  {{ content }}
+</main>
+
+<footer>
+  {% include organisms-footer.html %}
+</footer>
+
+<script>
+  WebFont.load({
+    google: {
+      families: ['Passion One'],
+      text: 'HIMBRAN\''
+    },
+  });
+</script>
+
+<script>
+  WebFont.load({
+    google: {
+      families: ['PT Sans Narrow']
+    }
+  });
+</script>
+
 <script>
     //Please change this if you fork the repo!
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

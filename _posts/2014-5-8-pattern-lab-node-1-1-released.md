@@ -5,6 +5,7 @@ title: "Pattern Lab Node 1.1 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

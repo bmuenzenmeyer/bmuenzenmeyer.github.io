@@ -5,6 +5,7 @@ title: "The Device Test Imperative"
 tags: 'development testing'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

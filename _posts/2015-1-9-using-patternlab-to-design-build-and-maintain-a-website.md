@@ -5,6 +5,7 @@ title: "Using Pattern Lab to Design, Build and Maintain a Website"
 tags: 'development design patternlab'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
+type: Post
 
 comments: true
 ---

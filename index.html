@@ -3,37 +3,34 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
-  {% include molecules-feature-block.html %}
+{% include molecules-feature-block.html %}
 
-  <ul class="posts">
-  {% for post in site.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a>{{ post.subtitle }} &raquo; <span>{{ post.date | date_to_string }}</span>
+<section class="half padded">
+  <h2 class="subheading">Words</h2>
+  <ul class="list">
+  {% for post in paginator.posts %}
+    <li class="post"><a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.type }}</span>
     </li>
   {% endfor %}
   </ul>
-
-<section class="half">
-	<img src="img/brian.jpg" alt="A picture of me in grey."/>
-	<ul>
-        <li><a href="https://twitter.com/bmuenzenmeyer">Twitter</a></li>
-        <li><a href="https://github.com/bmuenzenmeyer">Github</a></li>
-        <li><a href="http://codepen.io/bmuenzenmeyer/">Codepen</a></li>
-        <li><a href="http://www.pandora.com/profile/bmuenzenmeyer">Pandora</a></li>
-        <li><a href="http://grooveshark.com/#!/profile/Bmuenzenmeyer/18414918">Grooveshark</a></li>
-	</ul>
-
-  <p>I spend my working days in ux/ui design and my waking nights maintaining the <a href="https://github.com/pattern-lab/patternlab-node">node port</a> of Brad Frost and Dave Molsen’s Pattern Lab and moonlighting as <a href="http://crunchyowl.com">Crunchy Owl</a>, a small studio. I am interested in the intersection of performance and responsive design to craft better things that reach more people. I live in Northeast Wisconsin with my wife, young son, 2 cats and 3 coffee makers. When not online, I am digging up the yard, wearing an afghan, talking about something I heard on public radio, dressing in grayscale, or pretending to play the piano. The best way to reach me is on Twitter <a href="https://twitter.com/bmuenzenmeyer">@bmuenzenmeyer</a>.</p>
-
-  <h4>Featured Projects</h4>
-  <ul>
-    <li><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a></li>
-    <li><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Tools</a></li>
-    <li><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a></li>    
-  </ul>
-	
+  <a href="/archive.html">Archive</a>
 </section>
 
-<section class="half">
+<section class="half padded">
+  <h2 class="subheading">Things</h2>
+  <ul class="list">
+    <li class="post"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a><span>Project</span></li>
+    <li class="post"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Tools</a><span>Bookmarklets</span></li>
+    <li class="post"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a><span>List</span></li>
+    <li class="post"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a><span>List</span></li>
+    <li class="post"><a href="http://codepen.io/bmuenzenmeyer/full/avyeF">Codepen for Megan</a><span>Pen</span></li>
+    <li class="post"><a href="http://codepen.io/bmuenzenmeyer/search/type%20exploration/">Typography Explorations</a><span>Labs</span></li>
+  </ul>
+</section>
+
+<hr class="cf"/>
+
+<section>
 	<a href="http://www.crunchyowl.com"><img src="img/owl.png" alt="My small design studio, Crunchy Owl"/></a>
 	<ul>
 		<li><a href="https://twitter.com/crunchy_owl">Twitter</a></li>
@@ -41,16 +38,27 @@ title: Brian Muenzenmeyer
 
   <p>Crunchy Owl is a small web design and development shop. I craft effective, on-target digital experiences.</p>
 
-  <h4>Web Development</h4>
-  <p>I deliver quality code with an eye towards standards compliance and industry best practices. Responsive design principles extend from time-honored standards compliance and progressive enhancement. Sign me up for some of that! In a world of cut and paste snippets, WYSIWYG editors, and tight timelines, some of us still write code by hand, testing diligently and with little regard for sunrise.</p>
-  
-  <h4>UX &amp; UI Design</h4>
-  <p>Communicate effective messages to your audience. Crafting a functional product often starts with a deep dive into your needs and the needs of your users. From this input, Crunchy Owl can dial in and iterate quickly on a solution. Let's not forget to make it strikingly beautiful too.</p>
-  
-  <h4>Performance Optimization</h4>
-  <p>Speed matters, but performance is more than that. Performance is content meets execution, and I can help you push your codebase further, directly equating to more engagement. Understanding delivery options is key to an inclusive experience. Push the limits of deployment and send what matters most.</p>
+  <article class="half padded">
+    <h4>Web Development</h4>
+    <p>I deliver quality code with an eye towards standards compliance and industry best practices. Responsive design principles extend from time-honored standards compliance and progressive enhancement. Sign me up for some of that! In a world of cut and paste snippets, WYSIWYG editors, and tight timelines, some of us still write code by hand, testing diligently and with little regard for sunrise.</p>
+  </article>
 
-  <h4>Content Strategy</h4>
-  <p>With a proper content strategy, your message has a broader voice in the community, has more impact, and builds your brand. Creating reusable content to leverage social media is a must in today's environment. I fit right-sized solutions to the right requirements, offering full-stack solutions when necessary, or a handcrafted microsite when the need arises.</p>
+  <article class="half padded">
+    <h4>UX &amp; UI Design</h4>
+    <p>Communicate effective messages to your audience. Crafting a functional product often starts with a deep dive into your needs and the needs of your users. From this input, Crunchy Owl can dial in and iterate quickly on a solution. Let's not forget to make it strikingly beautiful too.</p>
+  </article>
 
+  <div class="cf"></div>
+
+  <article class="half padded">
+    <h4>Performance Optimization</h4>
+    <p>Speed matters, but performance is more than that. Performance is content meets execution, and I can help you push your codebase further, directly equating to more engagement. Understanding delivery options is key to an inclusive experience. Push the limits of deployment and send what matters most.</p>
+  </article>
+
+  <article class="half padded">  
+    <h4>Content Strategy</h4>
+    <p>With a proper content strategy, your message has a broader voice in the community, has more impact, and builds your brand. Creating reusable content to leverage social media is a must in today's environment. I fit right-sized solutions to the right requirements, offering full-stack solutions when necessary, or a handcrafted microsite when the need arises.</p>
+  </article>
 </section>
+
+<hr class="cf"/>

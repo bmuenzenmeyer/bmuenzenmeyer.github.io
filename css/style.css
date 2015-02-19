@@ -35,6 +35,7 @@ header, footer, nav, section, article, hgroup, figure {
 /* Clearfix */
 .cf {
   *zoom: 1;
+  clear: both;
 }
 
 .cf:before, .cf:after {
@@ -46,6 +47,12 @@ header, footer, nav, section, article, hgroup, figure {
 
 .cf:after {
   clear: both;
+}
+
+.lone, .half, .third {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 /* Completely remove from the flow and screen readers. */
@@ -104,7 +111,7 @@ header, footer, nav, section, article, hgroup, figure {
   background-size: 3px 3px;
 }
 
-.striped {
+.striped, .subheading {
   background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
   background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
   background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
@@ -139,10 +146,48 @@ body {
   color: #4c4c4c;
   margin: 0 .5em;
 }
+
 @media all and (min-width: 45em) {
-  body {
+  main, footer {
     width: 800px;
     margin: 0 auto;
+  }
+}
+
+hr {
+  margin: 3rem auto;
+}
+
+footer img {
+  width: 100%;
+  margin: 1rem auto;
+}
+@media all and (min-width: 45em) {
+  footer img {
+    float: left;
+    height: 8em;
+    width: auto;
+    margin-right: 1rem;
+  }
+}
+
+@media all and (min-width: 45em) {
+  .half {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+}
+.half.padded {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media all and (min-width: 45em) {
+  .third {
+    width: 33%;
+    display: inline-block;
+    float: left;
   }
 }
 
@@ -200,6 +245,10 @@ h6, .zeta {
   margin: 1rem auto;
 }
 
+.subheading {
+  padding: .25em;
+}
+
 p {
   line-height: 1.5em;
 }
@@ -230,37 +279,6 @@ dt {
 
 dd {
   margin-left: 0;
-}
-
-/* Unordered lists */
-li.post {
-  border-left: 1em solid #B2F33C;
-  background-color: #CEF586;
-  margin-bottom: 5px;
-  height: 1.8em;
-}
-li.post:hover {
-  border-left: 1em solid #55731D;
-}
-li.post a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 3px;
-  float: left;
-}
-li.post span {
-  float: right;
-  color: white;
-  background-color: rgba(76, 76, 76, 0.2);
-  padding: 3px 1em;
-}
-
-ul.list {
-  clear: both;
-  margin: 0;
-  padding: 0;
-  margin-top: 1em;
-  list-style: none;
 }
 
 /*------------------------------------*\
@@ -308,6 +326,47 @@ td {
   padding: 0.2em;
 }
 
+.buttons {
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  margin: .5em auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.buttons a {
+  flex: 0 1 24%;
+  align-self: auto;
+  text-align: center;
+  font-size: 1em;
+  color: #fefefe;
+  text-shadow: none;
+  font-weight: normal;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+.buttons a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.buttons div {
+  flex: 0 1 25%;
+  align-self: auto;
+  text-align: center;
+  font-size: .75em;
+  color: #fefefe;
+  text-shadow: none;
+  font-weight: normal;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  margin: .15em;
+  height: 4em;
+  line-height: 4em;
+}
+
 .animate-fade {
   -webkit-transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
@@ -330,4 +389,44 @@ td {
 .feature-block {
   padding: 1rem;
   border: 1px solid #b2b2b2;
+}
+
+/* Unordered lists */
+.post {
+  background-color: #CEF586;
+  margin-bottom: 5px;
+  padding-left: .5em;
+  min-height: 1.8em;
+  overflow: hidden;
+}
+.post a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px;
+  padding-right: 4em;
+  float: left;
+}
+.post span {
+  float: right;
+  color: white;
+  width: 4em;
+  background-color: rgba(76, 76, 76, 0.2);
+  padding: 3px 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul.list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+  list-style: none;
+}
+
+@media all and (min-width: 45em) {
+  .masthead header {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
