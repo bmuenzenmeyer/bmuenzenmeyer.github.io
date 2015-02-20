@@ -303,8 +303,6 @@ p + p {
 }
 
 blockquote {
-  border: 1px dotted #b2b2b2;
-  padding: 0.5rem;
   margin: 1rem auto;
 }
 
@@ -381,15 +379,35 @@ td {
   height: 2em;
   line-height: 2em;
   margin: .5em auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
   align-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 .buttons a {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 1 24%;
+  -ms-flex: 0 1 24%;
   flex: 0 1 24%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
   align-self: auto;
   text-align: center;
   font-size: 1em;
@@ -401,20 +419,6 @@ td {
 }
 .buttons a:hover {
   background: rgba(0, 0, 0, 0.8);
-}
-.buttons div {
-  flex: 0 1 25%;
-  align-self: auto;
-  text-align: center;
-  font-size: .75em;
-  color: #fefefe;
-  text-shadow: none;
-  font-weight: normal;
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.6);
-  margin: .15em;
-  height: 4em;
-  line-height: 4em;
 }
 
 .animate-fade {
@@ -436,7 +440,7 @@ td {
   transition: all 0.8s ease-in-out;
 }
 
-.feature-block {
+.feature-block, blockquote {
   padding: 1rem;
   border: 1px solid #b2b2b2;
 }
