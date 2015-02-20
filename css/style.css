@@ -55,6 +55,10 @@ header, footer, nav, section, article, hgroup, figure {
   margin-bottom: 1rem;
 }
 
+.affordance-inner {
+  padding: 2rem 2rem;
+}
+
 /* Completely remove from the flow and screen readers. */
 .is-hidden {
   display: none !important;
@@ -131,6 +135,10 @@ header, footer, nav, section, article, hgroup, figure {
   background-size: 2px 2px;
 }
 
+.bg-green {
+  background-color: #B2F33C;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -154,21 +162,51 @@ body {
   }
 }
 
-hr {
-  margin: 3rem auto;
-}
-
-footer img {
+footer .bio {
   width: 100%;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
 }
 @media all and (min-width: 45em) {
-  footer img {
+  footer .bio {
     float: left;
     height: 8em;
     width: auto;
     margin-right: 1rem;
   }
+}
+
+svg.chevron3 {
+  background-color: #FFF;
+  margin: 0 auto;
+}
+
+svg.chevron3 path {
+  fill: #B2F33C;
+  stroke: #B2F33C;
+  stroke-width: 0;
+}
+
+svg.separator {
+  display: block;
+  padding-bottom: 1rem;
+  pointer-events: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.crunchy-hero {
+  width: 300px;
+  display: block;
+  margin: 1em auto -9px;
+}
+
+.notfound span {
+  line-height: 48px;
+  height: 48px;
+  vertical-align: top;
+  display: inline-block;
 }
 
 @media all and (min-width: 45em) {
@@ -249,6 +287,13 @@ h6, .zeta {
   padding: .25em;
 }
 
+.alt {
+  margin: 1rem auto 0.25rem;
+  color: #B2F33C;
+  border-left: 1rem solid rgba(0, 0, 0, 0.1);
+  padding: 0.25rem;
+}
+
 p {
   line-height: 1.5em;
 }
@@ -258,8 +303,13 @@ p + p {
 }
 
 blockquote {
-  background-color: #f2f2f2;
-  margin: 2rem auto;
+  border: 1px dotted #b2b2b2;
+  padding: 0.5rem;
+  margin: 1rem auto;
+}
+
+hr {
+  margin: 3rem auto;
 }
 
 ol, ul {
@@ -403,15 +453,15 @@ td {
   text-decoration: none;
   display: inline-block;
   padding: 3px;
-  padding-right: 4em;
+  padding-right: 4.5em;
   float: left;
 }
 .post span {
   float: right;
   color: white;
-  width: 4em;
+  width: 4.5em;
   background-color: rgba(76, 76, 76, 0.2);
-  padding: 3px 1em;
+  padding: 3px 2px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -424,6 +474,19 @@ ul.list {
   list-style: none;
 }
 
+.masthead h1 {
+  text-align: center;
+}
+.masthead a {
+  text-decoration: none;
+  color: #4c4c4c;
+}
+.masthead a:visited, .masthead a:active {
+  color: #4c4c4c;
+}
+.masthead a:hover {
+  color: #B2F33C;
+}
 @media all and (min-width: 45em) {
   .masthead header {
     width: 800px;
