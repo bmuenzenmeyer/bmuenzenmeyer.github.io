@@ -46,3 +46,6 @@ Read how I've [defined what content I want](http://www.brianmuenzenmeyer.com/cre
 
 ####Update 4: Style Tile Version 0.0
 I've hosted the first version of a style tile on the site, available for viewing [here](http://www.brianmuenzenmeyer.com/styletile/). For the curious, my implementation is a blend of Samantha Warren's [http://styletil.es/](http://styletil.es/) and Sparkbox's [http://sparkbox.github.io/style-prototype/](http://sparkbox.github.io/style-prototype/) &mdash; not as polished as Warren's and not yet as interactive as sparkboxes. I plan to iterate on these style tiles - stay tuned!
+
+####Update 5: Style Tile Iterations
+Read how I've used [Style Tile Iterations](http://www.brianmuenzenmeyer.com/style-tile-iterations/) to explore the look and feel of the site and then extract them into my [instance of pattern lab node](www.brianmuenzenmeyer.com/patternlab/public/index.html). I had to strike a balance between design and development layout - one that resulted in what you see now.
