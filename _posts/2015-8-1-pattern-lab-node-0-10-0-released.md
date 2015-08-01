@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-code
 
 title: "Pattern Lab Node 0.10.0 Released"
 tags: 'patternlab development design'
@@ -20,9 +20,11 @@ Yes they are finally here! Pattern parameters are a simple mechanism for replaci
 
 The basic syntax is this:
 
-```
-{{> molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}
-```
+{% highlight javascript %}
+
+  {{> molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}
+
+{% endhighlight %}
 
 The attributes listed in the pattern parameters should match Mustache variable names in your pattern. The values listed for each attribute will replace the Mustache variables. Again, pattern parameters are a simple find and replace of Mustache variables with the supplied values.
 
