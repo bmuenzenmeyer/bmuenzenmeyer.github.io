@@ -20,9 +20,9 @@ Yes they are finally here! Pattern parameters are a simple mechanism for replaci
 
 The basic syntax is this:
 
-{% highlight javascript %}
+{% highlight html linenos %}
 
-  {{> molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}
+{{> molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}
 
 {% endhighlight %}
 
