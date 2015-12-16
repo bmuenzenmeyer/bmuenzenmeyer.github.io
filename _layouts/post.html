@@ -7,15 +7,14 @@ layout: default
 
 {% include post-meta.html %}
 
-<div class="postNav">
+<div class="postNav buttons buttons_autosize buttons_secondary">
 {% if page.next %}
-<a href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Newer Post</a> &laquo; 
+<a href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Newer Post<br/>{{ page.next.title }}</a>
 {% endif %}
 {% if page.next or page.previous %}
-|
 {% endif %}
 {% if page.previous %}
-&raquo; <a href="{{ site.url }}{{ page.previous.url }}" title="{{ page.previous.title }}">Older Post</a>
+<a href="{{ site.url }}{{ page.previous.url }}" title="{{ page.previous.title }}">Older Post<br/>{{ page.previous.title }}</a>
 {% endif %}
 </div>
 
