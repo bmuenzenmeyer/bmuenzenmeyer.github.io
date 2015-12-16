@@ -7,17 +7,7 @@ layout: default
 
 {% include post-meta.html %}
 
-<div class="postNav">
-{% if page.next %}
-<a href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Newer Post</a> &laquo; 
-{% endif %}
-{% if page.next or page.previous %}
-|
-{% endif %}
-{% if page.previous %}
-&raquo; <a href="{{ site.url }}{{ page.previous.url }}" title="{{ page.previous.title }}">Older Post</a>
-{% endif %}
-</div>
+{% include post-pagination.html %}
 <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
 
 {% include disqus.html %}
