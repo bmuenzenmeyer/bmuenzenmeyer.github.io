@@ -3,37 +3,54 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
-<section class="half padded">
-  <h2 class="subheading">Words</h2>
-  <ul class="list">
-  {% for post in paginator.posts %}
-    <li class="post"><a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.type }}</span>
-    </li>
-  {% endfor %}
-  </ul>
-  <a href="/archive.html">Archive</a>
+<!-- {% include molecules-elements.html %} -->
+
+<section>
+  <!-- {% include molecules-feature-block.html %} -->
+  <nav>
+    {% include molecules-social-buttons.html %}
+  </nav>
 </section>
 
-<section class="half padded">
-  <h2 class="subheading">Things</h2>
-  <ul class="list">
-    <li class="post"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a><span>Project</span></li>
-    <li class="post"><a href="http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB">noun.js</a><span>Project</span></li>
-    <li class="post"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Bookmarklets</a><span>Tool</span></li>
-    <li class="post"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a><span>List</span></li>
-    <li class="post"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a><span>List</span></li>
-    <li class="post"><a href="http://codepen.io/bmuenzenmeyer/full/avyeF">Codepen for Megan</a><span>Pen</span></li>
-    <li class="post"><a href="http://codepen.io/bmuenzenmeyer/search/type%20exploration/">Typography Explorations</a><span>Labs</span></li>
-    <li class="post"><a href="http://bennycakes.com">Bennycakes!</a><span>Thing</span></li>
-  </ul>
-</section>
+<div class="dotted">
+<h2 class="bannerheading fulbleed align-center alpha giga">Words</h2>
+  <section >
+    <ul class="list">
+    {% for post in site.posts %}
+      <li class="list_item">
+        <article class="post">
+          <heading><a href="{{ post.url }}" class="post_title">{{ post.title }}</a></heading>
+          <p class="post_summary">{{ post.summary }}</p>
+        </article>
+      </li>
+    {% endfor %}
+    </ul>
+    <a href="/archive.html" class="alternate">Archive</a>
+  </section>
+</div>
 
-<section class="half padded">
-  <h2 class="subheading">Appearances</h2>
+<div class="striped">
+<h2 class="bannerheading fullbleed align-center alpha giga">Things</h2>
+  <section>
+    <ul class="list">
+      <li class="list_item"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a></li>
+      <li class="list_item"><a href="http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB">noun.js</a></li>
+      <li class="list_item"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Bookmarklets</a></li>
+      <li class="list_item"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a></li>
+      <li class="list_item"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a></li>
+      <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/full/avyeF">Codepen for Megan</a></li>
+      <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/search/type%20exploration/">Typography Explorations</a></li>
+      <li class="list_item"><a href="http://bennycakes.com">Bennycakes!</a></li>
+    </ul>
+  </section>
+</div>
+
+<h2 class="bannerheading fullbleed align-center alpha giga">Appearances</h2>
+<section class="">
   <ul class="list">
-    <li class="post"><a href="http://msdevshow.com/2015/12/pattern-lab-with-brian-muenzenmeyer/">Pattern Lab on MSDEVSHOW</a><span>Podcast</span></li>
-    <li class="post"><a href="http://msdevshow.com/2014/09/web-performance-optimization-with-brian-muenzenmeyer/">Web Performance Optimization on MSDEVSHOW</a><span>Podcast</span></li>
-    <li class="post"><a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">Web Performance Enhancement</a><span>Slides</span></li>
+    <li class="post"><a href="http://msdevshow.com/2015/12/pattern-lab-with-brian-muenzenmeyer/">Pattern Lab on MSDEVSHOW</a></li>
+    <li class="post"><a href="http://msdevshow.com/2014/09/web-performance-optimization-with-brian-muenzenmeyer/">Web Performance Optimization on MSDEVSHOW</a></li>
+    <li class="post"><a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">Web Performance Enhancement</a></li>
   </ul>
 </section>
 

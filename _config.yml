@@ -1,11 +1,14 @@
 url: http://bmuenzenmeyer.github.io
-baseurl: 
+baseurl:
 domain: bmuenzenmeyer.github.io
 permalink: /:title
 name: Brian Muenzenmeyer
 description: 'The personal site of Brian Muenzenmeyer.'
-paginate: 10
+paginate: 5
 
 exclude:
 - node_modules
-- patternlab-node
+- _patternlab
+
+gems:
+- jekyll-paginate

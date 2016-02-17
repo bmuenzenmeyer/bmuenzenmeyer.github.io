@@ -32,6 +32,28 @@ header, footer, nav, section, article, hgroup, figure {
 /*------------------------------------*\
     $GLOBAL CLASSES
 \*------------------------------------*/
+/* Webfont: Overpass-Reg */
+@font-face {
+  font-family: 'Overpass';
+  src: url("../fonts/Overpass-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Overpass-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Overpass-Regular.woff") format("woff"), url("../fonts/Overpass-Regular.ttf") format("truetype"), url("../fonts/Overpass-Regular.svg#Overpass-Regular") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Overpass-Bold */
+@font-face {
+  font-family: 'Overpass';
+  src: url("../fonts/Overpass-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Overpass-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Overpass-Bold.woff") format("woff"), url("../fonts/Overpass-Bold.ttf") format("truetype"), url("../fonts/Overpass-Bold.svg#Overpass-Bold") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
 /* Clearfix */
 .cf {
   *zoom: 1;
@@ -115,7 +137,7 @@ header, footer, nav, section, article, hgroup, figure {
   background-size: 3px 3px;
 }
 
-.striped, .subheading {
+.striped {
   background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
   background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
   background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
@@ -139,6 +161,10 @@ header, footer, nav, section, article, hgroup, figure {
   background-color: #B2F33C;
 }
 
+.fullbleed, .bannerheading.fullbleed, .masthead {
+  margin: auto -.5em;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -149,16 +175,29 @@ html {
 
 body {
   background: #fff;
-  font: 18px/150% "PT Sans Narrow", Arial, Tahoma, sans-serif;
+  font: 18px/150% "Overpass", Arial, Tahoma, sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #4c4c4c;
   margin: 0 .5em;
 }
 
 @media all and (min-width: 45em) {
-  main, footer {
-    width: 800px;
+  section, footer {
+    width: 60rem;
     margin: 0 auto;
+  }
+}
+
+section {
+  padding-bottom: 1rem;
+}
+
+#container {
+  margin: 1em auto;
+}
+@media only screen and (min-width: 70em) {
+  #container {
+    max-width: 800px;
   }
 }
 
@@ -169,7 +208,7 @@ footer .bio {
 @media all and (min-width: 45em) {
   footer .bio {
     float: left;
-    height: 8em;
+    height: 175px;
     width: auto;
     margin-right: 1rem;
   }
@@ -234,7 +273,7 @@ a {
   color: #4c4c4c;
 }
 a:hover, a:focus {
-  color: #000;
+  color: #111;
 }
 
 nav a {
@@ -283,7 +322,17 @@ h6, .zeta {
   margin: 1rem auto;
 }
 
-.subheading {
+.giga {
+  font-size: 6rem;
+  font-size: 8vw;
+}
+
+.bannerheading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Overpass", Cursive;
+  font-weight: bold;
+  text-transform: uppercase;
   padding: .25em;
 }
 
@@ -327,6 +376,13 @@ dt {
 
 dd {
   margin-left: 0;
+}
+
+ul.list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*------------------------------------*\
@@ -374,6 +430,21 @@ td {
   padding: 0.2em;
 }
 
+.buttons a, .button_alt {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: .2em 1em .2em 1em;
+  color: #fefefe;
+  text-shadow: none;
+  font-weight: normal;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+.buttons a:hover, .button_alt:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .buttons {
   width: 100%;
   height: 2em;
@@ -409,16 +480,6 @@ td {
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  text-align: center;
-  font-size: 1em;
-  color: #fefefe;
-  text-shadow: none;
-  font-weight: normal;
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.6);
-}
-.buttons a:hover {
-  background: rgba(0, 0, 0, 0.8);
 }
 .buttons.buttons_autosize a {
   -webkit-box-flex: 0;
@@ -433,6 +494,19 @@ td {
 }
 .buttons.buttons_secondary a:hover {
   background: #b2b2b2;
+}
+.buttons.buttons_large {
+  font-family: "Overpass", Cursive;
+  text-transform: uppercase;
+}
+
+.button_alt {
+  color: #f2f2f2;
+  background: #C93CF3;
+}
+.button_alt:hover {
+  color: #f2f2f2;
+  background: #8208A6;
 }
 
 .animate-fade {
@@ -456,63 +530,107 @@ td {
 
 .feature-block, blockquote {
   padding: 1rem;
-  border: 1px solid #b2b2b2;
-}
-
-/* Unordered lists */
-.post {
+  margin: 1rem auto;
   background-color: #CEF586;
-  margin-bottom: 5px;
-  padding-left: .5em;
-  min-height: 1.8em;
-  overflow: hidden;
-}
-.post a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 3px;
-  padding-right: 4.5em;
-  float: left;
-}
-.post span {
-  float: right;
-  color: white;
-  width: 4.5em;
-  background-color: rgba(76, 76, 76, 0.2);
-  padding: 3px 2px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-ul.list {
-  clear: both;
-  margin: 0;
-  padding: 0;
-  margin-top: 1em;
-  list-style: none;
+  font-size: 1.25em;
 }
 
 .postNav {
   height: 100%;
 }
 
+.item-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+@media only screen and (min-width: 70em) {
+  .item-list {
+    width: 50%;
+    float: left;
+  }
+  .item-list.left {
+    align-items: flex-end;
+  }
+  .item-list.left .item, .item-list.left .title {
+    text-align: right;
+  }
+  .item-list.right {
+    align-items: flex-start;
+  }
+}
+
+.item {
+  padding: 10px;
+  margin: 5px;
+}
+.item a {
+  text-decoration: none;
+  padding: .25em;
+  padding-top: .5em;
+  background-color: #111;
+  color: #f2f2f2;
+}
+@media only screen and (min-width: 70em) {
+  .item:nth-of-type(3n) {
+    width: 130%;
+  }
+  .item:nth-of-type(5n) {
+    width: 90%;
+  }
+  .item:nth-of-type(7n) {
+    width: 115%;
+  }
+}
+
+.item_title {
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1.7;
+  font-family: Overpass;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.masthead {
+  color: #111;
+}
 .masthead h1 {
-  text-align: center;
+  font-family: "Overpass", Cursive;
+  font-size: 13vw;
+  font-weight: bold;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-top: 5rem;
+  background-color: #111;
+  color: white;
+  letter-spacing: -.1em;
+  line-height: .75;
+  vertical-align: bottom;
+  z-index: 10;
 }
 .masthead a {
   text-decoration: none;
-  color: #4c4c4c;
 }
 .masthead a:visited, .masthead a:active {
-  color: #4c4c4c;
+  color: white;
 }
-.masthead a:hover {
-  color: #B2F33C;
+
+.masthead + img {
+  float: right;
 }
+
 @media all and (min-width: 45em) {
-  .masthead header {
-    width: 800px;
-    margin: 0 auto;
+  .article div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .article p, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article ul {
+    width: 75%;
+    margin: 1rem auto 0;
+  }
+  .article p + p, .article p + ul, .article h1 + p, .article h1 + ul, .article h2 + p, .article h2 + ul, .article h3 + p, .article h3 + ul, .article h4 + p, .article h4 + ul, .article h5 + p, .article h5 + ul, .article h6 + p, .article h6 + ul, .article ul + p, .article ul + ul {
+    margin-top: 0.25rem;
   }
 }
 
