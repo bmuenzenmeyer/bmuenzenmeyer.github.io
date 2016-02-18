@@ -6,6 +6,8 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: 'test'
+summary: 'More than meets the eye. This minor version ships with configurable paths and is structured to be better consumed as a true npm depedency.'
 
 comments: true
 ---

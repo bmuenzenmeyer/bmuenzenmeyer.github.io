@@ -12,11 +12,11 @@
 
 {% include organisms-header.html %}
 
-<header class="bannerheading fullbleed align-center dotted">
+<header class="bannerheading fullbleed align-center dotted {{page.class}}">
   <h2 class="alpha giga">{{ page.title }}</h2>
 </header>
 
-<main id="container" role="main" >
+<main id="container" role="main" class="{{page.class}}">
   {{ content }}
 </main>
 
