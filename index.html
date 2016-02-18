@@ -3,63 +3,42 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
-<!-- {% include molecules-elements.html %} -->
-
-<section>
-  <!-- {% include molecules-feature-block.html %} -->
-  <nav>
-    {% include molecules-social-buttons.html %}
-  </nav>
+<section class="container item-list left">
+  <h2 class="item alpha">ARTICLES</h2>
+  {% for post in paginator.posts %}
+    <article class="item {{ post.class }}">
+      <header class="item_title"><a href="{{ post.url }}">{{ post.title }}</a></header>
+      <p>{{ post.summary }}</p>
+    </article>
+  {% endfor %}
 </section>
 
-<div class="dotted">
-<h2 class="bannerheading fulbleed align-center alpha giga">Words</h2>
-  <section >
-    <ul class="list">
-    {% for post in site.posts %}
-      <li class="list_item">
-        <article class="post">
-          <heading><a href="{{ post.url }}" class="post_title">{{ post.title }}</a></heading>
-          <p class="post_summary">{{ post.summary }}</p>
-        </article>
-      </li>
-    {% endfor %}
-    </ul>
-    <a href="/archive.html" class="alternate">Archive</a>
-  </section>
-</div>
+<section class="container item-list right">
+  <h2 class="item alpha">ERRATA</h2>
 
-<div class="striped">
-<h2 class="bannerheading fullbleed align-center alpha giga">Things</h2>
-  <section>
-    <ul class="list">
-      <li class="list_item"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a></li>
-      <li class="list_item"><a href="http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB">noun.js</a></li>
+  <article class="item">
+    <header class="item_title"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a></header>
+    <p></p>
+  </article>
+
+  <article class="item">
+    <header class="item_title"><a href="http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB">noun.js</a></header>
+    <p></p>
+  </article>
+
+</section>
+
+<!--
       <li class="list_item"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Bookmarklets</a></li>
       <li class="list_item"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a></li>
       <li class="list_item"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a></li>
       <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/full/avyeF">Codepen for Megan</a></li>
       <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/search/type%20exploration/">Typography Explorations</a></li>
       <li class="list_item"><a href="http://bennycakes.com">Bennycakes!</a></li>
-    </ul>
-  </section>
-</div>
-
-<h2 class="bannerheading fullbleed align-center alpha giga">Appearances</h2>
-<section class="">
-  <ul class="list">
     <li class="post"><a href="http://msdevshow.com/2015/12/pattern-lab-with-brian-muenzenmeyer/">Pattern Lab on MSDEVSHOW</a></li>
     <li class="post"><a href="http://msdevshow.com/2014/09/web-performance-optimization-with-brian-muenzenmeyer/">Web Performance Optimization on MSDEVSHOW</a></li>
-    <li class="post"><a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">Web Performance Enhancement</a></li>
-  </ul>
-</section>
+    <li class="post"><a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">Web Performance Enhancement</a></li> -->
 
-<hr class="cf"/>
+  {% include organisms-crunchyowl-teaser.html %}
 
-<section>
-
-  {% include molecules-crunchyowl-teaser.html %}
-
-  {% include molecules-crunchyowl-services.html %}
-
-<hr class="cf"/>
+  {% include organisms-crunchyowl-services.html %}

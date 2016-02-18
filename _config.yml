@@ -4,11 +4,10 @@ domain: bmuenzenmeyer.github.io
 permalink: /:title
 name: Brian Muenzenmeyer
 description: 'The personal site of Brian Muenzenmeyer.'
-paginate: 5
+paginate: 10
 
 exclude:
 - node_modules
 - _patternlab
 
-gems:
-- jekyll-paginate
+gems: [github-pages, jekyll-paginate]

@@ -10,13 +10,10 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 [Dave Rupert](https://twitter.com/davatron5000) sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.
 
 [Brad Frost](https://twitter.com/bradfrost) summed it up nicely:
-<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote> 
+<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote>
 
 I want to put some thoughts to paper about how this process has played out for me.
 
@@ -33,7 +30,7 @@ I can feel the desire to turn PL into more than it already is, to turn it into a
 
 * An alternative to photoshop comps and high-fidelity mockups as an acceptable design deliverable
 
-So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!) 
+So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!)
 
 ##What pain points have I experienced?
 

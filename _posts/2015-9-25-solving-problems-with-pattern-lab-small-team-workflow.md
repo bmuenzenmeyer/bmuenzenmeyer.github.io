@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I've had a soft-spot for style guides, ever since seeing [http://pea.rs/](http://pea.rs/) at An Event Apart a couple years back. When [Pattern Lab](http://patternlab.io/) emerged soon after, I was hooked. Since, I've maintained the [Node version](https://github.com/pattern-lab/patternlab-node) of Brad Frost's and Dave Olsen's Pattern Lab and used it in a number of personal and professional projects. At the company I work for, I use Pattern Lab as the style guide for our next-phase web applications.
@@ -58,6 +55,6 @@ Pattern Lab is also, secondarily, our pattern library. I hope this doesn't come 
 
 The last stated use of Pattern Lab is as a personal laboratory for me while designing new solutions. Pattern Lab's feature-set, whether it be [pattern parameters](http://patternlab.io/docs/pattern-parameters.html), swappable json files, or just the browser frontend itself, make it an invaluable tool to design a responsive web application in the browser. But I recognize and concede the fact that we are not big enough to keep this thing perfectly in sync with all source code. No, it ain't [Lonely Planet's Rizzo](http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html), but it's enough for us, for now. So I call attention to this explicitly with the team. I may use some of the more advanced features of Pattern Lab during design, showing it to others, testing against it, and so on. But when we start to solidify, the more evolved "organisms" are deconstructed into any new patterns that have emerged. It's for the best, as they evolve too fast once in the wild anyway, but their ancestral patterns remain. By doing this, we limit the "unDRYness," reduce the responsibilities of other developers, and mitigate a lot of the original concerns, freeing us to focus more on the benefits than the downsides.
 
------- 
+------
 
 I hope sharing this faceted application of Pattern Lab as a styleguide helps you as much as it helps me. I also hope that this posts title becomes a series of posts. We'll see. Perhaps you can help. What are you solving with Pattern Lab?

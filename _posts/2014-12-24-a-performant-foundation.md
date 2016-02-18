@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 {% include molecules-feature-redesign.html %}
 
 A great thing about writing [brianmuenzenmeyer.com](http://brianmuenzenmeyer.com) from the ground up is the ability to keep an eye on performance from the onset.
