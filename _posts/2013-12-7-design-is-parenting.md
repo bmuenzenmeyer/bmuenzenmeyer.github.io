@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 When my son was born, I was obsessed with the temperature of his bath water.  What if it was too hot?  Too cold?  Which was worse?  We bought this plastic bathtub that had a built-in color-changing thermometer.  We were given a color-changing rubber ducky at the shower.  The baby books said between this degree and that degree, Celsius or Fahrenheit. No shortage of [advice](https://www.google.com/search?q=what+temperature+should+my+babies+bath+water+be) existed on the web.  
 
 Practice grew me adept at drawing X amount of hot water and Y amount of cold, and how to cancel mistakes or maintain temperature by adding Z amount of warm.  And always, if in doubt, I had my arsenal of thermometers. It took me months to gradually realize that if it was comfortable for me, it was comfortable for baby.  There is no formula.  Find comfortable.  Trust.

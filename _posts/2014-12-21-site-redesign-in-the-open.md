@@ -10,14 +10,11 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 {% include molecules-feature-redesign.html %}
 
 It's time for another reboot of [brianmuenzenmeyer.com](http://brianmuenzenmeyer.com).
 
-I put a lot of time into the current tumblr site - especially in crafting the masthead. But I find it limiting, and reactionary, crafted from one idea with little creative room to grow. It was essentially a one-off idea, not an identity I want to associate myself with or build a brand on. There was no system backing the concept, or allowing a cohesive vision to be designed, iterated on, or maintained. 
+I put a lot of time into the current tumblr site - especially in crafting the masthead. But I find it limiting, and reactionary, crafted from one idea with little creative room to grow. It was essentially a one-off idea, not an identity I want to associate myself with or build a brand on. There was no system backing the concept, or allowing a cohesive vision to be designed, iterated on, or maintained.
 
 So it's time to start over - and this time to [do it in the open](http://bradfrost.com/blog/post/designing-in-the-open/). What comes will be a reflective exercise in branding, atomic design, and process. Along the way I will try to share insights, challenges, and little tips along the way. I encourage a discussion.
 
@@ -28,7 +25,7 @@ My goals include:
 * Making a performant, mobile-first web-presence
 * Creating a hub for all things I care about
 
-As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment. 
+As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment.
 
 ####Update 1: The Development Environment
 
@@ -39,7 +36,7 @@ I'll be using SASS, grunt, and [patternlab node](https://github.com/pattern-lab/
 I'm using Sublime Text and the gem [SourceTree](http://www.sourcetreeapp.com/) to develop and manage code.
 
 ####Update 2: Pattern Lab + Jekyll FTW
-Read how I've integrated [Pattern Lab and Jekyll](http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website/) with as little coupling as possible yet created a one-way DRY workflow that is driven with atomic design principles. 
+Read how I've integrated [Pattern Lab and Jekyll](http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website/) with as little coupling as possible yet created a one-way DRY workflow that is driven with atomic design principles.
 
 ####Update 3: Creating a Content Inventory
 Read how I've [defined what content I want](http://www.brianmuenzenmeyer.com/creating-a-content-inventory/) to include on the site upfront, with an eye toward relevance and structure.

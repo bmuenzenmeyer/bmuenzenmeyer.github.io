@@ -10,15 +10,12 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 Just pushed patternlab-node 1.2, check out the release [here](https://github.com/pattern-lab/patternlab-node/releases/tag/v0.1.2)
 
 Here is the changelog:
 
 * ADD: Abstracted template rendering into a function for easier swapping of rendering engine
-* ADD: Smarter filtering of files to support other templates Thanks 
+* ADD: Smarter filtering of files to support other templates Thanks
 * ADD: Help command line agument
 * ADD: Version command line argument
 * ADD: Patterns only command line argument

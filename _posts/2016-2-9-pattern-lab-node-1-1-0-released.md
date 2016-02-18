@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 Pattern Lab Node 1.1.0 is here, not to be outdone by v1.0.0!
 
 In terms of relative change, it's bigger than v1.0.0 in fact, with a good mix of fixes, enhancements, and a lot of work put into the shipped grunt/gulp harness you've almost undoubtedly customized already. Switching to configurable paths and making the core library require()-able is a huge win, opening the doors to [running Pattern Lab Node as an npm dependency](https://github.com/pattern-lab/patternlab-node/wiki/Running-Pattern-Lab-Node-as-an-npm-Dependency). If you've ever had to struggle through an upgrade, I suggest you check this out, as it should greatly lessen future maintenance costs and allow us to do some other cool stuff soon!

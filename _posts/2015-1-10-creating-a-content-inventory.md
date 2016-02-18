@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 {% include molecules-feature-redesign.html %}
 
 A major facet influencing the decision to redesign this site was a lackluster content strategy on my [tumblr](https://www.tumblr.com/blog/brianmuenzenmeyer). Some amount of restructuring could have gotten me closer to a desired state - but it would not have repaired a hastily-planned and executed design (see: the about section in the bottom!) Publishing convenience betrayed coherence of message. So, the itch grew, to consolidate and retake a stronger control on the publishing process, the structure, and the foundations of any good personal site - content that is relevant to me.
@@ -34,6 +31,6 @@ Previously I had no connection from brianmuenzenmeyer.com to [Crunchy Owl](http:
   * Logo
   * Services
   * Showcase
-  * Contact 
+  * Contact
 
 Great - a decent list. With this in hand it's pretty clear to determine if the content exists. If it doesn't - it must be created. If it does, it needs to be soon structured with the proper markup. A note, this list is roughly prioritized, but it's not set in stone yet. Next steps, perhaps conducted parallel with some exploratory style tiles, will be to create some content reference diagrams to chart out a relative content hierarchy and evolve a mobile-first layout.

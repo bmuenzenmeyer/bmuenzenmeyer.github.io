@@ -10,9 +10,6 @@ type: Post
 comments: true
 ---
 
-{{ page.title }}
-================
-
 Here are the slides from my NEWDUG Presentation: _Performance Enhancement - Testing Positive_
 
 Creating high-performance experiences is both art and science - but it's never an accident. In an ever-increasing landscape of choice and expectations for your users, you must learn to leverage tools, process, and those around you to craft optimal outcomes.
