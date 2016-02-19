@@ -6,6 +6,8 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'Travis CI support lands in Pattern Lab Node, allowing automatic integration tests on PRs and merges.' 
 
 comments: true
 ---

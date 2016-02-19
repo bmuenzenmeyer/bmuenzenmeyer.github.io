@@ -6,6 +6,8 @@ tags: 'design development performance'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'A short performance checkup to come back to later.' 
 
 comments: true
 ---

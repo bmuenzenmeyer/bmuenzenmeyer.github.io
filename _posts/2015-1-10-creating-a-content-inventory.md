@@ -6,6 +6,8 @@ tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'A content-first breakdown of what\s important on the site' 
 
 comments: true
 ---

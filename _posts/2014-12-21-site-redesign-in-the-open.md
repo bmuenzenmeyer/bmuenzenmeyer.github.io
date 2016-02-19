@@ -6,6 +6,8 @@ tags: 'design development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'The mothership post for the open redesign of my site. Check back often?' 
 
 comments: true
 ---
