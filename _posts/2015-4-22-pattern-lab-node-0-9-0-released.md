@@ -6,6 +6,8 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'Some frontend improvements to the styleguide' 
 
 comments: true
 ---

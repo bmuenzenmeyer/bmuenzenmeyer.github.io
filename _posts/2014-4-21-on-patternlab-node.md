@@ -6,6 +6,8 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'Some thoughts after a public conversation on Pattern Lab' 
 
 comments: true
 ---

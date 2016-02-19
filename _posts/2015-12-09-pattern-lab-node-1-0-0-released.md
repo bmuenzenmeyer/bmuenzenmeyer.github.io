@@ -6,6 +6,8 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'The big 1.0, signifying significant maturity of the project.' 
 
 comments: true
 ---

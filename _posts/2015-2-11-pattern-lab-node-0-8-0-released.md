@@ -6,11 +6,13 @@ tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
+class: ''
+summary: 'Hey, semver is cool.' 
 
 comments: true
 ---
 
-Just merged the development branch of Pattern Lab Node into master and marked it for release. I am excited about this as it was the direct result of a concerted effort to [document](https://github.com/pattern-lab/patternlab-node/issues/70) the project *against* Pattern Lab PHP, the original reference implementation. 
+Just merged the development branch of Pattern Lab Node into master and marked it for release. I am excited about this as it was the direct result of a concerted effort to [document](https://github.com/pattern-lab/patternlab-node/issues/70) the project *against* Pattern Lab PHP, the original reference implementation.
 
 *Note Pattern Lab Node now follows a more logical semver system, with an eventual march toward v1.0.0!*
 
