@@ -1,10 +1,10 @@
 <div class="postNav buttons buttons_secondary">
 {% if page.next %}
-<a href="{{ site.url }}{{ page.next.url }}" title="{{ page.next.title }}">Newer Post<br/>{{ page.next.title }}</a>
+<a href="/{{ page.next.url }}" title="{{ page.next.title }}">Newer Post<br/>{{ page.next.title }}</a>
 {% endif %}
 {% if page.next or page.previous %}
 {% endif %}
 {% if page.previous %}
-<a href="{{ site.url }}{{ page.previous.url }}" title="{{ page.previous.title }}">Older Post<br/>{{ page.previous.title }}</a>
+<a href="/{{ page.previous.url }}" title="{{ page.previous.title }}">Older Post<br/>{{ page.previous.title }}</a>
 {% endif %}
 </div>
