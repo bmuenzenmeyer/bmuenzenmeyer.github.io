@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'THE how-to for Pattern Lab + Jekyll site design and development.' 
+summary: 'THE how-to for Pattern Lab + Jekyll site design and development' 
 
 comments: true
 ---

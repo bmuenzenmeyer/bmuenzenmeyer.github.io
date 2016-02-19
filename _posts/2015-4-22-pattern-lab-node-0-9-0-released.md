@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'Some frontend improvements to the styleguide' 
+summary: 'Some frontend improvements to the style guide' 
 
 comments: true
 ---

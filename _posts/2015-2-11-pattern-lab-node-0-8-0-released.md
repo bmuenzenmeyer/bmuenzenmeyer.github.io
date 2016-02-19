@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'Hey, semver is cool.' 
+summary: 'Hey, semver is cool' 
 
 comments: true
 ---

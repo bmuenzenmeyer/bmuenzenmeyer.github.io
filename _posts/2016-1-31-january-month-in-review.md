@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'I review my first month of Una Kravets\' open source goals project.' 
+summary: 'I review my first month of open-sourced goals, inspired by Una Kravets.' 
 
 comments: true
 ---

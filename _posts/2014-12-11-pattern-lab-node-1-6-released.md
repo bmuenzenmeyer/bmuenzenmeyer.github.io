@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'Pattern Lineage.' 
+summary: 'Pattern Lineage' 
 
 comments: true
 ---
