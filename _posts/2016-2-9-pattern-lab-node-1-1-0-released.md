@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'More than meets the eye. This minor version ships with configurable paths and is structured to be better consumed as a true npm depedency.'
+summary: 'More than meets the eye. This minor version ships with configurable paths and is structured to be better consumed as a true npm dependency.'
 
 comments: true
 ---

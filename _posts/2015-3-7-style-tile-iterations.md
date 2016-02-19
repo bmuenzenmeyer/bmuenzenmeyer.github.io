@@ -7,7 +7,7 @@ author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 type: Post
 class: ''
-summary: 'A roundup of the style tiles used for initial visual direction on the redesign.' 
+summary: 'A roundup of the style tiles used for initial visual direction on the redesign' 
 
 comments: true
 ---
