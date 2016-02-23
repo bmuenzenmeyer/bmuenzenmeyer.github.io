@@ -5,9 +5,8 @@ title: "Pattern Lab Node 0.10.0 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'Pattern Parameters!' 
+summary: 'Pattern Parameters!'
 
 comments: true
 ---

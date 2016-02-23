@@ -5,9 +5,8 @@ title: "Creating a Content Inventory"
 tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'A content-first breakdown of what is important on the site' 
+summary: 'A content-first breakdown of what is important on the site'
 
 comments: true
 ---

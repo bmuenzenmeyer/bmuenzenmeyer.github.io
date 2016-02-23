@@ -5,9 +5,8 @@ title: "Solving Problems with Pattern Lab - Small Team Workflow"
 tags: 'patternlab development design workflow'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'Find out how Pattern Lab is useful even as a UX/UI team of one' 
+summary: 'Find out how Pattern Lab is useful even as a UX/UI team of one'
 
 comments: true
 ---

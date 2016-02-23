@@ -5,9 +5,8 @@ title: "Design is Parenting"
 tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'An imperfect analogy. Writing this summary now years ahead - I take parenting far more seriously. Interesting to read this post through a different lens' 
+summary: 'An imperfect analogy. Writing this summary now years ahead - I take parenting far more seriously. Interesting to read this post through a different lens'
 
 comments: true
 ---

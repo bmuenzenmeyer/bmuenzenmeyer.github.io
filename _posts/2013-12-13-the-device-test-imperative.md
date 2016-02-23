@@ -5,9 +5,8 @@ title: "The Device Test Imperative"
 tags: 'development testing'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'A cautionary tale... ye be warned!' 
+summary: 'A cautionary tale... ye be warned!'
 
 comments: true
 ---

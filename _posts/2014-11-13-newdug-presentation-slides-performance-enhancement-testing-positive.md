@@ -5,9 +5,8 @@ title: "NEWDUG Presentation Slides: Performance Enhancement - Testing Positive"
 tags: 'performance'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'Roydan was kind enough to let me talk about improving performance on Roydan.com' 
+summary: 'Roydan was kind enough to let me talk about improving performance on Roydan.com'
 
 comments: true
 ---

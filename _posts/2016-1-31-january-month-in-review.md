@@ -5,9 +5,8 @@ title: "January 2016 Month In Review"
 tags: 'month-in-review'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'I review my first month of open-sourced goals, inspired by Una Kravets.' 
+summary: 'I review my first month of open-sourced goals, inspired by Una Kravets.'
 
 comments: true
 ---

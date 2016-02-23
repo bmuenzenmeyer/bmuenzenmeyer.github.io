@@ -5,7 +5,6 @@ title: "Pattern Lab Node 1.1.0 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
 summary: 'More than meets the eye. This minor version ships with configurable paths and is structured to be better consumed as a true npm dependency.'
 

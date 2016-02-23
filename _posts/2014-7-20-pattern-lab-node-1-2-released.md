@@ -5,9 +5,8 @@ title: "Pattern Lab Node 1.2 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'Here be updates and new stuff' 
+summary: 'Here be updates and new stuff'
 
 comments: true
 ---
