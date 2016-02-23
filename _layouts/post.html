@@ -4,12 +4,16 @@ layout: item
 
 <section class="article {{ page.class }}">
 
-{{ content }}
+  {{ content }}
 
 </section>
 
-{% include post-meta.html %}
+<section>
 
-{% include post-pagination.html %}
+  {% include post-meta.html %}
 
-{% include disqus.html %}
+  {% include post-pagination.html %}
+
+  {% include disqus.html %}
+
+</section>

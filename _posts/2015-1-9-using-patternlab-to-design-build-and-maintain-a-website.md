@@ -5,16 +5,15 @@ title: "Using Pattern Lab to Design, Build and Maintain a Website"
 tags: 'development design patternlab'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'THE how-to for Pattern Lab + Jekyll site design and development' 
+summary: 'THE how-to for Pattern Lab + Jekyll site design and development'
 
 comments: true
 ---
 
 {% include molecules-feature-redesign.html %}
 
-###Why Pattern Lab
+### Why Pattern Lab
 
 Pattern Lab is a collection of tools to help you create atomic design systems. Full disclosure: I've maintained the node fork of [Brad](https://twitter.com/brad_frost) and [Dave's](https://twitter.com/dmolsen) stellar PHP trunk for a while now. Pattern Lab was my third [but] true love, fast on the heels of [pea.rs](http://pea.rs) and an attempt to roll my own style guide that had a decidedly [rough and tumble](https://www.youtube.com/watch?v=X4jF3xTxKWM) feel and outcome. Finding such a mature product was a godsend, and a great learning opportunity.
 
@@ -50,7 +49,7 @@ Placing Pattern Lab in an underscored directory ensures the jekyll ignores it du
 * [https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io](https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io) My user repository with a CNAME
 * [https://github.com/bmuenzenmeyer/patternlab](https://github.com/bmuenzenmeyer/patternlab) A project repository with Pattern Lab pushed on the gh-pages branch
 
-###Toward Maintainability
+### Toward Maintainability
 
 A style guide, once written, must preserve its relevance or quickly fall out of favor by stakeholders, designers, and developers. This is a darling you do not want to kill. If the style guide becomes stale and out of sync with the [realities of maintenance](http://csswizardry.com/2013/04/shame-css/), the investment is lost or damaged. A style guide's ability to communicate and focus diverse teams is a function of its parity with production. To this end, I am have created a small utility within [Pattern Lab Node](https://github.com/pattern-lab/patternlab-node) to extract select partials and output them where needed. Let's take a look at the `config.json` file at the root of the v0.1.7 install:
 

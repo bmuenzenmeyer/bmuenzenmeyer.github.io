@@ -5,9 +5,8 @@ title: "Site Redesign in the Open"
 tags: 'design development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
 class: ''
-summary: 'The mothership post for the open redesign of my site. Check back often?' 
+summary: 'The mothership post for the open redesign of my site. Check back often?'
 
 comments: true
 ---
@@ -29,7 +28,7 @@ My goals include:
 
 As for now, the site it rather bare-bones - but intentionally so. We'll probably start with a description of the development environment.
 
-####Update 1: The Development Environment
+#### Update 1: The Development Environment
 
 [brianmuenzenmeyer.com](http://brianmuenzenmeyer.com) is built with Jekyll and hosted on Github Pages. I've enjoyed the simplicity of static-page generators since learning of them. Writing in Markdown is a dream, with its basic styling support keeping everything semantic and clean. Staying simple means I can work fast and keep complexity low. The [Github Pages](https://help.github.com/articles/user-organization-and-project-pages/) user and project structure allows me to build and deploy projects, labs, and smaller sections as fully version-controlled, open source repositories all under my custom domain name.
 
@@ -37,14 +36,14 @@ I'll be using SASS, grunt, and [patternlab node](https://github.com/pattern-lab/
 
 I'm using Sublime Text and the gem [SourceTree](http://www.sourcetreeapp.com/) to develop and manage code.
 
-####Update 2: Pattern Lab + Jekyll FTW
+#### Update 2: Pattern Lab + Jekyll FTW
 Read how I've integrated [Pattern Lab and Jekyll](http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website/) with as little coupling as possible yet created a one-way DRY workflow that is driven with atomic design principles.
 
-####Update 3: Creating a Content Inventory
+#### Update 3: Creating a Content Inventory
 Read how I've [defined what content I want](http://www.brianmuenzenmeyer.com/creating-a-content-inventory/) to include on the site upfront, with an eye toward relevance and structure.
 
-####Update 4: Style Tile Version 0.0
+#### Update 4: Style Tile Version 0.0
 I've hosted the first version of a style tile on the site, available for viewing [here](http://www.brianmuenzenmeyer.com/styletile/). For the curious, my implementation is a blend of Samantha Warren's [http://styletil.es/](http://styletil.es/) and Sparkbox's [http://sparkbox.github.io/style-prototype/](http://sparkbox.github.io/style-prototype/) &mdash; not as polished as Warren's and not yet as interactive as sparkboxes. I plan to iterate on these style tiles - stay tuned!
 
-####Update 5: Style Tile Iterations
+#### Update 5: Style Tile Iterations
 Read how I've used [Style Tile Iterations](http://www.brianmuenzenmeyer.com/style-tile-iterations/) to explore the look and feel of the site and then extract them into my [instance of pattern lab node](www.brianmuenzenmeyer.com/patternlab/public/index.html). I had to strike a balance between design and development layout - one that resulted in what you see now.

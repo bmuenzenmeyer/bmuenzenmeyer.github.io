@@ -6,6 +6,10 @@ name: Brian Muenzenmeyer
 description: 'The personal site of Brian Muenzenmeyer.'
 paginate: 10
 
+collections:
+  projects:
+    output: true
+
 exclude:
 - node_modules
 - _patternlab

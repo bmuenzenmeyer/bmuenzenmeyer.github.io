@@ -14,21 +14,19 @@ title: Brian Muenzenmeyer
 </section>
 
 <section class="container item_list item_list-right">
-  <h2 class="item alpha">ADDENDA</h2>
-
-  <article class="item">
-    <header class="item_title"><a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a></header>
-    <p></p>
+  <h2 class="item alpha">THINGS</h2>
+  {% assign projs = site.projects | sort: 'order' %}
+  {% for proj in projs limit:10 %}
+  <article class="item {{ proj.class }}">
+    <header class="item_title"><a href="{{ proj.url }}">{{ proj.title }}</a></header>
+    <p>{{ proj.summary }}</p>
   </article>
-
-  <article class="item">
-    <header class="item_title"><a href="http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB">noun.js</a></header>
-    <p></p>
-  </article>
-
+  {% endfor %}
 </section>
-
 <!--
+
+https://github.com/pattern-lab/patternlab-node
+http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB
       <li class="list_item"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Bookmarklets</a></li>
       <li class="list_item"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a></li>
       <li class="list_item"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a></li>
