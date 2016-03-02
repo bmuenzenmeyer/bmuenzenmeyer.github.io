@@ -14,7 +14,7 @@ comments: true
 ### Month in Review
 This marks my second month of [tracking goals](https://github.com/bmuenzenmeyer/personal-goals) using [Una Kravets'](https://twitter.com/una) open-source goal tracking process.
 
-<em class="emphasis">And wow what I month it turned out to be.</em>
+<em class="emphasis">And wow what a month it turned out to be.</em>
 
 Pattern Lab Node is being used at Target to create some crazy cool ambitious initiatives, and the team invited me to headquarters in Minneapolis to see for myself. I cannot begin to describe how rewarding the day was, and how generous my hosts were. It was truly humbling (read: terrifying)  to see _teams of people_ using that thing I wrote in the basement - really still in the shadow of the behemoth that is Pattern Lab PHP (seriously, watch out for v2). I need to do a formal write-up about this trip, as these few thoughts don't do the day, the team, or the learning justice.
 
