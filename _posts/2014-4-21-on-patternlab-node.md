@@ -5,18 +5,16 @@ title: "On Pattern Lab - Node"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'Some thoughts after a public conversation on Pattern Lab'
 
 comments: true
 ---
 
-{{ page.title }}
-================
-
 [Dave Rupert](https://twitter.com/davatron5000) sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.
 
 [Brad Frost](https://twitter.com/bradfrost) summed it up nicely:
-<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote> 
+<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote>
 
 I want to put some thoughts to paper about how this process has played out for me.
 
@@ -24,7 +22,7 @@ Patternlab-PHP was rather feature-rich when I started. I likely missed the conve
 
 I can feel the desire to turn PL into more than it already is, to turn it into a _platform_ through which an entire project can grow, mature, and finally be deployed. I have also experienced first-hand the complexity that can creep into the solution when attempting to support so many features.
 
-##To me, Pattern Lab is:
+## To me, Pattern Lab is:
 * A tool to build reusable, scalable markup and css snippets. As Brad intended, you can decouple atomic design principles altogether if you so choose, but it's also...
 
 * A tool to glue components together in an iterative, incremental fashion.
@@ -33,9 +31,9 @@ I can feel the desire to turn PL into more than it already is, to turn it into a
 
 * An alternative to photoshop comps and high-fidelity mockups as an acceptable design deliverable
 
-So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!) 
+So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!)
 
-##What pain points have I experienced?
+## What pain points have I experienced?
 
 * **Initial project setup is cumbersome.** Hopefully some npm, grunt, dependency maturity in the near-term will help. As others have stated, attempting to obfuscate patternlab internals should be a goal. [Addy Osmani](https://twitter.com/addyosmani) suggested a pure node implementation which would be most agnostic. To me, grunt feels more consumable than pure node. I need to look into Assemble.
 

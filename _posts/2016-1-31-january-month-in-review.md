@@ -5,13 +5,11 @@ title: "January 2016 Month In Review"
 tags: 'month-in-review'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'I review my first month of open-sourced goals, inspired by Una Kravets.'
 
 comments: true
 ---
-
-{{ page.title }}
-================
 
 ### Month in Review
 The first month of [Una Kravets'](https://twitter.com/una) open-source goal tracking. I think I did alright for myself - chief accomplishments being way more reading than I have in ages. I transferred a lot of wasted time surfing reddit or whatever in favor of reading - and even lost myself a few nights reading instead of coding - an imbalance I haven't reveled in since highschool.

@@ -5,13 +5,11 @@ title: "Pattern Lab Node 0.10.0 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'Pattern Parameters!'
 
 comments: true
 ---
-
-{{ page.title }}
-================
 
 A busy time here again - with an uptick in interest in the project and renewed focus from me. Your humble port maintainer wants to get to v1.0.0 like no-other! It was also unlike any release to date - as it started with an incremental feature addition (pattern parameters) and ended with a complete overhaul of how patterns were stitched together with data.
 

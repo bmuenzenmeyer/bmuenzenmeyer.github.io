@@ -1,13 +1,21 @@
 ---
-layout: default
+layout: item
 ---
-{{ content }}
 
-<hr />
+<section class="article {{ page.class }}">
 
-{% include post-meta.html %}
+  {{ content }}
 
-{% include post-pagination.html %}
-<link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+</section>
 
-{% include disqus.html %}
+<section>
+
+  {% include post-meta.html %}
+
+  {% include post-pagination.html %}
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+  {% include disqus.html %}
+
+</section>

@@ -5,13 +5,11 @@ title: "Pattern Lab Node 1.0.0 Released"
 tags: 'patternlab development design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'The big 1.0, signifying significant maturity of the project'
 
 comments: true
 ---
-
-{{ page.title }}
-================
 
 **[Version 1.0.0 is here!](https://github.com/pattern-lab/patternlab-node/releases/tag/v1.0.0)** It's hard to believe, but it's time to tag this project. With styleModifiers and patternParameters a couple releases ago, Pattern Lab Node has really come up to snuff compared to the original Pattern Lab PHP system. [Exciting work continues even as I write this](https://github.com/pattern-lab/patternlab-node/tree/pattern-engines) on multiple other advancements, but I intend to fork this version and maintain it as the purest subset of original functionality. I feel funny tagging it now, but I figured if I didn't soon I wouldn't feel right continuously pushing it off or making users sign up for big file re-shuffles hidden away in a minor release.
 

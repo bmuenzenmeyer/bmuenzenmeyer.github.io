@@ -5,13 +5,11 @@ title: "Creating a Content Inventory"
 tags: 'design'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'A content-first breakdown of what is important on the site'
 
 comments: true
 ---
-
-{{ page.title }}
-================
 
 {% include molecules-feature-redesign.html %}
 
@@ -34,6 +32,6 @@ Previously I had no connection from brianmuenzenmeyer.com to [Crunchy Owl](http:
   * Logo
   * Services
   * Showcase
-  * Contact 
+  * Contact
 
 Great - a decent list. With this in hand it's pretty clear to determine if the content exists. If it doesn't - it must be created. If it does, it needs to be soon structured with the proper markup. A note, this list is roughly prioritized, but it's not set in stone yet. Next steps, perhaps conducted parallel with some exploratory style tiles, will be to create some content reference diagrams to chart out a relative content hierarchy and evolve a mobile-first layout.

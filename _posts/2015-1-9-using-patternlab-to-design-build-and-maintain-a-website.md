@@ -5,24 +5,22 @@ title: "Using Pattern Lab to Design, Build and Maintain a Website"
 tags: 'development design patternlab'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'THE how-to for Pattern Lab + Jekyll site design and development'
 
 comments: true
 ---
 
-{{ page.title }}
-================
-
 {% include molecules-feature-redesign.html %}
 
-###Why Pattern Lab
+### Why Pattern Lab
 
-Pattern Lab is a collection of tools to help you create atomic design systems. Full disclosure: I've maintained the node fork of [Brad](https://twitter.com/brad_frost) and [Dave's](https://twitter.com/dmolsen) stellar PHP trunk for a while now. Pattern Lab was my third [but] true love, fast on the heels of [pea.rs](http://pea.rs) and an attempt to roll my own style guide that had a decidedly [rough and tumble](https://www.youtube.com/watch?v=X4jF3xTxKWM) feel and outcome. Finding such a mature product was a godsend, and a great learning opportunity. 
+Pattern Lab is a collection of tools to help you create atomic design systems. Full disclosure: I've maintained the node fork of [Brad](https://twitter.com/brad_frost) and [Dave's](https://twitter.com/dmolsen) stellar PHP trunk for a while now. Pattern Lab was my third [but] true love, fast on the heels of [pea.rs](http://pea.rs) and an attempt to roll my own style guide that had a decidedly [rough and tumble](https://www.youtube.com/watch?v=X4jF3xTxKWM) feel and outcome. Finding such a mature product was a godsend, and a great learning opportunity.
 
-Piling success upon success just feels right. Building a site up from its atomic interface elements allows you to not only maintain consistency by paving less cow paths, but it allows you to pave over the whole shebang and propagate changes as well structured CSS should. Focusing on core elements like typography, irreverent of layout, is a strength Pattern Lab can bring to a design process. With auto-refresh, annotation, viewport resizing, and more, it's a clear choice for me when considering how I want the redesign to evolve. 
+Piling success upon success just feels right. Building a site up from its atomic interface elements allows you to not only maintain consistency by paving less cow paths, but it allows you to pave over the whole shebang and propagate changes as well structured CSS should. Focusing on core elements like typography, irreverent of layout, is a strength Pattern Lab can bring to a design process. With auto-refresh, annotation, viewport resizing, and more, it's a clear choice for me when considering how I want the redesign to evolve.
 
 ###Structured for Success
-Pattern Lab and jekyll are both static site generators, so the key is to integrate with as little coupling as possible and create a design and development workflow that promotes [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) concepts. After setting up jekyll, I used npm to pull down the latest version of patternlab-node into _patternlab. 
+Pattern Lab and jekyll are both static site generators, so the key is to integrate with as little coupling as possible and create a design and development workflow that promotes [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) concepts. After setting up jekyll, I used npm to pull down the latest version of patternlab-node into _patternlab.
 
 {% highlight bash %}
 
@@ -51,7 +49,7 @@ Placing Pattern Lab in an underscored directory ensures the jekyll ignores it du
 * [https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io](https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io) My user repository with a CNAME
 * [https://github.com/bmuenzenmeyer/patternlab](https://github.com/bmuenzenmeyer/patternlab) A project repository with Pattern Lab pushed on the gh-pages branch
 
-###Toward Maintainability
+### Toward Maintainability
 
 A style guide, once written, must preserve its relevance or quickly fall out of favor by stakeholders, designers, and developers. This is a darling you do not want to kill. If the style guide becomes stale and out of sync with the [realities of maintenance](http://csswizardry.com/2013/04/shame-css/), the investment is lost or damaged. A style guide's ability to communicate and focus diverse teams is a function of its parity with production. To this end, I am have created a small utility within [Pattern Lab Node](https://github.com/pattern-lab/patternlab-node) to extract select partials and output them where needed. Let's take a look at the `config.json` file at the root of the v0.1.7 install:
 
@@ -90,9 +88,9 @@ The final step, of course, is to reference our partial in our jekyll template:
 
 <body>
 <div class="site">
-  {{ "{% include organisms-header.html " }}%} 
+  {{ "{% include organisms-header.html " }}%}
   <div role="main">
-    {{ "{% content " }}%} 
+    {{ "{% content " }}%}
   </div>
 </div>
 ...
@@ -108,6 +106,3 @@ This is perhaps a rudimentary implementation, but it works perfectly in the jeky
 E.B. White, of Strunk and White's _The Elements of Style_, knew that a text lives longest past draft form. If anyone's read White's terse handbook, they will understand the efficacy of a well written sentence. So too, in my opinion, do websites, living long past their shower-thought, design brief PDF, or hackathon. A well-structured, maintainable site has little fat, a clear message supported by content and style, and consists of a one-way DRY workflow that does not collapse under its own weight. Stay tuned to see how this goes.
 
 _Please share your thoughts as to how this method could be improved upon or brought to other production web platforms._
-
- 
-

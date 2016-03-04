@@ -5,17 +5,15 @@ title: "The Device Test Imperative"
 tags: 'development testing'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-type: Post
+class: ''
+summary: 'A cautionary tale... ye be warned!'
 
 comments: true
 ---
 
-{{ page.title }}
-================
-
 _This post refers to an old version of brianmuenzenmeyer.com, but the lesson is important._
 
-When creating the masthead for this site, I was quick to ensure support in Chrome, Firefox, and IE 10-8. It was easy, I suggest _too easy_, to test the fluid layout and media queries by resizing the window, or using a tool like [this one](http://we-are-gurus.com/tools/responsive-design-tester.php) to gut-check various viewports. 
+When creating the masthead for this site, I was quick to ensure support in Chrome, Firefox, and IE 10-8. It was easy, I suggest _too easy_, to test the fluid layout and media queries by resizing the window, or using a tool like [this one](http://we-are-gurus.com/tools/responsive-design-tester.php) to gut-check various viewports.
 
 None of this, however, could satisfy the necessity of testing on a real mobile phone. Here's what I saw on mobile Safari on my iPad and iPhone:
 

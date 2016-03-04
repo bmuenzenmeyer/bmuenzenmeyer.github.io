@@ -1,12 +1,19 @@
 ---
-layout: default
+layout: item
 ---
-{{ content }}
 
-<hr />
+<section class="article {{ page.class }}">
 
-{% include post-meta.html %}
+  {{ content }}
 
-{% include post-pagination.html %}
+</section>
 
-{% include disqus.html %}
+<section>
+
+  {% include post-meta.html %}
+
+  {% include post-pagination.html %}
+
+  {% include disqus.html %}
+
+</section>
