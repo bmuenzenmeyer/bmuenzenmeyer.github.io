@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Archives | Brian Muenzenmeyer
+title: All Articles | Brian Muenzenmeyer
 ---
 
-<h2 class="subheading">Archives</h2>
-<ul class="list">
-{% for post in site.posts %}
-  <li class="post"><a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.type }}</span>
-  </li>
-{% endfor %}
-</ul>
+<section class="container item_list">
+  <h2 class="item alpha">ALL ARTICLES</h2>
+  {% for post in site.posts %}
+    <article class="item {{ post.class }}">
+      <header class="item_title"><a href="{{ post.url }}">{{ post.title }}</a></header>
+      <p>{{ post.summary }}</p>
+    </article>
+  {% endfor %}
+</section>
