@@ -29,9 +29,7 @@ The code we'll be augmenting is within [`gulpfile.js`](https://github.com/patter
 
 We will be adding to and editing the copy tasks.
 
-To add sass compilation capabilities, you must first include the [gulp-sass](https://github.com/dlmanning/gulp-sass) library from [npm](http://npmjs.com/).
-
-From a command prompt open to the root of your edition:
+To add sass compilation capabilities, you must first include the [gulp-sass](https://github.com/dlmanning/gulp-sass) library from [npm](http://npmjs.com/). From a command prompt open to the root of your edition:
 
 ```bash
 npm install gulp-sass
