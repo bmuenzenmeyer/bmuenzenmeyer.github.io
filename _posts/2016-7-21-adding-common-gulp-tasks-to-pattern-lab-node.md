@@ -85,11 +85,7 @@ gulp.task('pl-assets', gulp.series(
 );
 ```
 
-This task uses the new gulp 4.X syntax to clearly define what tasks must run in sequential order (series) versus in parallel. This task reads in plain English as:
-
-```
-When I'm told to run `pl-assets`, first run all the `pl-copy` tasks in whichever order you like, and then tell the caller when I'm done.
-```
+This task uses the new gulp 4.X syntax to clearly define what tasks must run in sequential order (series) versus in parallel. This task reads in plain English as: _When I'm told to run `pl-assets`, first run all the `pl-copy` tasks in whichever order you like, and then tell the caller when I'm done._
 
 Something you might notice from the example is that `gulp.series()` and `gulp.parallel()` calls are "nestable." Armed with that knowledge, we augment the task as follows:
 
