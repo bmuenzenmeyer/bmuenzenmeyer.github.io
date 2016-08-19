@@ -108,6 +108,16 @@ gulp.task('pl-assets', gulp.series(
 
 We've now ensured that `pl-sass` is called before `pl-copy:css` - while maintaining as much asynchronous processing as possible. We can test `pl-assets` individually if we like. Or since it's included in the `patternlab:build` task, we know the task will run with existing Pattern Lab commands.
 
+The last thing we have to do is still gulp to re-run our `pl-sass` task after every `.scss` file change. Add the following to the `watch()` function:
+
+```javascript
+gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass'));
+```
+
+With this in place the entire build chain will fire every time you save a sass file.
+
+For simplicity's sake, the complete altered gulpfile can be found here: [https://gist.github.com/bmuenzenmeyer/7a6ec54dc1ea720a61497a75ea88e3b4](https://gist.github.com/bmuenzenmeyer/7a6ec54dc1ea720a61497a75ea88e3b4) and is current as of Edition Node Gulp ~`1.3.0`
+
 I hope that this short post demystifies what it takes to grab a copy of Pattern Lab 2 and hack it up! We've spent a lot of time making an ecosystem that is flexible, extensible, and ready for you and your teams to make it your own.
 
 And as always, please give us feedback, no matter how small. Spot a typo in the docs, or this post, or think a feature would be killer? Let us know.
