@@ -3,7 +3,7 @@ layout: project
 
 title: 'Pattern Lab Node'
 summary: 'A workshop where one builds modular web solutions. The Node version of Pattern Lab is, at its core, a static site generator. It combines platform-agnostic assets, like the Mustache-based patterns, the JavaScript-based viewer, and the self-contained webserver, with a Node-based "builder" that transforms and dynamically builds complex solutions from ever-smaller patterns.'
-class: ''
+class: 'project--patternlab'
 order: 1
 part: molecules-patternlab-logo.html
 ---

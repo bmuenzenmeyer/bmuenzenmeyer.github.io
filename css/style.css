@@ -50,6 +50,14 @@ img{
 
 }
 
+
+/*
+PROJECT OVERRIDES
+*/
+.project.project--patternlab .project__title{
+  margin-top: -5rem;
+}
+
 /*
  PATTERN LAB CUSTOM LOGO
 */
@@ -108,4 +116,3 @@ img{
     margin-left: 35rem;
   }
 }
-
