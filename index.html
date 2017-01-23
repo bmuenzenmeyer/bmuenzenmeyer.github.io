@@ -3,47 +3,13 @@ layout: default
 title: Brian Muenzenmeyer
 ---
 
-<section class="container item_list item_list-left">
-  <h2 class="item alpha">ARTICLES</h2>
-  {% for post in paginator.posts %}
-    <article class="item {{ post.class }}">
-      <header class="item_title"><a href="{{ post.url }}">{{ post.title }}</a></header>
-      <p>{{ post.summary }}</p>
-    </article>
-  {% endfor %}
-
-  <a href="/archive.html" class="button-alt">All Articles</a>
-
-</section>
-
-<section class="container item_list item_list-right">
-  <h2 class="item alpha">THINGS</h2>
+<section class="project__container">
   {% assign projs = site.projects | sort: 'order' %}
-  {% for proj in projs limit:10 %}
-  <article class="item {{ proj.class }}">
-    <header class="item_title"><a href="{{ proj.url }}">{{ proj.title }}</a></header>
-    <p>{{ proj.summary }}</p>
+  {% for proj in projs %}
+  <article class="project {{ proj.class }}">
+    {% include {{proj.part}} %}
+    <header class="project__title"><a href="{{ proj.url }}">{{ proj.title }}</a></header>
+    <p class="project__summary">{{ proj.summary }}</p>
   </article>
   {% endfor %}
-</section>
-<!--
-
-https://github.com/pattern-lab/patternlab-node
-http://s.codepen.io/bmuenzenmeyer/debug/KdYKvB
-      <li class="list_item"><a href="https://bmuenzenmeyer.github.io/scrum">Scrum Bookmarklets</a></li>
-      <li class="list_item"><a href="https://bmuenzenmeyer.github.io/performance">Performance Checklist</a></li>
-      <li class="list_item"><a href="https://github.com/bmuenzenmeyer/Development-Resources">Development Resources</a></li>
-      <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/full/avyeF">Codepen for Megan</a></li>
-      <li class="list_item"><a href="http://codepen.io/bmuenzenmeyer/search/type%20exploration/">Typography Explorations</a></li>
-      <li class="list_item"><a href="http://bennycakes.com">Bennycakes!</a></li>
-    <li class="post"><a href="http://msdevshow.com/2015/12/pattern-lab-with-brian-muenzenmeyer/">Pattern Lab on MSDEVSHOW</a></li>
-    <li class="post"><a href="http://msdevshow.com/2014/09/web-performance-optimization-with-brian-muenzenmeyer/">Web Performance Optimization on MSDEVSHOW</a></li>
-    <li class="post"><a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">Web Performance Enhancement</a></li> -->
-
-<section>
-
-  {% include organisms-crunchyowl-teaser.html %}
-
-  {% include organisms-crunchyowl-services.html %}
-
 </section>
