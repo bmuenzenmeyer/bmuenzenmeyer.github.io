@@ -29,7 +29,6 @@ part: 'molecules-crunchyowl.html'
   <h4 class="alt">Content Strategy</h4>
   <p>With a proper content strategy, your message has a broader voice in the community, has more impact, and builds your brand. Creating reusable content to leverage social media is a must in today's environment. I fit right-sized solutions to the right requirements, offering full-stack solutions when necessary, or a handcrafted microsite when the need arises.</p>
 </article>
-</section>
 
 <div class="align-center">
   <a href="mailto:hi@crunchyowl.com" class="button button-call">GIVE A HOOT</a>
