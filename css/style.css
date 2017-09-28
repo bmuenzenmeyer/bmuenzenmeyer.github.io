@@ -34,6 +34,10 @@ img{
 
 }
 
+.article {
+  max-width: 60ch;
+}
+
 .project__container{
 
 }
@@ -115,4 +119,6 @@ PROJECT OVERRIDES
     padding-left: 3rem;
     margin-left: 35rem;
   }
+  
+
 }
