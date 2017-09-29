@@ -11,7 +11,7 @@ summary: 'A Thank You'
 comments: false
 ---
 
-By now the news of some changes to the core team of Pattern Lab have already made the rounds. The Node version of Pattern Lab is forging ahead with increasing momentum from the community and an inspiring roadmap. I welcome a renewed partnership from the PHP platform.  We already have some slick shared features planned.  While I am excited for the future, I want to take a moment to thank the person responsible for much of my growth in the past few years, [Dave Olsen](https://twitter.com/dmolsen).
+By now the news of some changes to the core team of Pattern Lab is making the rounds. The Node version of Pattern Lab is forging ahead with increasing momentum from the community and an inspiring roadmap. I welcome a renewed partnership from the PHP platform.  We already have some slick shared features planned.  While I am excited for the future, I want to take a moment to thank the person responsible for much of my growth in the past few years, [Dave Olsen](https://twitter.com/dmolsen).
 
 Dave, you might not realize it, but I've learned a lot from you.
 
