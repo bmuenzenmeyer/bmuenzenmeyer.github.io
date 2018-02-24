@@ -11,6 +11,9 @@ summary: 'I run through from start to finish how to add a common gulp task into 
 comments: true
 ---
 
+<br />
+_This article only pertains to Pattern Lab Node 2.X._
+
 With [Pattern Lab 2](https://www.smashingmagazine.com/2016/07/building-maintaining-atomic-design-systems-pattern-lab/) released, you can now integrate with the core Pattern Lab library via [Editions](http://patternlab.io/docs/advanced-ecosystem-overview.html). These pre-canned project configurations are meant to be consumed, riffed off of, and made your own: unique to each project or team's workflow.
 
 At the [Atomic Design / Pattern Lab Workshop at WebDesignDay](webdesignday.com/atomic-design-workshop.html), one attendee asked how to integrate Sass compilation into the [off-the-shelf gulp edition](https://github.com/pattern-lab/edition-node-gulp).
@@ -37,24 +40,24 @@ npm install gulp-sass
 
 Once this completes, add the gulp-sass library via a require statement at the top of the gulpfile:
 
-```javascript
-var gulp = require('gulp'),
+{% highlight javascript linenos %}
+  var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2));
-```
+{% endhighlight %}
 
 With sass included, we turn our attention to getting the `.scss` files compiled. For the sake of the demo I'll be assuming you store the `.scss` files alongside `.css` files inside `./source/css/`. Our sass task will compile the `.scss` from this location _back into this location_ so the existing css copy task picks it up.
 
-```javascript
-// SASS Compilation
-gulp.task('pl-sass', function(){
+{% highlight javascript linenos %}
+ // SASS Compilation
+  gulp.task('pl-sass', function(){
   return gulp.src(path.resolve(paths().source.css, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().source.css)));
 });
-```
+{% endhighlight %}
 
 > Note: Read more about Gulp Sass configuration [at its Github repository](https://github.com/dlmanning/gulp-sass).  
 
@@ -68,8 +71,8 @@ gulp pl-sass
 
 If everything is setup right - we see the `scss` compile into `css`. We are not done yet, however. We need to integrate our `pl-sass` task into the main toolchain. Critically, sass compilation needs to occur before copy of the css. Let's look at the `pl-assets` task:
 
-```javascript
-gulp.task('pl-assets', gulp.series(
+{% highlight javascript linenos %}
+ gulp.task('pl-assets', gulp.series(
   gulp.parallel(
     'pl-copy:js',
     'pl-copy:img',
@@ -83,14 +86,14 @@ gulp.task('pl-assets', gulp.series(
     done();
   })
 );
-```
+{% endhighlight %}
 
 This task uses the new gulp 4.X syntax to clearly define what tasks must run in sequential order (series) versus in parallel. This task reads in plain English as: _When I'm told to run `pl-assets`, first run all the `pl-copy` tasks in whichever order you like, and then tell the caller when I'm done._
 
 Something you might notice from the example is that `gulp.series()` and `gulp.parallel()` calls are "nestable." Armed with that knowledge, we augment the task as follows:
 
-```javascript
-gulp.task('pl-assets', gulp.series(
+{% highlight javascript linenos %}
+ gulp.task('pl-assets', gulp.series(
   gulp.parallel(
     'pl-copy:js',
     'pl-copy:img',
@@ -104,15 +107,15 @@ gulp.task('pl-assets', gulp.series(
     done();
   })
 );
-```
+{% endhighlight %}
 
 We've now ensured that `pl-sass` is called before `pl-copy:css` - while maintaining as much asynchronous processing as possible. We can test `pl-assets` individually if we like. Or since it's included in the `patternlab:build` task, we know the task will run with existing Pattern Lab commands.
 
 The last thing we have to do is still gulp to re-run our `pl-sass` task after every `.scss` file change. Add the following to the `watch()` function:
 
-```javascript
-gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass'));
-```
+{% highlight javascript linenos %}
+ gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass'));
+{% endhighlight %}
 
 With this in place the entire build chain will fire every time you save a sass file.
 
