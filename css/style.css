@@ -203,6 +203,9 @@ section {
 a {
   color: #0D80F0; }
 
+p {
+  margin-bottom: 1rem; }
+
 /*
 PROJECT OVERRIDES
 */
@@ -241,6 +244,10 @@ PROJECT OVERRIDES
 
 .project {
   margin-bottom: 10rem; }
+
+.item {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 /*------------------------------------*    $OBJECTS
 \*------------------------------------*/
