@@ -204,6 +204,11 @@ a {
   color: #0D80F0; }
 
 p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem; }
+
+.item__heading {
   margin-bottom: 1rem; }
 
 /*
