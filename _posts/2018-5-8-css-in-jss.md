@@ -109,11 +109,11 @@ P.S. I love Brad. [I work with him](http://patternlab.io), for goodness sake! Wh
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For what it&#39;s worth, I&#39;m very aware I&#39;m throwing some zingers around without really sinking my teeth into it. I&#39;m very much open to learning more about it, but I do remain skeptical. Hopefully this post explains a bit of my apprehension a bit better: <a href="https://t.co/6vFKhT9Tbo">https://t.co/6vFKhT9Tbo</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994027941121200129?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I felt triggered today by Brad’s tweet, but also because there are folks where I work expending valuable energy, money, and [creative exhaust](http://bradfrost.com/blog/post/creative-exhaust/) building CSS only solutions, missing out on an opportunity to explore new territory. They see Brad’s of the world as standard bearers for the familiar, as I do.
-
-Let’s all keep talking to each other, okay?
-
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">I&#39;m very open to listening and learning more, and I&#39;m excited to have started some great conversations with people who work with different approaches and swear by it.</p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994028275235217408?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I felt triggered today by Brad’s tweet, but also because there are folks where I work expending valuable energy, money, and [creative exhaust](http://bradfrost.com/blog/post/creative-exhaust/) building CSS only solutions, missing out on an opportunity to explore new territory. They see Brad’s of the world as standard bearers of the familiar, as I do. I think the problems Brad highlights are valid and warrant pause. Teams need to ultimately decides what is best for them over the lifespan of their product. 
+
+And then, as my friend puts it, I hope they [share what they know](https://twitter.com/brad_frost/status/450619808795885569).
 
 
