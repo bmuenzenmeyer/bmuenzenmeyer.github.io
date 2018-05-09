@@ -31,7 +31,6 @@ When onboarding new teams, we often stumble into a styling discussion. This is i
 I find it useful to look at a simple styled React component as a gentle introduction to a lot of concepts.
 
 {% highlight javascript %}
-
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
@@ -55,7 +54,6 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(Button);
-
 {% endhighlight %}
 
 #### In-file Colocation
@@ -71,7 +69,6 @@ CSS-IN-JS (as the second step of React’s HTML-IN-JS approach) makes sense beca
 Let’s look closely at the styles in the above snippet. Yes, it’s simple. 
 
 {% highlight javascript %}
-
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
@@ -82,18 +79,63 @@ const styles = theme => ({
     },
   },
 });
-
 {% endhighlight %}
 
-`margin`, `color`, `background`. All properties we are familiar with. But look at the value for `margin` or `background`. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. I think this is cool. Because it’s still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?). Media queries work. Descendant selectors work. CSS fundamentals are required—but we have some powertools in our workshop now.
+`margin`, `color`, `background`. All properties we are familiar with. But look at the value for `margin` or `background`. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. Notice that escendant selectors work. I think this is cool. Because it’s all still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?). 
 
-And yes, we still need progressive web applications. We still need `@supports`, we still need to cut the mustard. CSS-IN-JS does not significantly impede these necessities should someone need to build for them. I hope none of this persuades you otherwise.
+Media queries work. 
+
+{% highlight javascript %}
+const styles = theme => ({
+  root: {
+    margin: `0 ${theme.spacing.unit * -3}px`,
+  },
+  '@media (max-width: 1250px)': {
+    root: {
+      margin: `0 ${theme.spacing.unit * 2}px`,
+    },
+  },
+})
+{% endhighlight %}
+
+Pseudoclasses work.
+
+{% highlight javascript %}
+const styles = {
+  paragraph: {
+    '&:last-of-type': {
+      marginBottom: 0,
+    },
+  },
+}
+{% endhighlight %}
+
+`@supports` work.
+
+{% highlight javascript %}
+const styles = theme => ({
+  root: {
+    display: "flex"
+  },
+  "@supports (display: grid)": {
+    root: {
+      display: "grid",
+      gridTemplateColumns: "1fr 800ch 1fr"
+    },
+  },
+});
+}
+{% endhighlight %}
+
+CSS fundamentals are required—but we have some powertools in our workshop now. Got lots of classes to manage? Look no further than [classnames](https://github.com/JedWatson/classnames). 
+
+And yes, we still need progressive web applications. We still need `@supports` feature detection, we still need to cut the mustard. We still need _web design_. CSS-IN-JS does not significantly erode or impede these necessities should someone need to build for them. I hope none of this persuades you otherwise!
 
 #### CSS Yes
 
 Guess what? Your CSS badassery translates into a CSS-IN-JS solution. Teams still need an expert to own the craft of applying visual styles to markup. Doing so correctly and in a scalable manner is still key. All those years of accrued knowledge fighting browser quirks, consulting caniuse, learning CSS grid, clip-paths, gradients, etc, has only made me more powerful in a CSS-IN-JS world. It has translated just fine. I still need to know CSS in order to make something look the way I want to.
 
-There is a time and place for every tool. I doubt I’ll ever advocate CSS-IN-JS to my personal clients—because I am interested in [crafting right-sized solutions](http://crunchyowl.com/). But for teams building large apps atop React it feels like a sane way forward.
+There is a time and place for every tool. CSS-IN-JS makes a lot of sense in a lot of situations that I have encountered in my real-life™ work helping teams. Sass continues to be my go-to everywhere else. Are you building a design system? You may need the portability of the primative (Brad mentions this in the article below). I doubt I’ll ever advocate CSS-IN-JS to my personal clients—because I am interested in [crafting right-sized solutions](http://crunchyowl.com/) and most people I serve haven't needed something so heavy. But for teams building large apps atop React it feels like a sane way forward.
 
 #### Wrapping Up
 
