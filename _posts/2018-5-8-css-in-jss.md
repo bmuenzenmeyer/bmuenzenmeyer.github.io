@@ -78,7 +78,7 @@ const styles = theme => ({
         marginLeft: theme.spacing.unit / 2,
     },
   },
-});
+})
 {% endhighlight %}
 
 `margin`, `color`, `background`. All properties we are familiar with. But look at the value for `margin` or `background`. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. Notice that escendant selectors work. I think this is cool. Because it’s all still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?). 
@@ -123,8 +123,7 @@ const styles = theme => ({
       gridTemplateColumns: "1fr 800ch 1fr"
     },
   },
-});
-}
+})
 {% endhighlight %}
 
 CSS fundamentals are required—but we have some powertools in our workshop now. Got lots of classes to manage? Look no further than [classnames](https://github.com/JedWatson/classnames). 
