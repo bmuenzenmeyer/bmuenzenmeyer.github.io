@@ -6,7 +6,7 @@ tags: 'web development'
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 class: ''
-summary: 'CSS-IN-JS thoughts'
+summary: 'This post is an opinion about CSS-IN-JS. There are many like it but this one is mine'
 
 comments: false
 ---
@@ -18,7 +18,7 @@ It started on my bus home.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How &#39;bout that CSS-in-JS? <a href="https://t.co/mcR9scUhQq">pic.twitter.com/mcR9scUhQq</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/993920969990397952?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I cannot help but be slightly triggered by the tweet. The code snippet demonstrates a fundamental misunderstanding of React and how to apply styles to React components. Anyone seasoned in front end cringes. But to package this up and say "How ’bout that CSS-IN-JS?" really misses the mark for me. It’s a strawman. Perhaps a throwaway joke. But what it also does is dangerously conflate CSS-IN-JS with inline styles. Most CSS-IN-JS solutions now output classes. Full stop.
+I cannot help but be slightly triggered by the tweet. The code snippet demonstrates a fundamental misunderstanding of React and how to apply styles to React components. Anyone seasoned in front end cringes. But to package this up and say "How ’bout that CSS-IN-JS?" really misses the mark for me. This is not Brad’s code (he knows better): it’s a strawman. Perhaps a throwaway joke. But what it also does is dangerously conflate CSS-IN-JS with inline styles. To associate that code with CSS-IN-JS is disingenuous. Some readers of that tweet may misunderstand Brad's intent and come to the conclusion that THAT is CSS-IN-JSS. We aren’t constructively furthering the conversation this way. Most CSS-IN-JS solutions now output classes. Full stop.
 
 #### We Drive into the Future Using Only Our Rearview Mirror
 
