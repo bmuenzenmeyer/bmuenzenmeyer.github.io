@@ -26,7 +26,7 @@ We all take for granted at this point how wrong the above code looks. We (I libe
 
 Now, the product I work on at my job helps other teams write products quickly. It’s primarily a React application, so a modern front-end stack is expected. It can be complicated. We use a CSS-IN-JS technical solution as part of this product. [JSS](https://github.com/cssinjs/jss) to be exact ,though the specifics do not matter to me for the purposes of this post. 
 
-When onboarding new teams, we often stumble into a styling discussion. This is in addition to Javascript, ES6, React, and our proprietary componentry. It’s a lot at once. Those with prior CSS knowledge seem to pick it up pretty quickly. Many still wish to leverage CSS or Sass. I’ve started sharing out [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) by Mark Dalgleish as a superbly balanced look at the landscape. Please go read it. 
+When onboarding new teams, we often stumble into a styling discussion. This is in addition to Javascript, ES6, React, and our proprietary componentry. It’s a lot at once. Those with prior CSS knowledge seem to pick it up pretty quickly. Many still wish to leverage CSS or Sass. I’ve started sharing out [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) by Mark Dalgleish as a superbly balanced look at the landscape. He goes into much deeper detail than I do here. Please go read it. 
 
 I find it useful to look at a simple styled React component as a gentle introduction to a lot of concepts.
 
