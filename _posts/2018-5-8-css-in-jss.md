@@ -56,9 +56,9 @@ const styles = theme => ({
 export default withStyles(styles)(Button);
 {% endhighlight %}
 
-#### In-file Colocation
+#### In-file Collocation
 
-I have a co-worker that is not cut from the same cloth as I—he has little prior front-end experience. The muscle memory of dev tool inspection, source maps, `.scss` @imports, and the like is not present in him. Hunting for a static class name in a file somewhere, or worse, a descendant selector feels daunting.  Same-file colocation allows the styles that affect the component in question to be next to the markup and functionality. On purpose. Contained. As a single portable component. 
+I have a co-worker that is not cut from the same cloth as I—he has little prior front-end experience. The muscle memory of dev tool inspection, source maps, `.scss` @imports, and the like is not present in him. Hunting for a static class name in a file somewhere, or worse, a descendant selector feels daunting.  Same-file collocation allows the styles that affect the component in question to be next to the markup and functionality. On purpose. Contained. As a single portable component. 
 
 Rather than forcing him to learn and follow a convention, the styling is right there for the reading alongside the component he implements.
 
