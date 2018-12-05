@@ -76,6 +76,6 @@ The order should be reversed, but there is no doubting that both definitions app
 
 Good. No one else will as easily.
 
-But to do so without implementing a healthy, sustainable community is acting against the interests of the project. It is and abdication of the very responsibility they have earned.
+But to do so without implementing a healthy, sustainable community is acting against the interests of the project. It is an abdication of the very responsibility they have earned.
 
 I pledge to live by these laws to the best of my ability. I pledge to better understand my responsibilities and act upon them. I pledge to run this race, and to understand that I carry a baton, and to look for those waiting for me.
