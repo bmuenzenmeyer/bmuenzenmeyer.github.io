@@ -12,5 +12,5 @@ deploy:
   keep-history: true
   target_branch: master
   on:
-    branch: master
+    branch: stage
   fqdn: brianmuenzenmeyer.com
