@@ -4,29 +4,21 @@ title: Hi
 ---
 
 <div class="grid">
-
-    <div class="w-h" id="name">Brian Muenzenmeyer</div>
+    {{> nameinlights }}
     <div class="item"></div>
     <div class="item item--grow" id="hi">👋 hi hi</div>
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
-    <div class="item item--grow" id="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
-        <title>Gorilla step</title>
-        <!-- Designed by Metafizzy, 2017 -->
-        <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
-        <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
-        <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
-    </svg></div>
+    <div class="item item--grow" id="logo">{{> gorilla }}</div>
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
     <div class="item item--grow" id="job">lead front end engineer</div>
     <div class="item"></div>
     <div class="item"></div>
-    <div class="item"><a href="http://www.brianmuenzenmeyer.com/archive.html">writing</a></div>
     <div class="item"></div>
-    <div class="item"><a href="https://github.com/bmuenzenmeyer">sometimes open source</a></div>
+    <div class="item"><a href="https://github.com/bmuenzenmeyer">github</a></div>
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
@@ -37,12 +29,22 @@ title: Hi
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></div>
+    <div class="item"></div>
+    <div class="item"></div>
     <div class="item"><a href="https://twitter.com/bmuenzenmeyer">twitter</a></div>
     <div class="item"></div>
     <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+    <div class="item"></div> 
+    {{reverseArray collections.words}}
+    {{#each collections.words}}
+    {{{ randomItem }}}
+    <div class="item">
+        <a href="{{this.data.page.url}}">
+            🖋️ {{this.data.title}}
+        </a>
+    </div>
+    {{{ randomItem }}}
+    {{/each}}
     <div class="item"></div>
     <div class="item"></div>
     <div class="item"></div>
@@ -69,41 +71,4 @@ title: Hi
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    const classes = ['dotted', 'striped', 'grid', 'white', 'grey', 'gray', 'gris', 'grease', 'black']
-
-    const changeNode = (winnerwinnerdivdinner) => {
-        if (winnerwinnerdivdinner === undefined) {
-            const divs = $('.item')
-            winnerwinnerdivdinner = $('.item').get(getRandomInt(divs.length))	
-        } else {
-            winnerwinnerdivdinner = winnerwinnerdivdinner.target;
-        }
-        
-        const newClass = getRandomInt(classes.length)
-        $(winnerwinnerdivdinner).attr( 'class', `item bg-${classes[newClass]}` )
-    }
-
-    $(() => {
-        setInterval(changeNode, 200)
-
-        $(window).on("scroll", function() {
-            var scrollHeight = $(document).height();
-            var scrollPosition = $(window).height() + $(window).scrollTop();
-            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-                $('.grid').append('<div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div>')  
-            }
-
-        });
-        
-        $('body').on('click', '.item', e => {
-            changeNode(e)
-        })
-        
-    })
-</script>
+{{> razzledazzle scroll=true }}

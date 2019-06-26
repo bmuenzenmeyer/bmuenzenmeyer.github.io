@@ -9,12 +9,14 @@
 </head>
 <body>
 
-{{> components-header }}
+{{> components-header }}    
 
-<main id="container" role="main" class="{{ page.class }}">
-  <h2 class="item__heading">{{ page.title }}</h2>
+<main id="container" role="main" class="{{ class }} container--readable">
+  <h2 class="item--title">{{ title }}</h2>
   {{{ content }}}
 </main>
+
+{{> razzledazzle }}
 
 </body>
 </html>

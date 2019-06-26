@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: layouts/item.hbs
 
 title: "I, Maintainer"
-tags: "open source"
+tags: "words"
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 class: ""

@@ -1,8 +1,20 @@
 /* CSS */
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
-/* Specify in CSS */
-.grid {
+
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: "Fira Code", monospace;
+}
+
+.container--readable {
+  max-width: 80ch;
+  margin: 1rem auto;
+}
+
+.grid {
   overflow-x: hidden;
   display: grid;
   grid-gap: 5px;
@@ -51,8 +63,12 @@
 
 .item--grow {
   place-self: center;
-  height: calc(100% - 15px);
-  width: calc(100% - 15px);
+  height: calc(100% - 5px);
+  width: calc(100% - 5px);
+}
+
+.item--title {
+  font-size: 12vw;
 }
 
 svg {
@@ -86,6 +102,10 @@ a:hover {
     font-size: 4.5rem;
     grid-column: auto / span 2;
   }
+}
+
+#name a {
+  color: black;
 }
 
 #hi {
@@ -200,6 +220,10 @@ a:hover {
 
 .item.bg-black {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.item.bg-white {
+  background: #fff;
 }
 
 .item.bg-grid,
