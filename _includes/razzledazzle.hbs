@@ -1,0 +1,41 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    const classes = ['dotted', 'striped', 'grid', 'white', 'grey', 'gray', 'gris', 'grease', 'black']
+
+    const changeNode = (winnerwinnerdivdinner) => {
+        if (winnerwinnerdivdinner === undefined) {
+            const divs = $('.item')
+            winnerwinnerdivdinner = $('.item').get(getRandomInt(divs.length))	
+        } else {
+            winnerwinnerdivdinner = winnerwinnerdivdinner.target;
+        }
+        
+        const newClass = getRandomInt(classes.length)
+        $(winnerwinnerdivdinner).attr( 'class', `item bg-${classes[newClass]}` )
+    }
+
+    $(() => {
+        setInterval(changeNode, 200)
+        {{#if scroll}}
+
+        $(window).on("scroll", function() {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                $('.grid').append('<div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div><div class="item"></div>')  
+            }
+
+        });
+        
+        {{/if}}
+        
+        $('body').on('click', '.item', e => {
+            changeNode(e)
+        })
+        
+    })
+</script>

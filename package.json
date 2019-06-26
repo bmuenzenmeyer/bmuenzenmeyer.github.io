@@ -1,0 +1,23 @@
+{
+  "name": "bmuenzenmeyer.github.io",
+  "version": "1.0.0",
+  "description": "bmuenzenmeyer.github.io\r =======================",
+  "main": ".eleventy.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "0.8.3"
+  },
+  "scripts": {
+    "start": "npx eleventy --serve --port=8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io.git"
+  },
+  "author": "Brian Muenzenmeyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io/issues"
+  },
+  "homepage": "https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io#readme"
+}
