@@ -39,8 +39,8 @@ title: Hi
     {{#each collections.words}}
     {{{ randomItem }}}
     <div class="item">
-        <a href="{{this.data.page.url}}">
-            🖋️ {{this.data.title}}
+        <a href="{{{this.data.permalink}}}">
+            {{#ifIn 'keyboard' this.data.tags}} ⌨️ {{/ifIn}}{{#ifIn 'writing' this.data.tags}} 🖋️ {{/ifIn}} {{this.data.title}}
         </a>
     </div>
     {{{ randomItem }}}

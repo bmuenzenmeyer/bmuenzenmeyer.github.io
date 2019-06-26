@@ -2,8 +2,10 @@
 layout: layouts/item.hbs
 
 title: "I, Maintainer"
-tags: "words"
+permalink: /i-maintainer/index.html
+tags: ["words", "keyboard"]
 author: Brian Muenzenmeyer
+date: 2018-10-04
 twitter: bmuenzenmeyer
 class: ""
 summary: 'Because it is more than "Be Glad It Exists"'

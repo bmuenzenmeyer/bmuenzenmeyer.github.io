@@ -2,7 +2,9 @@
 layout: layouts/item.hbs
 
 title: "CSS-IN-JS"
-tags: "words"
+permalink: /css-in-js/index.html
+date: 2018-05-08
+tags: ["words", "keyboard"]
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 class: ""
