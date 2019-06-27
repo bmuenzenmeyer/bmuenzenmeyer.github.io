@@ -223,7 +223,7 @@ a:hover {
 }
 
 .item.bg-white {
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
 }
 
 .item.bg-grid,
