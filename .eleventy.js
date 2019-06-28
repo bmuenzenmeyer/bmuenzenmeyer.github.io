@@ -5,10 +5,20 @@ function getRandomInt(max) {
 module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("default", "layouts/default.hbs");
 
+  //asset folders
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
 
+  // favicons
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("android-chrome-96x96.png");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
+  eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg");
+
+  //handlebars
   eleventyConfig.addShortcode("randomItem", function() {
     const a = new Array(getRandomInt(3)).fill("");
     return a.reduce((i, s) => `${s}<div class='item'></div>`, "");
