@@ -12,6 +12,7 @@ html {
 .container--readable {
   max-width: 80ch;
   margin: 1rem auto;
+  padding-bottom: 2rem;
 }
 
 .grid {
