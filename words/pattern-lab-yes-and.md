@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/item.hbs
 
 title: "Pattern Lab. Yes, and..."
 permalink: /pattern-lab-yes-and/index.html
