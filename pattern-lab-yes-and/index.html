@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Pattern Lab. Yes, and... : A Thank You :  The personal website of Brian Muenzenmeyer.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <title> Pattern Lab. Yes, and... : Brian Muenzenmeyer</title>
+</head>
+
+<body>
+
+    <main id="container" role="main">
+        
+<header class="masthead grid">
+  <div class="w-h" id="name"><a href="/">Brian Muenzenmeyer</a></div>  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item item--grow" id="logo">  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+        <title>Gorilla step</title>
+        <!-- Designed by Metafizzy, 2017 -->
+        <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
+        <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
+        <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
+    </svg>  </div>
+  <div class="item"></div>
+  <div class="item"></div>
+
+  <div class="item"><a href="https://github.com/bmuenzenmeyer">github</a></div>
+  <div class="item"><a href="https://twitter.com/bmuenzenmeyer">twitter</a></div>
+  <div class="item"><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</header>
+
+<main id="container" role="main" class=" container--readable">
+  <h2 class="item--title">Pattern Lab. Yes, and...</h2>
+  <p>By now the news of some changes to the core team of Pattern Lab is <a href="http://bradfrost.com/blog/post/whats-next-for-pattern-lab/">making the rounds</a>. The Node version of Pattern Lab is forging ahead with increasing momentum from the community and an inspiring roadmap. I welcome a renewed partnership from the PHP platform. We already have some slick shared features planned. While I am excited for the future, I want to take a moment to thank the person responsible for much of my growth in the past few years, <a href="https://twitter.com/dmolsen">Dave Olsen</a>.</p>
+<p>Dave, you might not realize it, but I've learned a lot from you.</p>
+<p>From you I learned to adhere to a higher degree of professionalism in the code I wrote and documented.</p>
+<p>From you I learned to fret over the upgrade paths my users may encounter should they remain vested in my work.</p>
+<p>From you I learned how to be prepared for a release, and how to properly communicate change.</p>
+<p>From you I learned to embrace the right tool for the job.</p>
+<p>From you I learned to sometimes do the simple thing when the clever one seems like a better option.</p>
+<p>From you I learned to be firm to an ideal, balancing developer ergonomics for user convenience.</p>
+<p>From you I learned to care about people just learning something I had achieved mastery over.</p>
+<p>From you I learned how to long term plan an open source project - even if things don't always go as planned.</p>
+<p>From you I learned how to be a team player, playing midfield and running the length of the field to help wherever needed.</p>
+<p>From you I learned to support my fellow contributor when they ask for help, for s/he is likely going through just as much bullshit as I am, and STILL choosing to contribute.</p>
+<p>From you I learned that you always take a phone call if you can afford to.</p>
+<p>From you I learned to separate disparate concerns at an architectural level I had not yet seen put to practice.</p>
+<p>From you I learned to think beyond myself, my immediate concerns, and embrace the ideas of those around me. Without your early support, I would have achieved nothing. You are the embodiment of <a href="https://en.wikipedia.org/wiki/Yes,_and..."><strong>yes, and</strong></a>.</p>
+<p>From you I learned what it means to even have users that care about a product I helped build. Making is a core human endeavor. And you helped me get better at the craft.</p>
+<p>Thank you Dave.</p>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    const classes = ['dotted', 'striped', 'grid', 'white', 'white', 'white', 'white', 'white', 'grey', 'gray', 'gris', 'grease', 'black']
+
+    const changeNode = (winnerwinnerdivdinner) => {
+        if (winnerwinnerdivdinner === undefined) {
+            const divs = $('.item')
+            winnerwinnerdivdinner = $('.item').get(getRandomInt(divs.length))	
+        } else {
+            winnerwinnerdivdinner = winnerwinnerdivdinner.target;
+        }
+        
+        const newClass = getRandomInt(classes.length)
+        $(winnerwinnerdivdinner).attr( 'class', `item bg-${classes[newClass]}` )
+    }
+
+    $(() => {
+        setInterval(changeNode, 2000)
+        
+        $('body').on('click', '.item', e => {
+            changeNode(e)
+        })
+        
+    })
+</script>
+</body>
+</html>
+
+    </main>
+
+</body>
+
+</html>
