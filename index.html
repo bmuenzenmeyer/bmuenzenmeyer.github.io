@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>brianmuenzenmeyer.com</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link rel="icon" href="compassrose.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/bmz.min.css">
+        <link rel="apple-touch-icon" href="compassrose-57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="compassrose-72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="compassrose-114.png">
+        <style>#compassRoseContent:hover{cursor: pointer;}</style>
+    </head>
+    <body>
+        <div>
+            <h1>Lost? <small>I can show you the way</small></h1>
+            <div id="rose">
+                <div><a href="#about.cshtml" title="hi">about me</a></div>
+                <div><a href="https://twitter.com/bmuenzenmeyer" title="twitter">follow me</a></div>
+                <div><a href="https://github.com/bmuenzenmeyer" title="github">fork me</a></div>  
+                <div><a href="#uncharted/index.cshtml" title="into the void">uncharted</a></div>
+                <div><a href="#projects.cshtml" title="projects">watch me</a></div>
+                <div><a href="#articles/index.cshtml" title="blog">read me</a></div>
+            </div>
+            <img id="compassRoseContent" src="images/compassrose.gif" alt="These days its hard to know which way to go." title="These days its hard to know which way to go." width=250 height=268 />
+        </div>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/compassrose-0.2.js"></script>
+        <script>
+            $(function () {
+                $('#rose').compassRose({ radius: 200 });
+                var boogie;
+                function dance() {
+                    return setInterval(function () {
+                        $('#rose').compassRose('rotate', -6);
+                    }, 1000);
+                }
+                $('#rose div').hover(function () {
+                    clearInterval(boogie);
+                });
+                $('#compassRoseContent').on('click', function () {
+                    clearInterval(boogie);
+                    boogie = dance();
+                });
+            });
+        </script>
+    </body>
+</html>
