@@ -1,24 +1,100 @@
----
-layout: none
----
 var bmz = {};
 bmz.get = 
 	{
-		"title": "{{ site.name }}",
-		"description": "{{ site.description }}",
-		"link": "{{ site.url }}",
+		"title": "Brian Muenzenmeyer",
+		"description": "The personal site of Brian Muenzenmeyer.",
+		"link": "http://bmuenzenmeyer.github.io",
 		"posts" : [
-			{% for post in site.posts limit:10 %}
+			
 				{
-				"title": "{{ post.title }}",
-				"blurb": "{{ post.blurb }}",
-				"pubDate": "{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}",
-				"link": "{{ site.url }}{{ post.url }}"
-				{% if forloop.rindex > 1 %}
+				"title": "Adding Common Gulp Tasks to Pattern Lab Node",
+				"blurb": "",
+				"pubDate": "Thu, 21 Jul 2016 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/adding-common-gulp-tasks-to-pattern-lab-node"
+				
 				},
-				{% else %}
+				
+			
+				{
+				"title": "Pattern Lab 2",
+				"blurb": "",
+				"pubDate": "Wed, 13 Jul 2016 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/pattern-lab-2"
+				
+				},
+				
+			
+				{
+				"title": "Web Design Day",
+				"blurb": "",
+				"pubDate": "Mon, 25 Apr 2016 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/web-design-day"
+				
+				},
+				
+			
+				{
+				"title": "February 2016 Month In Review",
+				"blurb": "",
+				"pubDate": "Tue, 01 Mar 2016 00:00:00 -0600",
+				"link": "http://bmuenzenmeyer.github.io/february-month-in-review"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 1.1.0 Released",
+				"blurb": "",
+				"pubDate": "Tue, 09 Feb 2016 00:00:00 -0600",
+				"link": "http://bmuenzenmeyer.github.io/pattern-lab-node-1-1-0-released"
+				
+				},
+				
+			
+				{
+				"title": "January 2016 Month In Review",
+				"blurb": "",
+				"pubDate": "Sun, 31 Jan 2016 00:00:00 -0600",
+				"link": "http://bmuenzenmeyer.github.io/january-month-in-review"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 1.0.0 Released",
+				"blurb": "",
+				"pubDate": "Wed, 09 Dec 2015 00:00:00 -0600",
+				"link": "http://bmuenzenmeyer.github.io/pattern-lab-node-1-0-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Solving Problems with Pattern Lab - Small Team Workflow",
+				"blurb": "",
+				"pubDate": "Fri, 25 Sep 2015 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/solving-problems-with-pattern-lab-small-team-workflow"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 0.10.0 Released",
+				"blurb": "",
+				"pubDate": "Sat, 01 Aug 2015 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/pattern-lab-node-0-10-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 0.9.0 Released",
+				"blurb": "",
+				"pubDate": "Wed, 22 Apr 2015 00:00:00 -0500",
+				"link": "http://bmuenzenmeyer.github.io/pattern-lab-node-0-9-0-released"
+				
 				}
-				{% endif %}
-			{% endfor %}
+				
+			
 		]
 	}

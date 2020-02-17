@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Pattern Lab Node 0.10.0 Released || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<div class="masthead">
+  <header>
+    <h1 class="compact"><a href="http://brianmuenzenmeyer.com">BRIAN MUENZENMEYER</a>
+    </h1>
+  </header>
+</div>
+<!-- <img src="../../images/Eagle_OwlGreen_Transparent.png"/> -->
+<div class="striped fullbleed">&nbsp;
+</div>
+
+
+<header class="bannerheading fullbleed align-center dotted ">
+  <h2 class="alpha giga">Pattern Lab Node 0.10.0 Released</h2>
+</header>
+
+<main id="container" role="main" class="">
+  <section class="article ">
+
+  <p>A busy time here again - with an uptick in interest in the project and renewed focus from me. Your humble port maintainer wants to get to v1.0.0 like no-other! It was also unlike any release to date - as it started with an incremental feature addition (pattern parameters) and ended with a complete overhaul of how patterns were stitched together with data.</p>
+
+<h3 id="waiter-is-that-a-parameter-i-see-in-my-pattern">Waiter, Is That A Parameter I See in My Pattern?</h3>
+<p>Yes they are finally here! Pattern parameters are a simple mechanism for replacing Mustache variables via attributes on a pattern partial tag rather than having to use a pattern-specific json file. They are especially useful when you want to supply distinct values for Mustache variables in a specific pattern partial instance that may be included multiple times in a molecule, template, or page.</p>
+
+<p>The basic syntax is this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>{{&gt; molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The attributes listed in the pattern parameters should match Mustache variable names in your pattern. The values listed for each attribute will replace the Mustache variables. Again, pattern parameters are a simple find and replace of Mustache variables with the supplied values.</p>
+
+<p>Pattern parameters <strong>do not</strong> currently support the following:</p>
+
+<ul>
+  <li>sub-lists (e.g. iteration of a section),</li>
+  <li>and the use of long strings of text can be unwieldy</li>
+  <li>nested properties within the parameter data, such as ``</li>
+</ul>
+
+<p>You can read the full documentation on pattern parameters here: <a href="http://patternlab.io/docs/pattern-parameters.html">Using Pattern Parameters</a></p>
+
+<h3 id="data-inheritance">Data Inheritance</h3>
+
+<p>I cannot omit what I easily sank the most hours and stress into - the rendering of data correctly. Data inheritance is such a core concept to Pattern Lab that discovering a critical flaw in my algorithm was tough to swallow — it basically meant the port was never close to emulating the power of its older brother. I learned this during a rather routine comparison of functionality between PHP and Node, by  finally noticing that the home page touts were not rendered at all. Sure enough, they were not defined in the global data; <em>only</em> within the <code class="highlighter-rouge">homepage.json</code></p>
+
+<h3 id="changelog">CHANGELOG</h3>
+
+<ul>
+  <li>ADD: Added support for <a href="http://patternlab.io/docs/pattern-parameters.html">pattern parameters</a>! Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/88">#88</a></li>
+  <li>FIX: Data inheritance is now working as advertised. Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/127">#127</a>. This turned out to be a MAJOR thing, as I realized the home-page was not passing down any of its json data to partials.</li>
+  <li>CHG: Refactored a lot of code out of patternlab.js and into separate files. Doing so should make everything dryer, more unit testable, and easier to understand I hope.</li>
+  <li>ADD: Added proper styling for the homepage-emergency alert that is displayed for demo purposes</li>
+  <li>ADD: Added a new comment organism, the sticky comment, to ship an example of pattern parameters</li>
+  <li>CHG: Start some JS linting of the project. I don’t quite agree with a lot of it, so am trying to set some smart configurations</li>
+  <li>CHG: Wrapped some build messages in the patternlab.config.debug flag</li>
+  <li>FIX: Allow users to set a base url path. Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/125">#125</a> (testing in the wild requested)</li>
+  <li>THX: Thanks <a href="https://github.com/scottnath">@scottnath</a> for the proposed base url solution and <a href="https://github.com/jkbyln">@jkbyln</a> for discussion on the topic too!</li>
+</ul>
+
+<h3 id="upgrade-instructions">UPGRADE INSTRUCTIONS</h3>
+
+<p>Normally one could be safe following the instructions in <a href="https://github.com/pattern-lab/website/blob/dev/patternlabsite/docs/node/upgrading.md">here</a>, but this time we’ve changed some <code class="highlighter-rouge">source/_patternlab-files/</code> directory files too. I have opened <a href="https://github.com/pattern-lab/patternlab-node/issues/133">an issue</a> to make this process smoother in the future. For now, you should be able to upgrade using the follow process:</p>
+
+<ol>
+  <li>Backup your <code class="highlighter-rouge">source/</code> directory and <code class="highlighter-rouge">config.json</code></li>
+  <li>Overwrite all of <code class="highlighter-rouge">builder/</code> and <code class="highlighter-rouge">public/</code> as normal</li>
+  <li>Refer to this <a href="https://github.com/pattern-lab/patternlab-node/pull/130/files">pull request</a> if you need help, but you’ll essentially need to:
+    <ul>
+      <li>Add <code class="highlighter-rouge">"baseurl" : ""</code> to <code class="highlighter-rouge">config.json</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/pattern-header-footer/footer.html</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/styleguide.mustache</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/viewall.mustache</code></li>
+    </ul>
+  </li>
+</ol>
+
+<p>Sorry for the inconvenience. I know this isn’t ideal, but it’s far from impossible. Perhaps if you don’t need pattern parameter support or the base url you may choose to postpone an upgrade.</p>
+
+<p>I put a lot of hours into this one - essentially rewriting the entire engine -hope you like what you see!</p>
+
+<p>You can view the specific release here: <a href="https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0">https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0</a></p>
+
+<h3 id="pattern-lab-node-v100">Pattern Lab Node v1.0.0</h3>
+
+<p>Partly for my own sanity, and partly at the request of the community, I have organized remaining work into a <a href="https://github.com/pattern-lab/patternlab-node/issues/134">roadmap</a> for sorts. A person dedicating more hours to the project would churn through like I do a stack of pancakes, but for me it will take months yet. My goals are to be transparent about direction, emphasize the current finish line as the mustache-powered Pattern Lab PHP v1, and motivate myself toward that finish line. Please let me know if your current needs don’t jive with the roadmap..</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 08/01/15 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//solving-problems-with-pattern-lab-small-team-workflow" title="Solving Problems with Pattern Lab - Small Team Workflow">Newer Post<br/>Solving Problems with Pattern Lab - Small Team Workflow</a>
+
+
+
+<a href="//pattern-lab-node-0-9-0-released" title="Pattern Lab Node 0.9.0 Released">Older Post<br/>Pattern Lab Node 0.9.0 Released</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'brianmuenzenmeyer'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</section>
+
+</main>
+
+<div class="fullbleed striped">&nbsp;</div>
+<footer class="bg-gray fullbleed">
+  <section>
+
+    <div class="bio">
+
+      <img src="http://www.brianmuenzenmeyer.com/img/brian.jpg" alt="A picture of me in grey." class="bio_img"/>
+      <p class="bio_about">Hi hi, I'm Brian. I maintain <a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a> and moonlight at <a href="http://crunchyowl.com">Crunchy Owl</a>, my small studio. When not online, I am digging up the yard, wearing an afghan, talking about something I heard on public radio, dressing in grayscale, or pretending to play the piano.</p>
+      <p class="bio_about">The best way to reach me is on Twitter <a href="https://twitter.com/bmuenzenmeyer">@bmuenzenmeyer</a>.</p>
+    </div>
+
+    <div class="buttons buttons-capped buttons-social">
+  <a href="https://twitter.com/bmuenzenmeyer">Twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">Github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">Codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">Email</a>
+</div>
+
+
+    <div>
+  <blockquote class="contrasted">Above all, I have been a sentient being, a thinking animal, on this beautiful planet, and that in itself has been an enormous privilege and adventure. <cite><a href="http://mobile.nytimes.com/2015/02/19/opinion/oliver-sacks-on-learning-he-has-terminal-cancer.html">Oliver Sacks</a></cite></blockquote>
+</div>
+
+
+    <p><small>Be kind. Share things you find here in source or on screen. Words CC BY 4.0 Code WTFPL. Typeset in <a href="http://overpassfont.org/">Overpass</a> </small></p>
+  </section>
+
+</footer>
+
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

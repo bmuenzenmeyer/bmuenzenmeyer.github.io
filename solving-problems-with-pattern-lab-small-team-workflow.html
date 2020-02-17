@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Solving Problems with Pattern Lab - Small Team Workflow || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<div class="masthead">
+  <header>
+    <h1 class="compact"><a href="http://brianmuenzenmeyer.com">BRIAN MUENZENMEYER</a>
+    </h1>
+  </header>
+</div>
+<!-- <img src="../../images/Eagle_OwlGreen_Transparent.png"/> -->
+<div class="striped fullbleed">&nbsp;
+</div>
+
+
+<header class="bannerheading fullbleed align-center dotted ">
+  <h2 class="alpha giga">Solving Problems with Pattern Lab - Small Team Workflow</h2>
+</header>
+
+<main id="container" role="main" class="">
+  <section class="article ">
+
+  <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I’ve had a soft-spot for style guides, ever since seeing <a href="http://pea.rs/">http://pea.rs/</a> at An Event Apart a couple years back. When <a href="http://patternlab.io/">Pattern Lab</a> emerged soon after, I was hooked. Since, I’ve maintained the <a href="https://github.com/pattern-lab/patternlab-node">Node version</a> of Brad Frost’s and Dave Olsen’s Pattern Lab and used it in a number of personal and professional projects. At the company I work for, I use Pattern Lab as the style guide for our next-phase web applications.</p>
+
+<h3 id="so-i-said-to-myself-ldquoselfrdquo">So I said to myself, “self”</h3>
+<p>My company employs less than 20 people. In addition to being rank-and-file software developer, I am what the <a href="https://vimeo.com/139025298">crazy-insightful</a> <a href="http://leahbuley.com/">Leah Buley</a> calls a “ <a href="http://rosenfeldmedia.com/books/the-user-experience-team-of-one/">User Experience Team of One</a>”. This is not without its freedoms and its challenges. Consistency and stakeholder alignment are paramount, and so far exposing the style guide to the company has been met with encouragement and collaboration. Still, many of the core benefits of style guide are diminished when I fill multiple roles a style guide is meant to mediate between.</p>
+
+<h3 id="growing-pains">Growing Pains</h3>
+<p>While I am able to quickly use Pattern Lab to explore, build and tune patterns, the team stumbled when I included a direct reference to our style guide in implementation details of a planned feature. Really good questions cropped up:</p>
+
+<ul>
+  <li>Can I copy-paste the markup in the style guide?</li>
+  <li>Should the style guide document every possible state of the control/widget?</li>
+  <li>Am I expected to keep the style guide up to date?</li>
+  <li>Is the style guide the de-facto spec?</li>
+  <li>Is the style guide going to house every content-iteration of a control, like different confirmation modals?</li>
+</ul>
+
+<p>It was then I realized I was unprepared to answer most of these questions, and that my internal understanding of what Pattern Lab is <em>and could be</em> vastly differed from my coworkers.</p>
+
+<p>And so when I saw this, I couldn’t help but ask:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/brad_frost">@brad_frost</a> Should the new artifacts built with a style guide live on as part of it, or only new patterns extracted from them?</p>&mdash; Brian Muenzenmeyer (@bmuenzenmeyer) <a href="https://twitter.com/bmuenzenmeyer/status/645984298697256960">September 21, 2015</a></blockquote>
+
+<p>I had all my ammo prepared, slung right back in the face of the man himself. <em>Little did Brad know I was just deflecting my own troubles.</em></p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/brad_frost">@brad_frost</a> ditto! We came up with a decent compromise, but it&#39;s a longer-form explanation and not perfect.</p>&mdash; Brian Muenzenmeyer (@bmuenzenmeyer) <a href="https://twitter.com/bmuenzenmeyer/status/645997566430064640">September 21, 2015</a></blockquote>
+
+<p>Still, I found hope in our exchange (click on the cards to see some additional Tweets) - because it revealed to me that we are all very much still working on how best to incorporate style guides into our workflows. I know we can figure it out together. Brad rejoindered:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/bmuenzenmeyer">@bmuenzenmeyer</a> Sounds like a blog post! hahaha</p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/645998332020686849">September 21, 2015</a></blockquote>
+
+<h3 id="starting-small-staying-small">Starting Small, Staying Small</h3>
+<p>Pattern Lab can do many things, like build a content-driven website using increasingly more complex structured widgets, first with placeholder content and then actual content. But perhaps I cannot do many things with it under limited circumstances. First and foremost, what we needed was a clear, upfront definition of my three-fold uses of Pattern Lab.</p>
+
+<ol>
+  <li>Style guide</li>
+  <li>Pattern Library</li>
+  <li>Laboratory</li>
+</ol>
+
+<p>I went so far as to make the first pattern you see in Pattern Lab a welcome of sorts, explaining these three uses.</p>
+
+<p>So primarily, Pattern Lab is our living reference of the visual design elements that make up the application. Via gulp running on our source code, the CSS is automatically pushed to Pattern Lab with every save. Now I an see a 10,000 ft view of our interface elements decoupled from the application itself. This satisfies the most basic definition of a style guide.</p>
+
+<p>Pattern Lab is also, secondarily, our pattern library. I hope this doesn’t come as too much of a surprise. Common markup patterns can be combined to illustrate interactions between components. My goal is to make this someday something copy-pastable, so if you need to know how to create a new modal, or the data table, or the card - you can take the generic one from here that comprises all the right elements.</p>
+
+<p>The last stated use of Pattern Lab is as a personal laboratory for me while designing new solutions. Pattern Lab’s feature-set, whether it be <a href="http://patternlab.io/docs/pattern-parameters.html">pattern parameters</a>, swappable json files, or just the browser frontend itself, make it an invaluable tool to design a responsive web application in the browser. But I recognize and concede the fact that we are not big enough to keep this thing perfectly in sync with all source code. No, it ain’t <a href="http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html">Lonely Planet’s Rizzo</a>, but it’s enough for us, for now. So I call attention to this explicitly with the team. I may use some of the more advanced features of Pattern Lab during design, showing it to others, testing against it, and so on. But when we start to solidify, the more evolved “organisms” are deconstructed into any new patterns that have emerged. It’s for the best, as they evolve too fast once in the wild anyway, but their ancestral patterns remain. By doing this, we limit the “unDRYness,” reduce the responsibilities of other developers, and mitigate a lot of the original concerns, freeing us to focus more on the benefits than the downsides.</p>
+
+<hr />
+
+<p>I hope sharing this faceted application of Pattern Lab as a styleguide helps you as much as it helps me. I also hope that this posts title becomes a series of posts. We’ll see. Perhaps you can help. What are you solving with Pattern Lab?</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 09/25/15 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//pattern-lab-node-1-0-0-released" title="Pattern Lab Node 1.0.0 Released">Newer Post<br/>Pattern Lab Node 1.0.0 Released</a>
+
+
+
+<a href="//pattern-lab-node-0-10-0-released" title="Pattern Lab Node 0.10.0 Released">Older Post<br/>Pattern Lab Node 0.10.0 Released</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'brianmuenzenmeyer'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</section>
+
+</main>
+
+<div class="fullbleed striped">&nbsp;</div>
+<footer class="bg-gray fullbleed">
+  <section>
+
+    <div class="bio">
+
+      <img src="http://www.brianmuenzenmeyer.com/img/brian.jpg" alt="A picture of me in grey." class="bio_img"/>
+      <p class="bio_about">Hi hi, I'm Brian. I maintain <a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a> and moonlight at <a href="http://crunchyowl.com">Crunchy Owl</a>, my small studio. When not online, I am digging up the yard, wearing an afghan, talking about something I heard on public radio, dressing in grayscale, or pretending to play the piano.</p>
+      <p class="bio_about">The best way to reach me is on Twitter <a href="https://twitter.com/bmuenzenmeyer">@bmuenzenmeyer</a>.</p>
+    </div>
+
+    <div class="buttons buttons-capped buttons-social">
+  <a href="https://twitter.com/bmuenzenmeyer">Twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">Github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">Codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">Email</a>
+</div>
+
+
+    <div>
+  <blockquote class="contrasted">Above all, I have been a sentient being, a thinking animal, on this beautiful planet, and that in itself has been an enormous privilege and adventure. <cite><a href="http://mobile.nytimes.com/2015/02/19/opinion/oliver-sacks-on-learning-he-has-terminal-cancer.html">Oliver Sacks</a></cite></blockquote>
+</div>
+
+
+    <p><small>Be kind. Share things you find here in source or on screen. Words CC BY 4.0 Code WTFPL. Typeset in <a href="http://overpassfont.org/">Overpass</a> </small></p>
+  </section>
+
+</footer>
+
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>
