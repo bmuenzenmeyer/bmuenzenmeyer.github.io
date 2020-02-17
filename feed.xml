@@ -1,21 +1,616 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{{ site.name }}</title>
-		<description>{{ site.description }}</description>
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		<title>Brian Muenzenmeyer</title>
+		<description>The personal site of Brian Muenzenmeyer.</description>
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		
 			<item>
-				<title>{{ post.title }}</title>
-				<description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+				<title>Pattern Lab Node 1.1.0 Released</title>
+				<description>&lt;h1 id=&quot;pattern-lab-node-110-released&quot;&gt;Pattern Lab Node 1.1.0 Released&lt;/h1&gt;
+
+&lt;p&gt;Pattern Lab Node 1.1.0 is here, not to be outdone by v1.0.0!&lt;/p&gt;
+
+&lt;p&gt;In terms of relative change, it’s bigger than v1.0.0 in fact, with a good mix of fixes, enhancements, and a lot of work put into the shipped grunt/gulp harness you’ve almost undoubtedly customized already. Switching to configurable paths and making the core library require()-able is a huge win, opening the doors to &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/wiki/Running-Pattern-Lab-Node-as-an-npm-Dependency&quot;&gt;running Pattern Lab Node as an npm dependency&lt;/a&gt;. If you’ve ever had to struggle through an upgrade, I suggest you check this out, as it should greatly lessen future maintenance costs and allow us to do some other cool stuff soon!&lt;/p&gt;
+
+&lt;p&gt;Reference examples of a parent projects running Pattern Lab Node as a dependency can be found here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bmuenzenmeyer/patternlab-node-grunt-dependency-example&quot;&gt;Grunt Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bmuenzenmeyer/patternlab-node-gulp-dependency-example&quot;&gt;Gulp Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I want to take special note to @geoffp and @EvanLovely who were integral in crafting the major paths and require() work this release. Pattern Lab Node is a more reliable, more maintainable tool now.
+&lt;em&gt;Thank you&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;View the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/pull/243/files&quot;&gt;full version diff here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;changelog&quot;&gt;CHANGELOG&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;FIX: Fixed issue where partials containing styleModifiers with integers were not found correctly under all circumstances&lt;/li&gt;
+  &lt;li&gt;FIX: Fixed issue where excluded patterns were still rendered on the Pattern Lab site. Now they do not directly get rendered via the menu, view all links, or the styleguide, but are accessible for inclusion as pattern partials, and can be accessed via lineage.&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @theorise for reporting these issues.&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @dmolsen for input on desired behavior.&lt;/li&gt;
+  &lt;li&gt;FIX: Fixed issue where style modifier partials within list item blocks where not uniquely being applied. this seems like a regression. added a unit test with fix&lt;/li&gt;
+  &lt;li&gt;ADD: Added fuzzy pattern matching support based on patternType-substring(patternName) to align with PL PHP&lt;/li&gt;
+  &lt;li&gt;FIX: Fixed issue with gulpfile not copying style.css and watching the wrong directory&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @robinsonaaron for the issue and pull request!&lt;/li&gt;
+  &lt;li&gt;FIX: Prefer exact pattern key match over fuzzy matches inside getpatternbykey()&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @EvanLovely for the suggestion&lt;/li&gt;
+  &lt;li&gt;ADD: Make all paths configurable&lt;/li&gt;
+  &lt;li&gt;THX: HUGE Thanks to @geoffp and @EvanLovely for their thoughts, time, and talent to make this a reality!&lt;/li&gt;
+  &lt;li&gt;FIX: Fix issue where absolute paths in the config path object would not resolve&lt;/li&gt;
+  &lt;li&gt;THX: Thanks to @geoffp and @EvanLovely for reporting, fixing and testing the issue in the dev branch.&lt;/li&gt;
+  &lt;li&gt;FIX: Typo in gulp instructions in README.&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @simonknittel for the watchful eyes&lt;/li&gt;
+  &lt;li&gt;CHG: Changed locations of ./public/styleguide to ./core/styleguide to make ./public/ a cleaner distribution directory&lt;/li&gt;
+  &lt;li&gt;CHG: Removed scss files and config from project. This is in preparation for including the default asset repo in the future&lt;/li&gt;
+  &lt;li&gt;FIX: Fix issue where partials were not being sent to Mustache during pattern parameter parsing.&lt;/li&gt;
+  &lt;li&gt;THX: Thanks to @e2tha-e for reporting this issue.&lt;/li&gt;
+  &lt;li&gt;ADD: Now patterns and pseudopatterns can be linked from global or file data.json&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @kylewelsby for the thoughtful enhancement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;unit-testsassertions&quot;&gt;UNIT TESTS/ASSERTIONS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/pattern-lab/patternlab-node/jobs/107946383&quot;&gt;20 more unit tests/assertions&lt;/a&gt; were added with this release.&lt;/p&gt;
+
+&lt;h3 id=&quot;upgrade-instructions&quot;&gt;UPGRADE INSTRUCTIONS&lt;/h3&gt;
+
+&lt;p&gt;Assuming you are on v1.0.0, one should be able to follow the &lt;a href=&quot;&quot;&gt;standard upgrade instructions&lt;/a&gt; along with the following addenda:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Major changes have occurred in the shipped &lt;code class=&quot;highlighter-rouge&quot;&gt;Gruntfile&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;Gulpfile&lt;/code&gt;. It’s recommended to take the new versions’s file and manually merge any customizations you have. The good news is configurable paths make for a ton more flexibility into the future.&lt;/li&gt;
+  &lt;li&gt;Add the following to the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.json&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;patterns&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/_patterns/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;data&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/_data/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;styleguide&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./core/styleguide/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;patternlabFiles&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/_patternlab-files/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;js&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;images&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/images&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;fonts&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/fonts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;css&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./source/css/&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All &lt;code class=&quot;highlighter-rouge&quot;&gt;.scss&lt;/code&gt; files have been removed from the filesystem and &lt;code class=&quot;highlighter-rouge&quot;&gt;Gruntfile&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;Gulpfile&lt;/code&gt;. They caused confusion of sorts and added complexity for little benefit, as the styleguide doesn’t change significantly and the shipped pattern styling is not intended to be used. With the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/wiki/Roadmap&quot;&gt;roadmap&lt;/a&gt; point to other kits, for patterns and the styleguide, this feels like good preparation and aligned with the theme of this release to be about future-consumption.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All this change may warrant some to consider this a major upgrade, but the API hasn’t really changed, just the shipped harness around &lt;code class=&quot;highlighter-rouge&quot;&gt;patternlab.js.&lt;/code&gt; If you are worried about upgrading, your best bet might be to start anew just this once.&lt;/p&gt;
+
+&lt;h3 id=&quot;roadmap&quot;&gt;ROADMAP&lt;/h3&gt;
+&lt;p&gt;Keep an eye on the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/wiki/Roadmap&quot;&gt;roadmap&lt;/a&gt; for a clearer understanding of where the project is going in the next few releases.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/bmuenzenmeyer&quot;&gt;Tell me on Twitter what you are building with Pattern Lab Node!&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Tue, 09 Feb 2016 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/pattern-lab-node-1-1-0-released</link>
+				<guid isPermaLink="true">http://localhost:4000/pattern-lab-node-1-1-0-released</guid>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>January 2016 Month In Review</title>
+				<description>&lt;h1 id=&quot;january-2016-month-in-review&quot;&gt;January 2016 Month In Review&lt;/h1&gt;
+
+&lt;h3 id=&quot;month-in-review&quot;&gt;Month in Review&lt;/h3&gt;
+&lt;p&gt;The first month of &lt;a href=&quot;https://twitter.com/una&quot;&gt;Una Kravets’&lt;/a&gt; open-source goal tracking. I think I did alright for myself - chief accomplishments being way more reading than I have in ages. I transferred a lot of wasted time surfing reddit or whatever in favor of reading - and even lost myself a few nights reading instead of coding - an imbalance I haven’t reveled in since highschool.&lt;/p&gt;
+
+&lt;p&gt;There were some things I didn’t get done - like getting my &lt;a href=&quot;https://github.com/bmuenzenmeyer/autocomplete-patternlab&quot;&gt;atom autocomplete plugin&lt;/a&gt; fully functional, but this was mostly at the expense of learning more about the atom plugin architecture (my goal in the first place), and getting &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node&quot;&gt;Pattern Lab Node&lt;/a&gt; 1.1.0 ready for prep. As Una stated, not getting something isn’t worth dwelling on - so I’m not going to.&lt;/p&gt;
+
+&lt;p&gt;I enjoyed month one and am looking forward to February!&lt;/p&gt;
+
+&lt;h2 id=&quot;things-i-did-from-the-list&quot;&gt;Things I Did From the List:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[x] Read &lt;a href=&quot;http://abookapart.com/products/youre-my-favorite-client&quot;&gt;You’re My Favorite Client&lt;/a&gt; by Mike Monteiro&lt;/li&gt;
+  &lt;li&gt;[x] Read &lt;a href=&quot;https://buyolympia.com/q/Item=frank-chimero-the-shape-of-design-paperback&quot;&gt;The Shape of Design&lt;/a&gt; by Frank Chimero&lt;/li&gt;
+  &lt;li&gt;[x] Finish closet for baby room&lt;/li&gt;
+  &lt;li&gt;[x] Finish painting baby room&lt;/li&gt;
+  &lt;li&gt;[x] Rollover previous employer retirement into ROTH IRA&lt;/li&gt;
+  &lt;li&gt;[x] Codepen &lt;a href=&quot;http://codepen.io/bmuenzenmeyer/pen/qbpPaR&quot;&gt;Type and Contrast Exercise&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[x] Codepen &lt;a href=&quot;http://codepen.io/bmuenzenmeyer/pen/EVwXym/&quot;&gt;SVG Spinner&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;additional-things-i-did&quot;&gt;Additional Things I Did:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;[x] Read &lt;a href=&quot;http://www.amazon.com/Martian-Andy-Weir/dp/0553418025&quot;&gt;The Martian&lt;/a&gt; by Andy Weir&lt;/li&gt;
+  &lt;li&gt;[x] Wrote &lt;a href=&quot;https://github.com/bmuenzenmeyer/personal-goals/blob/master/content-list/books.md&quot;&gt;mini-reviews&lt;/a&gt; of each book I read&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;things-i-didnt-get-tofinish&quot;&gt;Things I Didn’t Get to/Finish:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;[ ] atom package: autocomplete-patternlab as a means to learn more about their package/extensibility/modularization models&lt;/li&gt;
+  &lt;li&gt;[ ] Look into atom &lt;a href=&quot;https://atom.io/packages/linter-eslint&quot;&gt;es-linting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Sun, 31 Jan 2016 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/january-month-in-review</link>
+				<guid isPermaLink="true">http://localhost:4000/january-month-in-review</guid>
+			</item>
+		
+			<item>
+				<title>Pattern Lab Node 1.0.0 Released</title>
+				<description>&lt;h1 id=&quot;pattern-lab-node-100-released&quot;&gt;Pattern Lab Node 1.0.0 Released&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/releases/tag/v1.0.0&quot;&gt;Version 1.0.0 is here!&lt;/a&gt;&lt;/strong&gt; It’s hard to believe, but it’s time to tag this project. With styleModifiers and patternParameters a couple releases ago, Pattern Lab Node has really come up to snuff compared to the original Pattern Lab PHP system. &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/tree/pattern-engines&quot;&gt;Exciting work continues even as I write this&lt;/a&gt; on multiple other advancements, but I intend to fork this version and maintain it as the purest subset of original functionality. I feel funny tagging it now, but I figured if I didn’t soon I wouldn’t feel right continuously pushing it off or making users sign up for big file re-shuffles hidden away in a minor release.&lt;/p&gt;
+
+&lt;p&gt;So, this ain’t no ‘Mission Accomplished’ banner, when I know there are a LOT of cool things just down the road. But it is a chance to take stock of where we are and where we can go. Depending on the pace of pattern engine work and reorganizing the file system structure, we might be seeing &lt;strong&gt;2.0.0&lt;/strong&gt; sooner than I imagined.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“What’s in a number?”&lt;/em&gt;, you ask. I’ll be trying to follow &lt;a href=&quot;http://semver.org/&quot;&gt;semver&lt;/a&gt; quite closely, as multiple people from companies and agencies are using Pattern Lab Node (which, by the way, is an impossibly humbling experience).&lt;/p&gt;
+
+&lt;p&gt;Anyway, the normal excerpt from the Github Release: &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/releases/tag/v1.0.0&quot;&gt;Pattern Lab Node 1.0.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;changelog&quot;&gt;Changelog&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;FIX: Resolve issue with not hiding underscored patterns.&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @ivancamilov for reporting this regression.&lt;/li&gt;
+  &lt;li&gt;FIX: Fix misapplied error input class&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @johngerome for the pull request!&lt;/li&gt;
+  &lt;li&gt;ADD: Added a note in the README during installation to run with elevated privileges&lt;/li&gt;
+  &lt;li&gt;THX: Thanks @RichardBray for the heads up&lt;/li&gt;
+  &lt;li&gt;ADD: Added a Prerequisites section to the README&lt;/li&gt;
+  &lt;li&gt;ADD: Added unit tests for pattern states and pseudopatterns&lt;/li&gt;
+  &lt;li&gt;CHG: Changed pseudopattern generation to use config.patterns.source directory instead of hardcode&lt;/li&gt;
+  &lt;li&gt;CHG: Explicitly sorting patterns by name prior to building the UI&lt;/li&gt;
+  &lt;li&gt;ADD: Added ability to specify link.* urls inside data objects&lt;/li&gt;
+  &lt;li&gt;CHG: Incremented version to 1.0.0. Achieved near-parity with PL PHP v1!&lt;/li&gt;
+  &lt;li&gt;THX: Thanks to each and every person who cared about Pattern Lab Node! - Brian&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;unit-tests--assertions&quot;&gt;Unit Tests / Assertions&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://travis-ci.org/pattern-lab/patternlab-node/jobs/95736743&quot;&gt;14 more unit tests/assertions&lt;/a&gt; were added with this release.&lt;/p&gt;
+
+&lt;h3 id=&quot;upgrade-instructions&quot;&gt;Upgrade Instructions&lt;/h3&gt;
+
+&lt;p&gt;Assuming you are on v0.15.X, one should be able to update package.json for either grunt or gulp configurations and run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm update&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;roadmap&quot;&gt;Roadmap&lt;/h3&gt;
+&lt;p&gt;Keep an eye on the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/wiki/Roadmap&quot;&gt;roadmap&lt;/a&gt; for a clearer understanding of where the project is going in the next few releases.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;stats&quot;&gt;Stats&lt;/h3&gt;
+&lt;p&gt;There are some neat things Github tracked for me so far. For example, check out the commit graph here, for a general sense of the ebb and flow of the project over two years.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/graphs/contributors&quot;&gt;&lt;img src=&quot;/img/pln-commits.png&quot; alt=&quot;Pattern Lab Commits&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, there has been a pretty big uptick in work of late, both by me and from others contributing back to the project.&lt;/p&gt;
+
+&lt;p&gt;Next check out the punchcard:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/graphs/punch-card&quot;&gt;&lt;img src=&quot;/img/pln-punchcard.png&quot; alt=&quot;Pattern Lab Punchcard&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s no secret to me that the bulk of effort has come at the expense of sleep - with most commits straddling midnight. I wonder how that compares to other open source projects…brb…oh it turns out &lt;a href=&quot;https://github.com/pattern-lab/patternlab-php/graphs/punch-card&quot;&gt;Dave and Brad aren’t as stupid as me!&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;and-now-for-something-completely-different&quot;&gt;And Now For Something Completely Different&lt;/h3&gt;
+&lt;p&gt;Well friends, with Pattern Lab 1.0.0 tagged, what does mean for me? Well, my itch for &lt;a href=&quot;http://codepen.io/bmuenzenmeyer/pen/KdYKvB&quot;&gt;other projects remains&lt;/a&gt;, and I have a number in the works or swimming around in my head. This site could use &lt;a href=&quot;http://www.brianmuenzenmeyer.com/site-redesign-in-the-open&quot;&gt;a bit more love yet&lt;/a&gt;, both in functionality/readability and aesthetics. I plan to write more, &lt;a href=&quot;http://www.brianmuenzenmeyer.com/solving-problems-with-pattern-lab-small-team-workflow&quot;&gt;extend posts like these about Pattern Lab into a series&lt;/a&gt;, and cover what I learned building and maintaining the port, and dive deeper into how to use Pattern Lab in general.&lt;/p&gt;
+
+&lt;p&gt;Oh, and most important of all, tomorrow my wife and I find out the gender of our second child, due in April. I have little doubt life will again be recast in a new mold come spring. Until then, and after, I’ll keep being a &lt;a href=&quot;http://crunchyowl.com&quot;&gt;nightowl&lt;/a&gt; whenever I can.&lt;/p&gt;
+
+&lt;h3 id=&quot;thanks&quot;&gt;Thanks&lt;/h3&gt;
+&lt;p&gt;Thanks to all of you for taking time out of your busy work or personal schedules to care about Pattern Lab Node - whether that be via building neat stuff, reporting issues, extending the library or using it as a dependency(!), contributing back, or just providing a word of encouragement. There are too many of you to thank, but you have my gratitude.&lt;/p&gt;
+
+&lt;p&gt;To Brad and Dave, I never would have done it without you both providing encouragement, support, guidance, and motivation by building such a great tool to build websites and web applications better in the first place. You know, shoulders of giants stuff.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 09 Dec 2015 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/pattern-lab-node-1-0-0-released</link>
+				<guid isPermaLink="true">http://localhost:4000/pattern-lab-node-1-0-0-released</guid>
+			</item>
+		
+			<item>
+				<title>Solving Problems with Pattern Lab - Small Team Workflow</title>
+				<description>&lt;h1 id=&quot;solving-problems-with-pattern-lab---small-team-workflow&quot;&gt;Solving Problems with Pattern Lab - Small Team Workflow&lt;/h1&gt;
+
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I’ve had a soft-spot for style guides, ever since seeing &lt;a href=&quot;http://pea.rs/&quot;&gt;http://pea.rs/&lt;/a&gt; at An Event Apart a couple years back. When &lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; emerged soon after, I was hooked. Since, I’ve maintained the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node&quot;&gt;Node version&lt;/a&gt; of Brad Frost’s and Dave Olsen’s Pattern Lab and used it in a number of personal and professional projects. At the company I work for, I use Pattern Lab as the style guide for our next-phase web applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-i-said-to-myself-self&quot;&gt;So I said to myself, “self”&lt;/h3&gt;
+&lt;p&gt;My company employs less than 20 people. In addition to being rank-and-file software developer, I am what the &lt;a href=&quot;https://vimeo.com/139025298&quot;&gt;crazy-insightful&lt;/a&gt; &lt;a href=&quot;http://leahbuley.com/&quot;&gt;Leah Buley&lt;/a&gt; calls a “ &lt;a href=&quot;http://rosenfeldmedia.com/books/the-user-experience-team-of-one/&quot;&gt;User Experience Team of One&lt;/a&gt;”. This is not without its freedoms and its challenges. Consistency and stakeholder alignment are paramount, and so far exposing the style guide to the company has been met with encouragement and collaboration. Still, many of the core benefits of style guide are diminished when I fill multiple roles a style guide is meant to mediate between.&lt;/p&gt;
+
+&lt;h3 id=&quot;growing-pains&quot;&gt;Growing Pains&lt;/h3&gt;
+&lt;p&gt;While I am able to quickly use Pattern Lab to explore, build and tune patterns, the team stumbled when I included a direct reference to our style guide in implementation details of a planned feature. Really good questions cropped up:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can I copy-paste the markup in the style guide?&lt;/li&gt;
+  &lt;li&gt;Should the style guide document every possible state of the control/widget?&lt;/li&gt;
+  &lt;li&gt;Am I expected to keep the style guide up to date?&lt;/li&gt;
+  &lt;li&gt;Is the style guide the de-facto spec?&lt;/li&gt;
+  &lt;li&gt;Is the style guide going to house every content-iteration of a control, like different confirmation modals?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It was then I realized I was unprepared to answer most of these questions, and that my internal understanding of what Pattern Lab is &lt;em&gt;and could be&lt;/em&gt; vastly differed from my coworkers.&lt;/p&gt;
+
+&lt;p&gt;And so when I saw this, I couldn’t help but ask:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/brad_frost&quot;&gt;@brad_frost&lt;/a&gt; Should the new artifacts built with a style guide live on as part of it, or only new patterns extracted from them?&lt;/p&gt;&amp;mdash; Brian Muenzenmeyer (@bmuenzenmeyer) &lt;a href=&quot;https://twitter.com/bmuenzenmeyer/status/645984298697256960&quot;&gt;September 21, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;I had all my ammo prepared, slung right back in the face of the man himself. &lt;em&gt;Little did Brad know I was just deflecting my own troubles.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/brad_frost&quot;&gt;@brad_frost&lt;/a&gt; ditto! We came up with a decent compromise, but it&amp;#39;s a longer-form explanation and not perfect.&lt;/p&gt;&amp;mdash; Brian Muenzenmeyer (@bmuenzenmeyer) &lt;a href=&quot;https://twitter.com/bmuenzenmeyer/status/645997566430064640&quot;&gt;September 21, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Still, I found hope in our exchange (click on the cards to see some additional Tweets) - because it revealed to me that we are all very much still working on how best to incorporate style guides into our workflows. I know we can figure it out together. Brad rejoindered:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/bmuenzenmeyer&quot;&gt;@bmuenzenmeyer&lt;/a&gt; Sounds like a blog post! hahaha&lt;/p&gt;&amp;mdash; Brad Frost (@brad_frost) &lt;a href=&quot;https://twitter.com/brad_frost/status/645998332020686849&quot;&gt;September 21, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;starting-small-staying-small&quot;&gt;Starting Small, Staying Small&lt;/h3&gt;
+&lt;p&gt;Pattern Lab can do many things, like build a content-driven website using increasingly more complex structured widgets, first with placeholder content and then actual content. But perhaps I cannot do many things with it under limited circumstances. First and foremost, what we needed was a clear, upfront definition of my three-fold uses of Pattern Lab.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Style guide&lt;/li&gt;
+  &lt;li&gt;Pattern Library&lt;/li&gt;
+  &lt;li&gt;Laboratory&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I went so far as to make the first pattern you see in Pattern Lab a welcome of sorts, explaining these three uses.&lt;/p&gt;
+
+&lt;p&gt;So primarily, Pattern Lab is our living reference of the visual design elements that make up the application. Via gulp running on our source code, the CSS is automatically pushed to Pattern Lab with every save. Now I an see a 10,000 ft view of our interface elements decoupled from the application itself. This satisfies the most basic definition of a style guide.&lt;/p&gt;
+
+&lt;p&gt;Pattern Lab is also, secondarily, our pattern library. I hope this doesn’t come as too much of a surprise. Common markup patterns can be combined to illustrate interactions between components. My goal is to make this someday something copy-pastable, so if you need to know how to create a new modal, or the data table, or the card - you can take the generic one from here that comprises all the right elements.&lt;/p&gt;
+
+&lt;p&gt;The last stated use of Pattern Lab is as a personal laboratory for me while designing new solutions. Pattern Lab’s feature-set, whether it be &lt;a href=&quot;http://patternlab.io/docs/pattern-parameters.html&quot;&gt;pattern parameters&lt;/a&gt;, swappable json files, or just the browser frontend itself, make it an invaluable tool to design a responsive web application in the browser. But I recognize and concede the fact that we are not big enough to keep this thing perfectly in sync with all source code. No, it ain’t &lt;a href=&quot;http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html&quot;&gt;Lonely Planet’s Rizzo&lt;/a&gt;, but it’s enough for us, for now. So I call attention to this explicitly with the team. I may use some of the more advanced features of Pattern Lab during design, showing it to others, testing against it, and so on. But when we start to solidify, the more evolved “organisms” are deconstructed into any new patterns that have emerged. It’s for the best, as they evolve too fast once in the wild anyway, but their ancestral patterns remain. By doing this, we limit the “unDRYness,” reduce the responsibilities of other developers, and mitigate a lot of the original concerns, freeing us to focus more on the benefits than the downsides.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I hope sharing this faceted application of Pattern Lab as a styleguide helps you as much as it helps me. I also hope that this posts title becomes a series of posts. We’ll see. Perhaps you can help. What are you solving with Pattern Lab?&lt;/p&gt;
+</description>
+				<pubDate>Fri, 25 Sep 2015 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/solving-problems-with-pattern-lab-small-team-workflow</link>
+				<guid isPermaLink="true">http://localhost:4000/solving-problems-with-pattern-lab-small-team-workflow</guid>
+			</item>
+		
+			<item>
+				<title>Pattern Lab Node 0.10.0 Released</title>
+				<description>&lt;h1 id=&quot;pattern-lab-node-0100-released&quot;&gt;Pattern Lab Node 0.10.0 Released&lt;/h1&gt;
+
+&lt;p&gt;A busy time here again - with an uptick in interest in the project and renewed focus from me. Your humble port maintainer wants to get to v1.0.0 like no-other! It was also unlike any release to date - as it started with an incremental feature addition (pattern parameters) and ended with a complete overhaul of how patterns were stitched together with data.&lt;/p&gt;
+
+&lt;h3 id=&quot;waiter-is-that-a-parameter-i-see-in-my-pattern&quot;&gt;Waiter, Is That A Parameter I See in My Pattern?&lt;/h3&gt;
+&lt;p&gt;Yes they are finally here! Pattern parameters are a simple mechanism for replacing Mustache variables via attributes on a pattern partial tag rather than having to use a pattern-specific json file. They are especially useful when you want to supply distinct values for Mustache variables in a specific pattern partial instance that may be included multiple times in a molecule, template, or page.&lt;/p&gt;
+
+&lt;p&gt;The basic syntax is this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;{{&amp;gt; molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The attributes listed in the pattern parameters should match Mustache variable names in your pattern. The values listed for each attribute will replace the Mustache variables. Again, pattern parameters are a simple find and replace of Mustache variables with the supplied values.&lt;/p&gt;
+
+&lt;p&gt;Pattern parameters &lt;strong&gt;do not&lt;/strong&gt; currently support the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sub-lists (e.g. iteration of a section),&lt;/li&gt;
+  &lt;li&gt;and the use of long strings of text can be unwieldy&lt;/li&gt;
+  &lt;li&gt;nested properties within the parameter data, such as ``&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can read the full documentation on pattern parameters here: &lt;a href=&quot;http://patternlab.io/docs/pattern-parameters.html&quot;&gt;Using Pattern Parameters&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;data-inheritance&quot;&gt;Data Inheritance&lt;/h3&gt;
+
+&lt;p&gt;I cannot omit what I easily sank the most hours and stress into - the rendering of data correctly. Data inheritance is such a core concept to Pattern Lab that discovering a critical flaw in my algorithm was tough to swallow — it basically meant the port was never close to emulating the power of its older brother. I learned this during a rather routine comparison of functionality between PHP and Node, by  finally noticing that the home page touts were not rendered at all. Sure enough, they were not defined in the global data; &lt;em&gt;only&lt;/em&gt; within the &lt;code class=&quot;highlighter-rouge&quot;&gt;homepage.json&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;changelog&quot;&gt;CHANGELOG&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ADD: Added support for &lt;a href=&quot;http://patternlab.io/docs/pattern-parameters.html&quot;&gt;pattern parameters&lt;/a&gt;! Resolves &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/88&quot;&gt;#88&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;FIX: Data inheritance is now working as advertised. Resolves &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/127&quot;&gt;#127&lt;/a&gt;. This turned out to be a MAJOR thing, as I realized the home-page was not passing down any of its json data to partials.&lt;/li&gt;
+  &lt;li&gt;CHG: Refactored a lot of code out of patternlab.js and into separate files. Doing so should make everything dryer, more unit testable, and easier to understand I hope.&lt;/li&gt;
+  &lt;li&gt;ADD: Added proper styling for the homepage-emergency alert that is displayed for demo purposes&lt;/li&gt;
+  &lt;li&gt;ADD: Added a new comment organism, the sticky comment, to ship an example of pattern parameters&lt;/li&gt;
+  &lt;li&gt;CHG: Start some JS linting of the project. I don’t quite agree with a lot of it, so am trying to set some smart configurations&lt;/li&gt;
+  &lt;li&gt;CHG: Wrapped some build messages in the patternlab.config.debug flag&lt;/li&gt;
+  &lt;li&gt;FIX: Allow users to set a base url path. Resolves &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/125&quot;&gt;#125&lt;/a&gt; (testing in the wild requested)&lt;/li&gt;
+  &lt;li&gt;THX: Thanks &lt;a href=&quot;https://github.com/scottnath&quot;&gt;@scottnath&lt;/a&gt; for the proposed base url solution and &lt;a href=&quot;https://github.com/jkbyln&quot;&gt;@jkbyln&lt;/a&gt; for discussion on the topic too!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;upgrade-instructions&quot;&gt;UPGRADE INSTRUCTIONS&lt;/h3&gt;
+
+&lt;p&gt;Normally one could be safe following the instructions in &lt;a href=&quot;https://github.com/pattern-lab/website/blob/dev/patternlabsite/docs/node/upgrading.md&quot;&gt;here&lt;/a&gt;, but this time we’ve changed some &lt;code class=&quot;highlighter-rouge&quot;&gt;source/_patternlab-files/&lt;/code&gt; directory files too. I have opened &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/133&quot;&gt;an issue&lt;/a&gt; to make this process smoother in the future. For now, you should be able to upgrade using the follow process:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Backup your &lt;code class=&quot;highlighter-rouge&quot;&gt;source/&lt;/code&gt; directory and &lt;code class=&quot;highlighter-rouge&quot;&gt;config.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Overwrite all of &lt;code class=&quot;highlighter-rouge&quot;&gt;builder/&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;public/&lt;/code&gt; as normal&lt;/li&gt;
+  &lt;li&gt;Refer to this &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/pull/130/files&quot;&gt;pull request&lt;/a&gt; if you need help, but you’ll essentially need to:
+    &lt;ul&gt;
+      &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;baseurl&quot; : &quot;&quot;&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;config.json&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Overwrite &lt;code class=&quot;highlighter-rouge&quot;&gt;source/_patternlab-files/pattern-header-footer/footer.html&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Overwrite &lt;code class=&quot;highlighter-rouge&quot;&gt;source/_patternlab-files/styleguide.mustache&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Overwrite &lt;code class=&quot;highlighter-rouge&quot;&gt;source/_patternlab-files/viewall.mustache&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sorry for the inconvenience. I know this isn’t ideal, but it’s far from impossible. Perhaps if you don’t need pattern parameter support or the base url you may choose to postpone an upgrade.&lt;/p&gt;
+
+&lt;p&gt;I put a lot of hours into this one - essentially rewriting the entire engine -hope you like what you see!&lt;/p&gt;
+
+&lt;p&gt;You can view the specific release here: &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0&quot;&gt;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pattern-lab-node-v100&quot;&gt;Pattern Lab Node v1.0.0&lt;/h3&gt;
+
+&lt;p&gt;Partly for my own sanity, and partly at the request of the community, I have organized remaining work into a &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/134&quot;&gt;roadmap&lt;/a&gt; for sorts. A person dedicating more hours to the project would churn through like I do a stack of pancakes, but for me it will take months yet. My goals are to be transparent about direction, emphasize the current finish line as the mustache-powered Pattern Lab PHP v1, and motivate myself toward that finish line. Please let me know if your current needs don’t jive with the roadmap..&lt;/p&gt;
+</description>
+				<pubDate>Sat, 01 Aug 2015 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/pattern-lab-node-0-10-0-released</link>
+				<guid isPermaLink="true">http://localhost:4000/pattern-lab-node-0-10-0-released</guid>
+			</item>
+		
+			<item>
+				<title>Pattern Lab Node 0.9.0 Released</title>
+				<description>&lt;h1 id=&quot;pattern-lab-node-090-released&quot;&gt;Pattern Lab Node 0.9.0 Released&lt;/h1&gt;
+
+&lt;p&gt;Pattern Lab 0.9.0 is shipped! In the span of a day or two, I received three pull requests, two of which provide major new functionality to Pattern Lab Node. Here is the CHANGELOG:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FIX: Added grunt-contrib-copy args to copy all found source/css/*.css&lt;/li&gt;
+  &lt;li&gt;ADD: Added upgrade instructions to README&lt;/li&gt;
+  &lt;li&gt;FIX: Fix issue with styleguide accordions not closing upon click of a sibling menu.&lt;/li&gt;
+  &lt;li&gt;THX: @getsetbro for reporting more issues :)&lt;/li&gt;
+  &lt;li&gt;ADD: Added support for pattern search. This is ‘in beta’ and should have more testing applied to it.&lt;/li&gt;
+  &lt;li&gt;ADD: Added support for all keyboard shortcuts found in PL-PHP-v1.0.0&lt;/li&gt;
+  &lt;li&gt;FIX: Fixed an issue where Hay mode and Disco mode did not stop one another when using keyboard shortcuts&lt;/li&gt;
+  &lt;li&gt;FIX: Fix location of paragraph closing tag to wrap citation&lt;/li&gt;
+  &lt;li&gt;THX: @laurendorman for the pull request!&lt;/li&gt;
+  &lt;li&gt;FIX: Removed some dead code.&lt;/li&gt;
+  &lt;li&gt;ADD: Added View All links in each menu subsection&lt;/li&gt;
+  &lt;li&gt;THX: BIG THANKS TO @walmokrani for this work!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;THANK YOU THANK YOU THANK YOU TO the super people that made this release possible, &lt;a href=&quot;https://github.com/getsetbro&quot;&gt;@getsetbro&lt;/a&gt; &lt;a href=&quot;https://github.com/laurendorman&quot;&gt;@laurendorman&lt;/a&gt; and &lt;a href=&quot;https://github.com/walmokrani&quot;&gt;@walmokrani&lt;/a&gt; for finding time to use pl node, report issues, and even help code solutions. You all have no idea how energized this made me. You are all superheroes.&lt;/p&gt;
+
+&lt;h4 id=&quot;upgrade-instructions&quot;&gt;Upgrade Instructions&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;If upgrading this time, you may need to run an &lt;code class=&quot;highlighter-rouge&quot;&gt;npm update&lt;/code&gt; to get the new grunt-contrib-copy tool.&lt;/strong&gt;
+To upgrade, you can find some yet-unreleased documentation here: https://github.com/pattern-lab/website/blob/dev/patternlabsite/docs/node/upgrading.md&lt;/p&gt;
+
+&lt;p&gt;You can view the specific release here: &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.9.0&quot;&gt;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.9.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Onward, to &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/milestones/v1.0.0&quot;&gt;v1.0.0&lt;/a&gt;!&lt;/p&gt;
+</description>
+				<pubDate>Wed, 22 Apr 2015 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/pattern-lab-node-0-9-0-released</link>
+				<guid isPermaLink="true">http://localhost:4000/pattern-lab-node-0-9-0-released</guid>
+			</item>
+		
+			<item>
+				<title>Style Tile Iterations</title>
+				<description>&lt;h1 id=&quot;style-tile-iterations&quot;&gt;Style Tile Iterations&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This post is part of a series on the &lt;a href=&quot;http://www.brianmuenzenmeyer.com/site-redesign-in-the-open/&quot;&gt;open redesign of brianmuenzenmeyer.com&lt;/a&gt; using atomic design and Pattern Lab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyone watching the open redesign progress mentioned above noticed big changes to the site in February, when elements of the site began to look more distinct and exhibit more structure. I set out to better understand the content hierarchy of the site while concurrently designing the look and feel.&lt;/p&gt;
+
+&lt;h4 id=&quot;keep-calm-and-iterate&quot;&gt;Keep Calm and Iterate&lt;/h4&gt;
+&lt;p&gt;I chose to combine the use of &lt;a href=&quot;http://styletil.es/&quot;&gt;http://styletil.es/&lt;/a&gt; with my instance of &lt;a href=&quot;http://www.brianmuenzenmeyer.com/patternlab/public/index.html&quot;&gt;pattern lab&lt;/a&gt; to explore concepts and then systematize them. I found the workflow to be acceptable— consisting of quick iterations of the style tile that exposed and refined patterns for eventual use. Utilizing simple versioning, I was able to build off of each style tile to gauge progress. You can see them all here:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.brianmuenzenmeyer.com/styletile/v1&quot;&gt;www.brianmuenzenmeyer.com/styletile/v1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.brianmuenzenmeyer.com/styletile/v2&quot;&gt;www.brianmuenzenmeyer.com/styletile/v2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.brianmuenzenmeyer.com/styletile/v3&quot;&gt;www.brianmuenzenmeyer.com/styletile/v3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.brianmuenzenmeyer.com/styletile&quot;&gt;www.brianmuenzenmeyer.com/styletile&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Or in gif form:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/styletile.gif&quot; alt=&quot;Style Tile Iterations&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some ideas that came and went along the way was the use of iconography, a purple complementary color scheme, and how much primacy I should give components like &lt;a href=&quot;http://crunchyowl.com&quot;&gt;Crunchy Owl&lt;/a&gt;. The style tile is a great design tool because you can afford to cut a few corners. Load fonts any way you like, put everything in one scss file, no worries. To me, the deliverable is intentionally a little rough around the edges.&lt;/p&gt;
+
+&lt;h4 id=&quot;moving-diagonally-is-difficult-but-not-impossible&quot;&gt;Moving Diagonally Is Difficult but Not Impossible&lt;/h4&gt;
+&lt;p&gt;But this process was not without its challenges— most of my own making. As I said, style tiles should be rough &lt;em&gt;collages&lt;/em&gt; (I compare style tiles to Pinterest to my clients now, as that is a good analog) and therefore devoid of layout. I tripped up on this along the way, and true enough, you can clearly see how my style tile iterations slowly evolve into something resembling a website layout. I don’t see this as &lt;strong&gt;bad&lt;/strong&gt;, only cautionary, as you can too easily allow yourself to question layout when using these. This is where pattern lab came to rescue for me. After I’d discovered an interface element I liked, it was time to extract into a pattern. (&lt;a href=&quot;http://www.brianmuenzenmeyer.com/patternlab/public/?p=atoms-striped-background&quot;&gt;Here’s an example of one of the subheadings&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h4 id=&quot;foundation-found&quot;&gt;Foundation Found&lt;/h4&gt;
+&lt;p&gt;The combination of style tile iteration + Pattern Lab systemization allowed me to piece by piece construct the design I wanted. I did this enough times that by v5 I felt comfortable translating Pattern Lab concepts into the partials necessary to bring the site content to a fuller depth (btw, I detailed the process to do this &lt;a href=&quot;http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website&quot;&gt;here&lt;/a&gt;). Work remains, such as pagination, comments, and post templates, but from here I have a great start. I hope this workflow could perhaps be useful to you too!&lt;/p&gt;
+</description>
+				<pubDate>Sat, 07 Mar 2015 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/style-tile-iterations</link>
+				<guid isPermaLink="true">http://localhost:4000/style-tile-iterations</guid>
+			</item>
+		
+			<item>
+				<title>Pattern Lab Node 0.8.0 Released</title>
+				<description>&lt;h1 id=&quot;pattern-lab-node-080-released&quot;&gt;Pattern Lab Node 0.8.0 Released&lt;/h1&gt;
+
+&lt;p&gt;Just merged the development branch of Pattern Lab Node into master and marked it for release. I am excited about this as it was the direct result of a concerted effort to &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues/70&quot;&gt;document&lt;/a&gt; the project &lt;em&gt;against&lt;/em&gt; Pattern Lab PHP, the original reference implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note Pattern Lab Node now follows a more logical semver system, with an eventual march toward v1.0.0!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;changelog&quot;&gt;CHANGELOG:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CHG: note the change in versioning to proper semver. wanted to do this to inch closer to a 1.0.0 release&lt;/li&gt;
+  &lt;li&gt;DEL: deleted most of the lingering PHP sync listener code&lt;/li&gt;
+  &lt;li&gt;FIX: support for displaying the HTML and Mustache in the code viewer&lt;/li&gt;
+  &lt;li&gt;ADD: pattern link support&lt;/li&gt;
+  &lt;li&gt;CHG: updated included mustache templates to reflect pattern links in navigation and compiling pages direct from templates&lt;/li&gt;
+  &lt;li&gt;THX: @getsetbro for finding and fixing a typo&lt;/li&gt;
+  &lt;li&gt;FIX: fixed a bug preventing pattern states from displaying on the flat template/pages&lt;/li&gt;
+  &lt;li&gt;ADD: support for basic pseudo-patterns&lt;/li&gt;
+  &lt;li&gt;CHG: cleaned up patternlab.js a bit for future testing, a bit more DRYness.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can view the specific release here: &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.8.0&quot;&gt;https://github.com/pattern-lab/patternlab-node/releases/tag/v0.8.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;nearing-done&quot;&gt;Nearing “Done?”&lt;/h4&gt;
+&lt;p&gt;It’s only taken me ~18 months(HOLY COW HOW DID THAT HAPPEN?), but Pattern Lab Node is maturing to the point where it can stand alone as a product, stepping out of the shadow created by Pattern Lab PHP. Hence, stargazers may notices on the &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/issues&quot;&gt;issue tracker&lt;/a&gt; an exciting milestone: &lt;em&gt;v1.0.0&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dmolsen.com/&quot;&gt;Dave Oslen&lt;/a&gt; has been crazy hard at work during this time, creating a PHP Twig implementation of “Pattern Lab 2.0” complete with a killer plugin architecture. It’s the stuff of beauty. I am unsure what the future holds for me - as I think my efforts might be best contributed there - but I will keep Pattern Lab Node functional and responding to user needs for the foreseeable future.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone that continues to discover, use, and report feedback to Pattern Lab Node.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 11 Feb 2015 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/pattern-lab-node-0-8-0-released</link>
+				<guid isPermaLink="true">http://localhost:4000/pattern-lab-node-0-8-0-released</guid>
+			</item>
+		
+			<item>
+				<title>Creating a Content Inventory</title>
+				<description>&lt;h1 id=&quot;creating-a-content-inventory&quot;&gt;Creating a Content Inventory&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This post is part of a series on the &lt;a href=&quot;http://www.brianmuenzenmeyer.com/site-redesign-in-the-open/&quot;&gt;open redesign of brianmuenzenmeyer.com&lt;/a&gt; using atomic design and Pattern Lab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A major facet influencing the decision to redesign this site was a lackluster content strategy on my &lt;a href=&quot;https://www.tumblr.com/blog/brianmuenzenmeyer&quot;&gt;tumblr&lt;/a&gt;. Some amount of restructuring could have gotten me closer to a desired state - but it would not have repaired a hastily-planned and executed design (see: the about section in the bottom!) Publishing convenience betrayed coherence of message. So, the itch grew, to consolidate and retake a stronger control on the publishing process, the structure, and the foundations of any good personal site - content that is relevant to me.&lt;/p&gt;
+
+&lt;p&gt;The redesign already has a lot of content on it already, but it’s now cataloged instead of decorated, a hub for all the things. Here’s the content inventory, literally a list of things I want to be available to myself and visitors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Short biography&lt;/li&gt;
+  &lt;li&gt;Picture&lt;/li&gt;
+  &lt;li&gt;Writing&lt;/li&gt;
+  &lt;li&gt;Projects&lt;/li&gt;
+  &lt;li&gt;Featured Highlight (like the open redesign)&lt;/li&gt;
+  &lt;li&gt;Labs / Codepens&lt;/li&gt;
+  &lt;li&gt;Social links / contact&lt;/li&gt;
+  &lt;li&gt;Speaking / slides&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Previously I had no connection from brianmuenzenmeyer.com to &lt;a href=&quot;http://crunchyowl.com&quot;&gt;Crunchy Owl&lt;/a&gt;, my small web design and development venture. Decoupling Crunchy Owl from my personal site does not make a whole ton of sense, as I am not fooling anyone with the size of the shop (I dropped the &lt;em&gt;royal we&lt;/em&gt; a while ago.) So really, the content inventory needs the following too:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Crunchy Owl
+    &lt;ul&gt;
+      &lt;li&gt;Logo&lt;/li&gt;
+      &lt;li&gt;Services&lt;/li&gt;
+      &lt;li&gt;Showcase&lt;/li&gt;
+      &lt;li&gt;Contact&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Great - a decent list. With this in hand it’s pretty clear to determine if the content exists. If it doesn’t - it must be created. If it does, it needs to be soon structured with the proper markup. A note, this list is roughly prioritized, but it’s not set in stone yet. Next steps, perhaps conducted parallel with some exploratory style tiles, will be to create some content reference diagrams to chart out a relative content hierarchy and evolve a mobile-first layout.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 10 Jan 2015 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/creating-a-content-inventory</link>
+				<guid isPermaLink="true">http://localhost:4000/creating-a-content-inventory</guid>
+			</item>
+		
+			<item>
+				<title>Using Pattern Lab to Design, Build and Maintain a Website</title>
+				<description>&lt;h1 id=&quot;using-pattern-lab-to-design-build-and-maintain-a-website&quot;&gt;Using Pattern Lab to Design, Build and Maintain a Website&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;This post is part of a series on the &lt;a href=&quot;http://www.brianmuenzenmeyer.com/site-redesign-in-the-open/&quot;&gt;open redesign of brianmuenzenmeyer.com&lt;/a&gt; using atomic design and Pattern Lab.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;###Why Pattern Lab&lt;/p&gt;
+
+&lt;p&gt;Pattern Lab is a collection of tools to help you create atomic design systems. Full disclosure: I’ve maintained the node fork of &lt;a href=&quot;https://twitter.com/brad_frost&quot;&gt;Brad&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/dmolsen&quot;&gt;Dave’s&lt;/a&gt; stellar PHP trunk for a while now. Pattern Lab was my third [but] true love, fast on the heels of &lt;a href=&quot;http://pea.rs&quot;&gt;pea.rs&lt;/a&gt; and an attempt to roll my own style guide that had a decidedly &lt;a href=&quot;https://www.youtube.com/watch?v=X4jF3xTxKWM&quot;&gt;rough and tumble&lt;/a&gt; feel and outcome. Finding such a mature product was a godsend, and a great learning opportunity.&lt;/p&gt;
+
+&lt;p&gt;Piling success upon success just feels right. Building a site up from its atomic interface elements allows you to not only maintain consistency by paving less cow paths, but it allows you to pave over the whole shebang and propagate changes as well structured CSS should. Focusing on core elements like typography, irreverent of layout, is a strength Pattern Lab can bring to a design process. With auto-refresh, annotation, viewport resizing, and more, it’s a clear choice for me when considering how I want the redesign to evolve.&lt;/p&gt;
+
+&lt;p&gt;###Structured for Success
+Pattern Lab and jekyll are both static site generators, so the key is to integrate with as little coupling as possible and create a design and development workflow that promotes &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design&lt;/a&gt; concepts. After setting up jekyll, I used npm to pull down the latest version of patternlab-node into _patternlab.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  npm install patternlab-node&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After a bit of cleanup, my jekyll directory structure looks as so:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.
+├── _includes
+├── _layouts
+├── _patternlab
+├── _posts
+├── _site
+├── css
+├── img
+├── js
+├── _config.yml
+└── index.html&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Placing Pattern Lab in an underscored directory ensures the jekyll ignores it during parsing locally. Since this is hosted on Github Pages, an absolutely &lt;em&gt;key&lt;/em&gt; step for me was to ignore the _patternlab directory. Of course, I still want to version control patterns and style from Pattern Lab, but with the help of Github again one can easily setup another repository. Added bonus is the fact that Pattern Lab, when pushed to the gh-pages branch, will be hosted as a sub-directory of my main site. I didn’t do this right the first time, mind you, but luckily you can instruct git to &lt;a href=&quot;http://stackoverflow.com/questions/1274057/making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore&quot;&gt;remove tracked files after they are ignored too&lt;/a&gt;. For anyone following along, you can see both of the repositories here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io&quot;&gt;https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io&lt;/a&gt; My user repository with a CNAME&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bmuenzenmeyer/patternlab&quot;&gt;https://github.com/bmuenzenmeyer/patternlab&lt;/a&gt; A project repository with Pattern Lab pushed on the gh-pages branch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;###Toward Maintainability&lt;/p&gt;
+
+&lt;p&gt;A style guide, once written, must preserve its relevance or quickly fall out of favor by stakeholders, designers, and developers. This is a darling you do not want to kill. If the style guide becomes stale and out of sync with the &lt;a href=&quot;http://csswizardry.com/2013/04/shame-css/&quot;&gt;realities of maintenance&lt;/a&gt;, the investment is lost or damaged. A style guide’s ability to communicate and focus diverse teams is a function of its parity with production. To this end, I am have created a small utility within &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node&quot;&gt;Pattern Lab Node&lt;/a&gt; to extract select partials and output them where needed. Let’s take a look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.json&lt;/code&gt; file at the root of the v0.1.7 install:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;patternExportKeys&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;organisms-header&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;patternExportDirectory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./../_includes/&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Simple enough. We specify a directory we want to output partials to, and define an array of pattern keys to export. Exporting &lt;em&gt;all&lt;/em&gt; patterns as partials may work for you. For me… early days. If you want to see the implementation of the pattern exporter, you can see it &lt;a href=&quot;https://github.com/pattern-lab/patternlab-node/blob/master/builder/pattern_exporter.js&quot;&gt;here on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s even easier to &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-copy&quot;&gt;copy&lt;/a&gt; the CSS outputted from patternlab a couple level’s higher to where jekyll is expecting it. With the CSS and the partials both being injected directly into the jekyll structure, my design &lt;em&gt;slash&lt;/em&gt; development workflow is one way and maintainable &lt;em&gt;starting&lt;/em&gt; at the Pattern Lab style guide. You can see it hosted at &lt;a href=&quot;http://www.brianmuenzenmeyer.com/patternlab/public/index.html&quot;&gt;www.brianmuenzenmeyer.com/patternlab/public/index.html&lt;/a&gt;. From these humble beginnings, iteration and atomic chemistry will run rampant! The final structure, when running Pattern Lab, is as follows:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;.
+├── _includes
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;   └── organisms-header.html //from Pattern Lab!
+├── _layouts
+├── _patternlab
+├── _posts
+├── _site
+├── css
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;   └── style.css //from Pattern Lab!
+├── img
+├── js
+├── _config.yml
+└── index.html&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;The final step, of course, is to reference our partial in our jekyll template:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;site&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {% include organisms-header.html %} 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% content %} 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is perhaps a rudimentary implementation, but it works perfectly in the jekyll environment. &lt;a href=&quot;https://twitter.com/ianfeather&quot;&gt;Ian Feather&lt;/a&gt; outlined a far more robust solution in his &lt;a href=&quot;http://ianfeather.co.uk/a-maintainable-style-guide/&quot;&gt;post&lt;/a&gt; about Lonely Planet’s style guide. One could quite conceivably output partials to a directory that a Drupal or Wordpress installation reads. I may look into that more soon and add it to the patternlab wiki.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The best writing is rewriting.
+— E.B. White&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E.B. White, of Strunk and White’s &lt;em&gt;The Elements of Style&lt;/em&gt;, knew that a text lives longest past draft form. If anyone’s read White’s terse handbook, they will understand the efficacy of a well written sentence. So too, in my opinion, do websites, living long past their shower-thought, design brief PDF, or hackathon. A well-structured, maintainable site has little fat, a clear message supported by content and style, and consists of a one-way DRY workflow that does not collapse under its own weight. Stay tuned to see how this goes.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Please share your thoughts as to how this method could be improved upon or brought to other production web platforms.&lt;/em&gt;&lt;/p&gt;
+
+</description>
+				<pubDate>Fri, 09 Jan 2015 00:00:00 -0600</pubDate>
+				<link>http://localhost:4000/using-patternlab-to-design-build-and-maintain-a-website</link>
+				<guid isPermaLink="true">http://localhost:4000/using-patternlab-to-design-build-and-maintain-a-website</guid>
+			</item>
+		
 	</channel>
 </rss>

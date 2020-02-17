@@ -1,24 +1,100 @@
----
-layout: none
----
 var bmz = {};
 bmz.get = 
 	{
-		"title": "{{ site.name }}",
-		"description": "{{ site.description }}",
-		"link": "{{ site.url }}",
+		"title": "Brian Muenzenmeyer",
+		"description": "The personal site of Brian Muenzenmeyer.",
+		"link": "http://localhost:4000",
 		"posts" : [
-			{% for post in site.posts limit:10 %}
+			
 				{
-				"title": "{{ post.title }}",
-				"blurb": "{{ post.blurb }}",
-				"pubDate": "{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}",
-				"link": "{{ site.url }}{{ post.url }}"
-				{% if forloop.rindex > 1 %}
+				"title": "Pattern Lab Node 1.1.0 Released",
+				"blurb": "",
+				"pubDate": "Tue, 09 Feb 2016 00:00:00 -0600",
+				"link": "http://localhost:4000/pattern-lab-node-1-1-0-released"
+				
 				},
-				{% else %}
+				
+			
+				{
+				"title": "January 2016 Month In Review",
+				"blurb": "",
+				"pubDate": "Sun, 31 Jan 2016 00:00:00 -0600",
+				"link": "http://localhost:4000/january-month-in-review"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 1.0.0 Released",
+				"blurb": "",
+				"pubDate": "Wed, 09 Dec 2015 00:00:00 -0600",
+				"link": "http://localhost:4000/pattern-lab-node-1-0-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Solving Problems with Pattern Lab - Small Team Workflow",
+				"blurb": "",
+				"pubDate": "Fri, 25 Sep 2015 00:00:00 -0500",
+				"link": "http://localhost:4000/solving-problems-with-pattern-lab-small-team-workflow"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 0.10.0 Released",
+				"blurb": "",
+				"pubDate": "Sat, 01 Aug 2015 00:00:00 -0500",
+				"link": "http://localhost:4000/pattern-lab-node-0-10-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 0.9.0 Released",
+				"blurb": "",
+				"pubDate": "Wed, 22 Apr 2015 00:00:00 -0500",
+				"link": "http://localhost:4000/pattern-lab-node-0-9-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Style Tile Iterations",
+				"blurb": "",
+				"pubDate": "Sat, 07 Mar 2015 00:00:00 -0600",
+				"link": "http://localhost:4000/style-tile-iterations"
+				
+				},
+				
+			
+				{
+				"title": "Pattern Lab Node 0.8.0 Released",
+				"blurb": "",
+				"pubDate": "Wed, 11 Feb 2015 00:00:00 -0600",
+				"link": "http://localhost:4000/pattern-lab-node-0-8-0-released"
+				
+				},
+				
+			
+				{
+				"title": "Creating a Content Inventory",
+				"blurb": "",
+				"pubDate": "Sat, 10 Jan 2015 00:00:00 -0600",
+				"link": "http://localhost:4000/creating-a-content-inventory"
+				
+				},
+				
+			
+				{
+				"title": "Using Pattern Lab to Design, Build and Maintain a Website",
+				"blurb": "",
+				"pubDate": "Fri, 09 Jan 2015 00:00:00 -0600",
+				"link": "http://localhost:4000/using-patternlab-to-design-build-and-maintain-a-website"
+				
 				}
-				{% endif %}
-			{% endfor %}
+				
+			
 		]
 	}
