@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Pattern Lab Node 1.1.0 Released || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">Pattern Lab Node 1.1.0 Released</h2>
+  <section class="article ">
+
+  <p>Pattern Lab Node 1.1.0 is here, not to be outdone by v1.0.0!</p>
+
+<p>In terms of relative change, it’s bigger than v1.0.0 in fact, with a good mix of fixes, enhancements, and a lot of work put into the shipped grunt/gulp harness you’ve almost undoubtedly customized already. Switching to configurable paths and making the core library require()-able is a huge win, opening the doors to <a href="https://github.com/pattern-lab/patternlab-node/wiki/Running-Pattern-Lab-Node-as-an-npm-Dependency">running Pattern Lab Node as an npm dependency</a>. If you’ve ever had to struggle through an upgrade, I suggest you check this out, as it should greatly lessen future maintenance costs and allow us to do some other cool stuff soon!</p>
+
+<p>Reference examples of a parent projects running Pattern Lab Node as a dependency can be found here:</p>
+
+<ul>
+  <li><a href="https://github.com/bmuenzenmeyer/patternlab-node-grunt-dependency-example">Grunt Example</a></li>
+  <li><a href="https://github.com/bmuenzenmeyer/patternlab-node-gulp-dependency-example">Gulp Example</a></li>
+</ul>
+
+<p>I want to take special note to @geoffp and @EvanLovely who were integral in crafting the major paths and require() work this release. Pattern Lab Node is a more reliable, more maintainable tool now.
+<em>Thank you</em></p>
+
+<p>View the <a href="https://github.com/pattern-lab/patternlab-node/pull/243/files">full version diff here</a>.</p>
+
+<h3 id="changelog">CHANGELOG</h3>
+<ul>
+  <li>FIX: Fixed issue where partials containing styleModifiers with integers were not found correctly under all circumstances</li>
+  <li>FIX: Fixed issue where excluded patterns were still rendered on the Pattern Lab site. Now they do not directly get rendered via the menu, view all links, or the styleguide, but are accessible for inclusion as pattern partials, and can be accessed via lineage.</li>
+  <li>THX: Thanks @theorise for reporting these issues.</li>
+  <li>THX: Thanks @dmolsen for input on desired behavior.</li>
+  <li>FIX: Fixed issue where style modifier partials within list item blocks where not uniquely being applied. this seems like a regression. added a unit test with fix</li>
+  <li>ADD: Added fuzzy pattern matching support based on patternType-substring(patternName) to align with PL PHP</li>
+  <li>FIX: Fixed issue with gulpfile not copying style.css and watching the wrong directory</li>
+  <li>THX: Thanks @robinsonaaron for the issue and pull request!</li>
+  <li>FIX: Prefer exact pattern key match over fuzzy matches inside getpatternbykey()</li>
+  <li>THX: Thanks @EvanLovely for the suggestion</li>
+  <li>ADD: Make all paths configurable</li>
+  <li>THX: HUGE Thanks to @geoffp and @EvanLovely for their thoughts, time, and talent to make this a reality!</li>
+  <li>FIX: Fix issue where absolute paths in the config path object would not resolve</li>
+  <li>THX: Thanks to @geoffp and @EvanLovely for reporting, fixing and testing the issue in the dev branch.</li>
+  <li>FIX: Typo in gulp instructions in README.</li>
+  <li>THX: Thanks @simonknittel for the watchful eyes</li>
+  <li>CHG: Changed locations of ./public/styleguide to ./core/styleguide to make ./public/ a cleaner distribution directory</li>
+  <li>CHG: Removed scss files and config from project. This is in preparation for including the default asset repo in the future</li>
+  <li>FIX: Fix issue where partials were not being sent to Mustache during pattern parameter parsing.</li>
+  <li>THX: Thanks to @e2tha-e for reporting this issue.</li>
+  <li>ADD: Now patterns and pseudopatterns can be linked from global or file data.json</li>
+  <li>THX: Thanks @kylewelsby for the thoughtful enhancement</li>
+</ul>
+
+<h3 id="unit-testsassertions">UNIT TESTS/ASSERTIONS</h3>
+<p><a href="https://travis-ci.org/pattern-lab/patternlab-node/jobs/107946383">20 more unit tests/assertions</a> were added with this release.</p>
+
+<h3 id="upgrade-instructions">UPGRADE INSTRUCTIONS</h3>
+
+<p>Assuming you are on v1.0.0, one should be able to follow the <a href="">standard upgrade instructions</a> along with the following addenda:</p>
+
+<ul>
+  <li>Major changes have occurred in the shipped <code class="highlighter-rouge">Gruntfile</code>/<code class="highlighter-rouge">Gulpfile</code>. It’s recommended to take the new versions’s file and manually merge any customizations you have. The good news is configurable paths make for a ton more flexibility into the future.</li>
+  <li>Add the following to the <code class="highlighter-rouge">config.json</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre>  <span class="s2">"paths"</span> <span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"source"</span> <span class="err">:</span> <span class="p">{</span>
+      <span class="s2">"root"</span><span class="err">:</span> <span class="s2">"./source/"</span><span class="p">,</span>
+      <span class="s2">"patterns"</span> <span class="err">:</span> <span class="s2">"./source/_patterns/"</span><span class="p">,</span>
+      <span class="s2">"data"</span> <span class="err">:</span> <span class="s2">"./source/_data/"</span><span class="p">,</span>
+      <span class="s2">"styleguide"</span> <span class="err">:</span> <span class="s2">"./core/styleguide/"</span><span class="p">,</span>
+      <span class="s2">"patternlabFiles"</span> <span class="err">:</span> <span class="s2">"./source/_patternlab-files/"</span><span class="p">,</span>
+      <span class="s2">"js"</span> <span class="err">:</span> <span class="s2">"./source/js"</span><span class="p">,</span>
+      <span class="s2">"images"</span> <span class="err">:</span> <span class="s2">"./source/images"</span><span class="p">,</span>
+      <span class="s2">"fonts"</span> <span class="err">:</span> <span class="s2">"./source/fonts"</span><span class="p">,</span>
+      <span class="s2">"css"</span> <span class="err">:</span> <span class="s2">"./source/css/"</span>
+    <span class="p">},</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>All <code class="highlighter-rouge">.scss</code> files have been removed from the filesystem and <code class="highlighter-rouge">Gruntfile</code>/<code class="highlighter-rouge">Gulpfile</code>. They caused confusion of sorts and added complexity for little benefit, as the styleguide doesn’t change significantly and the shipped pattern styling is not intended to be used. With the <a href="https://github.com/pattern-lab/patternlab-node/wiki/Roadmap">roadmap</a> point to other kits, for patterns and the styleguide, this feels like good preparation and aligned with the theme of this release to be about future-consumption.</li>
+</ul>
+
+<p>All this change may warrant some to consider this a major upgrade, but the API hasn’t really changed, just the shipped harness around <code class="highlighter-rouge">patternlab.js.</code> If you are worried about upgrading, your best bet might be to start anew just this once.</p>
+
+<h3 id="roadmap">ROADMAP</h3>
+<p>Keep an eye on the <a href="https://github.com/pattern-lab/patternlab-node/wiki/Roadmap">roadmap</a> for a clearer understanding of where the project is going in the next few releases.</p>
+
+<p><a href="https://twitter.com/bmuenzenmeyer">Tell me on Twitter what you are building with Pattern Lab Node!</a></p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 02/09/16 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//february-month-in-review" title="February 2016 Month In Review">Newer Post<br/>February 2016 Month In Review</a>
+
+
+
+<a href="//january-month-in-review" title="January 2016 Month In Review">Older Post<br/>January 2016 Month In Review</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

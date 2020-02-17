@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> On Pattern Lab - Node || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">On Pattern Lab - Node</h2>
+  <section class="article ">
+
+  <p><a href="https://twitter.com/davatron5000">Dave Rupert</a> sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.</p>
+
+<p><a href="https://twitter.com/bradfrost">Brad Frost</a> summed it up nicely:</p>
+<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote>
+
+<p>I want to put some thoughts to paper about how this process has played out for me.</p>
+
+<p>Patternlab-PHP was rather feature-rich when I started. I likely missed the conversations Brad and Dave had about what PL should and shouldn’t be. It was simultaneously an amazing living reference, but also a skyscraper to understand, deconstruct and finally rebuild with different materials. <a href="https://twitter.com/dmolsen">Dave Olsen</a> helped immensely in those first steps.</p>
+
+<p>I can feel the desire to turn PL into more than it already is, to turn it into a <em>platform</em> through which an entire project can grow, mature, and finally be deployed. I have also experienced first-hand the complexity that can creep into the solution when attempting to support so many features.</p>
+
+<h2 id="to-me-pattern-lab-is">To me, Pattern Lab is:</h2>
+<ul>
+  <li>
+    <p>A tool to build reusable, scalable markup and css snippets. As Brad intended, you can decouple atomic design principles altogether if you so choose, but it’s also…</p>
+  </li>
+  <li>
+    <p>A tool to glue components together in an iterative, incremental fashion.</p>
+  </li>
+  <li>
+    <p>One of many ways a web project could be built, but not the only way. A multi-tool, but not the best for every job.</p>
+  </li>
+  <li>
+    <p>An alternative to photoshop comps and high-fidelity mockups as an acceptable design deliverable</p>
+  </li>
+</ul>
+
+<p>So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!)</p>
+
+<h2 id="what-pain-points-have-i-experienced">What pain points have I experienced?</h2>
+
+<ul>
+  <li>
+    <p><strong>Initial project setup is cumbersome.</strong> Hopefully some npm, grunt, dependency maturity in the near-term will help. As others have stated, attempting to obfuscate patternlab internals should be a goal. <a href="https://twitter.com/addyosmani">Addy Osmani</a> suggested a pure node implementation which would be most agnostic. To me, grunt feels more consumable than pure node. I need to look into Assemble.</p>
+  </li>
+  <li>
+    <p><strong>The iframe-viewer still gets me sometimes.</strong> Living in this responsive age, I naturally try to resize my window instead of using the controls. I’v felt at times that the ish controls are not perfect, but haven’t been able to determine if it’s my problem or something in the implementation yet. I wonder if this can be configurable.</p>
+  </li>
+  <li>
+    <p><strong>The port is inelegant and immature.</strong> I brute-forced the processing of templates, instead of globbing as the PHP version did initially. While I think this is straight-forward and decently documented, it is not DRY or unit-testable. A refactor would do some good.</p>
+  </li>
+</ul>
+
+<p>As a peripheral member of the community, it’s exciting to see other’s interested in the same problems that drew me to Patternlab too. I’m also excited to see what ground we can make on PL-PHP :)</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 04/21/14 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//pattern-lab-node-1-1-released" title="Pattern Lab Node 1.1 Released">Newer Post<br/>Pattern Lab Node 1.1 Released</a>
+
+
+
+<a href="//the-device-test-imperative" title="The Device Test Imperative">Older Post<br/>The Device Test Imperative</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

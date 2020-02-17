@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> A Performant Foundation || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">A Performant Foundation</h2>
+  <section class="article ">
+
+  <p><em>This post is part of a series on the <a href="http://www.brianmuenzenmeyer.com/site-redesign-in-the-open">open redesign of brianmuenzenmeyer.com</a> using atomic design and Pattern Lab.</em></p>
+
+<p>A great thing about writing <a href="http://brianmuenzenmeyer.com">brianmuenzenmeyer.com</a> from the ground up is the ability to keep an eye on performance from the onset.</p>
+
+<p><a href="http://timkadlec.com/2013/01/setting-a-performance-budget/">Tim Kadlec reminds us to set a performance budget</a>, and with a new start and bare-bones content, interaction, and styling, there is nothing standing in the way delivering a performant experience to users.</p>
+
+<p>Utilizing the excellent <a href="http://www.webpagetest.org/">webpagetest.org service</a>, I ran <a href="http://bmuenzenmeyer.github.io/">bmuenzenmeyer.github.io/</a> through a quick run to baseline some initial performance metrics.</p>
+
+<p><img src="http://bmuenzenmeyer.github.io/img/webpagetest_foundation.png" alt="The webpagetest.org results for the site" /></p>
+
+<p>As you can see, I achieve sub-second results, but there are still things that could be improved. I am already taking quite the hit by serving uncompressed assets, and for that matter, I am not always serving them against an optimal rendering path.</p>
+
+<p>I’ll be adding <a href="https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io/issues">github issues</a> for each thing that comes out of this initial analysis - and I may update this post too.</p>
+
+<p>Oh, and about that budget? I want to keep page load under 1.5 seconds if I can, and requests under 15. These are, for me, a bit arbitrary, but I’d rather have a target to start measuring against. If you want to learn more about performance, measured, or perceived, please watch my slidedeck on this topic at : <a href="https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive">https://speakerdeck.com/bmuenzenmeyer/performance-enhancement-testing-positive</a>!</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 12/24/14 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//using-patternlab-to-design-build-and-maintain-a-website" title="Using Pattern Lab to Design, Build and Maintain a Website">Newer Post<br/>Using Pattern Lab to Design, Build and Maintain a Website</a>
+
+
+
+<a href="//site-redesign-in-the-open" title="Site Redesign in the Open">Older Post<br/>Site Redesign in the Open</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

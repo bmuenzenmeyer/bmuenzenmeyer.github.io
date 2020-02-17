@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Site Redesign in the Open || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">Site Redesign in the Open</h2>
+  <section class="article ">
+
+  <p><em>This post is part of a series on the <a href="http://www.brianmuenzenmeyer.com/site-redesign-in-the-open">open redesign of brianmuenzenmeyer.com</a> using atomic design and Pattern Lab.</em></p>
+
+<p>It’s time for another reboot of <a href="http://brianmuenzenmeyer.com">brianmuenzenmeyer.com</a>.</p>
+
+<p>I put a lot of time into the current tumblr site - especially in crafting the masthead. But I find it limiting, and reactionary, crafted from one idea with little creative room to grow. It was essentially a one-off idea, not an identity I want to associate myself with or build a brand on. There was no system backing the concept, or allowing a cohesive vision to be designed, iterated on, or maintained.</p>
+
+<p>So it’s time to start over - and this time to <a href="http://bradfrost.com/blog/post/designing-in-the-open/">do it in the open</a>. What comes will be a reflective exercise in branding, atomic design, and process. Along the way I will try to share insights, challenges, and little tips along the way. I encourage a discussion.</p>
+
+<p>My goals include:</p>
+
+<ul>
+  <li>Creating a development environment that is maintainable, flexible, and simple to blog and experiment on top of.</li>
+  <li>Establishing a design system that build upon core principles and is representative of me across differing contexts.</li>
+  <li>Making a performant, mobile-first web-presence</li>
+  <li>Creating a hub for all things I care about</li>
+</ul>
+
+<p>As for now, the site it rather bare-bones - but intentionally so. We’ll probably start with a description of the development environment.</p>
+
+<h4 id="update-1-the-development-environment">Update 1: The Development Environment</h4>
+
+<p><a href="http://brianmuenzenmeyer.com">brianmuenzenmeyer.com</a> is built with Jekyll and hosted on Github Pages. I’ve enjoyed the simplicity of static-page generators since learning of them. Writing in Markdown is a dream, with its basic styling support keeping everything semantic and clean. Staying simple means I can work fast and keep complexity low. The <a href="https://help.github.com/articles/user-organization-and-project-pages/">Github Pages</a> user and project structure allows me to build and deploy projects, labs, and smaller sections as fully version-controlled, open source repositories all under my custom domain name.</p>
+
+<p>I’ll be using SASS, grunt, and <a href="https://github.com/pattern-lab/patternlab-node">patternlab node</a> to supplement jekyll. A major part of the redesign will be utilizing atomic design principles to build a sustainable, consistent, and <em>maintainable</em> platform. <a href="https://github.com/bmuenzenmeyer/patternlab">This instance of patternlab</a> is housed as an ignored sub-directory of the main site. I’ll be talking more about this setup soon.</p>
+
+<p>I’m using Sublime Text and the gem <a href="http://www.sourcetreeapp.com/">SourceTree</a> to develop and manage code.</p>
+
+<h4 id="update-2-pattern-lab--jekyll-ftw">Update 2: Pattern Lab + Jekyll FTW</h4>
+<p>Read how I’ve integrated <a href="http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website/">Pattern Lab and Jekyll</a> with as little coupling as possible yet created a one-way DRY workflow that is driven with atomic design principles.</p>
+
+<h4 id="update-3-creating-a-content-inventory">Update 3: Creating a Content Inventory</h4>
+<p>Read how I’ve <a href="http://www.brianmuenzenmeyer.com/creating-a-content-inventory/">defined what content I want</a> to include on the site upfront, with an eye toward relevance and structure.</p>
+
+<h4 id="update-4-style-tile-version-00">Update 4: Style Tile Version 0.0</h4>
+<p>I’ve hosted the first version of a style tile on the site, available for viewing <a href="http://www.brianmuenzenmeyer.com/styletile/">here</a>. For the curious, my implementation is a blend of Samantha Warren’s <a href="http://styletil.es/">http://styletil.es/</a> and Sparkbox’s <a href="http://sparkbox.github.io/style-prototype/">http://sparkbox.github.io/style-prototype/</a> — not as polished as Warren’s and not yet as interactive as sparkboxes. I plan to iterate on these style tiles - stay tuned!</p>
+
+<h4 id="update-5-style-tile-iterations">Update 5: Style Tile Iterations</h4>
+<p>Read how I’ve used <a href="http://www.brianmuenzenmeyer.com/style-tile-iterations/">Style Tile Iterations</a> to explore the look and feel of the site and then extract them into my <a href="www.brianmuenzenmeyer.com/patternlab/public/index.html">instance of pattern lab node</a>. I had to strike a balance between design and development layout - one that resulted in what you see now.</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 12/21/14 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//a-performant-foundation" title="A Performant Foundation">Newer Post<br/>A Performant Foundation</a>
+
+
+
+<a href="//pattern-lab-node-1-6-released" title="Pattern Lab Node 1.6 Released">Older Post<br/>Pattern Lab Node 1.6 Released</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

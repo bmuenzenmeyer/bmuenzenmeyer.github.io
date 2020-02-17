@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Style Tile Iterations || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">Style Tile Iterations</h2>
+  <section class="article ">
+
+  <p><em>This post is part of a series on the <a href="http://www.brianmuenzenmeyer.com/site-redesign-in-the-open">open redesign of brianmuenzenmeyer.com</a> using atomic design and Pattern Lab.</em></p>
+
+<p>Anyone watching the open redesign progress mentioned above noticed big changes to the site in February, when elements of the site began to look more distinct and exhibit more structure. I set out to better understand the content hierarchy of the site while concurrently designing the look and feel.</p>
+
+<h4 id="keep-calm-and-iterate">Keep Calm and Iterate</h4>
+<p>I chose to combine the use of <a href="http://styletil.es/">http://styletil.es/</a> with my instance of <a href="http://www.brianmuenzenmeyer.com/patternlab/public/index.html">pattern lab</a> to explore concepts and then systematize them. I found the workflow to be acceptable— consisting of quick iterations of the style tile that exposed and refined patterns for eventual use. Utilizing simple versioning, I was able to build off of each style tile to gauge progress. You can see them all here:</p>
+
+<ol>
+  <li><a href="http://www.brianmuenzenmeyer.com/styletile/v1">www.brianmuenzenmeyer.com/styletile/v1</a></li>
+  <li><a href="http://www.brianmuenzenmeyer.com/styletile/v2">www.brianmuenzenmeyer.com/styletile/v2</a></li>
+  <li><a href="http://www.brianmuenzenmeyer.com/styletile/v3">www.brianmuenzenmeyer.com/styletile/v3</a></li>
+  <li><a href="http://www.brianmuenzenmeyer.com/styletile">www.brianmuenzenmeyer.com/styletile</a></li>
+</ol>
+
+<p>Or in gif form:</p>
+
+<p><img src="/img/styletile.gif" alt="Style Tile Iterations" /></p>
+
+<p>Some ideas that came and went along the way was the use of iconography, a purple complementary color scheme, and how much primacy I should give components like <a href="http://crunchyowl.com">Crunchy Owl</a>. The style tile is a great design tool because you can afford to cut a few corners. Load fonts any way you like, put everything in one scss file, no worries. To me, the deliverable is intentionally a little rough around the edges.</p>
+
+<h4 id="moving-diagonally-is-difficult-but-not-impossible">Moving Diagonally Is Difficult but Not Impossible</h4>
+<p>But this process was not without its challenges— most of my own making. As I said, style tiles should be rough <em>collages</em> (I compare style tiles to Pinterest to my clients now, as that is a good analog) and therefore devoid of layout. I tripped up on this along the way, and true enough, you can clearly see how my style tile iterations slowly evolve into something resembling a website layout. I don’t see this as <strong>bad</strong>, only cautionary, as you can too easily allow yourself to question layout when using these. This is where pattern lab came to rescue for me. After I’d discovered an interface element I liked, it was time to extract into a pattern. (<a href="http://www.brianmuenzenmeyer.com/patternlab/public/?p=atoms-striped-background">Here’s an example of one of the subheadings</a>)</p>
+
+<h4 id="foundation-found">Foundation Found</h4>
+<p>The combination of style tile iteration + Pattern Lab systemization allowed me to piece by piece construct the design I wanted. I did this enough times that by v5 I felt comfortable translating Pattern Lab concepts into the partials necessary to bring the site content to a fuller depth (btw, I detailed the process to do this <a href="http://www.brianmuenzenmeyer.com/using-patternlab-to-design-build-and-maintain-a-website">here</a>). Work remains, such as pagination, comments, and post templates, but from here I have a great start. I hope this workflow could perhaps be useful to you too!</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 03/07/15 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//pattern-lab-node-0-9-0-released" title="Pattern Lab Node 0.9.0 Released">Newer Post<br/>Pattern Lab Node 0.9.0 Released</a>
+
+
+
+<a href="//pattern-lab-node-0-8-0-released" title="Pattern Lab Node 0.8.0 Released">Older Post<br/>Pattern Lab Node 0.8.0 Released</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

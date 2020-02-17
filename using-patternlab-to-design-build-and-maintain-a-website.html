@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Using Pattern Lab to Design, Build and Maintain a Website || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">Using Pattern Lab to Design, Build and Maintain a Website</h2>
+  <section class="article ">
+
+  <p><em>This post is part of a series on the <a href="http://www.brianmuenzenmeyer.com/site-redesign-in-the-open">open redesign of brianmuenzenmeyer.com</a> using atomic design and Pattern Lab.</em></p>
+
+<h3 id="why-pattern-lab">Why Pattern Lab</h3>
+
+<p>Pattern Lab is a collection of tools to help you create atomic design systems. Full disclosure: I’ve maintained the node fork of <a href="https://twitter.com/brad_frost">Brad</a> and <a href="https://twitter.com/dmolsen">Dave’s</a> stellar PHP trunk for a while now. Pattern Lab was my third [but] true love, fast on the heels of <a href="http://pea.rs">pea.rs</a> and an attempt to roll my own style guide that had a decidedly <a href="https://www.youtube.com/watch?v=X4jF3xTxKWM">rough and tumble</a> feel and outcome. Finding such a mature product was a godsend, and a great learning opportunity.</p>
+
+<p>Piling success upon success just feels right. Building a site up from its atomic interface elements allows you to not only maintain consistency by paving less cow paths, but it allows you to pave over the whole shebang and propagate changes as well structured CSS should. Focusing on core elements like typography, irreverent of layout, is a strength Pattern Lab can bring to a design process. With auto-refresh, annotation, viewport resizing, and more, it’s a clear choice for me when considering how I want the redesign to evolve.</p>
+
+<h3 id="structured-for-success">Structured for Success</h3>
+<p>Pattern Lab and jekyll are both static site generators, so the key is to integrate with as little coupling as possible and create a design and development workflow that promotes <a href="http://bradfrost.com/blog/post/atomic-web-design/">atomic design</a> concepts. After setting up jekyll, I used npm to pull down the latest version of patternlab-node into _patternlab.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  npm install patternlab-node;</code></pre></figure>
+
+<p>After a bit of cleanup, my jekyll directory structure looks as so:</p>
+
+<pre>
+<code class="language-bash" data-lang="bash">.
+├── _includes
+├── _layouts
+├── _patternlab
+├── _posts
+├── _site
+├── css
+├── img
+├── js
+├── _config.yml
+└── index.html</code>
+</pre>
+
+<p>Placing Pattern Lab in an underscored directory ensures the jekyll ignores it during parsing locally. Since this is hosted on Github Pages, an absolutely <em>key</em> step for me was to ignore the _patternlab directory. Of course, I still want to version control patterns and style from Pattern Lab, but with the help of Github again one can easily setup another repository. Added bonus is the fact that Pattern Lab, when pushed to the gh-pages branch, will be hosted as a sub-directory of my main site. I didn’t do this right the first time, mind you, but luckily you can instruct git to <a href="http://stackoverflow.com/questions/1274057/making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore">remove tracked files after they are ignored too</a>. For anyone following along, you can see both of the repositories here:</p>
+
+<ul>
+  <li><a href="https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io">https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io</a> My user repository with a CNAME</li>
+  <li><a href="https://github.com/bmuenzenmeyer/patternlab">https://github.com/bmuenzenmeyer/patternlab</a> A project repository with Pattern Lab pushed on the gh-pages branch</li>
+</ul>
+
+<h3 id="toward-maintainability">Toward Maintainability</h3>
+
+<p>A style guide, once written, must preserve its relevance or quickly fall out of favor by stakeholders, designers, and developers. This is a darling you do not want to kill. If the style guide becomes stale and out of sync with the <a href="http://csswizardry.com/2013/04/shame-css/">realities of maintenance</a>, the investment is lost or damaged. A style guide’s ability to communicate and focus diverse teams is a function of its parity with production. To this end, I am have created a small utility within <a href="https://github.com/pattern-lab/patternlab-node">Pattern Lab Node</a> to extract select partials and output them where needed. Let’s take a look at the <code class="highlighter-rouge">config.json</code> file at the root of the v0.1.7 install:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="p">{</span>
+  <span class="s2">"patternExportKeys"</span><span class="err">:</span> <span class="p">[</span><span class="s2">"organisms-header"</span><span class="p">],</span>
+  <span class="s2">"patternExportDirectory"</span><span class="err">:</span> <span class="s2">"./../_includes/"</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Simple enough. We specify a directory we want to output partials to, and define an array of pattern keys to export. Exporting <em>all</em> patterns as partials may work for you. For me… early days. If you want to see the implementation of the pattern exporter, you can see it <a href="https://github.com/pattern-lab/patternlab-node/blob/master/builder/pattern_exporter.js">here on github</a>.</p>
+
+<p>It’s even easier to <a href="https://github.com/gruntjs/grunt-contrib-copy">copy</a> the CSS outputted from patternlab a couple level’s higher to where jekyll is expecting it. With the CSS and the partials both being injected directly into the jekyll structure, my design <em>slash</em> development workflow is one way and maintainable <em>starting</em> at the Pattern Lab style guide. You can see it hosted at <a href="http://www.brianmuenzenmeyer.com/patternlab/public/index.html">www.brianmuenzenmeyer.com/patternlab/public/index.html</a>. From these humble beginnings, iteration and atomic chemistry will run rampant! The final structure, when running Pattern Lab, is as follows:</p>
+
+<pre>
+<code class="language-bash" data-lang="bash">.
+├── _includes
+<span class="p">|</span>   └── organisms-header.html //from Pattern Lab!
+├── _layouts
+├── _patternlab
+├── _posts
+├── _site
+├── css
+<span class="p">|</span>   └── style.css //from Pattern Lab!
+├── img
+├── js
+├── _config.yml
+└── index.html</code>
+</pre>
+
+<p>The final step, of course, is to reference our partial in our jekyll template:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"site"</span><span class="nt">&gt;</span>
+  {% include organisms-header.html %}
+  <span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+    {% content %}
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+...
+<span class="nt">&lt;/body&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>This is perhaps a rudimentary implementation, but it works perfectly in the jekyll environment. <a href="https://twitter.com/ianfeather">Ian Feather</a> outlined a far more robust solution in his <a href="http://ianfeather.co.uk/a-maintainable-style-guide/">post</a> about Lonely Planet’s style guide. One could quite conceivably output partials to a directory that a Drupal or Wordpress installation reads. I may look into that more soon and add it to the patternlab wiki.</p>
+
+<blockquote>
+  <p>The best writing is rewriting.
+— E.B. White</p>
+</blockquote>
+
+<p>E.B. White, of Strunk and White’s <em>The Elements of Style</em>, knew that a text lives longest past draft form. If anyone’s read White’s terse handbook, they will understand the efficacy of a well written sentence. So too, in my opinion, do websites, living long past their shower-thought, design brief PDF, or hackathon. A well-structured, maintainable site has little fat, a clear message supported by content and style, and consists of a one-way DRY workflow that does not collapse under its own weight. Stay tuned to see how this goes.</p>
+
+<p><em>Please share your thoughts as to how this method could be improved upon or brought to other production web platforms.</em></p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 01/09/15 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//creating-a-content-inventory" title="Creating a Content Inventory">Newer Post<br/>Creating a Content Inventory</a>
+
+
+
+<a href="//a-performant-foundation" title="A Performant Foundation">Older Post<br/>A Performant Foundation</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

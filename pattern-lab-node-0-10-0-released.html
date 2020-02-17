@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Pattern Lab Node 0.10.0 Released || Brian Muenzenmeyer  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">Pattern Lab Node 0.10.0 Released</h2>
+  <section class="article ">
+
+  <p>A busy time here again - with an uptick in interest in the project and renewed focus from me. Your humble port maintainer wants to get to v1.0.0 like no-other! It was also unlike any release to date - as it started with an incremental feature addition (pattern parameters) and ended with a complete overhaul of how patterns were stitched together with data.</p>
+
+<h3 id="waiter-is-that-a-parameter-i-see-in-my-pattern">Waiter, Is That A Parameter I See in My Pattern?</h3>
+<p>Yes they are finally here! Pattern parameters are a simple mechanism for replacing Mustache variables via attributes on a pattern partial tag rather than having to use a pattern-specific json file. They are especially useful when you want to supply distinct values for Mustache variables in a specific pattern partial instance that may be included multiple times in a molecule, template, or page.</p>
+
+<p>The basic syntax is this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre>{{&gt; molecules-single-comment(description: 'A life is like a garden. Perfect moments can be had, but not preserved, except in memory.') }}<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The attributes listed in the pattern parameters should match Mustache variable names in your pattern. The values listed for each attribute will replace the Mustache variables. Again, pattern parameters are a simple find and replace of Mustache variables with the supplied values.</p>
+
+<p>Pattern parameters <strong>do not</strong> currently support the following:</p>
+
+<ul>
+  <li>sub-lists (e.g. iteration of a section),</li>
+  <li>and the use of long strings of text can be unwieldy</li>
+  <li>nested properties within the parameter data, such as ``</li>
+</ul>
+
+<p>You can read the full documentation on pattern parameters here: <a href="http://patternlab.io/docs/pattern-parameters.html">Using Pattern Parameters</a></p>
+
+<h3 id="data-inheritance">Data Inheritance</h3>
+
+<p>I cannot omit what I easily sank the most hours and stress into - the rendering of data correctly. Data inheritance is such a core concept to Pattern Lab that discovering a critical flaw in my algorithm was tough to swallow — it basically meant the port was never close to emulating the power of its older brother. I learned this during a rather routine comparison of functionality between PHP and Node, by  finally noticing that the home page touts were not rendered at all. Sure enough, they were not defined in the global data; <em>only</em> within the <code class="highlighter-rouge">homepage.json</code></p>
+
+<h3 id="changelog">CHANGELOG</h3>
+
+<ul>
+  <li>ADD: Added support for <a href="http://patternlab.io/docs/pattern-parameters.html">pattern parameters</a>! Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/88">#88</a></li>
+  <li>FIX: Data inheritance is now working as advertised. Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/127">#127</a>. This turned out to be a MAJOR thing, as I realized the home-page was not passing down any of its json data to partials.</li>
+  <li>CHG: Refactored a lot of code out of patternlab.js and into separate files. Doing so should make everything dryer, more unit testable, and easier to understand I hope.</li>
+  <li>ADD: Added proper styling for the homepage-emergency alert that is displayed for demo purposes</li>
+  <li>ADD: Added a new comment organism, the sticky comment, to ship an example of pattern parameters</li>
+  <li>CHG: Start some JS linting of the project. I don’t quite agree with a lot of it, so am trying to set some smart configurations</li>
+  <li>CHG: Wrapped some build messages in the patternlab.config.debug flag</li>
+  <li>FIX: Allow users to set a base url path. Resolves <a href="https://github.com/pattern-lab/patternlab-node/issues/125">#125</a> (testing in the wild requested)</li>
+  <li>THX: Thanks <a href="https://github.com/scottnath">@scottnath</a> for the proposed base url solution and <a href="https://github.com/jkbyln">@jkbyln</a> for discussion on the topic too!</li>
+</ul>
+
+<h3 id="upgrade-instructions">UPGRADE INSTRUCTIONS</h3>
+
+<p>Normally one could be safe following the instructions in <a href="https://github.com/pattern-lab/website/blob/dev/patternlabsite/docs/node/upgrading.md">here</a>, but this time we’ve changed some <code class="highlighter-rouge">source/_patternlab-files/</code> directory files too. I have opened <a href="https://github.com/pattern-lab/patternlab-node/issues/133">an issue</a> to make this process smoother in the future. For now, you should be able to upgrade using the follow process:</p>
+
+<ol>
+  <li>Backup your <code class="highlighter-rouge">source/</code> directory and <code class="highlighter-rouge">config.json</code></li>
+  <li>Overwrite all of <code class="highlighter-rouge">builder/</code> and <code class="highlighter-rouge">public/</code> as normal</li>
+  <li>Refer to this <a href="https://github.com/pattern-lab/patternlab-node/pull/130/files">pull request</a> if you need help, but you’ll essentially need to:
+    <ul>
+      <li>Add <code class="highlighter-rouge">"baseurl" : ""</code> to <code class="highlighter-rouge">config.json</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/pattern-header-footer/footer.html</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/styleguide.mustache</code></li>
+      <li>Overwrite <code class="highlighter-rouge">source/_patternlab-files/viewall.mustache</code></li>
+    </ul>
+  </li>
+</ol>
+
+<p>Sorry for the inconvenience. I know this isn’t ideal, but it’s far from impossible. Perhaps if you don’t need pattern parameter support or the base url you may choose to postpone an upgrade.</p>
+
+<p>I put a lot of hours into this one - essentially rewriting the entire engine -hope you like what you see!</p>
+
+<p>You can view the specific release here: <a href="https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0">https://github.com/pattern-lab/patternlab-node/releases/tag/v0.10.0</a></p>
+
+<h3 id="pattern-lab-node-v100">Pattern Lab Node v1.0.0</h3>
+
+<p>Partly for my own sanity, and partly at the request of the community, I have organized remaining work into a <a href="https://github.com/pattern-lab/patternlab-node/issues/134">roadmap</a> for sorts. A person dedicating more hours to the project would churn through like I do a stack of pancakes, but for me it will take months yet. My goals are to be transparent about direction, emphasize the current finish line as the mustache-powered Pattern Lab PHP v1, and motivate myself toward that finish line. Please let me know if your current needs don’t jive with the roadmap..</p>
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 08/01/15 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//solving-problems-with-pattern-lab-small-team-workflow" title="Solving Problems with Pattern Lab - Small Team Workflow">Newer Post<br/>Solving Problems with Pattern Lab - Small Team Workflow</a>
+
+
+
+<a href="//pattern-lab-node-0-9-0-released" title="Pattern Lab Node 0.9.0 Released">Older Post<br/>Pattern Lab Node 0.9.0 Released</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>

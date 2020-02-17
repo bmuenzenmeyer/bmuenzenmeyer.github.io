@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/style.css">
+  <title> CSS-IN-JS  </title>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="js/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<header class="masthead">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"
+    fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"/>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"/>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"/>
+  </svg>
+  <h1 class="masthead__header"><a href="http://brianmuenzenmeyer.com" class="masthead__header__link">Brian<span class="masthead__header__embellish">Muenzenmeyer</span></a></h1>
+</header>
+<nav class="nav">
+  <a href="/archive.html">all articles</a>
+  <a href="/about.html">about me</a>
+  <a href="https://twitter.com/bmuenzenmeyer">twitter</a>
+  <a href="https://github.com/bmuenzenmeyer">github</a>
+  <a href="http://codepen.io/bmuenzenmeyer/">codepen</a>
+  <a href="mailto:brian.muenzenmeyer@gmail.com">email</a>
+</nav>
+
+
+<main id="container" role="main" class="">
+  <h2 class="item__heading">CSS-IN-JS</h2>
+  <section class="article ">
+
+  <p><strong>This post is an opinion about CSS-IN-JS. There are many like it but this one is mine.</strong></p>
+
+<p>It started on my bus home.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How &#39;bout that CSS-in-JS? <a href="https://t.co/mcR9scUhQq">pic.twitter.com/mcR9scUhQq</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/993920969990397952?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I cannot help but be slightly triggered by the tweet. The code snippet demonstrates a fundamental misunderstanding of React and how to apply styles to React components. Anyone seasoned in front end cringes. But to package this up and say “How ’bout that CSS-IN-JS?” really misses the mark for me. This is not Brad’s code (he knows better): it’s a strawman. Perhaps a throwaway joke. But what it also does is dangerously conflate CSS-IN-JS with inline styles. To associate that code with CSS-IN-JS is disingenuous. Some readers of that tweet may misunderstand Brad’s intent and come to the conclusion that <em>this code</em> is representative “state-of-the-art” CSS-IN-JS. We aren’t constructively furthering the conversation this way. Most CSS-IN-JS solutions now output classes. Full stop.</p>
+
+<h4 id="we-drive-into-the-future-using-only-our-rearview-mirror">We Drive into the Future Using Only Our Rearview Mirror</h4>
+
+<p>We all take for granted at this point how wrong the above code looks. We (I liberally assign myself in the following camp) come up in a world where CSS became more and more powerful and standardized. We can make CSS do <a href="https://codepen.io/thebabydino/pen/paAJw">some</a> <a href="https://codepen.io/davidkpiano/pen/wMqXea">truly</a> <a href="https://codepen.io/jakealbaugh/pen/qNrZyw">magical</a> <a href="https://codepen.io/davidkpiano/pen/xLKBpM">things</a>. I revel in making CSS do amazing things just as much as the next developer. I’ve sweated the details within custom keyframe animations, crafted complex responsive layouts, built whole component libraries from scratch atop a BEM <code class="highlighter-rouge">block--element__modifier</code> tower. It felt great.</p>
+
+<p>Now, the product I work on at my job helps other teams write products quickly. It’s primarily a React application, so a modern front-end stack is expected. It can be complicated. We use a CSS-IN-JS technical solution as part of this product. <a href="https://github.com/cssinjs/jss">JSS</a> to be exact ,though the specifics do not matter to me for the purposes of this post.</p>
+
+<p>When onboarding new teams, we often stumble into a styling discussion. This is in addition to Javascript, ES6, React, and our proprietary componentry. It’s a lot at once. Those with prior CSS knowledge seem to pick it up pretty quickly. Many still wish to leverage CSS or Sass. I’ve started sharing out <a href="https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660">A Unified Styling Language</a> by Mark Dalgleish as a superbly balanced look at the landscape. He goes into much deeper detail than I do here. Please go read it.</p>
+
+<p>I find it useful to look at a simple styled React component as a gentle introduction to a lot of concepts.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">withStyles</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'material-ui/styles'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Button</span> <span class="nx">from</span> <span class="s1">'material-ui/Button'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">Button</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">children</span><span class="p">,</span> <span class="nx">classes</span><span class="p">,</span> <span class="nx">text</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">button</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">children</span><span class="p">}</span> <span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/Button</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="nx">theme</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">button</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">margin</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="s1">'currentColor'</span><span class="p">,</span>
+    <span class="na">background</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">myCompany</span><span class="p">.</span><span class="nx">primary</span><span class="p">,</span>
+    <span class="s1">'&amp; svg'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">marginLeft</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(</span><span class="nx">styles</span><span class="p">)(</span><span class="nx">Button</span><span class="p">);</span></code></pre></figure>
+
+<h4 id="in-file-collocation">In-file Collocation</h4>
+
+<p>I have a co-worker that is not cut from the same cloth as I—he has little prior front-end experience. The muscle memory of dev tool inspection, source maps, <code class="highlighter-rouge">.scss</code> @imports, and the like is not present in him. Hunting for a static class name in a file somewhere, or worse, a descendant selector feels daunting.  Same-file collocation allows the styles that affect the component in question to be next to the markup and functionality. On purpose. Contained. As a single portable component.</p>
+
+<p>Rather than forcing him to learn and follow a convention, the styling is right there for the reading alongside the component he implements.</p>
+
+<h4 id="consume-the-primitives">Consume the Primitives</h4>
+
+<p>CSS-IN-JS (as the second step of React’s HTML-IN-JS approach) makes sense because it puts the most primitive functionality inside the most powerful, allowing for the powerful features to augment the primitive. This is what the smartphone did to clocks, contact lists, calendars, notepads, ad nauseum. Now my smartphone can schedule a meeting with someone halfway across the country at the right time for both of us—by helping me string together a bunch of separate concerns into a single flow.</p>
+
+<p>Let’s look closely at the styles in the above snippet. Yes, it’s simple.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="nx">theme</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">button</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">margin</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="s1">'currentColor'</span><span class="p">,</span>
+    <span class="na">background</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">myCompany</span><span class="p">.</span><span class="nx">primary</span><span class="p">,</span>
+    <span class="s1">'&amp; svg'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">marginLeft</span><span class="p">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">})</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">margin</code>, <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">background</code>. All properties we are familiar with. But look at the value for <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">background</code>. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. Notice that escendant selectors work. I think this is cool. Because it’s all still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?).</p>
+
+<p>Media queries work.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="nx">theme</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">root</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">margin</span><span class="p">:</span> <span class="err">`</span><span class="mi">0</span> <span class="nx">$</span><span class="p">{</span><span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span> <span class="o">*</span> <span class="o">-</span><span class="mi">3</span><span class="p">}</span><span class="nx">px</span><span class="err">`</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="s1">'@media (max-width: 1250px)'</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">root</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">margin</span><span class="p">:</span> <span class="err">`</span><span class="mi">0</span> <span class="nx">$</span><span class="p">{</span><span class="nx">theme</span><span class="p">.</span><span class="nx">spacing</span><span class="p">.</span><span class="nx">unit</span> <span class="o">*</span> <span class="mi">2</span><span class="p">}</span><span class="nx">px</span><span class="err">`</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>Pseudoclasses work.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">paragraph</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">'&amp;:last-of-type'</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">marginBottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">@supports</code> work.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">styles</span> <span class="o">=</span> <span class="nx">theme</span> <span class="o">=&gt;</span> <span class="p">({</span>
+  <span class="na">root</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">display</span><span class="p">:</span> <span class="s2">"flex"</span>
+  <span class="p">},</span>
+  <span class="s2">"@supports (display: grid)"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">root</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nl">display</span><span class="p">:</span> <span class="s2">"grid"</span><span class="p">,</span>
+      <span class="na">gridTemplateColumns</span><span class="p">:</span> <span class="s2">"1fr 800ch 1fr"</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>CSS fundamentals are required—but we have some powertools in our workshop now. Got lots of classes to manage? Look no further than <a href="https://github.com/JedWatson/classnames">classnames</a>.</p>
+
+<p>And yes, we still need progressive web applications. We still need <code class="highlighter-rouge">@supports</code> feature detection, we still need to cut the mustard. We still need <em>web design</em>. CSS-IN-JS does not significantly erode or impede these necessities should someone need to build for them. I hope none of this persuades you otherwise!</p>
+
+<h4 id="css-yes">CSS Yes</h4>
+
+<p>Guess what? Your CSS badassery translates into a CSS-IN-JS solution. Teams still need an expert to own the craft of applying visual styles to markup. Doing so correctly and in a scalable manner is still key. All those years of accrued knowledge fighting browser quirks, consulting caniuse, learning CSS grid, clip-paths, gradients, etc, has only made me more powerful in a CSS-IN-JS world. It has translated just fine. I still need to know CSS in order to make something look the way I want to.</p>
+
+<p>There is a time and place for every tool. CSS-IN-JS makes a lot of sense in a lot of situations that I have encountered in my real-life™ work helping teams. Sass continues to be my go-to everywhere else. Are you building a design system? You may need the portability of the primitive (Brad mentions this in the article below). I doubt I’ll ever advocate CSS-IN-JS to my personal clients—because I am interested in <a href="http://crunchyowl.com/">crafting right-sized solutions</a> and most people I serve haven’t needed something so heavy. But for teams building large apps atop React it feels like a sane way forward.</p>
+
+<h4 id="wrapping-up">Wrapping Up</h4>
+
+<p>I end with this.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There’s been some knee-jerk reactions from different communities (incl. React) to what Brad is posting as he’s exploring front-end libraries. Let’s remember we can disagree about a lot and still teach each other amazing things</p>&mdash; Dan Abramov (@dan_abramov) <a href="https://twitter.com/dan_abramov/status/994020475482361856?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I respect Dan’s perspective here. He’s very much on the cutting edge of modern front-end development and yet understands where we all came from and that together we need to go somewhere new.</p>
+
+<p>P.S. I love Brad. <a href="http://patternlab.io">I work with him</a>, for goodness sake! While I was writing this post, Brad tweeted this and wrote this.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For what it&#39;s worth, I&#39;m very aware I&#39;m throwing some zingers around without really sinking my teeth into it. I&#39;m very much open to learning more about it, but I do remain skeptical. Hopefully this post explains a bit of my apprehension a bit better: <a href="https://t.co/6vFKhT9Tbo">https://t.co/6vFKhT9Tbo</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994027941121200129?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">I&#39;m very open to listening and learning more, and I&#39;m excited to have started some great conversations with people who work with different approaches and swear by it.</p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994028275235217408?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I felt triggered today by Brad’s tweet, but also because there are folks where I work expending valuable energy, money, and <a href="http://bradfrost.com/blog/post/creative-exhaust/">creative exhaust</a> building CSS only solutions, missing out on an opportunity to explore new territory. They see Brad’s of the world as standard bearers of the familiar, as I do. I think the problems Brad highlights are valid and warrant pause. Teams need to ultimately decide what is best for them over the lifespan of their product. I hope they try different approaches and construct an <em>informed</em> opinion.</p>
+
+<p>And then, as my friend puts it, I hope they <a href="https://twitter.com/brad_frost/status/450619808795885569">share what they know</a>.</p>
+
+
+
+</section>
+
+<section>
+
+  <div class="meta">Originally posted 05/08/18 - <a href="https://twitter.com/bmuenzenmeyer">Brian Muenzenmeyer - Follow me on Twitter</a></div>
+
+
+  <div class="postNav buttons buttons_secondary">
+
+<a href="//i-maintainer" title="I, Maintainer">Newer Post<br/>I, Maintainer</a>
+
+
+
+<a href="//pattern-lab-yes-and" title="Pattern Lab. Yes, and...">Older Post<br/>Pattern Lab. Yes, and...</a>
+
+</div>
+
+
+  <link rel="stylesheet" href="http://bmuenzenmeyer.github.io/css/code.css">
+
+</section>
+
+</main>
+
+<script>
+    //Please change this if you fork the repo!
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-29672680-1','auto');ga('send','pageview');
+</script>
+</body>
+</html>
