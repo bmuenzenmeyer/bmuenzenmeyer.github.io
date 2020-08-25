@@ -1,0 +1,12 @@
+
+blockquote {
+    font-style: italic;
+    margin: 1rem auto;
+}
+.game {
+    margin: 3rem auto; 
+}
+
+img {
+    max-width: 100%;
+}

@@ -39,7 +39,7 @@ layout: layouts/default.hbs
     {{{ randomItem }}}
     <div class="item">
         <a href="{{{this.data.permalink}}}">
-            {{#ifIn 'keyboard' this.data.tags}} ⌨️ {{/ifIn}}{{#ifIn 'writing' this.data.tags}} 🖋️ {{/ifIn}} {{this.data.title}}
+            {{#ifIn 'project' this.data.tags}} 👾 {{/ifIn}}{{#ifIn 'keyboard' this.data.tags}} ⌨️ {{/ifIn}}{{#ifIn 'writing' this.data.tags}} 🖋️ {{/ifIn}} {{this.data.title}}
         </a>
     </div>
     {{{ randomItem }}}

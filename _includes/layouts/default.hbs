@@ -15,6 +15,9 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <title>{{#if title}} {{title}} : {{/if}}Brian Muenzenmeyer</title>
+    {{#if customCSS}}
+        <link rel="stylesheet" href="/css/{{ customCSS }}.css">
+    {{/if}}
 </head>
 
 <body>
