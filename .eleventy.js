@@ -1,9 +1,5 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max))
-}
-
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addLayoutAlias("default", "layouts/default.hbs")
+  eleventyConfig.addLayoutAlias("default", "default.njk")
 
   //asset folders
   eleventyConfig.addPassthroughCopy("css")
@@ -17,14 +13,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon-32x32.png")
   eleventyConfig.addPassthroughCopy("site.webmanifest")
   eleventyConfig.addPassthroughCopy("safari-pinned-tab.svg")
-
-  //handlebars
-  eleventyConfig.addHandlebarsHelper("ifIn", function (elem, list, options) {
-    if (list.indexOf(elem) > -1) {
-      return options.fn(this)
-    }
-    return options.inverse(this)
-  })
 
   return {
     dir: {

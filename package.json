@@ -5,7 +5,8 @@
   "main": ".eleventy.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "0.11.1",
+    "nunjucks": "3.2.2"
   },
   "scripts": {
     "start": "npx @11ty/eleventy --serve --port=8080"

@@ -1,5 +1,5 @@
 ---
-layout: layouts/item.hbs
+layout: item.njk
 
 title: "I, Maintainer"
 permalink: /i-maintainer/index.html
