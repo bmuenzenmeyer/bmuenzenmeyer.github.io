@@ -6,45 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content=" I, Maintainer : Because it is more than &quot;Be Glad It Exists&quot; :  The personal website of Brian Muenzenmeyer.">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+
     <title> I, Maintainer : Brian Muenzenmeyer</title>
+    
 </head>
 
 <body>
 
-    <main id="container" role="main">
+    <main>
         
-<header class="masthead grid">
-  <div class="w-h" id="name"><a href="/">Brian Muenzenmeyer</a></div>  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item item--grow" id="logo">  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
-        <title>Gorilla step</title>
-        <!-- Designed by Metafizzy, 2017 -->
-        <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
-        <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
-        <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
-    </svg>  </div>
-  <div class="item"></div>
-  <div class="item"></div>
+<a href="/" id="home">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
+</svg>
+Brian Muenzenmeyer
+</a>
+<div><a href="https://github.com/bmuenzenmeyer">github</a></div>
+<div><a href="https://twitter.com/bmuenzenmeyer">twitter</a></div>
+<div><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></div>
+    
 
-  <div class="item"><a href="https://github.com/bmuenzenmeyer">github</a></div>
-  <div class="item"><a href="https://twitter.com/bmuenzenmeyer">twitter</a></div>
-  <div class="item"><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></div>
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-</header>
-
-<main id="container" role="main" class=" container--readable">
-  <h2 class="item--title">I, Maintainer</h2>
+<main class="">
+  <h2>I, Maintainer</h2>
   <blockquote>Because it is more than &quot;Be Glad It Exists&quot;</blockquote>
   <p>Pattern Lab development is stagnating.</p>
 <p>The evidence is everywhere. My <a href="https://github.com/pattern-lab/patternlab-node/milestone/22">3.0 milestone</a> is almost 1 year overdue. Release frequency is down. Questions increasingly go unanswered. Issues remain in a triage, unresolved state. Uncertainty and frustration brew within the community room.</p>
@@ -86,39 +83,6 @@ A promise with potential users. This software works as defined. Installation yie
 <p>I pledge to live by these laws to the best of my ability. I pledge to better understand my responsibilities and act upon them. I pledge to run this race, and to understand that I carry a baton, and to look for those waiting for me.</p>
 
 </main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    const classes = ['dotted', 'striped', 'grid', 'white', 'white', 'white', 'white', 'white', 'grey', 'gray', 'gris', 'grease', 'black']
-
-    const changeNode = (winnerwinnerdivdinner) => {
-        if (winnerwinnerdivdinner === undefined) {
-            const divs = $('.item')
-            winnerwinnerdivdinner = $('.item').get(getRandomInt(divs.length))	
-        } else {
-            winnerwinnerdivdinner = winnerwinnerdivdinner.target;
-        }
-        
-        const newClass = getRandomInt(classes.length)
-        $(winnerwinnerdivdinner).attr( 'class', `item bg-${classes[newClass]}` )
-    }
-
-    $(() => {
-        setInterval(changeNode, 2000)
-        
-        $('body').on('click', '.item', e => {
-            changeNode(e)
-        })
-        
-    })
-</script>
-</body>
-</html>
-
     </main>
 
 </body>
