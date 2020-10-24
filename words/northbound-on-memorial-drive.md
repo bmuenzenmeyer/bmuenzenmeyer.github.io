@@ -1,5 +1,5 @@
 ---
-layout: layouts/item.hbs
+layout: item.njk
 
 title: "Northbound on Memorial Drive"
 permalink: /northbound-on-memorial-drive/index.html

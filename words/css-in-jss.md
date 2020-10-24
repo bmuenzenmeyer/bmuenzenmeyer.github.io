@@ -1,5 +1,5 @@
 ---
-layout: layouts/item.hbs
+layout: item.njk
 
 title: "CSS-IN-JS"
 permalink: /css-in-js/index.html
@@ -33,31 +33,31 @@ When onboarding new teams, we often stumble into a styling discussion. This is i
 I find it useful to look at a simple styled React component as a gentle introduction to a lot of concepts.
 
 ```js
-import React from "react";
-import { withStyles } from "material-ui/styles";
-import Button from "material-ui/Button";
+import React from "react"
+import { withStyles } from "material-ui/styles"
+import Button from "material-ui/Button"
 
 function Button(props) {
-  const { children, classes, text } = props;
+  const { children, classes, text } = props
   return (
     <Button className={classes.button}>
       {children} {text}
     </Button>
-  );
+  )
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   button: {
     margin: theme.spacing.unit,
     color: "currentColor",
     background: theme.myCompany.primary,
     "& svg": {
-      marginLeft: theme.spacing.unit / 2
-    }
-  }
-});
+      marginLeft: theme.spacing.unit / 2,
+    },
+  },
+})
 
-export default withStyles(styles)(Button);
+export default withStyles(styles)(Button)
 ```
 
 #### In-file Collocation
@@ -73,16 +73,16 @@ CSS-IN-JS (as the second step of React’s HTML-IN-JS approach) makes sense beca
 Let’s look closely at the styles in the above snippet. Yes, it’s simple.
 
 ```js
-const styles = theme => ({
+const styles = (theme) => ({
   button: {
     margin: theme.spacing.unit,
     color: "currentColor",
     background: theme.myCompany.primary,
     "& svg": {
-      marginLeft: theme.spacing.unit / 2
-    }
-  }
-});
+      marginLeft: theme.spacing.unit / 2,
+    },
+  },
+})
 ```
 
 `margin`, `color`, `background`. All properties we are familiar with. But look at the value for `margin` or `background`. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. Notice that escendant selectors work. I think this is cool. Because it’s all still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?).
@@ -90,16 +90,16 @@ const styles = theme => ({
 Media queries work.
 
 ```js
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    margin: `0 ${theme.spacing.unit * -3}px`
+    margin: `0 ${theme.spacing.unit * -3}px`,
   },
   "@media (max-width: 1250px)": {
     root: {
-      margin: `0 ${theme.spacing.unit * 2}px`
-    }
-  }
-});
+      margin: `0 ${theme.spacing.unit * 2}px`,
+    },
+  },
+})
 ```
 
 Pseudoclasses work.
@@ -108,26 +108,26 @@ Pseudoclasses work.
 const styles = {
   paragraph: {
     "&:last-of-type": {
-      marginBottom: 0
-    }
-  }
-};
+      marginBottom: 0,
+    },
+  },
+}
 ```
 
 `@supports` work.
 
 ```js
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    display: "flex"
+    display: "flex",
   },
   "@supports (display: grid)": {
     root: {
       display: "grid",
-      gridTemplateColumns: "1fr 800ch 1fr"
-    }
-  }
-});
+      gridTemplateColumns: "1fr 800ch 1fr",
+    },
+  },
+})
 ```
 
 CSS fundamentals are required—but we have some powertools in our workshop now. Got lots of classes to manage? Look no further than [classnames](https://github.com/JedWatson/classnames).

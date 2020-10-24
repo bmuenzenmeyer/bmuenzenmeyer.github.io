@@ -1,0 +1,11 @@
+---
+layout: 'default.njk'
+---
+
+{%include "components-header.njk" %}    
+
+<main class="{{ class }}">
+  <h2>{{ title }}</h2>
+  <blockquote>{{ summary }}</blockquote>
+  {{ content | safe }}
+</main>
