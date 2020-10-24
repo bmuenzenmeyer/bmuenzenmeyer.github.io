@@ -1,3 +1,28 @@
+:root {
+  --darkblue: #031636;
+  --blue: #0d80f0;
+}
+
 #home svg {
   height: 1rem;
+}
+
+/* COLOR PREFERENCE */
+body {
+  background: red;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--darkblue);
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: #222;
+  }
 }
