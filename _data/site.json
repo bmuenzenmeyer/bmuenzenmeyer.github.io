@@ -4,7 +4,6 @@
   "domain": "bmuenzenmeyer.github.io",
   "permalink": "/:title",
   "baseurl": "",
-  "repo": "http://github.com/mattcone/markdown-guide",
   "comments": false,
   "author": {
     "name": "Brian Muenzenmeyer"

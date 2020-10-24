@@ -4,13 +4,8 @@ layout: 'layouts/default.hbs'
 
 {{> components-header }}    
 
-<main id="container" role="main" class="{{ class }} container--readable">
-  <h2 class="item--title">{{ title }}</h2>
+<main class="{{ class }}">
+  <h2>{{ title }}</h2>
   <blockquote>{{ summary }}</blockquote>
   {{{ content }}}
 </main>
-
-{{> razzledazzle }}
-
-</body>
-</html>
