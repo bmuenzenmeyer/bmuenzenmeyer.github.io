@@ -2,11 +2,14 @@
 layout: default.njk
 ---
 
-{% include "homelink.njk" %}
 <div id="job">lead front end engineer</div>
 <div id="coffee">when not online, I am trying to find my ☕</div>
+<ul class="collection">
 {% for item in collections.words %}
-    <a href="{{item.data.permalink}}">
-        {{item.data.title}}
-    </a>
+    <li>
+        <a href="{{item.data.permalink}}">
+            {{item.data.title}}
+        </a>
+    </li>
 {% endfor %}
+</ul>
