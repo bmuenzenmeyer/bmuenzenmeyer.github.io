@@ -7,15 +7,31 @@
   height: 2rem;
 }
 
+footer {
+  font-size: 60%;
+}
+
 /* COLOR PREFERENCE */
 body {
-  background: red;
   color: white;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--darkblue);
+    color: white;
+  }
+
+  a {
+    color: var(--blue);
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  a:hover,
+  a:focus {
     color: white;
   }
 }
@@ -25,4 +41,47 @@ body {
     background: white;
     color: #222;
   }
+
+  a {
+    color: #222;
+  }
+
+  a:visited {
+    color: var(--darkblue);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--blue);
+  }
+}
+
+/* LAYOUT */
+
+#container {
+  display: grid;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+@media (min-width: 35rem) {
+  #home {
+    flex-direction: row;
+  }
+  #home svg {
+    margin-right: 0.5rem;
+  }
+}
+
+.collection {
+}
+
+.collection li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

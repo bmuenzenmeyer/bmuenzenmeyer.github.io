@@ -25,10 +25,17 @@
 
 <body>
 
-    <main>
+    {% include "homelink.njk" %}
+
+    <main id="container">
         {{ content | safe }}
     </main>
 
 </body>
+
+<footer>
+    <p><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+</footer>
 
 </html>
