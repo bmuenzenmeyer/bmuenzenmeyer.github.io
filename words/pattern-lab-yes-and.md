@@ -4,8 +4,8 @@ layout: item.njk
 title: "Pattern Lab. Yes, and..."
 permalink: /pattern-lab-yes-and/index.html
 tags: ["words", "keyboard"]
-author: Brian Muenzenmeyer
 date: 2017-09-29
+author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 class: ""
 summary: "A Thank You"
