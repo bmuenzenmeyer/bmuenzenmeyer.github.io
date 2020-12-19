@@ -13,6 +13,8 @@ summary: 'Because it is more than "Be Glad It Exists"'
 comments: false
 ---
 
+_Update: Since this article was written, I've [retired from active involvement in Pattern Lab](https://github.com/pattern-lab/patternlab-node/pull/1250). The ideas I lay out in the below post made stepping away the right decision at this time._
+
 Pattern Lab development is stagnating.
 
 The evidence is everywhere. My [3.0 milestone](https://github.com/pattern-lab/patternlab-node/milestone/22) is almost 1 year overdue. Release frequency is down. Questions increasingly go unanswered. Issues remain in a triage, unresolved state. Uncertainty and frustration brew within the community room.

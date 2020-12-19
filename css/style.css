@@ -3,6 +3,10 @@
   --blue: #0d80f0;
 }
 
+html {
+  font-size: 100%;
+}
+
 #home svg {
   height: 2rem;
 }
@@ -14,6 +18,7 @@ footer {
 /* COLOR PREFERENCE */
 body {
   color: white;
+  font-size: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +65,7 @@ body {
 
 #container {
   display: grid;
+  margin: 0.5rem;
 }
 
 #home {
@@ -69,12 +75,33 @@ body {
   margin: 1rem;
 }
 
+p {
+  line-height: 1.3;
+}
+
 @media (min-width: 35rem) {
   #home {
     flex-direction: row;
   }
   #home svg {
     margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 60ch) {
+  article {
+    max-width: 60ch;
+  }
+
+  article img,
+  article div {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 60rem) {
+  body {
+    font-size: 24px;
   }
 }
 

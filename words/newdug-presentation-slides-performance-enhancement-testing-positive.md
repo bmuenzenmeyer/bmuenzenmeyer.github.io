@@ -1,14 +1,16 @@
 ---
-layout: post
+layout: item.njk
 
 title: "NEWDUG Presentation Slides: Performance Enhancement - Testing Positive"
-tags: 'performance'
+permalink: /newdug-presentation-slides-performance-enhancement-testing-positive/index.html
+tags: ["words", "keyboard"]
+date: 2014-11-13
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-class: ''
-summary: 'Roydan was kind enough to let me talk about improving performance on Roydan.com'
+class: ""
+summary: "Roydan was kind enough to let me talk about improving performance on Roydan.com"
 
-comments: true
+comments: false
 ---
 
 Here are the slides from my NEWDUG Presentation: _Performance Enhancement - Testing Positive_

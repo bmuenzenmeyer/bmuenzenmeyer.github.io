@@ -1,14 +1,16 @@
 ---
-layout: post-code
+layout: item.njk
 
 title: "The Device Test Imperative"
-tags: 'development testing'
+permalink: /the-device-test-imperative/index.html
+tags: ["words", "keyboard"]
+date: 2013-12-13
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
-class: ''
-summary: 'A cautionary tale... ye be warned!'
+class: ""
+summary: "A cautionary tale... ye be warned!"
 
-comments: true
+comments: false
 ---
 
 _This post refers to an old version of brianmuenzenmeyer.com, but the lesson is important._
@@ -23,12 +25,10 @@ Frustrating! What could have caused this? I kicked into Firefox's 3D mode, confi
 
 Some digging revealed that mobile Safari overflow rendering rules are different, and that I should try the following CSS.
 
-{% highlight css linenos %}
-
-html{
+```
+html {
     overflow-x: hidden;
 }
+```
 
-{% endhighlight %}
-
-Sure enough, fixed for all tested version of Safari.  Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.
+Sure enough, fixed for all tested version of Safari. Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.
