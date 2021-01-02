@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" The personal website of Brian Muenzenmeyer.">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Brian Muenzenmeyer</title>
+    
+</head>
+
+<body>
+
+    <header>
+    <a href="/" id="home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
+</svg>
+    Brian Muenzenmeyer
+    </a>
+</header>
+<nav>
+    <ul>
+        <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
+        <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></li>
+        <li><a href="/arcade">👾 arcade</a></li>
+    </ul>
+</nav>
+
+    <main id="container">
+        <h2>CSS-IN-JS</h2>
+
+Tags: keyboard,words
+
+Date: 2018-05-08
+
+<p><strong>This post is an opinion about CSS-IN-JS. There are many like it but this one is mine.</strong></p>
+<p>It started on my bus home.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How &#39;bout that CSS-in-JS? <a href="https://t.co/mcR9scUhQq">pic.twitter.com/mcR9scUhQq</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/993920969990397952?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I cannot help but be slightly triggered by the tweet. The code snippet demonstrates a fundamental misunderstanding of React and how to apply styles to React components. Anyone seasoned in front end cringes. But to package this up and say &quot;How ’bout that CSS-IN-JS?&quot; really misses the mark for me. This is not Brad’s code (he knows better): it’s a strawman. Perhaps a throwaway joke. But what it also does is dangerously conflate CSS-IN-JS with inline styles. To associate that code with CSS-IN-JS is disingenuous. Some readers of that tweet may misunderstand Brad's intent and come to the conclusion that <em>this code</em> is representative &quot;state-of-the-art&quot; CSS-IN-JS. We aren’t constructively furthering the conversation this way. Most CSS-IN-JS solutions now output classes. Full stop.</p>
+<h4>We Drive into the Future Using Only Our Rearview Mirror</h4>
+<p>We all take for granted at this point how wrong the above code looks. We (I liberally assign myself in the following camp) come up in a world where CSS became more and more powerful and standardized. We can make CSS do <a href="https://codepen.io/thebabydino/pen/paAJw">some</a> <a href="https://codepen.io/davidkpiano/pen/wMqXea">truly</a> <a href="https://codepen.io/jakealbaugh/pen/qNrZyw">magical</a> <a href="https://codepen.io/davidkpiano/pen/xLKBpM">things</a>. I revel in making CSS do amazing things just as much as the next developer. I’ve sweated the details within custom keyframe animations, crafted complex responsive layouts, built whole component libraries from scratch atop a BEM <code>block--element__modifier</code> tower. It felt great.</p>
+<p>Now, the product I work on at my job helps other teams write products quickly. It’s primarily a React application, so a modern front-end stack is expected. It can be complicated. We use a CSS-IN-JS technical solution as part of this product. <a href="https://github.com/cssinjs/jss">JSS</a> to be exact ,though the specifics do not matter to me for the purposes of this post.</p>
+<p>When onboarding new teams, we often stumble into a styling discussion. This is in addition to Javascript, ES6, React, and our proprietary componentry. It’s a lot at once. Those with prior CSS knowledge seem to pick it up pretty quickly. Many still wish to leverage CSS or Sass. I’ve started sharing out <a href="https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660">A Unified Styling Language</a> by Mark Dalgleish as a superbly balanced look at the landscape. He goes into much deeper detail than I do here. Please go read it.</p>
+<p>I find it useful to look at a simple styled React component as a gentle introduction to a lot of concepts.</p>
+<pre><code class="language-js">import React from &quot;react&quot;
+import { withStyles } from &quot;material-ui/styles&quot;
+import Button from &quot;material-ui/Button&quot;
+
+function Button(props) {
+  const { children, classes, text } = props
+  return (
+    &lt;Button className={classes.button}&gt;
+      {children} {text}
+    &lt;/Button&gt;
+  )
+}
+
+const styles = (theme) =&gt; ({
+  button: {
+    margin: theme.spacing.unit,
+    color: &quot;currentColor&quot;,
+    background: theme.myCompany.primary,
+    &quot;&amp; svg&quot;: {
+      marginLeft: theme.spacing.unit / 2,
+    },
+  },
+})
+
+export default withStyles(styles)(Button)
+</code></pre>
+<h4>In-file Collocation</h4>
+<p>I have a co-worker that is not cut from the same cloth as I—he has little prior front-end experience. The muscle memory of dev tool inspection, source maps, <code>.scss</code> @imports, and the like is not present in him. Hunting for a static class name in a file somewhere, or worse, a descendant selector feels daunting. Same-file collocation allows the styles that affect the component in question to be next to the markup and functionality. On purpose. Contained. As a single portable component.</p>
+<p>Rather than forcing him to learn and follow a convention, the styling is right there for the reading alongside the component he implements.</p>
+<h4>Consume the Primitives</h4>
+<p>CSS-IN-JS (as the second step of React’s HTML-IN-JS approach) makes sense because it puts the most primitive functionality inside the most powerful, allowing for the powerful features to augment the primitive. This is what the smartphone did to clocks, contact lists, calendars, notepads, ad nauseum. Now my smartphone can schedule a meeting with someone halfway across the country at the right time for both of us—by helping me string together a bunch of separate concerns into a single flow.</p>
+<p>Let’s look closely at the styles in the above snippet. Yes, it’s simple.</p>
+<pre><code class="language-js">const styles = (theme) =&gt; ({
+  button: {
+    margin: theme.spacing.unit,
+    color: &quot;currentColor&quot;,
+    background: theme.myCompany.primary,
+    &quot;&amp; svg&quot;: {
+      marginLeft: theme.spacing.unit / 2,
+    },
+  },
+})
+</code></pre>
+<p><code>margin</code>, <code>color</code>, <code>background</code>. All properties we are familiar with. But look at the value for <code>margin</code> or <code>background</code>. It relies on a theme object supplied at the top-level application to reference a size or color. A single place to handle design-tokens. Notice that escendant selectors work. I think this is cool. Because it’s all still Javascript at the end of the day, we can do math, or really reference any arbitrary logic we want (color the app Green on March 17th?).</p>
+<p>Media queries work.</p>
+<pre><code class="language-js">const styles = (theme) =&gt; ({
+  root: {
+    margin: `0 ${theme.spacing.unit * -3}px`,
+  },
+  &quot;@media (max-width: 1250px)&quot;: {
+    root: {
+      margin: `0 ${theme.spacing.unit * 2}px`,
+    },
+  },
+})
+</code></pre>
+<p>Pseudoclasses work.</p>
+<pre><code class="language-js">const styles = {
+  paragraph: {
+    &quot;&amp;:last-of-type&quot;: {
+      marginBottom: 0,
+    },
+  },
+}
+</code></pre>
+<p><code>@supports</code> work.</p>
+<pre><code class="language-js">const styles = (theme) =&gt; ({
+  root: {
+    display: &quot;flex&quot;,
+  },
+  &quot;@supports (display: grid)&quot;: {
+    root: {
+      display: &quot;grid&quot;,
+      gridTemplateColumns: &quot;1fr 800ch 1fr&quot;,
+    },
+  },
+})
+</code></pre>
+<p>CSS fundamentals are required—but we have some powertools in our workshop now. Got lots of classes to manage? Look no further than <a href="https://github.com/JedWatson/classnames">classnames</a>.</p>
+<p>And yes, we still need progressive web applications. We still need <code>@supports</code> feature detection, we still need to cut the mustard. We still need <em>web design</em>. CSS-IN-JS does not significantly erode or impede these necessities should someone need to build for them. I hope none of this persuades you otherwise!</p>
+<h4>CSS Yes</h4>
+<p>Guess what? Your CSS badassery translates into a CSS-IN-JS solution. Teams still need an expert to own the craft of applying visual styles to markup. Doing so correctly and in a scalable manner is still key. All those years of accrued knowledge fighting browser quirks, consulting caniuse, learning CSS grid, clip-paths, gradients, etc, has only made me more powerful in a CSS-IN-JS world. It has translated just fine. I still need to know CSS in order to make something look the way I want to.</p>
+<p>There is a time and place for every tool. CSS-IN-JS makes a lot of sense in a lot of situations that I have encountered in my real-life™ work helping teams. Sass continues to be my go-to everywhere else. Are you building a design system? You may need the portability of the primitive (Brad mentions this in the article below). I doubt I’ll ever advocate CSS-IN-JS to my personal clients—because I am interested in <a href="http://crunchyowl.com/">crafting right-sized solutions</a> and most people I serve haven't needed something so heavy. But for teams building large apps atop React it feels like a sane way forward.</p>
+<h4>Wrapping Up</h4>
+<p>I end with this.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There’s been some knee-jerk reactions from different communities (incl. React) to what Brad is posting as he’s exploring front-end libraries. Let’s remember we can disagree about a lot and still teach each other amazing things</p>&mdash; Dan Abramov (@dan_abramov) <a href="https://twitter.com/dan_abramov/status/994020475482361856?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I respect Dan’s perspective here. He’s very much on the cutting edge of modern front-end development and yet understands where we all came from and that together we need to go somewhere new.</p>
+<p>P.S. I love Brad. <a href="http://patternlab.io">I work with him</a>, for goodness sake! While I was writing this post, Brad tweeted this and wrote this.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">For what it&#39;s worth, I&#39;m very aware I&#39;m throwing some zingers around without really sinking my teeth into it. I&#39;m very much open to learning more about it, but I do remain skeptical. Hopefully this post explains a bit of my apprehension a bit better: <a href="https://t.co/6vFKhT9Tbo">https://t.co/6vFKhT9Tbo</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994027941121200129?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">I&#39;m very open to listening and learning more, and I&#39;m excited to have started some great conversations with people who work with different approaches and swear by it.</p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/994028275235217408?ref_src=twsrc%5Etfw">May 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I felt triggered today by Brad’s tweet, but also because there are folks where I work expending valuable energy, money, and <a href="http://bradfrost.com/blog/post/creative-exhaust/">creative exhaust</a> building CSS only solutions, missing out on an opportunity to explore new territory. They see Brad’s of the world as standard bearers of the familiar, as I do. I think the problems Brad highlights are valid and warrant pause. Teams need to ultimately decide what is best for them over the lifespan of their product. I hope they try different approaches and construct an <em>informed</em> opinion.</p>
+<p>And then, as my friend puts it, I hope they <a href="https://twitter.com/brad_frost/status/450619808795885569">share what they know</a>.</p>
+
+    </main>
+
+</body>
+
+<footer>
+    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+    <p><a href="/styleguide">Styleguide</a></p>
+</footer>
+
+</html>

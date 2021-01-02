@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" The personal website of Brian Muenzenmeyer.">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Brian Muenzenmeyer</title>
+    
+</head>
+
+<body>
+
+    <header>
+    <a href="/" id="home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
+</svg>
+    Brian Muenzenmeyer
+    </a>
+</header>
+<nav>
+    <ul>
+        <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
+        <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></li>
+        <li><a href="/arcade">👾 arcade</a></li>
+    </ul>
+</nav>
+
+    <main id="container">
+        <h2>On Pattern Lab</h2>
+
+Tags: words,keyboard
+
+Date: 2014-04-21
+
+<p><a href="https://twitter.com/davatron5000">Dave Rupert</a> sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.</p>
+<p><a href="https://twitter.com/bradfrost">Brad Frost</a> summed it up nicely:</p>
+<blockquote>It's been a process to make Pattern Lab simultaneously flexible and robust</blockquote>
+<p>I want to put some thoughts to paper about how this process has played out for me.</p>
+<p>Patternlab-PHP was rather feature-rich when I started. I likely missed the conversations Brad and Dave had about what PL should and shouldn't be. It was simultaneously an amazing living reference, but also a skyscraper to understand, deconstruct and finally rebuild with different materials. <a href="https://twitter.com/dmolsen">Dave Olsen</a> helped immensely in those first steps.</p>
+<p>I can feel the desire to turn PL into more than it already is, to turn it into a <em>platform</em> through which an entire project can grow, mature, and finally be deployed. I have also experienced first-hand the complexity that can creep into the solution when attempting to support so many features.</p>
+<h2>To me, Pattern Lab is:</h2>
+<ul>
+<li>
+<p>A tool to build reusable, scalable markup and css snippets. As Brad intended, you can decouple atomic design principles altogether if you so choose, but it's also...</p>
+</li>
+<li>
+<p>A tool to glue components together in an iterative, incremental fashion.</p>
+</li>
+<li>
+<p>One of many ways a web project could be built, but not the only way. A multi-tool, but not the best for every job.</p>
+</li>
+<li>
+<p>An alternative to photoshop comps and high-fidelity mockups as an acceptable design deliverable</p>
+</li>
+</ul>
+<p>So, as I reread this, and wonder at which features to implement next against the living spec that is the PHP version, I question what feels missing to me. (Also excited at the prospect of Dave and Brad writing a spec!)</p>
+<h2>What pain points have I experienced?</h2>
+<ul>
+<li>
+<p><strong>Initial project setup is cumbersome.</strong> Hopefully some npm, grunt, dependency maturity in the near-term will help. As others have stated, attempting to obfuscate patternlab internals should be a goal. <a href="https://twitter.com/addyosmani">Addy Osmani</a> suggested a pure node implementation which would be most agnostic. To me, grunt feels more consumable than pure node. I need to look into Assemble.</p>
+</li>
+<li>
+<p><strong>The iframe-viewer still gets me sometimes.</strong> Living in this responsive age, I naturally try to resize my window instead of using the controls. I'v felt at times that the ish controls are not perfect, but haven't been able to determine if it's my problem or something in the implementation yet. I wonder if this can be configurable.</p>
+</li>
+<li>
+<p><strong>The port is inelegant and immature.</strong> I brute-forced the processing of templates, instead of globbing as the PHP version did initially. While I think this is straight-forward and decently documented, it is not DRY or unit-testable. A refactor would do some good.</p>
+</li>
+</ul>
+<p>As a peripheral member of the community, it's exciting to see other's interested in the same problems that drew me to Patternlab too. I'm also excited to see what ground we can make on PL-PHP :)</p>
+
+    </main>
+
+</body>
+
+<footer>
+    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+    <p><a href="/styleguide">Styleguide</a></p>
+</footer>
+
+</html>

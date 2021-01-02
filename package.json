@@ -1,15 +1,22 @@
 {
   "name": "bmuenzenmeyer.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "bmuenzenmeyer.github.io\r =======================",
   "main": ".eleventy.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "0.11.1",
-    "nunjucks": "3.2.2"
+    "@11ty/eleventy": "0.11.0",
+    "clean-css": "4.2.3",
+    "dotenv": "8.2.0",
+    "markdown-it": "10.0.0",
+    "netlify-plugin-minify-html": "0.2.2",
+    "node-fetch": "2.6.0"
   },
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --port=8080"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "hook": "node utils/addTrelloHook.js",
+    "format": "npx prettier 'src/**/*.js' --write"
   },
   "repository": {
     "type": "git",

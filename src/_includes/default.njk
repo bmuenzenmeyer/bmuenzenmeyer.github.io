@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{%if title %} {{title}} : {{summary}} : {% endif %} The personal website of Brian Muenzenmeyer.">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{%if title %} {{title}} : {% endif %}Brian Muenzenmeyer</title>
+    {%if customCSS %}
+        <link rel="stylesheet" href="/css/{{ customCSS }}.css">
+    {% endif %}
+</head>
+
+<body>
+
+    {% include "homelink.njk" %}
+
+    <main id="container">
+        {{ content | safe }}
+    </main>
+
+</body>
+
+<footer>
+    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+    <p><a href="/styleguide">Styleguide</a></p>
+</footer>
+
+</html>

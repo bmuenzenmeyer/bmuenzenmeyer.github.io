@@ -1,0 +1,18 @@
+---
+layout: default.njk
+pagination:
+    data: content
+    size: 1
+    alias: page
+permalink: "/{{ page.name | slug }}/"
+eleventyExcludeFromCollections: true
+---
+<h2>{{page.name}}</h2>
+
+Tags: {{page.tags}}
+
+Date: {{page.PANTOGRAPH_date }}
+
+{% markdown %}
+    {{- page.desc | safe }}
+{% endmarkdown %}

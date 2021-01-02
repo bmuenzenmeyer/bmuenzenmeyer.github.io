@@ -1,0 +1,21 @@
+---
+layout: default.njk
+pagination:
+  data: tags
+  size: 1
+  alias: tag
+  filter:
+    - all
+permalink: /tags/{{ tag.name }}/
+---
+<h1>Tagged “{{ tag.name }}”</h1>
+
+{% for t in tags | reverse %}
+
+  {% if tag.name == t.name  %}
+    {% for card in t.cards | reverse %}
+      <a href="../../{{card.name | slug }}">{{ card.name }}</a>
+    {% endfor %}
+  {% endif %}
+
+{% endfor %}

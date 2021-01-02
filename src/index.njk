@@ -1,0 +1,41 @@
+---
+layout: default.njk
+---
+
+<div id="job">lead front end engineer</div>
+<div id="coffee">when not online, I am trying to find my ☕</div>
+<ul class="collection">
+{% for item in collections.words | reverse %}
+    <li>
+        <a href="{{item.data.permalink}}">
+            {{item.data.title}}
+        </a> <small>{{item.data.date.toDateString() }}</small>
+    </li>
+{% endfor %}
+</ul>
+
+<nav>
+  <ul class="collection">
+    {%- for page in content -%}
+      <li><a href="{{ page.url | url }}">{{ page.name }}</a> <small>{{ page.PANTOGRAPH_date }}</small></li>
+    {%- endfor -%}
+
+    {% for tag in tags %}
+      <li>All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+    {% endfor %}
+
+  </ul>
+</nav>
+
+<div>
+  {% for card in home %}
+  <section>
+    <h2>{{ card.name }}</h2>
+    <div>
+    {% markdown %}
+      {{- card.desc | safe }}
+    {% endmarkdown %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

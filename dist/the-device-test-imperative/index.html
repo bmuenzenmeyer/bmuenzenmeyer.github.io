@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" The personal website of Brian Muenzenmeyer.">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Brian Muenzenmeyer</title>
+    
+</head>
+
+<body>
+
+    <header>
+    <a href="/" id="home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+    <title>Gorilla step</title>
+    <!-- Designed by Metafizzy, 2017 -->
+    <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
+    <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
+    <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
+</svg>
+    Brian Muenzenmeyer
+    </a>
+</header>
+<nav>
+    <ul>
+        <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
+        <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/brian-muenzenmeyer-91a77554/">linkedin</a></li>
+        <li><a href="/arcade">👾 arcade</a></li>
+    </ul>
+</nav>
+
+    <main id="container">
+        <h2>The Device Test Imperative</h2>
+
+Tags: keyboard,words
+
+Date: 2013-12-13
+
+<p><em>This post refers to an old version of brianmuenzenmeyer.com, but the lesson is important.</em></p>
+<p>When creating the masthead for this site, I was quick to ensure support in Chrome, Firefox, and IE 10-8. It was easy, I suggest <em>too easy</em>, to test the fluid layout and media queries by resizing the window, or using a tool like <a href="http://we-are-gurus.com/tools/responsive-design-tester.php">this one</a> to gut-check various viewports.</p>
+<p>None of this, however, could satisfy the necessity of testing on a real mobile phone. Here's what I saw on mobile Safari on my iPad and iPhone:</p>
+<p><img src="http://media.tumblr.com/44579688d0cc9ae1959c70298ceb0936/tumblr_inline_mxic1fWSEw1s7cfvn.png" alt="The site on an iPhone, for some reason not adhering to the same viewport as desktop browsers."></p>
+<p>Frustrating! What could have caused this? I kicked into Firefox's 3D mode, confirming the masthead's 200% width trick was extending the page width, but my current <code>overflow: hidden</code> declarations were not being honored.</p>
+<p>Some digging revealed that mobile Safari overflow rendering rules are different, and that I should try the following CSS.</p>
+<pre><code>html {
+    overflow-x: hidden;
+}
+</code></pre>
+<p>Sure enough, fixed for all tested version of Safari. Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.</p>
+
+    </main>
+
+</body>
+
+<footer>
+    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+    <p><a href="/styleguide">Styleguide</a></p>
+</footer>
+
+</html>
