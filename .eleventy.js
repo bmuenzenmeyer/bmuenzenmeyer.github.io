@@ -1,4 +1,10 @@
+const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug")
+
 module.exports = function (eleventyConfig) {
+
+  // plugins
+  eleventyConfig.addPlugin(pluginBetterSlug);
+
   eleventyConfig.addLayoutAlias("default", "default.njk")
 
   //asset folders
@@ -30,9 +36,9 @@ module.exports = function (eleventyConfig) {
     return new CleanCSS({}).minify(code).styles
   })
 
-  eleventyConfig.addNunjucksFilter("toHumanUrl", (v) => 
+  eleventyConfig.addNunjucksFilter("toHumanUrl", (v) =>
     v.replace(/\//g, "")
-    .replace(/-/g, ' ')
+      .replace(/-/g, ' ')
   )
 
   return {

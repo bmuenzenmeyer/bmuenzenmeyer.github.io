@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
+    "@borisschapira/eleventy-plugin-better-slug": "1.0.1",
     "clean-css": "4.2.3",
     "dotenv": "8.2.0",
     "markdown-it": "10.0.0",
