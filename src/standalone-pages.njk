@@ -20,6 +20,10 @@ eleventyExcludeFromCollections: true
 <aside class="post-meta">
 
   <div class="post-date">Date: {{page.PANTOGRAPH_date }}</div>
-  <div class="post-tags">Tags: {{page.tags}}</div>
+  <div class="post-tags">Tags: 
+  {% for tag in page.tags %}
+  <a href="/tags/{{tag}}">{{tag}}</a>
+  {% endfor %}
+  </div>
 
 </aside>
