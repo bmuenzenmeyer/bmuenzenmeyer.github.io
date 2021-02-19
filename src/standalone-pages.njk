@@ -7,7 +7,15 @@ pagination:
 permalink: "/{{ page.name | slug }}/"
 eleventyExcludeFromCollections: true
 ---
-<h2>{{page.name}}</h2>
+
+<article>
+
+  <h2>{{page.name}}</h2>
+  {% markdown %}
+      {{- page.desc | safe }}
+  {% endmarkdown %}
+
+</article>
 
 <aside class="post-meta">
 
@@ -15,11 +23,3 @@ eleventyExcludeFromCollections: true
   <div class="post-tags">Tags: {{page.tags}}</div>
 
 </aside>
-
-<article>
-
-{% markdown %}
-    {{- page.desc | safe }}
-{% endmarkdown %}
-
-</article>

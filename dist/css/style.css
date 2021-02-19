@@ -121,8 +121,15 @@ footer {
 .container {
   display: grid;
   margin: 0.5rem;
-  grid-template-columns: minmax(10px, 3fr) minmax(10px, 1fr);
-  grid-template-rows: min-content min-content 1fr min-content;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+
+@media (min-width: 55rem) {
+  .container {
+    grid-template-columns: minmax(10px, 3fr) minmax(10px, 1fr);
+    grid-template-rows: min-content 1fr min-content;
+  }
 }
 
 #home {

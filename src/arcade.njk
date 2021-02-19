@@ -65,6 +65,8 @@ games:
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 
+<article>
+
 {% for game in games %}
 
 <div class="game">
@@ -72,3 +74,5 @@ games:
     <a href="{{game.url}}"><img src="{{game.img}}" alt="{{game.name}}" /></a>
 </div>
 {% endfor %}
+
+</article>
