@@ -17,25 +17,30 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&display=swap" rel="stylesheet">
+
     <title>Brian Muenzenmeyer</title>
     
 </head>
 
 <body>
 
-    <header>
-    <a href="/" id="home">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+  <div class="masthead">
+  <header>
+      <a href="/" id="home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
     <title>Gorilla step</title>
     <!-- Designed by Metafizzy, 2017 -->
     <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
     <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
     <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
 </svg>
-    Brian Muenzenmeyer
-    </a>
-</header>
-<nav>
+      Brian Muenzenmeyer
+      </a>
+  </header>
+  <nav class="nav">
     <ul>
         <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
         <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
@@ -43,13 +48,20 @@
         <li><a href="/arcade">👾 arcade</a></li>
     </ul>
 </nav>
+</div>
 
-    <main id="container">
-        <h2>Northbound on Memorial Drive</h2>
+  <main>
+      <div class="container">
+  <h2>Northbound on Memorial Drive</h2>
 
-Tags: words,writing
+<aside class="post-meta">
 
-Date: 2018-05-08
+  <div class="post-date">Date: 2018-05-08</div>
+  <div class="post-tags">Tags: words,writing</div>
+
+</aside>
+
+<article>
 
 <p>The snow has been frequent, simple and plain,<br/>
 (some shades of white are lost to comparison)<br/>
@@ -68,16 +80,19 @@ east where they will be new bright days for some.<br/>
 It is not elapsed east that drives men west,<br/>
 that direction is the last life alive.<br/>
 Then I, behind snowplows gathering drifts,<br/>
-turn left into the city.</p>
+turn left into the city.
+<img src="https://trello-attachments.s3.amazonaws.com/5f94235bfe5ed061cf72cefd/5ff07a1dead4794fee8a038e/7030220cd59d7353efb4f3b4d939a82c/image.png" alt="Northbound on Memorial Drive" title="Northbound on Memorial Drive"></p>
 
-    </main>
+
+</article>
+</div>
+  </main>
+
+  <footer>
+      <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+      <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+      <p><a href="/styleguide">Styleguide</a></p>
+  </footer>
 
 </body>
-
-<footer>
-    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
-    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
-    <p><a href="/styleguide">Styleguide</a></p>
-</footer>
-
 </html>

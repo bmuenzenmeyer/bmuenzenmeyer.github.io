@@ -17,25 +17,30 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&display=swap" rel="stylesheet">
+
     <title>Brian Muenzenmeyer</title>
     
 </head>
 
 <body>
 
-    <header>
-    <a href="/" id="home">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+  <div class="masthead">
+  <header>
+      <a href="/" id="home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
     <title>Gorilla step</title>
     <!-- Designed by Metafizzy, 2017 -->
     <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
     <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
     <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
 </svg>
-    Brian Muenzenmeyer
-    </a>
-</header>
-<nav>
+      Brian Muenzenmeyer
+      </a>
+  </header>
+  <nav class="nav">
     <ul>
         <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
         <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
@@ -43,15 +48,24 @@
         <li><a href="/arcade">👾 arcade</a></li>
     </ul>
 </nav>
+</div>
 
-    <main id="container">
-        <h2>I, Maintainer</h2>
+  <main>
+      <div class="container">
+  <h2>I, Maintainer</h2>
 
-Tags: words,keyboard
+<aside class="post-meta">
 
-Date: 2018-10-04
+  <div class="post-date">Date: 2018-10-04</div>
+  <div class="post-tags">Tags: words,keyboard</div>
 
-<p><em>Update: Since this article was written, I've <a href="https://github.com/pattern-lab/patternlab-node/pull/1250">retired from active involvement in Pattern Lab</a>. The ideas I lay out in the below post made stepping away the right decision at this time.</em></p>
+</aside>
+
+<article>
+
+<blockquote>
+<p>Update: Since this article was written, I've <a href="https://github.com/pattern-lab/patternlab-node/pull/1250">retired from active involvement in Pattern Lab</a>. The ideas I lay out in the below post made stepping away the right decision at this time.</p>
+</blockquote>
 <p>Pattern Lab development is stagnating.</p>
 <p>The evidence is everywhere. My <a href="https://github.com/pattern-lab/patternlab-node/milestone/22">3.0 milestone</a> is almost 1 year overdue. Release frequency is down. Questions increasingly go unanswered. Issues remain in a triage, unresolved state. Uncertainty and frustration brew within the community room.</p>
 <p>I've struggled with how best to articulate my feelings about this. Especially to the community. To the individuals, teams, and companies that have come to rely on Pattern Lab. I owe an explanation. What I hope follows is not perceived as an exculpatory list of excuses. Rather, I plan to use it as an open framework to confront, define, and buttress my value system as it pertains to open source software. Then, I hope I can act upon these values.</p>
@@ -67,20 +81,20 @@ Date: 2018-10-04
 <p>Maintenance is a responsibility. Throwing something on GitHub is not enough. The building maintenance person must keep the floors clean. The bathrooms operational. The entrances clear during the day and locked at night. The furnace running. The lighting adequate. The smoke detectors functioning. The facade protected from the elements. Shirking any one of these duties impairs the capabilities of occupants and visitors. These are essential responsibilities. With responsibility comes a requirement to act always in accordance to that responsibility.
 <a href="https://quoteinvestigator.com/2015/07/23/great-power/">People have said it better</a>. Open source maintenance is no different.</p>
 <p>To distill a maintainer's responsibilities into core facets, I have borrowed from <a href="https://en.wikipedia.org/wiki/Three_Laws_of_Robotics">Asimov's Three Laws</a>. Perhaps it feels like a dramatic summary of the rather mundane task of pushing to a public git remote. But if you feel that way, I've likely already lost you. That's fine. These laws have my name on them, not yours.</p>
-<h3>1. A maintainer may not harm a user or, through inaction, allow users to come to harm</h3>
+<h4>1. A maintainer may not harm a user or, through inaction, allow users to come to harm</h4>
 <p>When maintainers choose to open source software, they are implicitly (and often explicitly) creating a contract. Contracts are based on trust and they are bi-directional. They are the written manifestation of an agreement between two parties.
 A promise with potential users. This software works as defined. Installation yields this result. This API returns <code>X</code>. <em>See for yourself, the code is right here</em>. Contribute in this way. Find support here. Here is the roadmap.</p>
 <p>Maintainers, via the byproduct of their every action, create the norms of the project. A welcoming atmosphere creates a safe environment. Sustained engagement sets a collegial tone. Quick response times inject an air of reliability. Frequent releases suggest alacrity. These are all promises maintainers extend to users that come upon the project. These are lofty promises but promises maintainers aspire to keep.</p>
 <p>Truth is, I cannot devote as much time as I <em>used to</em>. I almost wrote &quot;<em>like</em>&quot;, but I need to be honest with myself and with you. I like doing other things. These other pursuits compete for limited time. Atop this, I am finding increasing satisfaction, challenge, and growth from my day job than the escapism Pattern Lab granted me in days past. This amounts to inaction, and it is harming Pattern Lab and the community that relies upon it.</p>
 <p>Shipping incomplete features. Shipping undocumented functionality. Outpacing my output with overpromising. Sitting on pull requests. Dismissing the notifications of chats and requests and questions without responding. These are all things I have done at one time or another. Not out of malice. No. Out of working too fast, too cloistered, not in accordance with the empathy for others required of a maintainer. This amounts to harm.</p>
-<h3>2. A maintainer must shepherd their project and empower the community to do the same</h3>
+<h4>2. A maintainer must shepherd their project and empower the community to do the same</h4>
 <p>When maintainers choose to open source software, they do so not in a vacuum, but as part of a living, breathing system. We usually call it the Internet. If they are lucky, other folks find their software useful and want to use it. If they are even luckier, other folks find the software almost useful and want to improve it. Open source is a relay race, with each maintainer taking the baton from those before them. Try to make it a long-distance race, not a sprint.</p>
 <p>Maintainers must acknowledge that, as they had built atop the work of others, folks will build atop their work. They will come and voice desire to help. Maintainers must be ready to receive them and hand them the baton. Well-constructed projects attract individuals that want to invest more time into the project. They see well-written documentation, clear roadmaps, thorough contribution guidelines, inclusive codes of conduct, vibrant online communities, frequent releases, and clear code as as time well spent. Making it all available to them to contribute back to is empowering.</p>
 <p>Hiding logic inside monolithic constructs, making extension and customization difficult, and infrequently interacting with the community is a major disincentive to investment.</p>
 <p>Maintainers that foster a collaborative environment end up diffusing the weight of responsibility into shared efforts that outlast their own contributions.</p>
 <p>For too long in Pattern Lab's 3.0 lifecycle I sat on the <code>dev-3.0</code> branch. When it proved too much to maintain 2.X and 3.X branches, I cut <code>dev</code> over to 3 and started <code>alpha</code> releases. I hoped that by working in the open folks would be able to help. The net result has been confusion. I've introduced new parts of the ecosystem which are lynch-pins to success yet buggy or unintuitive. I've added technical complexity in the monorepo. I've not retired the old 2.X repositories yet. I've lagged in documentation.</p>
 <p>I've not asked for much help. I've not created an environment where folks can take earnest investment in contribution and be met with success for their efforts. I know how I'd feel if I were you all.</p>
-<h3>3. A maintainer must protect their own existence as long as such protection does not conflict with the First or Second Laws</h3>
+<h4>3. A maintainer must protect their own existence as long as such protection does not conflict with the First or Second Laws</h4>
 <p>Ah! The heart of the matter. The Law that creates all the fun in Asimov's work. A <a href="https://en.wikipedia.org/wiki/Trolley_problem">trolley problem</a>, perhaps. When maintainers choose to open source software, they do so at their own risk. Humans are hard-wired to remember negative feedback more than positive feedback. Ten-fold positive interactions eroded by the displeasure on a single negative. Time spent on the project can feel futile with ever-increasing scrutiny, demand, and newcomers. The amount of effort required to maintain a healthy, growing project is immense. There are two main definitions of maintain:</p>
 <ul>
 <li>cause or enable (a condition or state of affairs) to continue</li>
@@ -91,14 +105,16 @@ A promise with potential users. This software works as defined. Installation yie
 <p>But to do so without implementing a healthy, sustainable community is acting against the interests of the project. It is an abdication of the very responsibility they have earned.</p>
 <p>I pledge to live by these laws to the best of my ability. I pledge to better understand my responsibilities and act upon them. I pledge to run this race, and to understand that I carry a baton, and to look for those waiting for me.</p>
 
-    </main>
+
+</article>
+</div>
+  </main>
+
+  <footer>
+      <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+      <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+      <p><a href="/styleguide">Styleguide</a></p>
+  </footer>
 
 </body>
-
-<footer>
-    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
-    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
-    <p><a href="/styleguide">Styleguide</a></p>
-</footer>
-
 </html>

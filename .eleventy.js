@@ -1,9 +1,8 @@
 const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug")
 
 module.exports = function (eleventyConfig) {
-
   // plugins
-  eleventyConfig.addPlugin(pluginBetterSlug);
+  eleventyConfig.addPlugin(pluginBetterSlug)
 
   eleventyConfig.addLayoutAlias("default", "default.njk")
 
@@ -37,8 +36,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addNunjucksFilter("toHumanUrl", (v) =>
-    v.replace(/\//g, "")
-      .replace(/-/g, ' ')
+    v.replace(/\//g, "").replace(/-/g, " ")
   )
 
   return {

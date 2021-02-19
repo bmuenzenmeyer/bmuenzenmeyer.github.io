@@ -1,18 +1,25 @@
 ---
 layout: default.njk
 ---
+<section>
+  <div class="intro">
+    <div id="job">lead front end engineer</div>
+    <div id="coffee">when not online, I am trying to find my ☕</div>
+  </div>
+  <ul class="collection">
+  {% for item in collections.words | reverse %}
+      <li>
+          <a href="{{item.data.permalink}}">
+              {{item.data.title}}
+          </a> <small>{{item.data.date.toDateString() }}</small>
+      </li>
+  {% endfor %}
+  </ul>
+</section>
 
-<div id="job">lead front end engineer</div>
-<div id="coffee">when not online, I am trying to find my ☕</div>
-<ul class="collection">
-{% for item in collections.words | reverse %}
-    <li>
-        <a href="{{item.data.permalink}}">
-            {{item.data.title}}
-        </a> <small>{{item.data.date.toDateString() }}</small>
-    </li>
-{% endfor %}
-</ul>
+<section>
+
+<h2>Articles</h2>
 
 <nav>
   <ul class="collection">
@@ -26,6 +33,8 @@ layout: default.njk
 
   </ul>
 </nav>
+
+</section>
 
 <div>
   {% for card in home %}

@@ -17,25 +17,30 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&display=swap" rel="stylesheet">
+
     <title>Brian Muenzenmeyer</title>
     
 </head>
 
 <body>
 
-    <header>
-    <a href="/" id="home">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+  <div class="masthead">
+  <header>
+      <a href="/" id="home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
     <title>Gorilla step</title>
     <!-- Designed by Metafizzy, 2017 -->
     <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
     <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
     <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
 </svg>
-    Brian Muenzenmeyer
-    </a>
-</header>
-<nav>
+      Brian Muenzenmeyer
+      </a>
+  </header>
+  <nav class="nav">
     <ul>
         <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
         <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
@@ -43,13 +48,20 @@
         <li><a href="/arcade">👾 arcade</a></li>
     </ul>
 </nav>
+</div>
 
-    <main id="container">
-        <h2>The Device Test Imperative</h2>
+  <main>
+      <div class="container">
+  <h2>The Device Test Imperative</h2>
 
-Tags: keyboard,words
+<aside class="post-meta">
 
-Date: 2013-12-13
+  <div class="post-date">Date: 2013-12-13</div>
+  <div class="post-tags">Tags: keyboard,words</div>
+
+</aside>
+
+<article>
 
 <p><em>This post refers to an old version of brianmuenzenmeyer.com, but the lesson is important.</em></p>
 <p>When creating the masthead for this site, I was quick to ensure support in Chrome, Firefox, and IE 10-8. It was easy, I suggest <em>too easy</em>, to test the fluid layout and media queries by resizing the window, or using a tool like <a href="http://we-are-gurus.com/tools/responsive-design-tester.php">this one</a> to gut-check various viewports.</p>
@@ -63,14 +75,16 @@ Date: 2013-12-13
 </code></pre>
 <p>Sure enough, fixed for all tested version of Safari. Need to test Android and other devices, sure, but this was another small reminder to get into a browser - especially mobile browsers, as soon as possible.</p>
 
-    </main>
+
+</article>
+</div>
+  </main>
+
+  <footer>
+      <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+      <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+      <p><a href="/styleguide">Styleguide</a></p>
+  </footer>
 
 </body>
-
-<footer>
-    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
-    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
-    <p><a href="/styleguide">Styleguide</a></p>
-</footer>
-
 </html>

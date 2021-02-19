@@ -17,6 +17,10 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&display=swap" rel="stylesheet">
+
     <title>{%if title %} {{title}} : {% endif %}Brian Muenzenmeyer</title>
     {%if customCSS %}
         <link rel="stylesheet" href="/css/{{ customCSS }}.css">
@@ -25,18 +29,17 @@
 
 <body>
 
-    {% include "homelink.njk" %}
+  {% include "homelink.njk" %}
 
-    <main id="container">
-        {{ content | safe }}
-    </main>
+  <main>
+      {{ content | safe }}
+  </main>
+
+  <footer>
+      <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+      <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+      <p><a href="/styleguide">Styleguide</a></p>
+  </footer>
 
 </body>
-
-<footer>
-    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
-    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
-    <p><a href="/styleguide">Styleguide</a></p>
-</footer>
-
 </html>

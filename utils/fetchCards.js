@@ -4,6 +4,7 @@ require("dotenv").config()
 
 const {
   TRELLO_BOARD_ID,
+  TRELLO_API_ATTACHMENTS,
   TRELLO_API_BOARD_CARDS,
   TRELLO_TOKEN,
   TRELLO_KEY,
@@ -25,7 +26,7 @@ const extractProperty = (card, propName) => {
 
   if (label.length) {
     if (propName === "tag") {
-      card[`tags`] = label.map(l => l.name.split(':')[1])
+      card[`tags`] = label.map((l) => l.name.split(":")[1])
     } else {
       if (!card.tags) {
         card[`tags`] = []
@@ -36,41 +37,51 @@ const extractProperty = (card, propName) => {
   // console.log(35, card)
 }
 
-module.exports = (listID) => {
+module.exports = async (listID) => {
   // Fetch the JSON data about this board
-  return fetch(`${trelloBoardUrl}?key=${TRELLO_KEY}&token=${TRELLO_TOKEN}`)
-    .then((res) => res.json())
-    .then((json) => {
-      // Just focus on the cards which are in the list we want
-      // and do not have a closed status
-      let contentCards = json.filter((card) => {
-        return card.idList == listID && !card.closed
-      })
+  const response = await fetch(
+    `${trelloBoardUrl}?key=${TRELLO_KEY}&token=${TRELLO_TOKEN}`
+  )
+  const json = await response.json()
 
-      // only include cards labelled with "live" or with
-      // the name of the branch we are in
-      let contextCards = contentCards.filter((card) => {
-        return card.labels.filter(
-          (label) =>
-            label.name.toLowerCase() == "live" ||
-            label.name.toLowerCase() == BRANCH
-        ).length
-      })
+  // Just focus on the cards which are in the list we want
+  // and do not have a closed status
+  let contentCards = json.filter((card) => {
+    return card.idList == listID && !card.closed
+  })
 
-      // If a card has an attachment, add it as an image in the description markdown
-      contextCards.forEach((card) => {
-        if (card.attachments && card.attachments.length) {
-          card.name = ""
+  // only include cards labelled with "live" or with
+  // the name of the branch we are in
+  let contextCards = contentCards.filter((card) => {
+    return card.labels.filter(
+      (label) =>
+        label.name.toLowerCase() == "live" || label.name.toLowerCase() == BRANCH
+    ).length
+  })
+
+  // If a card has an attachment, add it as an image in the descriotion markdown
+  await contextCards.forEach(async (card) => {
+    if (card.badges.attachments) {
+      const trelloAttachmentsUrl = TRELLO_API_ATTACHMENTS.replace(
+        "TRELLO_CARD_ID",
+        card.id
+      )
+
+      await fetch(
+        `${trelloAttachmentsUrl}?key=${TRELLO_KEY}&token=${TRELLO_TOKEN}`
+      )
+        .then((res) => res.json())
+        .then((res) => {
           card.desc =
-            card.desc +
-            `\n![${card.name}](${card.attachments[0].url} '${card.name}')`
-        }
+            card.desc + `\n![${card.name}](${res[0].url} '${card.name}')`
+          card.PANTOGRAPH_IMAGE = res[0].url
+        })
+    }
 
-        extractProperty(card, "tag")
-        extractProperty(card, "date")
-      })
+    extractProperty(card, "tag")
+    extractProperty(card, "date")
+  })
 
-      // return our data
-      return contextCards
-    })
+  // return our data
+  return contextCards
 }

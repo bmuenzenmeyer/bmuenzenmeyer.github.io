@@ -17,25 +17,30 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;400&display=swap" rel="stylesheet">
+
     <title>Brian Muenzenmeyer</title>
     
 </head>
 
 <body>
 
-    <header>
-    <a href="/" id="home">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
+  <div class="masthead">
+  <header>
+      <a href="/" id="home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0D80F0" stroke="#031636" stroke-width="2" class="masthead__logo">
     <title>Gorilla step</title>
     <!-- Designed by Metafizzy, 2017 -->
     <path d="M7 14l-6 6v10h6M23 13l9 9v8h-7l-2-2v-2h-2l-2.5-2.5M16 10a7 7 0 0 1 0 14"></path>
     <path d="M15 16l2 2v4l-1 1 1 1v6H7V14l4-4 7-7h3l4 4-1 1 2 2v2l-1 1"></path>
     <path fill="none" d="M26 12l-2 2h-3l-2-2V8h5"></path>
 </svg>
-    Brian Muenzenmeyer
-    </a>
-</header>
-<nav>
+      Brian Muenzenmeyer
+      </a>
+  </header>
+  <nav class="nav">
     <ul>
         <li><a href="https://github.com/bmuenzenmeyer">github</a></li>
         <li><a href="https://twitter.com/bmuenzenmeyer">twitter</a></li>
@@ -43,13 +48,20 @@
         <li><a href="/arcade">👾 arcade</a></li>
     </ul>
 </nav>
+</div>
 
-    <main id="container">
-        <h2>CSS-IN-JS</h2>
+  <main>
+      <div class="container">
+  <h2>CSS-IN-JS</h2>
 
-Tags: keyboard,words
+<aside class="post-meta">
 
-Date: 2018-05-08
+  <div class="post-date">Date: 2018-05-08</div>
+  <div class="post-tags">Tags: keyboard,words</div>
+
+</aside>
+
+<article>
 
 <p><strong>This post is an opinion about CSS-IN-JS. There are many like it but this one is mine.</strong></p>
 <p>It started on my bus home.</p>
@@ -157,14 +169,16 @@ export default withStyles(styles)(Button)
 <p>I felt triggered today by Brad’s tweet, but also because there are folks where I work expending valuable energy, money, and <a href="http://bradfrost.com/blog/post/creative-exhaust/">creative exhaust</a> building CSS only solutions, missing out on an opportunity to explore new territory. They see Brad’s of the world as standard bearers of the familiar, as I do. I think the problems Brad highlights are valid and warrant pause. Teams need to ultimately decide what is best for them over the lifespan of their product. I hope they try different approaches and construct an <em>informed</em> opinion.</p>
 <p>And then, as my friend puts it, I hope they <a href="https://twitter.com/brad_frost/status/450619808795885569">share what they know</a>.</p>
 
-    </main>
+
+</article>
+</div>
+  </main>
+
+  <footer>
+      <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
+      <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
+      <p><a href="/styleguide">Styleguide</a></p>
+  </footer>
 
 </body>
-
-<footer>
-    <p>Scaffolded with <a href="https://github.com/bmuenzenmeyer/pantograph">Pantograph</a>. <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> combined via <a href="https://www.11ty.dev/">11ty</a> and hosted atop <a href="https://www.netlify.com/">Netlify</a>.</p>
-    <p>Gorilla Logo designed by <a href="https://desandro.com/">David DeSandro</a>.
-    <p><a href="/styleguide">Styleguide</a></p>
-</footer>
-
 </html>

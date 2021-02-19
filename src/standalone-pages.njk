@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: item.njk
 pagination:
     data: content
     size: 1
@@ -9,10 +9,17 @@ eleventyExcludeFromCollections: true
 ---
 <h2>{{page.name}}</h2>
 
-Tags: {{page.tags}}
+<aside class="post-meta">
 
-Date: {{page.PANTOGRAPH_date }}
+  <div class="post-date">Date: {{page.PANTOGRAPH_date }}</div>
+  <div class="post-tags">Tags: {{page.tags}}</div>
+
+</aside>
+
+<article>
 
 {% markdown %}
     {{- page.desc | safe }}
 {% endmarkdown %}
+
+</article>
