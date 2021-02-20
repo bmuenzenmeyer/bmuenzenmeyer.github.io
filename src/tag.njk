@@ -11,15 +11,15 @@ permalink: /tags/{{ tag.name }}/
 <h1>Tagged “{{ tag.name }}”</h1>
 
 <article>
-
-<ul class="collection">
+ 
+<ul class="collection"> 
 
 {% for t in tags | reverse %}
 
   {% if tag.name == t.name  %}
-    {% for card in t.cards | reverse %}
+    {% for card in t.cards %}
     <li>
-      <a href="../../{{card.name | slug }}">{{ card.name }}</a>
+      <a href="../../{{card.name | slug }}">{{ card.name }}  <small>{{ card.PANTOGRAPH_date }}</small></a>
     {% endfor %}
     </li>
   {% endif %}
