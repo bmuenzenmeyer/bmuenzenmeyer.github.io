@@ -1,6 +1,12 @@
 :root {
   --darkblue: #031636;
   --blue: #0d80f0;
+  --connections-particleColor: rgb(150, 180, 200);
+  --connections-lineColor: rgb(150, 180, 200);
+  --connections-particleAmount: 80;
+  --connections-defaultRadius: 2;
+  --connections-variantRadius: 1;
+  --connections-linkRadius: 90;
 }
 
 html {
@@ -273,4 +279,12 @@ blockquote {
   max-width: 100%;
   clip-path: circle(50px at center);
   padding: 1rem;
+}
+
+@media (min-width: 45rem) {
+  h2 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-image: paint(connections);
+  }
 }
