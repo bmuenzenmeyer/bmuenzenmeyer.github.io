@@ -60,7 +60,7 @@ body {
 
 /* TYPOGRAPHY */
 
-@media (min-width: 35rem) {
+@media (min-width: 38rem) {
   h1,
   h2,
   h3,
@@ -103,8 +103,7 @@ p {
 }
 
 aside,
-blockquote,
-footer {
+blockquote {
   background-color: rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -112,11 +111,15 @@ footer {
   padding: 1rem;
 }
 
-footer {
-  font-size: 60%;
-}
-
 /* LAYOUT */
+
+@media (min-width: 55rem) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+  }
+}
 
 .container {
   display: grid;
@@ -139,7 +142,7 @@ footer {
   margin: 1rem;
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 38rem) {
   #home {
     flex-direction: row;
   }
@@ -171,7 +174,7 @@ footer {
   list-style: none;
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 38rem) {
   .masthead {
     flex-direction: row;
     align-items: center;
@@ -206,11 +209,6 @@ footer {
 
 /* HOME */
 
-.intro {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 /* LISTS */
 
 .collection {
@@ -219,4 +217,60 @@ footer {
 .collection li {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 8rem;
+}
+
+.footer__container,
+.footer__bio,
+.footer__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__fact {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 45rem) {
+  .footer__container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer__container,
+  .footer__bio {
+    flex-direction: row;
+  }
+  .footer__container {
+    justify-content: space-between;
+  }
+
+  .footer__intro {
+    margin-left: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .footer__bio {
+    flex-grow: 1;
+  }
+
+  .footer__colophon {
+    margin-left: auto;
+    max-width: 600px;
+    padding-left: 1rem;
+  }
+}
+
+.footer__avatar {
+  width: 100px;
+  aspect-ratio: 1;
+  max-width: 100%;
+  clip-path: circle(50px at center);
+  padding: 1rem;
 }
