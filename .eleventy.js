@@ -42,10 +42,28 @@ module.exports = function (eleventyConfig) {
   )
 
   eleventyConfig.addNunjucksFilter("toDateObj", function (PANTOGRAPH_DATE) {
-    // PANTOGRAPH_DATE is 'YYYY-MM-DD'
-    const parts = PANTOGRAPH_DATE.split("-")
-    return new Date(parts[0], parts[1], parts[2])
+    return PANTOGRAPH_DATEtoDate(PANTOGRAPH_DATE)
   })
+
+  eleventyConfig.addNunjucksFilter(
+    "getNewestCollectionItemDateFromPANTOGRAPH_DATE",
+    function (collections) {
+      const words = collections.filter((c) => c.name === "words")
+
+      const dates = words[0].cards.map((c) => {
+        // console.log(c)
+        return PANTOGRAPH_DATEtoDate(c.PANTOGRAPH_date)
+      })
+
+      console.log(dates)
+
+      const maxDate = new Date(Math.max(...dates))
+
+      console.log(maxDate)
+
+      return maxDate
+    }
+  )
 
   eleventyConfig.addNunjucksFilter("mdToHTML", function (content) {
     return md.render(content)
@@ -57,4 +75,13 @@ module.exports = function (eleventyConfig) {
       output: "dist",
     },
   }
+}
+
+const PANTOGRAPH_DATEtoDate = (PANTOGRAPH_DATE) => {
+  if (!PANTOGRAPH_DATE) {
+    return new Date(0, 0, 0)
+  }
+  // PANTOGRAPH_DATE is 'YYYY-MM-DD'
+  const parts = PANTOGRAPH_DATE.split("-")
+  return new Date(parts[0], parts[1], parts[2])
 }
