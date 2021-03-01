@@ -1,0 +1,47 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "pagination": {
+    "data": "tags",
+    "size": 9999
+  },
+  "metadata": {
+    "title": "Brian Muenzenmeyer",
+    "subtitle": "The personal website of Brian Muenzenmeyer. Every page a new Circus McGurkus!",
+    "url": "https://brianmuenzenmeyer.com/",
+    "feedUrl": "https://brianmuenzenmeyer.com/feed.xml",
+    "author": {
+      "name": "Brian Muenzenmeyer",
+      "email": "brian.muenzenmeyer@gmail.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  {# <updated>{{ tags | getNewestCollectionItemDate | dateToRfc3339 }}</updated> #}
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for tag in tags %}
+    {% if tag.name === "words" %}
+      {% for item in tag.cards %}
+      {% set absolutePostUrl %}{{ item.name | slug | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ item.name }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ item.PANTOGRAPH_date | toDateObj | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ item.desc | mdToHTML | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+      {%- endfor %}
+    {% endif %}
+  {%- endfor %}
+</feed> 
