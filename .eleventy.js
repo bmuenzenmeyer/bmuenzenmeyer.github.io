@@ -1,8 +1,10 @@
 const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug")
+const pluginRss = require("@11ty/eleventy-plugin-rss")
 
 module.exports = function (eleventyConfig) {
   // plugins
   eleventyConfig.addPlugin(pluginBetterSlug)
+  eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addLayoutAlias("default", "default.njk")
 
@@ -38,6 +40,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("toHumanUrl", (v) =>
     v.replace(/\//g, "").replace(/-/g, " ")
   )
+
+  eleventyConfig.addNunjucksFilter("toDateObj", function (PANTOGRAPH_DATE) {
+    // PANTOGRAPH_DATE is 'YYYY-MM-DD'
+    const parts = PANTOGRAPH_DATE.split("-")
+    return new Date(parts[0], parts[1], parts[2])
+  })
+
+  eleventyConfig.addNunjucksFilter("mdToHTML", function (content) {
+    return md.render(content)
+  })
 
   return {
     dir: {
