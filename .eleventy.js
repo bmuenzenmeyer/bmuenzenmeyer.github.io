@@ -55,11 +55,11 @@ module.exports = function (eleventyConfig) {
         return PANTOGRAPH_DATEtoDate(c.PANTOGRAPH_date)
       })
 
-      console.log(dates)
+      // console.log(dates)
 
       const maxDate = new Date(Math.max(...dates))
 
-      console.log(maxDate)
+      // console.log(maxDate)
 
       return maxDate
     }
