@@ -11,7 +11,8 @@
 
 html {
   font-size: 100%;
-  font-family: "Fraunces", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #home svg {
@@ -161,11 +162,12 @@ blockquote {
 .masthead {
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .nav {
   width: 100%;
-  text-align: center;
 }
 
 .nav ul {
@@ -282,8 +284,95 @@ blockquote {
 
 @media (min-width: 45rem) {
   h2 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-image: paint(connections);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.version-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 45rem) {
+  .version-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  border: 1px solid #222;
+  padding: 0.5rem;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__image {
+  width: 100%;
+}
+
+/** CSS IS AWESOME **/
+
+:root {
+  --border-size: 4px;
+}
+
+[data-theme] {
+  background-color: var(--bg, white);
+  color: var(--text, black);
+  border-color: var(--border-color, black);
+}
+
+.masthead {
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead__header {
+  display: flex;
+
+  width: var(--size, 105px);
+  height: var(--size, 105px);
+  border-size: var(--border-size);
+  border-color: var(--border-color);
+  border-style: solid;
+  overflow-x: show;
+}
+
+.masthead #home {
+  margin: 0;
+  font-size: var(--font-size, 48px);
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 55rem) {
+  .masthead {
+    flex-direction: row;
+  }
+
+  .masthead__header {
+    --size: 165px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .masthead #home {
+    --font-size: 64px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg: black;
+  }
+
+  [data-theme="dark"] {
+    --bg: black;
+    --border-color: white;
+    --text: white;
   }
 }

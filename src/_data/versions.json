@@ -1,0 +1,70 @@
+[
+  {
+    "name": "v1",
+    "date": "~2010-2012",
+    "url": "https://v1.brianmuenzenmeyer.com/",
+    "text": "My first designed online presence.",
+    "stats": [
+      "Hand-made logo & favicon",
+      "Links placed with <a href='https://compassrose.netlify.app'>compassrose</a>, one of my first open source projects"
+    ],
+    "image": "v1.png"
+  },
+  {
+    "name": "v2",
+    "date": "~2013-2014",
+    "url": "https://v2.brianmuenzenmeyer.com/",
+    "text": "Large letterform celebrating my large name.",
+    "stats": [
+      "UnifrakturCook still one of my favorites here",
+      "<a href='http://fittextjs.com/'>FitText</a> hero.",
+      "Subtle Patterns influences."
+    ],
+    "image": "v2.png" 
+  },
+  {
+    "name": "v3",
+    "date": "2015",
+    "url": "https://v3.brianmuenzenmeyer.com/",
+    "text": "Color exists. Exploration of digital textures.",
+    "stats": [
+      "The beginning of increased writing output",
+      "The first Pattern Lab era site"
+    ],
+    "image": "v3.png" 
+  },
+  {
+    "name": "v4",
+    "date": "2016",
+    "url": "https://v4.brianmuenzenmeyer.com/",
+    "text": "Stark.",
+    "stats": [
+      "Probably my best refresh instead of rewrite"
+    ],
+    "image": "v4.png" 
+  },
+  {
+    "name": "v5",
+    "date": "2017-2019",
+    "url": "https://v5.brianmuenzenmeyer.com/",
+    "text": "Even starker.",
+    "stats": [
+      "Pattern Lab burnout happened during this period",
+      "We move to Minneapolis",
+      "First use of logo purchased from <a href='https://desandro.com/'>David DeSandro</a>"
+    ],
+    "image": "v5.png" 
+  },
+  {
+    "name": "v6",
+    "date": "2019-2020",
+    "url": "https://v6.brianmuenzenmeyer.com/",
+    "text": "I cannot get this grid idea outta my head.",
+    "stats": [
+      "Generative grid textures",
+      "Emoji",
+      "Old writing emerges"
+    ],
+    "image": "v6.png" 
+  }
+]
