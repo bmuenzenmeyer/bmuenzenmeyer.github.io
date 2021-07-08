@@ -109,6 +109,10 @@ p {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+}
+
 aside,
 blockquote {
   background-color: rgba(0, 0, 0, 0.3);
