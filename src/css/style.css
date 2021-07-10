@@ -1,12 +1,7 @@
 :root {
-  --darkblue: #031636;
-  --blue: #0d80f0;
-  --connections-particleColor: rgb(150, 180, 200);
-  --connections-lineColor: rgb(150, 180, 200);
-  --connections-particleAmount: 80;
-  --connections-defaultRadius: 2;
-  --connections-variantRadius: 1;
-  --connections-linkRadius: 90;
+  --darkblue: #395177;
+  --blue: #031636;
+  --softwhite: #ddd;
 }
 
 html {
@@ -21,14 +16,13 @@ html {
 
 /* COLOR PREFERENCE */
 body {
-  color: white;
   font-size: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--darkblue);
-    color: white;
+    color: var(--softwhite);
   }
 
   a {
@@ -36,18 +30,18 @@ body {
   }
 
   a:visited {
-    color: white;
+    color: var(--softwhite);
   }
 
   a:hover,
   a:focus {
-    color: white;
+    color: var(--softwhite);
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    background: #ddd;
+    background: var(--softwhite);
     color: #222;
   }
 
@@ -77,23 +71,23 @@ body {
   }
 
   h1 {
-    font-size: 13rem;
-  }
-
-  h2 {
     font-size: 8rem;
   }
 
-  h3 {
+  h2 {
     font-size: 5rem;
   }
 
-  h4 {
+  h3 {
     font-size: 3rem;
   }
 
-  h5 {
+  h4 {
     font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
   }
 }
 
@@ -125,10 +119,10 @@ blockquote {
 /* LAYOUT */
 
 @media (min-width: 55rem) {
-  main {
+  main,
+  .masthead {
     margin-left: auto;
     margin-right: auto;
-    max-width: 900px;
   }
 }
 
@@ -140,8 +134,14 @@ blockquote {
 }
 
 @media (min-width: 55rem) {
-  .container {
-    grid-template-rows: min-content 1fr min-content;
+  article {
+    display: grid;
+    grid-template-columns: 1fr 10% 60ch 10% 1fr;
+  }
+  aside {
+    width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -164,8 +164,7 @@ blockquote {
 /* MASTHEAD / NAV */
 
 .masthead {
-  display: flex;
-  flex-direction: column;
+  max-width: 60ch;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -186,35 +185,32 @@ blockquote {
 }
 
 @media (min-width: 38rem) {
-  .masthead {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .nav {
-    margin-left: auto;
-    width: max-content;
-  }
-
   .nav ul {
     flex-direction: row;
   }
   .nav li {
-    padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
 }
 
 /* ARTICLE */
 
-@media (min-width: 60ch) {
-  .container p {
-    max-width: 60ch;
+@media (min-width: 38rem) {
+  article > * {
+    grid-column: 3 / 4;
   }
 
-  .container img,
-  .container div {
-    max-width: 100%;
+  article > img,
+  article > picture,
+  article > div {
+    grid-column: 2 / 5;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  article > div.cp_embed_wrapper {
+    margin-left: unset;
+    margin-right: unset;
   }
 }
 
@@ -250,7 +246,7 @@ blockquote {
 
 @media (min-width: 45rem) {
   .footer__container {
-    max-width: 1200px;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
   }
@@ -330,17 +326,10 @@ blockquote {
   border-color: var(--border-color, black);
 }
 
-.masthead {
-  display: flex;
-  flex-direction: column;
-}
-
 .masthead__header {
   display: flex;
-
-  width: var(--size, 105px);
-  height: var(--size, 105px);
-  border-size: var(--border-size);
+  width: var(--size, 118px);
+  height: var(--size, 118px);
   border-color: var(--border-color);
   border-style: solid;
   overflow-x: show;
@@ -354,18 +343,22 @@ blockquote {
 }
 
 @media only screen and (min-width: 55rem) {
-  .masthead {
-    flex-direction: row;
-  }
-
   .masthead__header {
-    --size: 165px;
-    flex-direction: column;
-    justify-content: center;
+    --size: 158px;
   }
 
   .masthead #home {
     --font-size: 64px;
+  }
+}
+
+@media only screen and (min-width: 85rem) {
+  .masthead__header {
+    --size: 316px;
+  }
+
+  .masthead #home {
+    --font-size: 128px;
   }
 }
 
@@ -376,7 +369,7 @@ blockquote {
 
   [data-theme="dark"] {
     --bg: black;
-    --border-color: white;
-    --text: white;
+    --border-color: var(--softwhite);
+    --text: var(--softwhite);
   }
 }

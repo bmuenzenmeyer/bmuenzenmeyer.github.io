@@ -2,39 +2,43 @@
 layout: default.njk
 ---
 
-<h2>Versions</h2>
+<article>
 
-<p>Cobbled together here is some semblence of a history of this site. Many of the deeper links no longer work, but take in the aesthetic.</p>
+  <h2>Versions</h2>
 
-<div class="version-list">
+  <p>Cobbled together here is some semblence of a history of this site. Many of the deeper links no longer work, but take in the aesthetic.</p>
 
-  {%- for version in versions -%}
+  <div class="version-list">
 
-  <div class="card card--version">
+    {%- for version in versions -%}
 
-    <div class="card__header"
-      <h3 class="card__name">
-        {{ version.name }}
-      </h3>
-      <span class="card__meta">{{ version.date}}</span>
+    <div class="card card--version">
+
+      <div class="card__header"
+        <h3 class="card__name">
+          {{ version.name }}
+        </h3>
+        <span class="card__meta">{{ version.date}}</span>
+      </div>
+
+      <img src="../img/{{version.image}}" class="card__image"/>
+
+      <p class="card__text">{{version.text}}</p>
+
+      <ul class="card__stats">
+      {%- for stat in version.stats -%}
+      <li class="card__stat">{{stat|safe}}</li>
+      {%- endfor -%}
+      </ul>
+
+      <div class="card__footer">
+        <a href="{{version.url}}" class="card__action">View</a>
+      </div>
+
     </div>
 
-    <img src="../img/{{version.image}}" class="card__image"/>
-
-    <p class="card__text">{{version.text}}</p>
-
-    <ul class="card__stats">
-    {%- for stat in version.stats -%}
-    <li class="card__stat">{{stat|safe}}</li>
     {%- endfor -%}
-    </ul>
-
-    <div class="card__footer">
-      <a href="{{version.url}}" class="card__action">View</a>
-    </div>
 
   </div>
 
-  {%- endfor -%}
-
-</div>
+</article>
