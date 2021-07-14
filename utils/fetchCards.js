@@ -50,13 +50,16 @@ const findImage = async (card) => {
     )
 
     const res = await rawRes.json()
-    // card.desc = card.desc + `\n![${card.name}](${res[0].url} '${card.name}')`
-    card.PANTOGRAPH_IMAGE = res[0].url
 
-    const stats = await Image(res[0].url, {
-      widths: [400, 800, 1200],
-      outputDir: "./_site/img/",
-      useCache: false,
+    await res.forEach(async (r, index) => {
+      // card.desc = card.desc + `\n![${card.name}](${res[0].url} '${card.name}')`
+      card[`PANTOGRAPH_IMAGE_${index}`] = res[index].url
+
+      const stats = await Image(res[index].url, {
+        widths: [400, 800, 1200],
+        outputDir: "./_site/img/",
+        useCache: false,
+      })
     })
 
     return card

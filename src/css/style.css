@@ -107,12 +107,19 @@ img {
   max-width: 100%;
 }
 
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 3px solid var(--softwhite);
+}
+
 aside,
 blockquote {
   background-color: rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 0;
+  margin-right: 0;
   padding: 1rem;
 }
 
