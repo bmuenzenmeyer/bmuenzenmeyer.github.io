@@ -45,20 +45,30 @@ const findImage = async (card) => {
       card.id
     )
 
-    const rawRes = await fetch(
-      `${trelloAttachmentsUrl}?key=${TRELLO_KEY}&token=${TRELLO_TOKEN}`
-    )
+    const rawURL = `${trelloAttachmentsUrl}?key=${TRELLO_KEY}&token=${TRELLO_TOKEN}`
+
+    // console.log(50, { rawURL })
+
+    const rawRes = await fetch(rawURL)
 
     const res = await rawRes.json()
 
     await res.forEach(async (r, index) => {
-      // card.desc = card.desc + `\n![${card.name}](${res[0].url} '${card.name}')`
-      card[`PANTOGRAPH_IMAGE_${index}`] = res[index].url
+      const imageURL = `${res[index].url}`
 
-      const stats = await Image(res[index].url, {
+      // console.log(60, { imageURL })
+
+      const stats = await Image(imageURL, {
         widths: [400, 800, 1200],
         outputDir: "./_site/img/",
         useCache: false,
+        cacheOptions: {
+          fetchOptions: {
+            headers: {
+              Authorization: `OAuth oauth_consumer_key="${TRELLO_KEY}", oauth_token="${TRELLO_TOKEN}"`,
+            },
+          },
+        },
       })
     })
 
