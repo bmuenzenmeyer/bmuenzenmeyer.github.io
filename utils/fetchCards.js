@@ -60,7 +60,8 @@ const findImage = async (card) => {
 
       const stats = await Image(imageURL, {
         widths: [400, 800, 1200],
-        outputDir: "./_site/img/",
+        outputDir: "./src/img/",
+        formats: ["jpeg"],
         useCache: false,
         cacheOptions: {
           fetchOptions: {
@@ -105,6 +106,7 @@ module.exports = async (listID) => {
     // extract properties off of trello labels like `tag:foo`
     extractProperty(card, "tag")
     extractProperty(card, "date")
+    extractProperty(card, "summary")
     return card
   })
 
