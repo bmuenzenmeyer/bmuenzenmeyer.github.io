@@ -1,0 +1,24 @@
+---
+layout: default.njk
+pagination:
+  data: walls
+  size: 1
+  alias: wall
+  filter:
+    - all
+permalink: /walls/{{ wall.name }}/
+---
+
+<style>
+html { 
+  background: url(/img/walls/{{ wall.name }}.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+html > * {
+  display: none !important;
+}
+</style>
+

@@ -233,6 +233,36 @@ blockquote {
   margin-bottom: 1rem;
 }
 
+/* WALL */
+.wall {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.wall--fullbleed {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wall__image,
+.wall__caption {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.wall__caption {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  text-align: center;
+  align-self: center;
+  font-size: 20vw;
+}
+
 /* FOOTER */
 
 .footer {
