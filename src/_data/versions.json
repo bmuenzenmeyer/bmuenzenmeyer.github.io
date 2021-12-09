@@ -66,5 +66,17 @@
       "Old writing emerges"
     ],
     "image": "v6.png" 
-  }
+  },
+  {
+    "name": "v7",
+    "date": "2021",
+    "url": "https://v7.brianmuenzenmeyer.com/",
+    "text": "A return to basics. I start to miss web development more and more.",
+    "stats": [
+      "CSS is Awesome",
+      "prefers-color-scheme support",
+      "Made with <a href='https://github.com/bmuenzenmeyer/pantograph'>pantograph</a>"
+    ],
+    "image": "v7.png" 
+  }  
 ]
