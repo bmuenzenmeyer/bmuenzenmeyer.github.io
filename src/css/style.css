@@ -351,8 +351,6 @@ blockquote {
   width: 100%;
 }
 
-/** CSS IS AWESOME **/
-
 :root {
   --border-size: 4px;
 }
@@ -361,42 +359,6 @@ blockquote {
   background-color: var(--bg, white);
   color: var(--text, black);
   border-color: var(--border-color, black);
-}
-
-.masthead__header {
-  display: flex;
-  width: var(--size, 118px);
-  height: var(--size, 118px);
-  border-color: var(--border-color);
-  border-style: solid;
-  overflow-x: show;
-}
-
-.masthead #home {
-  margin: 0;
-  font-size: var(--font-size, 48px);
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-}
-
-@media only screen and (min-width: 55rem) {
-  .masthead__header {
-    --size: 158px;
-  }
-
-  .masthead #home {
-    --font-size: 64px;
-  }
-}
-
-@media only screen and (min-width: 85rem) {
-  .masthead__header {
-    --size: 316px;
-  }
-
-  .masthead #home {
-    --font-size: 128px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
