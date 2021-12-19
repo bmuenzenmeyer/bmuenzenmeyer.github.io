@@ -1,8 +1,62 @@
 <div class="masthead">
   <header class="masthead__header">
-      <a href="/" id="home">
       {# {% include "gorilla.njk" %} #}
-      Brian Muenzenmeyer
-      </a>
+      <h1><a href="/" id="home">
+      <div class="masthead__word">
+        <span class="masthead__letter">B</span>
+        <span class="masthead__letter">r</span>
+        <span class="masthead__letter">i</span>
+        <span class="masthead__letter">a</span>
+        <span class="masthead__letter">n</span>
+
+        <span class="masthead__letter">M</span>
+        <span class="masthead__letter">u</span>
+        <span class="masthead__letter">e</span>
+        <span class="masthead__letter">n</span>
+        <span class="masthead__letter">z</span>
+        <span class="masthead__letter">e</span>
+        <span class="masthead__letter">n</span>
+        <span class="masthead__letter">m</span>
+        <span class="masthead__letter">e</span>
+        <span class="masthead__letter">y</span>
+        <span class="masthead__letter">e</span>
+        <span class="masthead__letter">r</span>
+      </div>
+      </a></h1>
   </header>
+
+  <div class="swatches">
+    <button value="blue" class="swatch swatch--blue">Blue</button>
+    <button value="yellow" class="swatch swatch--yellow">Yellow</button>
+    <button value="orange" class="swatch swatch--orange">Orange</button>
+    <button value="red" class="swatch swatch--red">Red</button>
+    <button value="green" class="swatch swatch--green">Green</button>
+    <button value="grey" class="swatch swatch--grey">Grey</button>
+    <button value="black" class="swatch swatch--black">Black</button>    
+  </div>
+
 </div>
+
+<script>
+let root = document.documentElement;
+
+document.querySelectorAll('.swatch').forEach(s => s.addEventListener('click', event => {
+  const color = event.target.value
+
+  const colors = {
+    'yellow' : '#e5b360',
+    'grey': '#c1c1c1',
+    'red': '#9e421d',
+    'orange': '#b26722',
+    'blue': '#00649b',
+    'green': '#50633b',
+    'black': '#171619'
+  }
+
+
+  root.style.setProperty('--theme-color', colors[color])
+}))
+
+
+
+</script>

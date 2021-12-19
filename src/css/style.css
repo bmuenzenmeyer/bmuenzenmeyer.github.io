@@ -2,6 +2,19 @@
   --darkblue: #395177;
   --blue: #031636;
   --softwhite: #ddd;
+
+  --block-color: #222;
+
+  --theme-color: #c1c1c1;
+
+  --size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+  --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+  --size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  --size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.618rem);
+  --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.618rem);
+  --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 4.236rem);
+  --size-900: clamp(2.67rem, 2.07rem + 3vw, 6.854rem);
+  --size-1000: clamp(3.34rem, 2.45rem + 6.43vw, 11.089rem);
 }
 
 html {
@@ -14,19 +27,24 @@ html {
   height: 2rem;
 }
 
-/* COLOR PREFERENCE */
 body {
   font-size: 18px;
 }
 
+/* COLOR PREFERENCE */
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: #171619;
+  }
+
   body {
-    background: var(--darkblue);
+    background: var(--theme-color);
     color: var(--softwhite);
   }
 
   a {
-    color: var(--blue);
+    color: var(--softwhite);
   }
 
   a:visited {
@@ -40,8 +58,12 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
+  :root {
+    --theme-color: #c1c1c1;
+  }
+
   body {
-    background: var(--softwhite);
+    background: var(--theme-color);
     color: #222;
   }
 
@@ -71,23 +93,23 @@ body {
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: var(--size-1000);
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: var(--size-800);
   }
 
   h3 {
-    font-size: 3rem;
+    font-size: var(--size-700);
   }
 
   h4 {
-    font-size: 2rem;
+    font-size: var(--size-600);
   }
 
   h5 {
-    font-size: 1.5rem;
+    font-size: var(--size-500);
   }
 }
 
@@ -156,7 +178,6 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
 }
 
 @media (min-width: 38rem) {
@@ -171,9 +192,29 @@ blockquote {
 /* MASTHEAD / NAV */
 
 .masthead {
-  max-width: 60ch;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.mashead__header {
+}
+
+.masthead__word {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.masthead__letter {
+  text-align: center;
+  transform: scale(-1, 1);
+  padding: 0.25rem;
+  margin: 0.15rem;
+  background-color: var(--block-color);
+  color: var(--theme-color);
+}
+
+.masthead__header a {
+  text-decoration: none;
 }
 
 .nav {
@@ -349,26 +390,4 @@ blockquote {
 
 .card__image {
   width: 100%;
-}
-
-:root {
-  --border-size: 4px;
-}
-
-[data-theme] {
-  background-color: var(--bg, white);
-  color: var(--text, black);
-  border-color: var(--border-color, black);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    --bg: black;
-  }
-
-  [data-theme="dark"] {
-    --bg: black;
-    --border-color: var(--softwhite);
-    --text: var(--softwhite);
-  }
 }
