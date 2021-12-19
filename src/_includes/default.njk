@@ -2,25 +2,89 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{%if title %} {{title}} : {{summary}} : {% endif %} The personal website of Brian Muenzenmeyer.">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{%if title %} {{title}} : {{summary}} : {% endif %} The personal website of Brian Muenzenmeyer.">
+  <link rel="stylesheet" href="/css/style.css">
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
 
-    <title>{%if title %} {{title}} : {% endif %}Brian Muenzenmeyer</title>
-    {%if customCSS %}
-        <link rel="stylesheet" href="/css/{{ customCSS }}.css">
-    {% endif %}
+  <title>{%if title %} {{title}} : {% endif %}Brian Muenzenmeyer</title>
+  {%if customCSS %}
+      <link rel="stylesheet" href="/css/{{ customCSS }}.css">
+  {% endif %}
+
+  <!-- fonts -->
+
+  <style>
+    @font-face {
+      font-family: Novela;
+      src: url('fonts/novela-regular-webfont.woff2') format('woff2'),
+          url('fonts/novela-regular-webfont.woff') format('woff');
+    }
+    @font-face {
+      font-family: Novela;
+      src: url('fonts/novela-bold-webfont.woff2') format('woff2'),
+          url('fonts/novela-bold-webfont.woff') format('woff');
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: Novela;
+      src: url('fonts/novela-regularitalic-webfont.woff2') format('woff2'),
+          url('fonts/novela-regularitalic-webfont.woff') format('woff');
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: Novela;
+      src: url('fonts/novela-bolditalic-webfont.woff2') format('woff2'),
+          url('fonts/novela-bolditalic-webfont.woff') format('woff');
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    body {
+      font-family: serif;
+    }
+    .fonts-loaded body {
+      font-family: Novela, serif;
+    }
+  
+  </style>
+
+  <script>
+    (function() {
+
+      // Optimization for Repeat Views
+      if( sessionStorage.fontsLoadedFoutWithClass ) {
+        document.documentElement.className += " fonts-loaded";
+        return;
+      }
+
+      if( "fonts" in document ) {
+        Promise.all([
+          document.fonts.load("1em Novela"),
+          document.fonts.load("700 1em Novela"),
+          document.fonts.load("italic 1em Novela"),
+          document.fonts.load("italic 700 1em Novela")
+        ]).then(function () {
+          document.documentElement.className += " fonts-loaded";
+
+          // Optimization for Repeat Views
+          sessionStorage.fontsLoadedFoutWithClass = true;
+        });
+      }
+    })();
+  </script>
 </head>
 
 <body>
