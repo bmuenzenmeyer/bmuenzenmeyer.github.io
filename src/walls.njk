@@ -1,11 +1,13 @@
 ---
-layout: default.njk
+layout: item.njk
 ---
+
+<h2>Walls</h2>
 
 <i>A digital place to preserve the ❤️ Megan put into our home on Tartan Curv.</i>
 
 {% for wall in walls %}
-<a href="/walls/{{ wall.name }}">
+<a href="/walls/{{ wall.name }}" class="wall__link">
 <figure class="wall">
   <img class="wall__image" src="/img/walls/{{ wall.name }}.jpg" alt="A photo of a painted accent wall Megan made in {{ wall.name }}'s room."/>
   <figcaption class="wall__caption">{{ wall.name }}</figcaption>

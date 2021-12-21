@@ -11,23 +11,4 @@ img {
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-      background: var(--darkblue) !important;
-      color: white !important;
-    }
-  
-    a {
-      color: var(--blue);
-    }
-  
-    a:visited {
-      color: white;
-    }
-  
-    a:hover,
-    a:focus {
-      color: white;
-    }
-  }
-  
-  @media (prefers-color-scheme: light) {
+}
