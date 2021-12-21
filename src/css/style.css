@@ -171,9 +171,80 @@ blockquote {
 /* MASTHEAD / NAV */
 
 .masthead {
+<<<<<<< Updated upstream
   max-width: 60ch;
   margin-top: 3rem;
   margin-bottom: 3rem;
+=======
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  background-color: var(--softwhite);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ),
+    paint(fleck);
+  --fleck-colors: var(--theme-color);
+  --fleck-seed: 123;
+}
+
+.masthead__header {
+}
+
+.masthead__word {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.masthead__letter {
+  text-align: center;
+  transform: scale(-1, 1);
+  padding: 0.25rem 0.5rem;
+  margin: 0.15rem;
+  background-color: var(--block-color);
+  background-image: url(/img/retina_wood.avif);
+  color: var(--theme-color);
+}
+
+.masthead__header a {
+  text-decoration: none;
+}
+
+.swatches {
+  text-align: right;
+}
+
+.swatch {
+  border: 1px solid var(--softwhite);
+  background-color: currentColor;
+  min-width: 50px;
+}
+
+.swatch--blue {
+  color: var(--theme-blue);
+}
+.swatch--yellow {
+  color: var(--theme-yellow);
+}
+.swatch--orange {
+  color: var(--theme-orange);
+}
+.swatch--red {
+  color: var(--theme-red);
+}
+.swatch--green {
+  color: var(--theme-green);
+}
+.swatch--grey {
+  color: var(--theme-grey);
+}
+.swatch--black {
+  color: var(--theme-black);
+>>>>>>> Stashed changes
 }
 
 .nav {
