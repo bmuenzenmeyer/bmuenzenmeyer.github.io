@@ -62,7 +62,7 @@ const findImage = async (card) => {
         widths: [400, 800, 1200],
         outputDir: "./src/img/",
         formats: ["jpeg"],
-        useCache: false,
+        useCache: true,
         cacheOptions: {
           fetchOptions: {
             headers: {

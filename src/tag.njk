@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: item.njk
 pagination:
   data: tags
   size: 1
@@ -9,24 +9,22 @@ pagination:
 permalink: /tags/{{ tag.name }}/
 ---
 
-<article>
  
-  <h2>Tagged “{{ tag.name }}”</h2>
-  
-  <ul class="collection"> 
+<h2>Tagged “{{ tag.name }}”</h2>
 
-  {% for t in tags | reverse %}
+<ul class="collection"> 
 
-    {% if tag.name == t.name  %}
-      {% for card in t.cards %}
-      <li>
-        <a href="../../{{card.name | slug }}">{{ card.name }}  <small>{{ card.PANTOGRAPH_date }}</small></a>
-      {% endfor %}
-      </li>
-    {% endif %}
+{% for t in tags | reverse %}
 
-  {% endfor %}
+  {% if tag.name == t.name  %}
+    {% for card in t.cards %}
+    <li>
+      <a href="../../{{card.name | slug }}">{{ card.name }}  <small>{{ card.PANTOGRAPH_date }}</small></a>
+    {% endfor %}
+    </li>
+  {% endif %}
 
-  </ul>
+{% endfor %}
 
-</article>
+</ul>
+
