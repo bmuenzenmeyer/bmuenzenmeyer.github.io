@@ -8,21 +8,19 @@ permalink: "/{{ page.name | slug }}/"
 eleventyExcludeFromCollections: true
 ---
 
-<article>
 
-  <h2>{{page.name}}</h2>
-  {% if page.PANTOGRAPH_summary  %}
-  <div class="post-summary-container">
-    <hr class="spacer"/>
-    <p class="post-summary">{{page.PANTOGRAPH_summary}}</p>
-    <hr class="spacer"/>
-  </div>
-  {% endif  %}
-  {% markdown %}
-      {{- page.desc | safe }}
-  {% endmarkdown %}
+<h2>{{page.name}}</h2>
+{% if page.PANTOGRAPH_summary  %}
+<div class="post-summary-container">
+  <hr class="spacer"/>
+  <p class="post-summary">{{page.PANTOGRAPH_summary}}</p>
+  <hr class="spacer"/>
+</div>
+{% endif  %}
+{% markdown %}
+    {{- page.desc | safe }}
+{% endmarkdown %}
 
-</article>
 
 <aside class="post-meta">
 

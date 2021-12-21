@@ -5,19 +5,19 @@
   "main": ".eleventy.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "0.11.0",
-    "@11ty/eleventy-img": "0.10.0",
-    "@11ty/eleventy-plugin-rss": "1.1.0",
+    "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy-img": "1.0.0",
+    "@11ty/eleventy-plugin-rss": "1.1.2",
     "@borisschapira/eleventy-plugin-better-slug": "1.0.1",
-    "clean-css": "4.2.3",
-    "dotenv": "8.2.0",
-    "markdown-it": "10.0.0",
-    "netlify-plugin-minify-html": "0.2.2",
-    "node-fetch": "2.6.0"
+    "clean-css": "5.2.2",
+    "dotenv": "10.0.0",
+    "markdown-it": "12.3.0",
+    "netlify-plugin-minify-html": "0.3.1",
+    "node-fetch": "2.6.6"
   },
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --incremental",
     "hook": "node utils/addTrelloHook.js",
     "format": "npx prettier 'src/**/*.js' --write"
   },

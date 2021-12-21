@@ -4,6 +4,8 @@ layout: default.njk
 
 <article>
 
+
+
   <section>
     <ul class="collection">
     {% for item in collections.words | reverse %}
@@ -23,7 +25,11 @@ layout: default.njk
   <nav>
     <ul class="collection">
       {%- for page in content -%}
-        <li><a href="{{ page.url | url }}">{{ page.name }}</a> <small>{{ page.PANTOGRAPH_date }}</small></li>
+        <li class="collection__article">
+          <a href="{{ page.url | url }}">{{ page.name }}</a>
+          <small>{{ page.PANTOGRAPH_date }}</small>
+          <caption>{{ page.PANTOGRAPH_summary }}</caption>
+        </li>
       {%- endfor -%}
 
       {% for tag in tags %}
@@ -35,15 +41,17 @@ layout: default.njk
 
   </section>
 
-    {% for card in home %}
-    <section>
-      <h2>{{ card.name }}</h2>
-      <div>
-      {% markdown %}
-        {{- card.desc | safe }}
-      {% endmarkdown %}
-      </div>
-    </section>
-    {% endfor %}
+  {% for card in home %}
+  <section>
+    <h2>{{ card.name }}</h2>
+    <div>
+    {% markdown %}
+      {{- card.desc | safe }}
+    {% endmarkdown %}
+    </div>
+  </section>
+  {% endfor %}
+
+  {% include "berelwouldbeproud.njk" %}
 
 </article>
