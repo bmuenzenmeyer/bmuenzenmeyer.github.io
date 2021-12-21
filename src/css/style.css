@@ -243,7 +243,6 @@ blockquote {
 /* MASTHEAD / NAV */
 
 .masthead {
-  max-width: 60ch;
   margin-top: 3rem;
   margin-bottom: 3rem;
   display: flex;
