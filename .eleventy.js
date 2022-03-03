@@ -84,5 +84,5 @@ const PANTOGRAPH_DATEtoDate = (PANTOGRAPH_DATE) => {
   }
   // PANTOGRAPH_DATE is 'YYYY-MM-DD'
   const parts = PANTOGRAPH_DATE.split("-")
-  return new Date(parts[0], parts[1], parts[2])
+  return new Date(parts[0], parts[1] - 1, parts[2])
 }
