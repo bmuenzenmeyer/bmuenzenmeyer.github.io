@@ -7,28 +7,25 @@ pagination:
 permalink: "/{{ page.name | slug }}/"
 eleventyExcludeFromCollections: true
 ---
+<section>
+  <div class="collection__article collection__article--top">
+    <h2 class="collection__title white">{{ page.name }}</h2>
+    <p class="collection__summary">{{ page.PANTOGRAPH_summary }}</p>
+    <ul class="collection__tags">
+      <li class="pull--left">
+        <relative-time datetime="{{ page.PANTOGRAPH_date }}T12:00:00-06:00">
+        {{ page.PANTOGRAPH_date }}
+        </relative-time>
+      </li>
+    {% for tag in page.tags %}
+      <li >
+        <a class="white" href="/tags/{{tag}}">{{tag}}</a>
+      </li>
+    {%- endfor -%}
+    </ul>
+  </div>
+</section>
 
-
-<h2>{{page.name}}</h2>
-{% if page.PANTOGRAPH_summary  %}
-<div class="post-summary-container">
-  <hr class="spacer"/>
-  <p class="post-summary">{{page.PANTOGRAPH_summary}}</p>
-  <hr class="spacer"/>
-</div>
-{% endif  %}
 {% markdown %}
     {{- page.desc | safe }}
 {% endmarkdown %}
-
-
-<aside class="post-meta">
-
-  <div class="post-date">Date: {{page.PANTOGRAPH_date }}</div>
-  <div class="post-tags">Tags: 
-  {% for tag in page.tags %}
-  <a href="/tags/{{tag}}">{{tag}}</a>
-  {% endfor %}
-  </div>
-
-</aside>

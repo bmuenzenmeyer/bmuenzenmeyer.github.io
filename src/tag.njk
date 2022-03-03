@@ -9,22 +9,37 @@ pagination:
 permalink: /tags/{{ tag.name }}/
 ---
 
+
+
  
 <h2>Tagged “{{ tag.name }}”</h2>
 
-<ul class="collection"> 
 
+  <nav>
+    <ul class="collection">
 {% for t in tags | reverse %}
-
-  {% if tag.name == t.name  %}
+        {% if tag.name == t.name  %}
     {% for card in t.cards %}
-    <li>
-      <a href="../../{{card.name | slug }}">{{ card.name }}  <small>{{ card.PANTOGRAPH_date }}</small></a>
+        <li class="collection__item">
+          <div class="collection__article">
+            <a class="collection__title" href="../../{{card.name | slug }}">{{ card.name }}</a>
+            <p class="collection__summary">{{ card.PANTOGRAPH_summary }}</p>
+            <ul class="collection__tags">
+              <li class="pull--left">
+              <relative-time datetime="{{ card.PANTOGRAPH_date }}T12:00:00-06:00">
+              {{ card.PANTOGRAPH_date }}
+              </relative-time>
+              </li>
+            </ul>
+           </div>
     {% endfor %}
     </li>
   {% endif %}
+      {%- endfor -%}
+    </ul>
+  </nav>
 
-{% endfor %}
 
-</ul>
+
+
 

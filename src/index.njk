@@ -6,7 +6,7 @@ layout: default.njk
 
 
 
-  <section>
+  {# <section>
     <ul class="collection">
     {% for item in collections.words | reverse %}
         <li>
@@ -18,22 +18,35 @@ layout: default.njk
     </ul>
   </section>
 
-  <section>
+  <section> #}
 
   <h2>Articles</h2>
 
   <nav>
     <ul class="collection">
       {%- for page in content -%}
-        <li class="collection__article">
-          <a href="{{ page.url | url }}">{{ page.name }}</a>
-          <small>{{ page.PANTOGRAPH_date }}</small>
-          <caption>{{ page.PANTOGRAPH_summary }}</caption>
+        <li class="collection__item">
+          <div class="collection__article">
+            <a class="collection__title" href="{{ page.url | url }}">{{ page.name }}</a>
+            <p class="collection__summary">{{ page.PANTOGRAPH_summary }}</p>
+            <ul class="collection__tags">
+              <li class="pull--left">
+              <relative-time datetime="{{ page.PANTOGRAPH_date }}T12:00:00-06:00">
+              {{ page.PANTOGRAPH_date }}
+              </relative-time>
+              </li>
+            {% for tag in page.tags %}
+              <li>
+              <a href="/tags/{{tag}}">{{tag}}</a>
+              </li>
+            {%- endfor -%}
+            </ul>
+           </div>
         </li>
       {%- endfor -%}
 
       {% for tag in tags %}
-        <li>All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+        <li class="black">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
       {% endfor %}
 
     </ul>
