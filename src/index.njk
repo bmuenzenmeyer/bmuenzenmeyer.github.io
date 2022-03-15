@@ -4,55 +4,76 @@ layout: default.njk
 
 <article>
 
+  <div class="split-list">
 
+    <section>
 
-  {# <section>
-    <ul class="collection">
-    {% for item in collections.words | reverse %}
-        <li>
-            <a href="{{item.data.permalink}}">
-                {{item.data.title}}
-            </a> <small>{{item.data.date.toDateString() }}</small>
-        </li>
-    {% endfor %}
-    </ul>
-  </section>
+      <h2>Articles</h2>
 
-  <section> #}
+      <nav>
+        <ul class="collection">
+          {%- for page in content -%}
+            <li class="collection__item">
+              <div class="collection__article">
+                <a class="collection__title" href="{{ page.url | url }}">{{ page.name }}</a>
+                <p class="collection__summary">{{ page.PANTOGRAPH_summary }}</p>
+                <ul class="collection__tags">
+                  <li class="pull--left">
+                  <relative-time datetime="{{ page.PANTOGRAPH_date }}T12:00:00-06:00">
+                  {{ page.PANTOGRAPH_date }}
+                  </relative-time>
+                  </li>
+                {% for tag in page.tags %}
+                  <li>
+                  <a href="/tags/{{tag}}">{{tag}}</a>
+                  </li>
+                {%- endfor -%}
+                </ul>
+              </div>
+            </li>
+          {%- endfor -%}
 
-  <h2>Articles</h2>
+          {% for tag in tags %}
+            <li class="black">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+          {% endfor %}
 
-  <nav>
-    <ul class="collection">
-      {%- for page in content -%}
-        <li class="collection__item">
-          <div class="collection__article">
-            <a class="collection__title" href="{{ page.url | url }}">{{ page.name }}</a>
-            <p class="collection__summary">{{ page.PANTOGRAPH_summary }}</p>
-            <ul class="collection__tags">
-              <li class="pull--left">
-              <relative-time datetime="{{ page.PANTOGRAPH_date }}T12:00:00-06:00">
-              {{ page.PANTOGRAPH_date }}
+        </ul>
+      </nav>
+
+    </section>
+
+    <section>
+
+      <h2>Projects</h2>
+
+      <nav>
+        <ul class="collection">
+
+          <li class="collection__item">
+            <div class="collection__article">
+              <a class="collection__title" href="/tags/boythisishard/">Boy, This Is Hard</a>
+              <div class="cage">
+                <!-- it's dangerous to go alone -->
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+                {% include "heart.njk" %}
+              </div>
+              <p class="collection__summary">It's dangerous to go alone! A series of short essays on topics my boys may someday find interesting.</p>
+              Started <relative-time datetime="2021-06023T12:00:00-06:00">
+              Jun 23, 2021
               </relative-time>
-              </li>
-            {% for tag in page.tags %}
-              <li>
-              <a href="/tags/{{tag}}">{{tag}}</a>
-              </li>
-            {%- endfor -%}
-            </ul>
-           </div>
-        </li>
-      {%- endfor -%}
+            </div>
+          </li>
+          
+        </ul>
+      </nav>
+    </section>
 
-      {% for tag in tags %}
-        <li class="black">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
-      {% endfor %}
-
-    </ul>
-  </nav>
-
-  </section>
+  </div>
 
   {% for card in home %}
   <section>

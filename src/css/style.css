@@ -175,7 +175,7 @@ blockquote {
 @media (min-width: 55rem) {
   article {
     display: grid;
-    grid-template-columns: 1fr 10% 60ch 10% 1fr;
+    grid-template-columns: 1fr 1fr 60ch 1fr 1fr;
   }
   aside {
     width: 60ch;
@@ -192,29 +192,29 @@ blockquote {
   }
 
   .crop--topleft {
-    grid-column: 2 / 2;
+    grid-column: 1 / 1;
     grid-row-start: 1;
     border-left: none;
     border-top: none;
+    justify-self: flex-end;
   }
 
   .crop--topright {
-    grid-column: 4 / 4;
+    grid-column: 5 / 5;
     grid-row-start: 1;
-    justify-self: flex-end;
     border-right: none;
     border-top: none;
   }
 
   .crop--bottomleft {
-    grid-column: 2 / 2;
+    grid-column: 1 / 1;
     border-left: none;
     border-bottom: none;
+    justify-self: flex-end;
   }
 
   .crop--bottomright {
-    grid-column: 4 / 4;
-    justify-self: flex-end;
+    grid-column: 5 / 5;
     border-right: none;
     border-bottom: none;
   }
@@ -223,7 +223,7 @@ blockquote {
     width: 50px;
     grid-column: 5/5;
     grid-row: 1/2;
-    margin-left: 1rem;
+    margin-left: 4rem;
   }
 
   #registration1 {
@@ -401,13 +401,13 @@ blockquote {
 
 @media screen and (min-width: 55rem) {
   .collection__article {
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
   }
 }
 
 .collection__title {
   display: block;
-  font-size: clamp(36px, 8vw, 128px);
+  font-size: var(--size-700);
 }
 
 .collection__summary {
@@ -538,14 +538,15 @@ blockquote {
   }
 }
 
-.version-list {
+.split-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 45rem) {
-  .version-list {
-    grid-template-columns: 1fr 1fr 1fr;
+  .split-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
 }
 
@@ -561,4 +562,14 @@ blockquote {
 
 .card__image {
   width: 100%;
+}
+
+.cage {
+  display: flex;
+  width: 100%;
+}
+
+.cage .heart {
+  width: 30px;
+  margin: 1.5rem 0.25rem 0 0;
 }
