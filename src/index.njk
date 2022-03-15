@@ -4,6 +4,18 @@ layout: default.njk
 
 <article>
 
+
+  {% for card in home %}
+  <section>
+    <h2>{{ card.name }}</h2>
+    <div>
+    {% markdown %}
+      {{- card.desc | safe }}
+    {% endmarkdown %}
+    </div>
+  </section>
+  {% endfor %}
+
   <div class="split-list">
 
     <section>
@@ -51,7 +63,7 @@ layout: default.njk
 
           <li class="collection__item">
             <div class="collection__article">
-              <a class="collection__title" href="/tags/boythisishard/">Boy, This Is Hard</a>
+              <a class="collection__title" href="/boy-this-is-hard/">Boy, This Is Hard</a>
               <div class="cage">
                 <!-- it's dangerous to go alone -->
                 {% include "heart.njk" %}
@@ -63,9 +75,11 @@ layout: default.njk
                 {% include "heart.njk" %}
               </div>
               <p class="collection__summary">It's dangerous to go alone! A series of short essays on topics my boys may someday find interesting.</p>
-              Started <relative-time datetime="2021-06023T12:00:00-06:00">
-              Jun 23, 2021
+              Started <relative-time datetime="2021-06-23T12:00:00-06:00">
+              June 23rd, 2021
               </relative-time>
+
+              <a href="/tags/boythisishard/">All posts in the project.</a>
             </div>
           </li>
           
@@ -75,16 +89,7 @@ layout: default.njk
 
   </div>
 
-  {% for card in home %}
-  <section>
-    <h2>{{ card.name }}</h2>
-    <div>
-    {% markdown %}
-      {{- card.desc | safe }}
-    {% endmarkdown %}
-    </div>
-  </section>
-  {% endfor %}
+
 
   {% include "berelwouldbeproud.njk" %}
 
