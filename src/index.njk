@@ -66,13 +66,9 @@ layout: default.njk
               <a class="collection__title" href="/boy-this-is-hard/">Boy, This Is Hard</a>
               <div class="cage">
                 <!-- it's dangerous to go alone -->
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
-                {% include "heart.njk" %}
+                {% for i in range(0, 7) -%}
+                  {% include "heart.njk" %} 
+                {%- endfor %}
               </div>
               <p class="collection__summary">It's dangerous to go alone! A series of short essays on topics my boys may someday find interesting.</p>
               Started <relative-time datetime="2021-06-23T12:00:00-06:00">

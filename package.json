@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy": "2.0.0-canary.4",
     "@11ty/eleventy-img": "1.0.0",
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "@borisschapira/eleventy-plugin-better-slug": "1.0.1",
