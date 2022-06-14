@@ -20,11 +20,11 @@ layout: default.njk
 
     <section>
 
-      <h2>Articles</h2>
+      <h2>Recent Articles</h2>
 
       <nav>
         <ul class="collection">
-          {%- for page in content -%}
+          {%- for page in content.slice(0, 10) -%}
             <li class="collection__item">
               <div class="collection__article">
                 <a class="collection__title" href="{{ page.url | url }}">{{ page.name }}</a>
