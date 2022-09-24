@@ -1,0 +1,20 @@
+
+<div class="book">
+
+  <div class="book__intro">
+    {% include "gorilla.njk" %} 
+    <span>
+    I'm writing a book! Lemme tell you about it as I can. I'm really excited to share more soon.
+    </span>
+  </div>
+
+  <form name="book" method="POST" data-netlify="true" class="book__form">
+    <p>
+      <label class="book__input">Enter your email address: <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <button type="submit" class="book__signup">Sign Up</button>
+    </p>
+  </form>
+
+</div>
