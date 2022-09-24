@@ -13,7 +13,7 @@
   --theme-grey: #c1c1c1;
   --theme-black: #171619;
 
-  --theme-color: #c1c1c1;
+  --theme-color: #171619;
 
   --size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
   --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
@@ -609,6 +609,10 @@ blockquote {
   color: var(--softwhite);
   padding: 1rem;
   border: none;
+}
+
+.book__signup:hover {
+  cursor: pointer;
 }
 
 
