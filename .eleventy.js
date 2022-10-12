@@ -70,6 +70,11 @@ module.exports = function (eleventyConfig) {
     return md.render(content)
   })
 
+  eleventyConfig.addFilter("debugger", (...args) => {
+    console.log(...args)
+    debugger
+  })
+
   return {
     dir: {
       input: "src",

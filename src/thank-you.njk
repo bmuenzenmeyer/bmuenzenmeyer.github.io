@@ -6,6 +6,44 @@ layout: item.njk
 
   <h2>Thank You</h2>
 
-  <div>Coming to an inbox near you! I'll share updates on the book as I can. In the meantime, check out some of my other <a href="/tags/words">writing</a>.</div>
+  <div>Coming to an inbox near you! I'll share updates on the book as I can.</div>
+  
+  </article>
 
-</article>
+  <aside>
+
+  <h3>All posts related to the book</h3>
+
+  <nav>
+    <ul class="collection">
+{%- for individualTag in tags -%}
+
+{% if individualTag.name == 'book'  %}
+
+{%- for card in individualTag.cards -%}
+{{card | debugger}}
+
+        <li class="collection__item">
+          <div class="collection__article">
+            <a class="collection__title" href="../../{{card.name | slug }}">{{ card.name }}</a>
+            <p class="collection__summary">{{ card.PANTOGRAPH_summary }}</p>
+            <ul class="collection__tags">
+              <li class="pull--left">
+              <relative-time datetime="{{ card.PANTOGRAPH_date }}T12:00:00-06:00">
+              {{ card.PANTOGRAPH_date }}
+              </relative-time>
+              </li>
+            </ul>
+           </div>
+          </li>
+
+{% endfor %}
+
+{% endif %}
+
+{% endfor %}
+    </ul>
+  </nav>
+
+</aside> 
+
