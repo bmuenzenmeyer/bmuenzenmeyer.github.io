@@ -47,7 +47,7 @@ layout: default.njk
           {%- endfor -%}
 
           {% for tag in tags %}
-            <li class="black">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+            <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
           {% endfor %}
 
         </ul>

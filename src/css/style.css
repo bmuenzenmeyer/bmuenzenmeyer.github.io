@@ -433,7 +433,8 @@ blockquote {
   margin-right: auto;
 }
 
-.collection__tags li {
+.collection__tags li,
+.tag__link {
   list-style-type: none;
   margin-left: 0.25rem;
 }
