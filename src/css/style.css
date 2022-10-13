@@ -34,7 +34,8 @@
   color: var(--softwhite);
 }
 
-html, button {
+html,
+button {
   font-size: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -345,14 +346,16 @@ blockquote {
 
 .nav li {
   list-style: none;
+  padding-bottom: 0.5rem;
 }
 
-@media (min-width: 38rem) {
+@media (min-width: 50rem) {
   .nav ul {
     flex-direction: row;
   }
   .nav li {
-    padding-right: 0.25rem;
+    padding-bottom: unset;
+    padding-right: 1rem;
   }
 }
 
@@ -482,7 +485,12 @@ blockquote {
 
 .footer {
   margin-top: 8rem;
-  margin-bottom: 3rem;
+  color: white;
+  background-color: var(--theme-color, --theme-grey);
+}
+
+.footer a {
+  color: white;
 }
 
 .footer__container,
@@ -491,6 +499,12 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.footer__container,
+.footer__colophon,
+.footer__bio {
+  padding: 1rem;
 }
 
 .footer__fact {
@@ -502,6 +516,8 @@ blockquote {
     max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
   .footer__container,
   .footer__bio {
@@ -509,6 +525,7 @@ blockquote {
   }
   .footer__container {
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .footer__intro {
@@ -517,12 +534,14 @@ blockquote {
   }
 
   .footer__bio {
+    padding: 0;
     flex-grow: 1;
   }
 
   .footer__colophon {
     margin-left: auto;
     max-width: 600px;
+    padding: 0;
     padding-left: 1rem;
   }
 }
@@ -580,7 +599,7 @@ blockquote {
 
 .book {
   margin-top: 3rem;
-  padding: .5rem;
+  padding: 0.5rem;
   max-width: 35ch;
 }
 
@@ -604,8 +623,7 @@ blockquote {
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: .75rem .25rem;
-
+  padding: 0.75rem 0.25rem;
 }
 
 .book__signup {
@@ -618,7 +636,6 @@ blockquote {
 .book__signup:hover {
   cursor: pointer;
 }
-
 
 @media only screen and (min-width: 38em) {
   .book__intro {
