@@ -85,6 +85,9 @@
       }
     })();
   </script>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 
 <body>
@@ -131,6 +134,18 @@
   </script>
 
   <script type="module" src="https://unpkg.com/@github/time-elements@3.1.2/dist/index.js?module"></script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
