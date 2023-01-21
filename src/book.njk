@@ -12,27 +12,32 @@ layout: item.njk
 
   <nav>
     <ul class="collection">
-      {%- for individualTag in tags -%} {% if individualTag.name == 'book' %}
-      {%- for card in individualTag.cards -%}
-      <li class="collection__item">
-        <div class="collection__article">
-          <a class="collection__title" href="../../{{ card.name | slug }}">{{
-            card.name
-          }}</a>
-          <p class="collection__summary">{{ card.PANTOGRAPH_summary }}</p>
-          <ul class="collection__tags">
-            <li class="pull--left">
-              <relative-time
-                datetime="{{ card.PANTOGRAPH_date }}T12:00:00-06:00"
-              >
-                {{ card.PANTOGRAPH_date }}
+      {%- for page in collections.book  -%}
+        <li class="collection__item">
+          <div class="collection__article">
+            <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
+            <p class="collection__summary">{{ page.data.summary }}</p>
+            <ul class="collection__tags">
+              <li class="pull--left">
+              <relative-time datetime="{{ page.data.date }}">
+              {{ page.data.date }}
               </relative-time>
-            </li>
-          </ul>
-        </div>
-      </li>
+              </li>
+            {% for tag in page.data.tags %}
+              <li>
+              <a href="/tags/{{tag}}">{{tag}}</a>
+              </li>
+            {%- endfor -%}
+            </ul>
+          </div>
+        </li>
+      {%- endfor -%}
 
-      {% endfor %} {% endif %} {% endfor %}
+      {% for tag in tags %}
+        <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+      {% endfor %}
+
     </ul>
   </nav>
+
 </aside>

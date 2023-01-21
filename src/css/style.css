@@ -261,12 +261,12 @@ blockquote {
 /* MASTHEAD / NAV */
 
 .masthead {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column-reverse;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
   background-color: var(--softwhite);
   background-image: linear-gradient(
       to bottom,

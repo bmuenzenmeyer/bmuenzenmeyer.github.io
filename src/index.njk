@@ -6,13 +6,15 @@ layout: default.njk
 
   {% include "bookpromo.njk" %} 
 
+    <div class="split-list">
+
     <section>
 
       <h2>Recent Articles</h2>
 
       <nav>
         <ul class="collection">
-          {%- for page in collections.post.slice(0, 10) | reverse -%}
+          {%- for page in collections.post | reverse | limit(5) -%}
             <li class="collection__item">
               <div class="collection__article">
                 <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
@@ -39,6 +41,8 @@ layout: default.njk
 
         </ul>
       </nav>
+
+      <a href="/archive/">All Posts</a> | <a href="/tags/opensource">Open Source</a>
 
       </section>
 
@@ -72,7 +76,7 @@ layout: default.njk
 
           <li class="collection__item">
             <div class="collection__article">
-              <a class="collection__title" href="/boy-this-is-hard/">Boy, This Is Hard</a>
+              <a class="collection__title" href="/posts/2021-boy-this-is-hard/">Boy, This Is Hard</a>
               <div class="cage">
                 <!-- it's dangerous to go alone -->
                 {% for i in range(0, 8) -%}
@@ -133,5 +137,7 @@ layout: default.njk
     </section>
 
   </div>
+
+  {% include "berelwouldbeproud.njk" %}
 
 </article>
