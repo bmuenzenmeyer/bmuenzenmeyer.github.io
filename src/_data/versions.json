@@ -20,7 +20,7 @@
       "<a href='http://fittextjs.com/'>FitText</a> hero.",
       "Subtle Patterns influences."
     ],
-    "image": "v2.png" 
+    "image": "v2.png"
   },
   {
     "name": "v3",
@@ -31,17 +31,15 @@
       "The beginning of increased writing output",
       "The first Pattern Lab era site"
     ],
-    "image": "v3.png" 
+    "image": "v3.png"
   },
   {
     "name": "v4",
     "date": "2016",
     "url": "https://v4.brianmuenzenmeyer.com/",
     "text": "Stark.",
-    "stats": [
-      "Probably my best refresh instead of rewrite"
-    ],
-    "image": "v4.png" 
+    "stats": ["Probably my best refresh instead of rewrite"],
+    "image": "v4.png"
   },
   {
     "name": "v5",
@@ -53,19 +51,15 @@
       "We move to Minneapolis",
       "First use of logo purchased from <a href='https://desandro.com/'>David DeSandro</a>"
     ],
-    "image": "v5.png" 
+    "image": "v5.png"
   },
   {
     "name": "v6",
     "date": "2019-2020",
     "url": "https://v6.brianmuenzenmeyer.com/",
     "text": "I cannot get this grid idea outta my head.",
-    "stats": [
-      "Generative grid textures",
-      "Emoji",
-      "Old writing emerges"
-    ],
-    "image": "v6.png" 
+    "stats": ["Generative grid textures", "Emoji", "Old writing emerges"],
+    "image": "v6.png"
   },
   {
     "name": "v7",
@@ -77,6 +71,14 @@
       "prefers-color-scheme support",
       "Made with <a href='https://github.com/bmuenzenmeyer/pantograph'>pantograph</a>"
     ],
-    "image": "v7.png" 
-  }  
+    "image": "v7.png"
+  },
+  {
+    "name": "v8",
+    "date": "2022",
+    "url": "https://v8.brianmuenzenmeyer.com/",
+    "text": "A love-letter to wood-type. The skeuomorphism is passable.",
+    "stats": ["Wood type", "Houdini paintlet", "Color themes"],
+    "image": "v8.png"
+  }
 ]
