@@ -2,6 +2,8 @@
 layout: item
 title: The Device Test Imperative
 summary: A cautionary tale... ye be warned!
+tags:
+  - post
 ---
 
 _This post refers to an old version of_ [_brianmuenzenmeyer.com_](http://brianmuenzenmeyer.com "‌"), but the lesson is important.

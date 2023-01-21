@@ -6,6 +6,42 @@ layout: default.njk
 
   {% include "bookpromo.njk" %} 
 
+    <section>
+
+      <h2>Recent Articles</h2>
+
+      <nav>
+        <ul class="collection">
+          {%- for page in collections.post.slice(0, 10) -%}
+            <li class="collection__item">
+              <div class="collection__article">
+                <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
+                <p class="collection__summary">{{ page.data.summary }}</p>
+                <ul class="collection__tags">
+                  <li class="pull--left">
+                  <relative-time datetime="{{ page.PANTOGRAPH_date }}T12:00:00-06:00">
+                  {{ page.PANTOGRAPH_date }}
+                  </relative-time>
+                  </li>
+                {% for tag in page.data.tags %}
+                  <li>
+                  <a href="/tags/{{tag}}">{{tag}}</a>
+                  </li>
+                {%- endfor -%}
+                </ul>
+              </div>
+            </li>
+          {%- endfor -%}
+
+          {% for tag in tags %}
+            <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
+          {% endfor %}
+
+        </ul>
+      </nav>
+
+      </section>
+
 
     <section>
 
