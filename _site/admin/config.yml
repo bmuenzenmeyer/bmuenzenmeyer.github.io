@@ -1,29 +1,50 @@
+---
 backend:
   name: git-gateway
   branch: main
-
-media_folder: "src/img"
-
+media_folder: src/img
 collections:
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
-    label: "Pages" # Used in the UI
-    folder: "src/pages" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "item" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
-    folder: "src/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "item" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Summary", name: "summary", widget: "string" }gs
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: pages
+    label: Pages
+    folder: src/pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: item
+      - label: Title
+        name: title
+        widget: string
+      - label: Permalink
+        name: permalink
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+  - name: posts
+    label: Posts
+    folder: src/posts
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: item
+      - label: Title
+        name: title
+        widget: string
+      - label: Summary
+        name: summary
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Tags
+        name: tags
+        widget: list
+      - label: Body
+        name: body
+        widget: markdown
