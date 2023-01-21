@@ -129,3 +129,8 @@
   from = "/drafting-and-grafting"
   to = "/posts/2023-drafting-and-grafting"
   conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/ham-readio"
+  to = "/posts/2023-ham-readio"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
