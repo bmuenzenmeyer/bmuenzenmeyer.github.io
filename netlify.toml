@@ -24,3 +24,108 @@
   from = "/the-device-test-imperative"
   to = "/posts/2013-the-device-test-imperative"
   conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/on-pattern-lab"
+  to = "/posts/2014-on-pattern-lab"
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/solving-problems-with-pattern-lab-small-team-workflow"
+  to = "/posts/2015-solving-problems-with-pattern-lab-small-team-workflow"
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/pattern-lab-2"
+  to = "/posts/2016-pattern-lab-2"
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/pattern-lab-yes-and"
+  to = "/posts/2017-pattern-lab-yes-and"
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/css-in-js"
+  to = "/posts/2018-css-in-js"
+  conditions = {Language = ["en","es"], Country = ["US"]}  
+
+[[redirects]]
+  from = "/i-maintainer"
+  to = "/posts/2018-i-maintainer"
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+[[redirects]]
+  from = "/beware-software-platitudes"
+  to = "/posts/2021-beware-software-platitudes"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/boy-this-is-hard"
+  to = "/posts/2021-boy-this-is-hard"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/four"
+  to = "/posts/2021-four"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/lemon-box-letterforms"
+  to = "/posts/2021-lemon-box-letterforms"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/my-typical-day-march-321st"
+  to = "/posts/2021-my-typical-day-march-321st"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/one-month-in-rss-and-a-slow-web-rebound"
+  to = "/posts/2021-one-month-in-rss-and-a-slow-web-rebound"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/pay-for-experts"
+  to = "/posts/2021-pay-for-experts"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/walls-and-within-them"
+  to = "/posts/2021-walls-and-within-them"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/arguing-with-strawman-considered-harmful"
+  to = "/posts/2022-arguing-with-strawman-considered-harmful"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/covers-and-creativity"
+  to = "/posts/2022-covers-and-creativity"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/cutting-onions"
+  to = "/posts/2022-cutting-onions"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/shitty-first-drafts"
+  to = "/posts/2022-shitty-first-draft"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/the-chain"
+  to = "/posts/2022-the-chain"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/the-right-tool"
+  to = "/posts/2022-the-right-tool"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
+
+[[redirects]]
+  from = "/drafting-and-grafting"
+  to = "/posts/2023-drafting-and-grafting"
+  conditions = {Language = ["en","es"], Country = ["US"]}    
