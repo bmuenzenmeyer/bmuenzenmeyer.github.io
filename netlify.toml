@@ -23,4 +23,4 @@
 [[redirects]]
   from = "/the-device-test-imperative"
   to = "/posts/2013-the-device-test-imperative"
-  query = {path = ":path"}
+  conditions = {Language = ["en","es"], Country = ["US"]}
