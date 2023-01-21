@@ -19,3 +19,8 @@
   [plugins.inputs.minifierOptions]
     removeComments = true
     collapseInlineTagWhitespace = false
+
+[[redirects]]
+  from = "/the-device-test-imperative"
+  to = "/posts/2013-the-device-test-imperative"
+  query = {path = ":path"}
