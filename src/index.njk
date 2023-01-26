@@ -2,142 +2,25 @@
 layout: default.njk
 ---
 
-<article>
+<header class="masthead">
+  <figure id="masthead__img">
+    <img src="/img/Brian-Fall.jpg" alt="A portrait of Brian Muenzenmeyer. Brian is a 30-somthing bald white man wearing a plaid shirt, grey glasses, and a five o'lock shadow. Photo taken by Samantha Brinda Photography. "/>
+    <figcaption><small>Photo credit <a href="https://www.samanthabrindaphotography.com/">Samantha Brinda</a></small></figcaption>
+  </figure>
 
-  {% include "bookpromo.njk" %} 
-
-    <div class="split-list">
-
-    <section>
-
-      <h2>Recent Articles</h2>
-
-      <nav>
-        <ul class="collection">
-          {%- for page in collections.post | reverse | limit(5) -%}
-            <li class="collection__item">
-              <div class="collection__article">
-                <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
-                <p class="collection__summary">{{ page.data.summary }}</p>
-                <ul class="collection__tags">
-                  <li class="pull--left">
-                  <relative-time datetime="{{ page.data.date }}">
-                  {{ page.data.date }}
-                  </relative-time>
-                  </li>
-                {% for tag in page.data.tags %}
-                  <li>
-                  <a href="/tags/{{tag}}">{{tag}}</a>
-                  </li>
-                {%- endfor -%}
-                </ul>
-              </div>
-            </li>
-          {%- endfor -%}
-
-          {% for tag in tags %}
-            <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
-          {% endfor %}
-
-        </ul>
-      </nav>
-
-      <a href="/archive/">All Posts</a> | <a href="/tags/opensource">Open Source</a>
-
-      </section>
-
-
-    <section>
-
-      <h2>Projects</h2>
-
-      <nav>
-        <ul class="collection">
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="/book/">Upcoming Book...</a>
-              <p class="collection__summary">I'm writing the book I've always wanted to write—and that I wish existed when I needed it most. I'm pretty excited and scared for the whole thing, which is the perfect subject matter really.</p>
-              Started <relative-time datetime="2022-10-04T12:00:00-06:00">
-              October 4th, 2022
-              </relative-time>
-            </div>
-          </li>
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="https://makeapullre.quest">Make a Pull Request</a>
-              <p class="collection__summary">A community resource dedicated to improving the quality of writing &amp; ease of assessing code changes.</p>
-              Started <relative-time datetime="2021-08-16T12:00:00-06:00">
-              August 16th, 2021
-              </relative-time>
-            </div>
-          </li>
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="/posts/2021-boy-this-is-hard/">Boy, This Is Hard</a>
-              <div class="cage">
-                <!-- it's dangerous to go alone -->
-                {% for i in range(0, 8) -%}
-                  {% include "heart.njk" %} 
-                {%- endfor %}
-              </div>
-              <p class="collection__summary">It's dangerous to go alone! A series of short essays on topics my boys may someday find interesting.</p>
-              Started <relative-time datetime="2021-06-23T12:00:00-06:00">
-              June 23rd, 2021
-              </relative-time>
-
-              <a href="/tags/boythisishard/">All posts in the project.</a>
-            </div>
-          </li>
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="https://patternlab.io/">Pattern Lab</a>
-              <p class="collection__summary">Create atomic design systems with Pattern Lab. I was the lead maintainer of Pattern Lab Node for many years.</p>
-              Started <relative-time datetime="2020-09-01T12:00:00-06:00">
-              September 1st, 2020
-              </relative-time>
-            </div>
-          </li>
-
-           <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="/tot-drop/">Tot Drop</a>
-              <p class="collection__summary">The Christmas gift for my brother-in-law that single-handedly ended our yearly gift exchange tradition.</p>
-              Started <relative-time datetime="2018-12-25T12:00:00-06:00">
-              December 25th, 2018
-              </relative-time>
-            </div>
-          </li>
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="https://donedaily.netlify.app/">Done Daily</a>
-              <p class="collection__summary">A simple list app that resets every day, comparing you to yourself yesterday. One of my first public web apps. I've recently hosted it on netlify and left the code unaltered as possible, a sort of time capsule.</p> 
-              Started <relative-time datetime="2013-02-03T12:00:00-06:00">
-              February, 2013
-              </relative-time>
-            </div>
-          </li>          
-
-          <li class="collection__item">
-            <div class="collection__article">
-              <a class="collection__title" href="https://compassrose.netlify.app/">compassrose.js</a>
-              <p class="collection__summary">A radial navigation/orientation plugin written in jQuery. My first real open source effort. I've recently hosted it on netlify and left the code unaltered as possible, a sort of time capsule.	</p> 
-              Started <relative-time datetime="2013-02-03T12:00:00-06:00">
-              February, 2013
-              </relative-time>
-            </div>
-          </li>
-          
-        </ul>
-      </nav>
-    </section>
-
+  <div id="masthead__intro">
+    {% include "bookpromo.njk" %} 
   </div>
 
-  {% include "berelwouldbeproud.njk" %}
+  <span id="masthead__last">Muenzenmeyer</span>
+  <span id="masthead__first">Brian</span>
+  <nav id="masthead__nav">
+    {% include "nav.njk" %} 
+  </nav>
 
-</article>
+
+  
+</header>
+
+
+

@@ -3,16 +3,29 @@ layout: item.njk
 ---
 
 <article>
-  <h2>Book</h2>
+  <h1>Book</h1>
+
   {% include "bookpromo.njk" %}
+
+  <h2>Status</h2>
+
+  <p>Curious to know where we are in the process?</p>
+
+  <ul>
+    <li>✅ Proposal Drafted</li>
+    <li>✅ Pitch Accepted</li>
+    <li>✅ Draft Complete</li>
+    <li>✏️ Editing</li>
+  </ul>
+
 </article>
 
 <aside>
-  <h3>All posts related to the book</h3>
+  <h2>All posts related to the book</h2>
 
   <nav>
     <ul class="collection">
-      {%- for page in collections.book  -%}
+      {%- for page in collections.book | reverse  -%}
         <li class="collection__item">
           <div class="collection__article">
             <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
