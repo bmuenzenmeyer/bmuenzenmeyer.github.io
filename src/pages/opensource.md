@@ -1,7 +1,7 @@
 ---
 layout: item.njk
 title: Open Source
-permalink: hubs/opensource
+permalink: hubs/opensource/index.html
 ---
 
-# Open Source
+cool stuff

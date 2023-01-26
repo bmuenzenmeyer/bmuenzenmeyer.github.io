@@ -1,11 +1,12 @@
 ---
+layout: 'item.njk'
 pagination:
   data: collections
   size: 1
   alias: tag
 permalink: /tags/{{ tag }}/
-layout: item.njk
 ---
+
 <h1>Tagged “{{ tag }}”</h1>
 
 {% set taglist = collections[ tag ] %}
