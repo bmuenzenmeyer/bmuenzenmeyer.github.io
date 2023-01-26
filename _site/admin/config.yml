@@ -23,9 +23,6 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: Custom CSS
-        name: css
-        widget: string
   - name: posts
     label: Posts
     folder: src/posts
