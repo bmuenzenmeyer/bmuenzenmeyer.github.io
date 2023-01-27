@@ -226,7 +226,7 @@ blockquote {
 @media (min-width: 38rem) {
   .masthead {
     display: grid;
-    grid-template-columns: 0 minmax(300px, 45vw) 200px 1fr 2rem;
+    grid-template-columns: 0 minmax(300px, 45vw) min-content 1fr 2rem;
     grid-template-rows: min-content min-content 1fr;
   }
 
