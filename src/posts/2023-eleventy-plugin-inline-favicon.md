@@ -20,7 +20,7 @@ W﻿ith a little shortcode magic, you can add an inline image of any link. The f
 {% ai "https://front-end.social/@brian" %}@brian{% endai %}
 `﻿``
 
-I﻿ have more plans for this... such as configurability, a11y investigations, and most importantly seeing if I can integrate 11ty image into it. For now, it's a bit of a custom-made toy / tool / dubious idea, inspired by a blog post by {% ai "https://blog.jim-nielsen.com/2021/displaying-favicons-for-any-domain/" %}im Nielson{% endai %}.
+I﻿ have more plans for this... such as configurability, a11y investigations, and most importantly seeing if I can integrate 11ty image into it. For now, it's a bit of a custom-made toy / tool / dubious idea, inspired by a blog post by {% ai "https://blog.jim-nielsen.com/2021/displaying-favicons-for-any-domain/" %}Jim Nielson{% endai %}.
 
 L﻿et me know what y'all think!
 
