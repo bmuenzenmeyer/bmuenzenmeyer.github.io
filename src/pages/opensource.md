@@ -36,9 +36,9 @@ With Pattern Lab I found an outlet for an itch I had really just began to scratc
 
 Pattern Lab work extended to my time at {% ai "https://roydan.com/"%}Roydan Enterprises {% endai %}. I am grateful for this early investment of open source software from a tiny company.
 
-Marty Henderson and I open sourced a tool called {% ai "https://github.com/target/markdown-inject"%}`markdown-inject`{% endai %}, which has been a fun outlet for learning things like GitHub actions. I'm so glad that {% ai "https://opensource.target.com/"%}Target{% endai %} understands the value of open source software.
+Marty Henderson and I open sourced a tool called {% ai "https://www.npmjs.com/package/markdown-inject"%}`markdown-inject`{% endai %}, which has been a fun outlet for learning things like GitHub actions. I'm so glad that {% ai "https://opensource.target.com/"%}Target{% endai %} understands the value of open source software.
 
-This work also re-invigorated my desire to maintain software again, which I've re-approached with {% ai "https://makeapullre.quest/"%}makeapullre.quest{% endai %} and {% ai "https://github.com/bmuenzenmeyer/eleventy-plugin-inline-link-favicon"%}`eleventy-plugin-inline-link-favicon`{% endai %}. You can see the later's output prominently on this page.
+This work also re-invigorated my desire to maintain software again, which I've re-approached with {% ai "https://makeapullre.quest/"%}makeapullre.quest{% endai %} and {% ai "https://www.npmjs.com/package/eleventy-plugin-inline-link-favicon"%}`eleventy-plugin-inline-link-favicon`{% endai %}. You can see the later's output prominently on this page.
 
 <h3 id="mentor">Mentor</h3>
 
