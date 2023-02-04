@@ -8,6 +8,7 @@
     "@11ty/eleventy-img": "1.0.0",
     "@11ty/eleventy-plugin-rss": "1.1.2",
     "@borisschapira/eleventy-plugin-better-slug": "1.0.1",
+    "eleventy-plugin-inline-link-favicon": "1.0.3",
     "clean-css": "5.2.2",
     "dotenv": "10.0.0",
     "markdown-it": "12.3.0",

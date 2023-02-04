@@ -1,10 +1,12 @@
 const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug")
 const pluginRss = require("@11ty/eleventy-plugin-rss")
+const pluginInlineLinkFavicon = require("eleventy-plugin-inline-link-favicon")
 
 module.exports = function (eleventyConfig) {
   // plugins
   eleventyConfig.addPlugin(pluginBetterSlug)
   eleventyConfig.addPlugin(pluginRss)
+  eleventyConfig.addPlugin(pluginInlineLinkFavicon)
 
   eleventyConfig.addLayoutAlias("default", "default.njk")
 
@@ -42,34 +44,6 @@ module.exports = function (eleventyConfig) {
     v.replace(/\//g, "").replace(/-/g, " ")
   )
 
-  eleventyConfig.addNunjucksFilter("toDateObj", function (PANTOGRAPH_DATE) {
-    return PANTOGRAPH_DATEtoDate(PANTOGRAPH_DATE)
-  })
-
-  eleventyConfig.addNunjucksFilter(
-    "getNewestCollectionItemDateFromPANTOGRAPH_DATE",
-    function (collections) {
-      const words = collections.filter((c) => c.name === "words")
-
-      const dates = words[0].cards.map((c) => {
-        // console.log(c)
-        return PANTOGRAPH_DATEtoDate(c.PANTOGRAPH_date)
-      })
-
-      // console.log(dates)
-
-      const maxDate = new Date(Math.max(...dates))
-
-      // console.log(maxDate)
-
-      return maxDate
-    }
-  )
-
-  eleventyConfig.addNunjucksFilter("mdToHTML", function (content) {
-    return md.render(content)
-  })
-
   eleventyConfig.addFilter("debugger", (...args) => {
     console.log(...args)
     debugger
@@ -89,14 +63,6 @@ module.exports = function (eleventyConfig) {
       input: "src",
       output: "_site",
     },
+    markdownTemplateEngine: "njk",
   }
-}
-
-const PANTOGRAPH_DATEtoDate = (PANTOGRAPH_DATE) => {
-  if (!PANTOGRAPH_DATE) {
-    return new Date(0, 0, 0)
-  }
-  // PANTOGRAPH_DATE is 'YYYY-MM-DD'
-  const parts = PANTOGRAPH_DATE.split("-")
-  return new Date(parts[0], parts[1] - 1, parts[2])
 }

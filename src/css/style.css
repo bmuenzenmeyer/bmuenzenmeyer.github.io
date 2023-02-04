@@ -113,6 +113,7 @@ figure {
   h4,
   h5 {
     font-weight: 100;
+    margin-bottom: 0;
   }
 
   h1 {
@@ -464,6 +465,10 @@ blockquote {
 
 .footer__fact {
   margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--2023-yellow);
 }
 
 @media (min-width: 45rem) {
