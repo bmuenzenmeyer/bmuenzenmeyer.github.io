@@ -1,7 +1,7 @@
 ---
 layout: item
 title: eleventy-plugin-inline-favicon
-summary: I just released a new plugin for 11ty> I hope you like it.
+summary: I just released a new plugin for 11ty, I hope you like it.
 date: 2023-02-04T13:38:58.297Z
 tags:
   - post
