@@ -17,8 +17,8 @@ So far, I've asked 13 people one thing or another:
 
 * 8 quotations from Twitter (Twitter sucks, and some folks have left the platform) 
 * 2 review requests from trusted colleagues
--  2 image re-licenses or permissions, one from a New York Times best-selling author
--  1 interview
+* 2 image re-licenses or permissions, one from a New York Times best-selling author
+* 1 interview
 
 Every single one of them said yes. I cannot thank them enough. And to my family - who's given me space to sustain work on it now for a good long time. 
 
