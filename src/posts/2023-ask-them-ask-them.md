@@ -8,6 +8,8 @@ tags:
   - boythisishard
   - book
 ---
+![A picture of the There Is a Bird On Your Head! (An Elephant and Piggie Book) by Mo Willems. Elephant asks Piggie "Ask Them?" to Piggie who replies, "Ask them!" Elephant has a bird nest on his head and wishes them to leave.](/src/img/20230207_191925.jpg)
+
 It hit me the other day that my draft wouldn't be what it is today without the generosity of many folks who believed in it, and me.
 
 So much of the fear to act comes from this central struggle in my mind between asking permission and asking forgiveness. For small things, I often quip that forgiveness is the better battle to wage. A plan, a hunch, or a [shitty first drafts](https://brianmuenzenmeyer.com/posts/2022-shitty-first-drafts/)
