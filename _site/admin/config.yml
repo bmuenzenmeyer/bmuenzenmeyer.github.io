@@ -2,7 +2,7 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: src/img
+media_folder: img
 collections:
   - name: pages
     label: Pages
