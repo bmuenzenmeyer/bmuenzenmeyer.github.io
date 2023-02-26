@@ -561,18 +561,21 @@ blockquote {
 @media (min-width: 45rem) {
   .split-list {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
 }
 
 .card {
-  border: 1px solid #222;
-  padding: 0.5rem;
 }
 
 .card__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.card__name {
+  margin-top: 0;
 }
 
 .card__image {
