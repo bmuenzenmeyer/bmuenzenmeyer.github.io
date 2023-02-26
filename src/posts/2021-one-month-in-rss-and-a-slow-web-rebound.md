@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: "One Month In: RSS and A Slow Web Rebound"
 summary: Unread and oh well
 date: 2021-04-08T15:20:54.141Z
 tags:
   - post
 ---
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sundays are for RSS 🦝</p>— Dave Rupert (@davatron5000) <a href="[https://twitter.com/davatron5000/status/1366057220950130688?ref_src=twsrc^tfw](https://twitter.com/davatron5000/status/1366057220950130688?ref_src=twsrc%5Etfw "‌")">February 28, 2021</a></blockquote> <script async src="[https://platform.twitter.com/widgets.js](https://platform.twitter.com/widgets.js "‌")" charset="utf-8"></script>
 
 After setting up my RSS feed last month, I set out to reconnect with my web design community roots. I want to extinguish or lessen the idle/doom-scrolling of Twitter and Reddit and tame the always-another email newsletter.

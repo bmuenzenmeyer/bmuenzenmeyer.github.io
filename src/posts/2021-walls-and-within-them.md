@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Walls and Within Them
 summary: A small shrine to Megan's caring and skill.
 date: 2021-12-28T16:32:35.246Z
@@ -7,6 +7,7 @@ tags:
   - post
   - boythisishard
 ---
+
 It's been easy to think of walls as bad things, given the last few years. And then there's that saying about fences. Both add to evidence that walls act as barriers as their primary function.
 
 But of course, walls have more than one dimension. Our walls have helped display the warmth of our family. Our walls try to welcome and delight. Our walls tell a story.

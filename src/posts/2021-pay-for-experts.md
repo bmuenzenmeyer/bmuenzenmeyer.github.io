@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Pay for Experts
 summary: A small but weighty example
 date: 2021-11-15T16:30:41.936Z
@@ -7,6 +7,7 @@ tags:
   - post
   - boythisishard
 ---
+
 We found ourselves owning a Yamaha baby grand piano now for over 10 years. It was probably the first _nice_ thing Megan and I ever bought together, after our 77k modest bomb shelter of a first home. The piano is an extremely durable good—like most instruments really—that still holds value and is a beautiful addition to our home. I remember doing yardwork and listening to Megan playing it inside. The unmistakable Clementi poured out our windows. I dared not come closer because it seemed like the kinda thing she only played in private. I cannot think of a single time when someone asked her to play and she obliged. She's that way about most things.
 
 We've now moved four times in those same 10 odd years and had a spectrum of experiences with the piano. It arrived at 23rd Street from Jim Laabs—only a guy and his girlfriend. One was barefoot, traversing our two ample foyer steps. They handled it with confident movement. It was a bit baffling—but I don't remember being the least bit concerned. I had no idea who these people were but they were part of the package deal—and insured.

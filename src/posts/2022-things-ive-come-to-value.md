@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Things I've Come to Value
 summary: Things I come back to, and why
 date: 2022-04-09T15:43:26.675Z
@@ -7,6 +7,7 @@ tags:
   - post
   - boythisishard
 ---
+
 Oscar Wilde said that a cynic is a man that knows the price of everything and the value of nothing. He would have been such a prolific Twitter shitposter. The wasteful and cheap consumption we live through reminds me of this quote, especially as we accrue and discard more stuff. We've had vacuum cleaners that don't last a year. Coffee makers that last about as long. Kids' shoes worn through after a season. What still works? [Megan](/walls/megan/ "‌")'s grandfather's wood-handled ax. The bomb-shelter wheelbarrow with a solid tire. The recipes Megan inherited from her grandmother.
 
 I am gripped increasingly by an urge to use things that last and have lasted. They will outlast me.
@@ -54,7 +55,7 @@ loading="lazy"
 alt="A hammer">
 </picture>
 
-Jim gave me this hammer a long time ago. When I was just starting out and didn't have much of anything by way of tools. I didn't assign much value to it initially. I wonder if he did at the time. He has many of his dad's tools. This is the only one that I have. Now that I have few other hammers, this one just feels _different_.  It could be confirmation bias. It might have a real weight, density, or balance difference. But it has history too. It came with the label long-worn off already. Paint from some other project staining the handle. Dents and scratches across its tarnished surface. Now it's fun to see some of the dents fill in with chalk or mud as one of you borrows it.
+Jim gave me this hammer a long time ago. When I was just starting out and didn't have much of anything by way of tools. I didn't assign much value to it initially. I wonder if he did at the time. He has many of his dad's tools. This is the only one that I have. Now that I have few other hammers, this one just feels _different_. It could be confirmation bias. It might have a real weight, density, or balance difference. But it has history too. It came with the label long-worn off already. Paint from some other project staining the handle. Dents and scratches across its tarnished surface. Now it's fun to see some of the dents fill in with chalk or mud as one of you borrows it.
 
 "It's a tool, not a toy," I remind you to various degress of success.
 

@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Cutting Onions
 summary: Learning about layers upon layers
 date: 2022-11-22T16:57:18.682Z
@@ -7,6 +7,7 @@ tags:
   - post
   - book
 ---
+
 The deeper I get into drafting, the more it feels like I am cutting onions.
 
 I've had broad, surface-level awareness of many topics I wish to write about for years and years now, and felt pretty darn good speaking to them. Stringing together these topics into a cogent argument felt and feels attainable, but what's been humbling is how far off I am in truly understanding these topics. The generalist approach I take to a lot of my life—my favorite animal is a duck—only carries me so far.

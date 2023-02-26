@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Covers and Creativity
 summary: But this time with more cowbell?
 date: 2022-10-16T15:55:44.779Z
@@ -7,6 +7,7 @@ tags:
   - post
   - book
 ---
+
 I wrote a bit today between Max's birthday party drop-off and pickup. It didn't feel all that productive, maybe 6 paragraphs in total of [shitty first draft material](https://brianmuenzenmeyer.com/shitty-first-drafts/ "‌"). But I feathered in 9 resources and bookmarked a couple more along the way, and even found myself contributing to an open source project (procrastinating much?).
 
 The weight of self-doubt crept in as I referenced so many other pieces of work as a part of my narrative. How much of this is original thought and how much is mere re-packaging of others' words? How much of my expertise is parroted truisms, anecdotes masquerading as one-size-fits-all advice, and Twitter thought-leader navel-gazing?

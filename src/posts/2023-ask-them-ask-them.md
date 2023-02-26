@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Ask Them? Ask Them!
 summary: https://www.youtube.com/watch?v=SAT1q6wCTes
 date: 2023-02-08T02:18:46.063Z

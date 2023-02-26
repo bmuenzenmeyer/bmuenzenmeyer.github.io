@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: I, Maintainer
 summary: Because it is more than "Be Glad It Exists"
 date: 2018-10-04T15:15:28.239Z
@@ -7,6 +7,7 @@ tags:
   - post
   - opensource
 ---
+
 > Update: Since this article was written, I've [retired from active involvement in Pattern Lab](https://github.com/pattern-lab/patternlab-node/pull/1250 "‌"). The ideas I lay out in the below post made stepping away the right decision at this time.
 
 Pattern Lab development is stagnating.

@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: CSS-IN-JS
 summary: A tweet, a bus ride, an "it depends."
 date: 2018-05-08T15:13:00.413Z
 tags:
   - post
 ---
+
 <strong>This post is an opinion about CSS-IN-JS. There are many like it but this one is mine.</strong>
 
 It started on my bus home.

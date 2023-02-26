@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Shitty First Drafts
 summary: Just in time for NaNoWriMo but already under contract!
 date: 2022-10-11T15:45:03.107Z
@@ -8,6 +8,7 @@ tags:
   - boythisishard
   - book
 ---
+
 > This post is part of a series as I document my journey [writing a book](https://brianmuenzenmeyer.com/book "‌")!
 
 I've tried to live the ethos of shitty first drafts in my writing for a while now. I distinctly recall _not_ doing this when creative writing in college and younger. I agonized over a single word at a time. I realized today while researching that shitty first drafts hold up for software development too. It's good little-a agile stuff. Two idioms resonated with me:

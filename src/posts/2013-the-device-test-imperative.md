@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: The Device Test Imperative
 summary: A cautionary tale... ye be warned!
 date: 2013-12-13T15:51:13.697Z

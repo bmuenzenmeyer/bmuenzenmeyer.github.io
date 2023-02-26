@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Solving Problems with Pattern Lab - Small Team Workflow
 summary: Find out how Pattern Lab is useful even as a UX/UI team of one
 date: 2015-09-25T14:57:29.595Z
@@ -7,6 +7,7 @@ tags:
   - post
   - opensource
 ---
+
 <script async src="[//platform.twitter.com/widgets.js](//platform.twitter.com/widgets.js "smartCard-inline")" charset="utf-8"></script>
 
 I've had a soft-spot for style guides, ever since seeing [http://pea.rs/](http://pea.rs/ "‌") at An Event Apart a couple years back. When [Pattern Lab](http://patternlab.io/ "‌") emerged soon after, I was hooked. Since, I've maintained the [Node version](https://github.com/pattern-lab/patternlab-node "‌") of Brad Frost's and Dave Olsen's Pattern Lab and used it in a number of personal and professional projects. At the company I work for, I use Pattern Lab as the style guide for our next-phase web applications.

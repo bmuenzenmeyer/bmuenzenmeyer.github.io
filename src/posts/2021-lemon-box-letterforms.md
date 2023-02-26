@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: Lemon Box Letterforms
 summary: When life gives you a lemon box, you labor over creating it with CSS.
 date: 2021-06-10T15:22:50.188Z
 tags:
   - post
 ---
+
 I never thought a box from a warehouse grocer would create typographic inspiration, but here we are.
 
 The object of my obsession:
@@ -65,7 +66,7 @@ The stripes were inconsistently spaced, the edges seemed blurry, and it felt too
 
 Narrator: There was.
 
-From what I gather, I was misusing [repeating-linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient() "‌"), trying to create the repetition myself instead of letting the CSS do that for me.
+From what I gather, I was misusing [repeating-linear-gradient](<https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient()> "‌"), trying to create the repetition myself instead of letting the CSS do that for me.
 
 <p class="codepen" data-height="500" data-theme-id="33490" data-default-tab="css,result" data-user="bmuenzenmeyer" data-slug-hash="69f13aedf3df8388ae807e485665fadc" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="LEMONS gradient - better">
 <span>See the Pen <a href="[https://codepen.io/bmuenzenmeyer/pen/69f13aedf3df8388ae807e485665fadc](https://codepen.io/bmuenzenmeyer/pen/69f13aedf3df8388ae807e485665fadc "‌")">

@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Pattern Lab. Yes, and...
 summary: A thank you
 date: 2017-09-29T15:11:15.133Z
@@ -7,6 +7,7 @@ tags:
   - post
   - opensource
 ---
+
 By now the news of some changes to the core team of Pattern Lab is [making the rounds](http://bradfrost.com/blog/post/whats-next-for-pattern-lab/ "‌"). The Node version of Pattern Lab is forging ahead with increasing momentum from the community and an inspiring roadmap. I welcome a renewed partnership from the PHP platform. We already have some slick shared features planned. While I am excited for the future, I want to take a moment to thank the person responsible for much of my growth in the past few years, [Dave Olsen](https://twitter.com/dmolsen "‌").
 
 Dave, you might not realize it, but I've learned a lot from you.

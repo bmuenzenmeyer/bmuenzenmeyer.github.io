@@ -1,8 +1,9 @@
 ---
-layout: item.njk
+layout: item
 title: Uses
 permalink: uses/
 ---
+
 I'm not too attached to much, aside from [some exceptions](https://brianmuenzenmeyer.com/posts/2022-things-ive-come-to-value/).
 
 ## On a computer
@@ -13,8 +14,7 @@ I'm not too attached to much, aside from [some exceptions](https://brianmuenzenm
 - Vivaldi Browser
 - Hyper Terminal
 
-
-## On the World Wide Web 
+## On the World Wide Web
 
 - Dark Reader
 - Netlify
@@ -22,5 +22,5 @@ I'm not too attached to much, aside from [some exceptions](https://brianmuenzenm
 
 ## Closer to home
 
-- Smith Coffee 
+- Smith Coffee
 - True Classics

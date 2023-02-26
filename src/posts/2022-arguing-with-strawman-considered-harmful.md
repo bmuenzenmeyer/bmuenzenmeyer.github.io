@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Arguing with Strawman Considered Harmful
 summary: I win every argument I have with other people, and I bet you do too.
 date: 2022-03-08T16:39:32.804Z
@@ -7,7 +7,8 @@ tags:
   - post
   - boythisishard
 ---
-I win all the arguments I have with other people. I bet you do too. The problem is—all of these arguments are fictitious—taking place only in my head. They are a product of my insecurities and worries, manifesting perhaps as some sort of fight or flight training. But it never makes me feel better—instead stewing the stressors of conflict unresolved or conversations yet to be had. I've learned to identify this feeling, this feedback loop. I've now seen it mentioned in Max's school, a part of learning called meta-cognition, or simply, "thinking about thinking". I  hope to nip these arguments in the bud when they crop up. What I've found is that by short-circuiting the feedback loop and directly communicating with my antagonist, my worst fears are allayed and I find that they are almost always ill-founded, over-blown, or too-hyphenated.
+
+I win all the arguments I have with other people. I bet you do too. The problem is—all of these arguments are fictitious—taking place only in my head. They are a product of my insecurities and worries, manifesting perhaps as some sort of fight or flight training. But it never makes me feel better—instead stewing the stressors of conflict unresolved or conversations yet to be had. I've learned to identify this feeling, this feedback loop. I've now seen it mentioned in Max's school, a part of learning called meta-cognition, or simply, "thinking about thinking". I hope to nip these arguments in the bud when they crop up. What I've found is that by short-circuiting the feedback loop and directly communicating with my antagonist, my worst fears are allayed and I find that they are almost always ill-founded, over-blown, or too-hyphenated.
 
 [Strawmen](https://en.wikipedia.org/wiki/Straw_man "‌") don't get a chance to explain themselves. _"Gosh, they are stupid, aren't they!?"_ They represent the most irrational position against my most enlightened opinions. Be it in a relationship, an objective decision at home or work, the political spectrum, or the strangers we encounter throughout our day. Winning disputes with strawmen gives me a momentary high, but it never lasts and only entrenches further into my psyche. It's convenient to expect and prepare for the worst of intents in others—it's a coping mechanism to shield oneself from vulnerability and loss. I've done this time and time again, and still do sometimes. In the very distant past, I would project these arguments onto romantic partners. By the way, I don't do this with Megan, and for that, I assign every measure of our successful partnership. But with others, it was such an exhaustive shower-thought exercise in futility that I now see it as a huge red flag. I didn't really know better back then. My memory better serves more recent examples, like business relationships. _"If they only saw it my way!"_ _"Why don't they understand?"_ _"I bet you didn't consider..."_ _"When you said... it implied that ..."_ It's all bullshit, one-sided lizard-brain Brian. Danger ahead!
 

@@ -1,0 +1,20 @@
+---
+layout: 'item.njk'
+---
+
+{{ content | safe }}
+
+<aside>
+
+  <p>Posted: <relative-time datetime="{{ date }}">
+{{ date }}
+</relative-time>
+  </p>
+  <p>
+  Tags:
+  {% for tag in tags %}
+    <a href="/tags/{{tag}}">{{tag}}</a>
+  {%- endfor -%}
+  </p>
+
+</aside>

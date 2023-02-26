@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Drafting and Grafting
 summary: Writing done, but not complete
 date: 2023-01-05T16:58:32.148Z
@@ -7,6 +7,7 @@ tags:
   - post
   - book
 ---
+
 The draft is "done!"
 It feels good to say that. I finished late (early) one night, the final exhale of a marathon a year in the writing and a career in the making.
 

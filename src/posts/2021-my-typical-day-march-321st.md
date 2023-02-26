@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: My typical day (March 321st)
 summary: A time capsule of the pandemic
 date: 2021-01-16T16:18:56.872Z
 tags:
   - post
 ---
+
 > Inspired by [Dave Rupert’s post](https://twitter.com/davatron5000/status/1349002895711227907 "‌").
 
 **5-6AM** I usually wake between 5 and 6AM, with healthy snoozing. I will catch up on news and newsletters, email or fun coding. This being the only consistent time that doesn’t impact family life—I sometimes game. My go-to is Battlegrounds, which I enjoy as an FPS but also as a game I can play despite frustrating wrist issues that Halo or anything twitchier seems to exacerbate.

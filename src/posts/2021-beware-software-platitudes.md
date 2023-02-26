@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: Beware Software Platitudes
 summary: Maybe it should be "don't repeat otherselves"
 date: 2021-10-08T15:28:52.432Z
 tags:
   - post
 ---
+
 The other day at work another engineering team reported a bug that should have been impossible. We distribute a custom `ErrorBoundary` for our users which implements the React [lifecycle method ](https://reactjs.org/docs/react-component.html#componentdidcatch "‌")`componentDidCatch`:
 
 ```

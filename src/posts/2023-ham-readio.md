@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Ham Readio
 summary: Tuning in and twittering out
 date: 2023-01-21T16:59:37.225Z
@@ -7,7 +7,8 @@ tags:
   - post
   - book
 ---
-If the Twitter exodus yielded any good (aside from further outing Batman as a terrible role model), it's that we should control our content and our message as if it were a resource worth preserving. I've been excited to see folks blogging again. Not only blogging, but [call-and-response](https://en.wikipedia.org/wiki/Call_and_response_(music) "‌") blogging with one another.
+
+If the Twitter exodus yielded any good (aside from further outing Batman as a terrible role model), it's that we should control our content and our message as if it were a resource worth preserving. I've been excited to see folks blogging again. Not only blogging, but [call-and-response](<https://en.wikipedia.org/wiki/Call_and_response_(music)> "‌") blogging with one another.
 
 ## Call and Response
 

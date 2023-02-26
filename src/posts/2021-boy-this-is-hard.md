@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Boy, This Is Hard
 summary: I didn't see where it started but I saw where it ended.
 date: 2021-06-23T15:24:47.182Z
@@ -7,6 +7,7 @@ tags:
   - post
   - boythisishard
 ---
+
 I never met my grandfather⁠—he was the perfect relative. My middle name is his name. I have his wristwatch and his hammer. I am told stories here and there at family gatherings and see the odd photo. I see his impact on others in my orbit, like my father, who lost him when he was barely 17 years old.
 
 I cannot fathom that void.

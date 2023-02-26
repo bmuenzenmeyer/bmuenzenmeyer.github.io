@@ -1,10 +1,9 @@
 ---
-layout: item.njk
+layout: item
 title: Open Source
 permalink: hubs/opensource/index.html
+date:
 ---
-
-<link href="/css/opensource.css" rel="stylesheet" />
 
 ## 15 Years of Open Source Experience
 

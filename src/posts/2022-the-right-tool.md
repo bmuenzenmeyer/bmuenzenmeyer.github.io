@@ -1,11 +1,12 @@
 ---
-layout: item
+layout: post
 title: The Right Tool
 summary: How I measure up measuring up
 date: 2022-02-02T16:33:34.169Z
 tags:
   - post
 ---
+
 The right tool is the one that is fastest.<br/>
 The right tool is the one that is cheapest.<br/>
 The right tool is the one you have with you.<br/>

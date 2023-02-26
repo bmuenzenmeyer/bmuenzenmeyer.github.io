@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: On Pattern Lab
 summary: Some thoughts after a public conversation on Pattern Lab
 date: 2014-04-21T14:53:23.224Z
@@ -7,6 +7,7 @@ tags:
   - post
   - opensource
 ---
+
 [Dave Rupert](https://twitter.com/davatron5000 "‌") sparked a conversation today about Patternlab after some initial usage, which elicited a nice round of feedback from others.
 
 [Brad Frost](https://twitter.com/bradfrost "‌") summed it up nicely:
