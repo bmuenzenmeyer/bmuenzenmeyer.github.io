@@ -58,6 +58,9 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, limit)
   })
 
+  // rss
+  eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822)
+
   return {
     dir: {
       input: "src",
