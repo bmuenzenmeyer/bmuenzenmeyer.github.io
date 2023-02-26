@@ -2,7 +2,6 @@
 layout: item
 title: Open Source
 permalink: hubs/opensource/index.html
-date:
 ---
 
 ## 15 Years of Open Source Experience
