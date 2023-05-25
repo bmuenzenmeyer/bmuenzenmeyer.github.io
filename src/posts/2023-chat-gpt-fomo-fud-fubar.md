@@ -6,7 +6,7 @@ date: 2023-05-25T03:56:29.068Z
 tags:
   - post
 ---
-Today I attended an open source conference. The topics covered a healthy mixture of industry topics, what some would even inaccurately call soft-skills. But one throughline cut through attendees, speakers' off-hand remarks, and the schedule itself: AI and specifically ChatGPT. I directly observed:
+Today I attended an open source conference. The topics covered a healthy mixture of industry topics. But one throughline cut through attendees, speakers' off-hand remarks, and the schedule itself: AI and specifically ChatGPT. I directly observed:
 - Pre-talk bro-chat about which model was better.
 - Caveats that the Stack Overflow data didn't represent a time when ChatGPT was yet prevalent  
 - Quips that the ChatGPT room was bigger than the current speakers' accommodations, maybe they should have spoken about that
