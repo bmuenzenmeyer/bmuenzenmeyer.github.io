@@ -1,6 +1,6 @@
 ---
 layout: item
-title: Chat GPT FOMO FUD FUBAR
+title: CHATGPT FOMO FUD FUBAR
 summary: Old man yells at cloud
 date: 2023-05-25T03:56:29.068Z
 tags:
