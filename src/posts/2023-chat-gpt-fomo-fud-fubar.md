@@ -20,6 +20,6 @@ And with crypto, blockchain, NFTs... I felt a similar frenzy wash over spaces, w
 
 If it matters. I'll hear about it eventually. This is one place I just cannot yet spend cycles on. I'm getting to a point in my career where I sorta relish NOT learning about something. Echos of my CSS-Tricks article, ["I don't know."](https://css-tricks.com/i-dont-know/) (Still the URL I am most proud of)
 
-An attendee I talked to when to a ChatGPT roundtable. He said it was just a bunch of guys talking about what they thought. Seemed on brand.
+An attendee I talked to went to a ChatGPT roundtable. He said it was just a bunch of guys talking about what they thought. Seemed on brand.
 
 FUBAR, I say.
