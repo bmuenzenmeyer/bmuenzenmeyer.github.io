@@ -7,8 +7,7 @@ layout: 'default.njk'
   {% include "nav.njk" %}
 </nav>
 
-
-<article>
+<article class="article--{{type}}">
   <h1>{{title}}</h1>
   <small>{{summary}}</small>
   {{ content | safe }}

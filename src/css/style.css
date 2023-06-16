@@ -366,7 +366,7 @@ blockquote {
 }
 
 .collection__item:nth-child(even) .collection__article,
-.border-gradient {
+.s {
   border-image: linear-gradient(
       45deg,
       var(--theme-yellow),
@@ -474,11 +474,12 @@ blockquote {
 /* FOOTER */
 
 .footer {
-  margin-top: 8rem;
-  color: var(--softwhite);
-  background-color: var(--theme-color, --theme-grey);
-  border-top-style: solid;
-  border-top-width: 3px;
+  margin-top: 12rem;
+  padding-top: 12rem;
+  background-image: url(/img/family.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
 }
 
 .footer__container,
@@ -497,10 +498,6 @@ blockquote {
 
 .footer__fact {
   margin-bottom: 1rem;
-}
-
-.footer a {
-  color: var(--2023-yellow);
 }
 
 @media (min-width: 45rem) {
