@@ -6,6 +6,7 @@ date: 2023-07-08T07:06:35.776Z
 tags:
   - opensource
   - nodejs
+  - post
 ---
 T﻿his week I joined the [Node.js website team](https://github.com/nodejs/nodejs.org). It's been a fantastic way, however small, to contribute toward something larger. I believe that [open source](https://brianmuenzenmeyer.com/hubs/opensource/) contribution takes many forms. In my short time here, I've triaged issues, discussed future plans, fixed some small things, and reviewed pull requests. 
 
