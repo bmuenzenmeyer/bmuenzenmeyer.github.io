@@ -38,6 +38,8 @@ Marty Henderson and I open sourced a tool called {% ai "https://www.npmjs.com/pa
 
 This work also re-invigorated my desire to maintain software again, which I've re-approached with {% ai "https://makeapullre.quest/"%}makeapullre.quest{% endai %} and {% ai "https://www.npmjs.com/package/eleventy-plugin-inline-link-favicon"%}`eleventy-plugin-inline-link-favicon`{% endai %}. You can see the later's output prominently on this page.
 
+Recently, I've joined the {% ai "https://nodejs.org"%}nodejs.org website team{% endai %}, an experience that is helping me [contribute and learn from others](https://brianmuenzenmeyer.com/posts/2023-joining-the-node-js-website-team/).
+
 <h3 id="mentor">Mentor</h3>
 
 I was fortunate enough to participate as a mentee in Mozilla's {% ai "https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/"%}Open Leaders program{% endai %}. This was my first exposure to organized community-building and professional development. It was inspiring to learn and connect with others looking to build one another up.
