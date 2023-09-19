@@ -142,4 +142,71 @@ https://www.openeuler.org/en/
 
 lots of challenges. all eyes are on open source. its all of our jobs to educate our peers.
 
+## Demonstrating OSPO Value
 
+> A panel discussion on OSPO Metrics
+
+- Chan Voong, Comcast
+- Daniel Izquierdo, Bitergia
+- Dawn Foster, CHAOSS
+- David Hirsch, Dynatrace
+
+https://chaoss.community/
+
+### stakeholders
+
+- all inclusive approach to stakeholders. go from developers all the way to the CTO. PMs. leadership. need to translate perspective to and from all
+- sometimes we forget: biggest stakeholder is the "community" itself
+- easy to get sucked in to legal, security, etc. we need to move beyond "just" that
+
+### narrative from numbers to story, and vice-versa
+
+- data to narrative. wall of dashboards that requires interpretation for different stakeholders. developer vs executive, based on the same data.
+- different sets of data for different stakeholders. remind ourselves that we work for a company. its important to demonstrate worth. "flipside" to metrics, that help us maintain our OSPO
+- "what is the most effective way to communicate to the person in front of me." contextualize the numbers
+- know your audience.
+- you dont even need the data. sometimes you only have the message. more impactful to have the pitch, and help that lead your data gathering efforts
+- community metrics are sometimes arbitrary. have metrics that a related to other parts of the business. tie everything back.
+
+### what are the tools you use to get data or create measurements?
+
+- chaoss community software - https://chaoss.community/software/
+- metrics, but also groups of them via [metrics models](https://chaoss.community/kbtopic/all-metrics-models/)
+- [oss compass](https://oss-compass.org/)
+- example: OSPOs that contribute to other business units
+
+### what are some of the usecases for these tools?
+
+- influence and impact
+- data science. 
+
+### Q&A
+
+#### how did you grow from 8 to 30?
+
+- ticketing system helped prove adoption and time saved
+- how that impacts revenue
+
+#### how do you keep people from gaming metrics?
+
+- try to focus on metrics that, if gamed, are still good for the community
+- centralize the measurement. anonymize it. 
+
+#### we want to measure contributions without tying to performance?
+
+- this is for only product management, not developer stuff
+
+#### how do you educate teams to put extra effort into open source instead of the product model?
+
+- compare to estimate
+- do both and compare (not often done)
+- try to explain upstream at a strategic level
+- even so, some things dont have numbers
+- it's a marathon
+
+#### what metrics help at the executive level
+
+- measure your dependencies
+- measure those contributors
+- consider how much it would take to build it ourselves
+- what do executives care about? back into it that way
