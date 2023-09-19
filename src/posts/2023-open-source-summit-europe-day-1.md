@@ -138,6 +138,8 @@ https://www.openeuler.org/en/
   - education and advocacy
   - make it easy to do open source 
 
+---
 
+lots of challenges. all eyes are on open source. its all of our jobs to educate our peers.
 
 
