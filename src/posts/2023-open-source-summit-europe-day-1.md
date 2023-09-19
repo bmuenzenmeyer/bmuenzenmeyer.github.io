@@ -210,3 +210,82 @@ https://chaoss.community/
 - measure those contributors
 - consider how much it would take to build it ourselves
 - what do executives care about? back into it that way
+
+## How Can Your OSPO Drive Open Source Business Value for Your Organization? 
+
+> Masae Shida, VMware
+
+### Why align open source business strategy?
+
+- time to market
+- quick access to innovation
+- scalable, reliable
+- outside perspectives
+- cost saving
+- community power
+- we need a business case on the ROI of open source
+- WHY, WHAT, and HOW we open source
+- risks without strategy
+  - reduced revenue
+  - degrades proprietary value
+  - upsets customers and community
+  - reputational damage
+- your OSPO can help build a commercially competitive product strategy
+- best practices. consultations. 
+
+### open source business models
+
+- services and support
+- open core (freemium)
+- hosting / SaaS
+- marketplace, ads partnership
+
+### open source commercialization
+
+- developer community-driven
+- me: developers as organized labor
+- value ladder instead of sales funnel - Peter Levine
+  - awareness
+  - consideration
+  - evaluation
+  - purchase
+
+### community as future customers
+
+- work across business-functions
+- continue refining approach
+
+### strategic development approach
+
+- create new
+  - be good stewards. contribute to existing if possible first
+  - be transparent
+  - this is long-term commitment
+  - be intentional with what you open source
+  - CLA vs DCO
+- enhance existing
+  - consider functionality, compatibility, license
+  - adoption, maturity, community, governance, security
+  - good visibility and influence
+- use only
+
+### competitive technology
+
+- review on a regular basis
+
+### final thoughts
+
+- no magic wand that guarantees revenue from OSS
+- an OSPO can help manage a consistent strategy
+- engaging as a community is critical
+
+### Q&A
+
+#### what advice do you have for evaluating dependencies?
+
+- didn't have an answer.
+
+#### how do OSPOs handle AI?
+
+- not sure yet. hoping to learn from others
+
