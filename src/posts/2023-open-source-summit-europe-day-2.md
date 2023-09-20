@@ -322,4 +322,4 @@ see screenshot
 
 ### SBOM
 
-SPDX 3 rc with license compliance
+[SPDX 3 rc](https://www.linuxfoundation.org/press/spdx-sbom-3-release-candidate) with more use cases
