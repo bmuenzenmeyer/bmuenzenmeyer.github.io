@@ -67,3 +67,69 @@ Jim Zemlin, Executive Director, LF
   - supply chain security, CI, memory safety
 - "no one questions why we maintain roads and bridges"
 
+
+## Node.js What's Next?
+
+Jean Burellier, Michael Dawson, Node.js
+
+### Following What's Next
+
+- 200 repos
+- 20 LTS in October
+- nodejs.org/calendar
+
+### Recent Features
+
+- "major releases are boring"
+- promotion to LTS is an event though
+- Features, Old News
+  - OpenSSL3 (17). Smaller key lengths. algorithms changed. Native modules deprecations
+  - Default DNS Resolution. IPv6 vs IPv4. `--dns-result-order=ipv4first` 
+- Baking
+  - fetch (17.5, no flag in 18)
+  - WASI - WASM in Node.js (13.3, 20 no longer needs a flag)
+  - `--watch` `--watch-path` `--watch-preserve-output` (18.11, 16.19)
+- Hot off the press
+  - argument parser (18), collab from yargs and commander
+  - test runner (20) mocks, reporters, coverage
+  - single-executable application (19)
+    - easier distribution
+    - more secure only runs what is bundled
+    - nodejs/postject
+  - process-based permissions (19)
+    - file system, spawning, workers
+    - runtime API
+  - tracing channel (19)
+    - diagnostic information.
+    - `tracingChannel.trace*`
+    - `tracingChannel.subscribe`
+  - arm64 for Windows (19)
+
+### Next-10
+
+- technical values and priorities
+- constituencies
+- constituencies' needs
+- technical priorities
+- mini-summits to focus on technical priorities. 3 to 4 times a year
+- survey, 1700 respondents
+  - biggest ask: better docs
+- sharing project news
+
+### New Teams and Initiatives
+
+- performance
+- security. funding OpenSSF
+- single executable app
+- uvwasi / wasm
+- examples repository nodejs/examples
+- website, redesigned experience
+
+### How to Get Involved
+
+- open to all
+- participating in meetings
+- open issues
+- docs / translations
+- review PRs
+- nobody understands all of it
