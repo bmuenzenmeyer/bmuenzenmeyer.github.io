@@ -319,3 +319,7 @@ see screenshot
 
 - justify upstream as a risk management. healthy upstream is sustainable
 - from an audit of usage, find the ones that are most critical... and invest in them. "at least for the top 50, you should have a strategy for how it's managed"
+
+### SBOM
+
+SPDX 3 rc with license compliance
