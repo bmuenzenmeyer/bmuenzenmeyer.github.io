@@ -94,7 +94,7 @@ Jean Burellier, Michael Dawson, Node.js
   - test runner (20) mocks, reporters, coverage
   - single-executable application (19)
     - easier distribution
-    - more secure only runs what is bundled
+    - more secure only runs what is bundled. smaller surface area
     - nodejs/postject
   - process-based permissions (19)
     - file system, spawning, workers
