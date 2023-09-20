@@ -133,3 +133,80 @@ Jean Burellier, Michael Dawson, Node.js
 - docs / translations
 - review PRs
 - nobody understands all of it
+
+## Improving the Security of a Major Open Source Project : Open Step at a Time
+
+> Michael Dawson, Rafael Gonzaga
+
+- "Open Open Source" 
+- >3200 contributors
+- 1B downloads direct last year
+- top OpenSSF criticality score
+- "but... volunteers are a poor match for time critical work"
+- OpenSSF - full time resource in starting in 2022
+
+### Reactive - the life of a CVE
+
+- threat model. without a TM, there is imbalanced expecations
+  - example: sync read of a large file. not a threat, per the TM. trust
+  - what do we trust? (not to misbehave) ex: FS. 
+  - what we don't trust? HTTP servers
+  - published in `Security.md`
+- security reports
+  - please dont open public
+  - hackerone. private. make public after resolved.
+  - accept or reject, using TM
+  - CVE and CVSS assignment, if accepted
+  - what did not work?
+    - email
+    - ad hoc triaging
+    - small number of triagers. needs to rotate else people burnout
+    - handling reports for experimental features
+  - what is working?
+    - triage team > 3 people
+    - triage rotation
+    - hackerone, private, public after, easy CVE assignment
+- creating fixes
+  - `node-private` repo. running in public CI is disclosing vulns
+  - people availability - often busy. OpenSSF funding has helped.
+  - sometimes the vulns are platform-specific, like Windows-only
+  - locking CI when about to release
+- security releases
+  - 26 steps
+  - advanced notice to ecosystem, related teams
+  - coordinating subteams
+  - release stewards rotation. 6 of them. matteo (platformatic), michael (redhat), bryan (datadog), rafael (nearform), juan, joe
+
+### Proactive
+
+- Dependency Vulnerability Checks (nodejs/nodejs-dependency-vuln-assessments)
+- permissions model (20)
+  - `npm install magicpackage` # malicious file access
+  - `node --experimental-permission --allow-fs-read=/path/to/project/*`
+  - allow-fs-read, fs-write, allow-worker, allow-child-worker
+- security best practices (document)
+- automated dependency updates
+- OSSF scorecared
+- CII best practices
+- automate release
+- review build process of the dependencies
+- make sure node.js can reliably maintain the release lines
+
+### How you can help
+
+**individuals**
+
+1. contribute as a collaborator
+2. volunteer as a releaser
+3. champion wg initiative
+4. join the working group
+5. volunteer
+6. contribute to issuesa
+
+**businesses**
+
+1. reward people for contributing! triage, etc
+2. reward people for being a security expert
+3. implement vulnerability reporting policies with considerations for open source projects
+4. join a foundation 
+5. contribute to LFD bug bounty security fund
