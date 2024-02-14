@@ -37,5 +37,9 @@ When in eternal lines to Time thou grow'st.
 So long lives this, and this gives life to thee.
 ```
 
+view the rich diff at https://gist.github.com/bmuenzenmeyer/9aa65d1572d428328fd029ae2ed06eb3, I don't have syntax highlighting here yet :D
+
+
+
 
 > _thanks [Shakespeare](https://poets.org/poem/shall-i-compare-thee-summers-day-sonnet-18), and my English degree_
