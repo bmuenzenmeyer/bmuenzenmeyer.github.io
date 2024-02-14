@@ -26,7 +26,7 @@ Shall I compare thee to a summer’s day?
 By chance, or nature’s changing course, untrimmed;
 
 - But thy eternal summer shall not fade,
-+ But thy eternal source shall node fade,
++ But thy eternal source shall not fade,
 Nor lose possession of that fair thou ow’st,
 - Nor shall death brag thou wand'rest in his shade,
 + Nor shall bugs bring thou issue log betrayed,
