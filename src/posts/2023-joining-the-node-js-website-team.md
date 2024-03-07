@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Joining the Node.js Website Team
 summary: Open source engagement comes in many forms
 date: 2023-07-08T07:06:35.776Z

@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Open Source Summit Europe Day 1
 summary: Notes from a world away
 date: 2023-09-19T07:00:59.452Z

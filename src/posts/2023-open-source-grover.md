@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Open Source Grover
 summary: show up
 date: 2023-07-30T13:30:07.535Z

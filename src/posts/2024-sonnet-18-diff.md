@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Sonnet 18 Diff
 summary: Shall I <compare/> thee to a summer's day?
 date: 2024-02-14T02:27:22.961Z

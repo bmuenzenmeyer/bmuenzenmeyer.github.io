@@ -1,5 +1,5 @@
 ---
-layout: item
+layout: post
 title: Open Source. Open Doors.
 summary: A long overdue update
 date: 2024-03-01T22:05:02.779Z
