@@ -592,15 +592,14 @@ blockquote {
 .book {
 }
 
+.book blockquote {
+  padding-left: 0;
+}
+
 .book__intro {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.book__intro svg {
-  width: 100px;
-  margin: 1rem;
+  align-items: flex-start;
 }
 
 .book__input {
@@ -631,8 +630,3 @@ blockquote {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 38em) {
-  .book__intro {
-    flex-direction: row;
-  }
-}
