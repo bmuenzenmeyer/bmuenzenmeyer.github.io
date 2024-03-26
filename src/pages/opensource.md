@@ -38,10 +38,12 @@ Marty Henderson and I open sourced a tool called {% ai "https://www.npmjs.com/pa
 
 This work also re-invigorated my desire to maintain software again, which I've re-approached with {% ai "https://makeapullre.quest/"%}makeapullre.quest{% endai %} and {% ai "https://www.npmjs.com/package/eleventy-plugin-inline-link-favicon"%}`eleventy-plugin-inline-link-favicon`{% endai %}. You can see the later's output prominently on this page.
 
-Recently, I've joined the {% ai "https://nodejs.org"%}nodejs.org website team{% endai %}, an experience that is helping me [contribute and learn from others](https://brianmuenzenmeyer.com/posts/2023-joining-the-node-js-website-team/).
+Recently, I've joined the {% ai "https://nodejs.org"%}nodejs.org website team{% endai %}, an experience that is helping me [contribute and learn from others](https://brianmuenzenmeyer.com/posts/2023-joining-the-node-js-website-team/). 11 months of work in 2023 and 2024 culminated in a redesign of the site, and I'm so proud of the work we've done together. Truly a collective, open effort spanning the globe. I wrote a deep dive on the {% ai "https://nodejs.org/en/blog/announcements/diving-into-the-nodejs-website-redesign"%}Node.js blog{% endai %}.
 
 <h3 id="mentor">Mentor</h3>
 
 I was fortunate enough to participate as a mentee in Mozilla's {% ai "https://foundation.mozilla.org/en/initiatives/mozilla-open-leaders/"%}Open Leaders program{% endai %}. This was my first exposure to organized community-building and professional development. It was inspiring to learn and connect with others looking to build one another up.
 
 My opportunity to mentor came from the experience of a lifetime, volunteering during {% ai "https://ghc.anitab.org/programs-and-awards/open-source-day/"%}Open Source Day at Grace Hopper celebration{% endai %}. I worked with dozens of attendees to get their local environment setup and ready to make contributions to the Node.js project. This felt so intimidating, (even to me!) but wow was it energizing to see new faces just as eager to engage in open source software. Again, it was so so great to be empowered to do this by my employer.
+
+Mentoring and enablement comes in many forms. One I am very proud of is {% ai "https://tech.target.com/blog/open-source-fund"%}Target's Open Source Fund{% endai %}. Our commitment to the open source ecosystem here is just the beginning, and I'm excited to see where it goes.
