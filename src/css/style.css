@@ -49,7 +49,7 @@ body {
 }
 
 main {
-  margin: 0.5rem;
+  margin: 1.5rem;
 }
 
 figure {
@@ -369,19 +369,19 @@ blockquote {
 .s {
   border-image: linear-gradient(
       45deg,
-      var(--theme-yellow),
-      var(--theme-orange),
-      var(--theme-red)
+      transparent,
+      white,
+      transparent
     )
     1;
 }
 
 .collection__item:nth-child(odd) .collection__article {
   border-image: linear-gradient(
-      90deg,
-      var(--theme-red),
-      var(--theme-orange),
-      var(--theme-yellow)
+      -45deg,
+      transparent,
+      white,
+      transparent
     )
     1;
 }
@@ -392,7 +392,7 @@ blockquote {
   margin-left: 0;
   padding: 1rem 0.5rem;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
 }
 
 .collection__article--top {
