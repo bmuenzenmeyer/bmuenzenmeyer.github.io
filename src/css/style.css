@@ -237,6 +237,22 @@ blockquote {
   margin: 0.5rem;
 }
 
+
+#masthead__first,
+#masthead__last {
+  font-size: 3rem;
+  writing-mode: vertical-lr;
+  padding-left: 50%;
+}
+
+#masthead__first {
+  transform: rotate(180deg);
+}
+
+#masthead__last {
+  margin-top: -120px;
+}
+
 @media (min-width: 38rem) {
   .masthead {
     display: grid;
@@ -255,6 +271,9 @@ blockquote {
     grid-column: 2;
     font-size: 5rem;
     text-align: right;
+    writing-mode: unset;
+    transform: unset;
+    padding-left: unset;
   }
 
   #masthead__last {
@@ -262,6 +281,8 @@ blockquote {
     grid-column: 3;
     writing-mode: vertical-lr;
     font-size: 5rem;
+    padding-left: unset;
+    margin-top: unset;
   }
 
   #masthead__intro {
