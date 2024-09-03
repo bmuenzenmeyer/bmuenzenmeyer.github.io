@@ -172,6 +172,17 @@ pre {
   border: 3px solid var(--softwhite);
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--theme-grey);
+  padding: 0.5rem;
+}
+
 aside,
 blockquote {
   border-top: solid 1px var(--theme-color);
@@ -237,7 +248,7 @@ blockquote {
   margin: 0.5rem;
 }
 
-#item__nav a:has(img){
+#item__nav a:has(img) {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -393,23 +404,11 @@ blockquote {
 
 .collection__item:nth-child(even) .collection__article,
 .s {
-  border-image: linear-gradient(
-      45deg,
-      transparent,
-      white,
-      transparent
-    )
-    1;
+  border-image: linear-gradient(45deg, transparent, white, transparent) 1;
 }
 
 .collection__item:nth-child(odd) .collection__article {
-  border-image: linear-gradient(
-      -45deg,
-      transparent,
-      white,
-      transparent
-    )
-    1;
+  border-image: linear-gradient(-45deg, transparent, white, transparent) 1;
 }
 
 .collection__article {
@@ -663,4 +662,3 @@ blockquote {
 .book__signup:hover {
   cursor: pointer;
 }
-
