@@ -652,6 +652,7 @@ blockquote {
 }
 
 .book__signup {
+  display: inline-block;
   background-color: var(--2023-orange);
   color: var(--softwhite);
   padding: 1rem;
