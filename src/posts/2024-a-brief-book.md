@@ -2,8 +2,6 @@
 layout: post
 title: A Brief Book
 summary: Homage to A Book Apart
-img: /assets/20240831_210949.jpg
-img_alt: A photo of the table of contents within proof of Approachable Open Source, unbound and already worn from a read-through!
 date: 2024-09-07T12:46:53.233Z
 tags:
   - post
