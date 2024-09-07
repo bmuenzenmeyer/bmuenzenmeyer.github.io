@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Brief Book
-summary: Homage to A Book Apart
+summary: A map and a compass
 date: 2024-09-07T12:46:53.233Z
 tags:
   - post
