@@ -18,7 +18,7 @@ tags:
 
 It's worth repeating! The 📀 "gold copy" of my book is off to the printer! That was my internal milestone to finally announce the title to the world. I'm looking at the well-worn proof right now.
 
-<a href="https://2b7cef-ac.myshopify.com/products/approachable-open-source-paperback-ebook-bundle" class="book__signup">🆕 Preorder at $32 for a paperback and digital bundle!</a>
+<a href="https://2b7cef-ac.myshopify.com/products/approachable-open-source-paperback-ebook-bundle" class="book__signup">🆕 Preorder at $27 for a paperback and digital bundle!</a>
 
 ![A picture of the proof of Approachable Open Source by Brian Muenzenmeyer](/img/aos-proof.jpg)
 
