@@ -193,6 +193,12 @@ blockquote {
   padding: 1rem;
 }
 
+article blockquote {
+  border-top: 0;
+  border-left: solid 1px var(--theme-color);
+  border-image: linear-gradient(45deg, transparent, white, transparent) 1;
+}
+
 /* LAYOUT */
 
 @media (min-width: 55rem) {
