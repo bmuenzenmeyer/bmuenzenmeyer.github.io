@@ -181,7 +181,7 @@ describe('createUTCDate', () => {
 })
 ```
 
-The test runner seems to get a bit more full-featured with every release. Now for simple projects I think of the native runner before reaching for something stronger, like jest or [vitest](https://vitest.dev/).
+The test runner seems to get a bit more full-featured with every release. Now for simple projects I think of the native runner before reaching for something stronger, like jest or [vitest](https://vitest.dev/). My fellow Node.js maintainer [Augustin Mauroy](https://github.com/AugustinMauroy) was quick to mention JSX support too, which many but not all projects would need to consider.
 
 <h3 id="watching-source-code">👀 Watching Source Code</h3>
 
@@ -386,6 +386,8 @@ Purists will say it didn't build the project at all, it only removed the typings
 Node.js maintainers are quick to mention the many caveats with this approach, and other decisions, such as currently [not supporting type-stripping under node_modules](https://github.com/nodejs/node/blob/98d4ebc6d425f55d22b8ab745031cd19f89fd283/lib/internal/modules/typescript.js#L124-L126). 
 
 > 🚀🐢  This is all intentionally careful, by the way. I'll get to that more near the end of the article. As proof of this intentionality, recently Node.js maintainers [unflagged the type-stripping behavior](https://github.com/nodejs/node/pull/56350) (😊 with some tiny assists by me). I've talked to Marco about the node_modules limitation. He intends to remove it, but everyone is wary of a new fragmentation where folks publish TypeScript-only code. The community is still working through the ESM shift. 
+
+> ❗ One the places I _am_ eagerly awaiting a TypeScript-only experience is when authoring custom GitHub Actions. They get consumed in a pretty defined environment after all. Unfortunately, the [GitHub runner environment itself still does not support Node 22](https://bsky.app/profile/brianmuenzenmeyer.com/post/3lawemugvh22z) (This is different  than using setup-node to install it.) I am sure with time this will resolve. Until then, we need a build process.
 
 #### 🎵 Anything You Can Do I Can Do Better...
 
