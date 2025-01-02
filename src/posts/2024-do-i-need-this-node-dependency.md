@@ -13,10 +13,7 @@ tags:
 
 It's been exciting [contributing](https://github.com/nodejs/nodejs.org/graphs/contributors) to the [nodejs.org website](https://nodejs.org/en). It's a five-way intersection of technology, legacy choices, market forces, language, and people. Playing part-engineer, part-traffic cop through it all is rewarding and humbling. One of the benefits of this time is the awareness of the Node.js project's velocity of new and feature releases. New versions are released all the time across [Active LTS and Current](https://nodejs.org/en/about/previous-releases) development lines. It's easy to miss something between the release notes and our busy work schedules.
 
-> 🙈 `tldr` [Skip to the unifying narrative](#️pace-layers)
-
-<!-- START doctoc -->
-<!-- END doctoc -->
+> 🙈 tl;dr <a href="#oss-pace-layers">Skip to the unifying narrative</a>
 
 ## 🆕 Newish Features
 
@@ -447,7 +444,7 @@ We've retained our functionality, and our DevEx is more or less the same, if not
 > ⚡ All this, with _two orders of magnitude_ less dependencies. Dependabot will be bored. 
 
 
-<h2 id="pace-layers">☀️ Pace Layers</h2>
+<h2 id="oss-pace-layers">☀️ Pace Layers</h2>
 
 Stewart Brand's [Pace Layering: How Complex Systems Learn and Keep Learning](https://jods.mitpress.mit.edu/pub/issue3-brand/release/2) has really _really_ taken hold in my thinking of late. Each of these new releases is a story in and of itself, but together they form a _narrative_. A narrative of complex, mutual learning.
 
