@@ -21,12 +21,12 @@ Through the efforts of contributors over several recent majors, great new featur
 
 | Feature                                       | Introduced | Release Status                                                     |
 | --------------------------------------------- | ---------- | ------------------------------------------------------------------ |
-| [testing source code](#testing-source-code)   | 16.17.0    | Stable as of 20.0.0                                                |
-| [watching source code](#watching-source-code) | 16.19.0    | Stable as of 20.13.0                                               |
-| [parsing arguments](#parsing-arguments)       | 18.3.0     | Stable as of 20.0.0                                                |
-| [reading environment](#reading-environment)   | 20.6.0     | Active Development                                                 |
-| [styling output](#styling-output)             | 20.12.0    | Stable, as of [22.13.0](https://github.com/nodejs/node/pull/56329) |
-| [run typescript](#typescript)                 | 22.6.0     | Active Development                                                 |
+| [testing source code](#testing-source-code)   | [16.17.0](https://nodejs.org/en/blog/release/v16.17.0)    | Stable as of 20.0.0                                                |
+| [watching source code](#watching-source-code) | [16.19.0](https://nodejs.org/en/blog/release/v16.19.0)    | Stable as of 20.13.0                                               |
+| [parsing arguments](#parsing-arguments)       | [18.3.0](https://nodejs.org/en/blog/release/v18.3.0)     | Stable as of 20.0.0                                                |
+| [reading environment](#reading-environment)   | [20.6.0](https://nodejs.org/en/blog/release/v20.6.0)     | Active Development                                                 |
+| [styling output](#styling-output)             | [20.12.0](https://nodejs.org/en/blog/release/v20.12.0)    | Stable, as of [22.13.0](https://github.com/nodejs/node/pull/56329) |
+| [run typescript](#typescript)                 | [22.6.0](https://nodejs.org/en/blog/release/v22.6.0)     | Active Development                                                 |
 
 Interestingly, these releases potentially replace an external dependency in your project.
 
