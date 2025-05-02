@@ -381,7 +381,7 @@ To run it? We can replace the `dev` script with:
 +"dev:node": "node --experimental-strip-types --env-file=.env --watch-path src src/server.ts --to 2025-04-20",
 ```
 
-Purists will say it didn't build the project at all, it only removed the typings, flow-style. Ick! But wait, I say, my editor gave me immediate feedback of the error, without needing a build process at all. So...who caress? As with many things in this post, this is good enough for me!
+Purists will say it didn't build the project at all, it only removed the typings, flow-style. Ick! But wait, I say, my editor gave me immediate feedback of the error, without needing a build process at all. So...who cares? As with many things in this post, this is good enough for me!
 
 Node.js maintainers are quick to mention the many caveats with this approach, and other decisions, such as currently [not supporting type-stripping under node_modules](https://github.com/nodejs/node/blob/98d4ebc6d425f55d22b8ab745031cd19f89fd283/lib/internal/modules/typescript.js#L124-L126). 
 
