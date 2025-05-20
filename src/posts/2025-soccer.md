@@ -19,8 +19,8 @@ Here's a running playlist of games we've been to as a family and with friends.
 
 Notable moments:
 
-- Freezing with Jim while it snows for the opener
+- [Freezing](https://youtu.be/pEEJKUzQN7I?si=HhqMKOcql_PwzUU7) with Jim while it snows for the opener
 - Ben: "The hotdogs give you the best burps."
 - Jack in the locker room as a pitch pal!
-- Watching Messi score, and then beating him 4-1.
+- [Watching](https://youtu.be/FQ_iGTU60os?si=r2bDnc8qrnefgBk9) Messi score, and then beating him 4-1.
 - Jack gifting our new neighbor a jersey during his first game.
