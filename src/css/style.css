@@ -171,7 +171,6 @@ pre {
   padding: 1rem;
   border: 1px solid var(--theme-grey);
   border-image: linear-gradient(45deg, transparent, white, transparent) 1;
-
 }
 
 table {
@@ -683,4 +682,34 @@ article blockquote {
 
 .book__signup:hover {
   cursor: pointer;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  overflow-x: scroll;
+}
+
+.logos img {
+  /* aspect-ratio: 1; */
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+
+.logos ~ table {
+  text-align: center;
+  overflow-x: scroll;
+}
+
+/* stripe the table rows */
+.logos ~ table tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.logo-solo {
+  margin: 1rem auto;
 }
