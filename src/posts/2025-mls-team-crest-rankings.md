@@ -2,7 +2,7 @@
 layout: item
 title: Major League Soccer Team Crest Rankings
 summary: My opinionated rankings of Major League Soccer team crests and logos.
-date: 2025-05-27T00:00:00.000Z
+date: 2025-06-24T00:00:00.000Z
 tags:
   - soccer
   - post
