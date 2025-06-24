@@ -522,57 +522,57 @@ I really enjoyed looking at the MLS crests through his eyes. He's even got a rec
 ### 5/5 Crests
 
 <div class="logos">
-<img src="/img/mls/MIN_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Minnesota United FC">
-<img src="/img/mls/STL_Logo_PRI_FC_RGB_800x800.png" width="40" height="40" alt="St. Louis City SC">
+<img src="/img/mls/MIN_Logo_PRI_FC_RGB_800x800.png" width="42" height="42" alt="Minnesota United FC">
+<img src="/img/mls/STL_Logo_PRI_FC_RGB_800x800.png" width="60" height="60" alt="St. Louis City SC">
 </div>
 
 ### 4/5 Crests
 
 <div class="logos">
-<img src="/img/mls/DAL_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="FC Dallas">
-<img src="/img/mls/LAFC_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Los Angeles FC (LAFC)">
-<img src="/img/mls/MIA_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Inter Miami CF">
-<img src="/img/mls/SD_Logo_PRI_FC_RGB_800x800.png" height="32" alt="San Diego FC">
-<img src="/img/mls/SJ_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="San Jose Earthquakes">
-<img src="/img/mls/TOR_Logo_PRI_FC_RGB_800x800.png" width="36" height="36" alt="Toronto FC">
+<img src="/img/mls/DAL_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="FC Dallas">
+<img src="/img/mls/LAFC_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Los Angeles FC (LAFC)">
+<img src="/img/mls/MIA_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Inter Miami CF">
+<img src="/img/mls/SD_Logo_PRI_FC_RGB_800x800.png" height="52" alt="San Diego FC">
+<img src="/img/mls/SJ_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="San Jose Earthquakes">
+<img src="/img/mls/TOR_Logo_PRI_FC_RGB_800x800.png" width="56" height="56" alt="Toronto FC">
 
 </div>
 
 ### 3/5 Crests
 
 <div class="logos">
-<img src="/img/mls/ATL_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Atlanta United FC"> 
-<img src="/img/mls/CHI_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Chicago Fire FC">
-<img src="/img/mls/COL_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Colorado Rapids">
-<img src="/img/mls/LA_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="LA Galaxy">
-<img src="/img/mls/CFM_logo_complete_RGB.png" width="45" height="45" alt="CF Montréal">
-<img src="/img/mls/NE_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="New England Revolution">
-<img src="/img/mls/RBNY_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="New York Red Bulls">
-<img src="/img/mls/ORL_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Orlando City SC">
-<img src="/img/mls/RSL_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Real Salt Lake">
-<img src="/img/mls/SEA_Logo_PRI_FC_RGB_800x800.png" width="41" height="41" alt="Seattle Sounders FC">
-<img src="/img/mls/SKC_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Sporting Kansas City">
-<img src="/img/mls/VAN_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Vancouver Whitecaps FC">
+<img src="/img/mls/ATL_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Atlanta United FC"> 
+<img src="/img/mls/CHI_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Chicago Fire FC">
+<img src="/img/mls/COL_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Colorado Rapids">
+<img src="/img/mls/LA_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="LA Galaxy">
+<img src="/img/mls/CFM_logo_complete_RGB.png" width="65" height="45" alt="CF Montréal">
+<img src="/img/mls/NE_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="New England Revolution">
+<img src="/img/mls/RBNY_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="New York Red Bulls">
+<img src="/img/mls/ORL_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Orlando City SC">
+<img src="/img/mls/RSL_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Real Salt Lake">
+<img src="/img/mls/SEA_Logo_PRI_FC_RGB_800x800.png" width="61" height="61" alt="Seattle Sounders FC">
+<img src="/img/mls/SKC_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Sporting Kansas City">
+<img src="/img/mls/VAN_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Vancouver Whitecaps FC">
 
 </div>
 
 ### 2/5 Crests
 
 <div class="logos">
-<img src="/img/mls/ATX_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Austin FC">
-<img src="/img/mls/CLT_Logo_PRI_FC_RGB_800x800.png" width="40" height="40" alt="Charlotte FC">
-<img src="/img/mls/CLB_Logo_PRI_FC_LTBG_RGB_800x800.png" width="32" height="32" alt="Columbus Crew">
-<img src="/img/mls/DC_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="D.C. United">
-<img src="/img/mls/HOU_Logo_PRI_FC_RGB_800x800.png" width="34" height="34" alt="Houston Dynamo FC">
-<img src="/img/mls/NSH_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="Nashville SC">
-<img src="/img/mls/NYC_Logo_PRI_FC_RGB.png" width="32" height="32" alt="New York City FC">
-<img src="/img/mls/PHI_Logo_PRI_FC_RGB_800x800.png" width="45" height="45" alt="Philadelphia Union">
-<img src="/img/mls/POR_Logo_PRI_FC_RGB_800x800.png" width="43" height="43" alt="Portland Timbers">
+<img src="/img/mls/ATX_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Austin FC">
+<img src="/img/mls/CLT_Logo_PRI_FC_RGB_800x800.png" width="60" height="60" alt="Charlotte FC">
+<img src="/img/mls/CLB_Logo_PRI_FC_LTBG_RGB_800x800.png" width="52" height="52" alt="Columbus Crew">
+<img src="/img/mls/DC_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="D.C. United">
+<img src="/img/mls/HOU_Logo_PRI_FC_RGB_800x800.png" width="54" height="54" alt="Houston Dynamo FC">
+<img src="/img/mls/NSH_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="Nashville SC">
+<img src="/img/mls/NYC_Logo_PRI_FC_RGB.png" width="52" height="52" alt="New York City FC">
+<img src="/img/mls/PHI_Logo_PRI_FC_RGB_800x800.png" width="65" height="65" alt="Philadelphia Union">
+<img src="/img/mls/POR_Logo_PRI_FC_RGB_800x800.png" width="63" height="63" alt="Portland Timbers">
 
 </div>
 
 ### 1/5 Crests
 
 <div class="logos">
-<img src="/img/mls/CIN_Logo_PRI_FC_RGB_800x800.png" width="32" height="32" alt="FC Cincinnati">
+<img src="/img/mls/CIN_Logo_PRI_FC_RGB_800x800.png" width="52" height="52" alt="FC Cincinnati">
 </div>
