@@ -20,7 +20,7 @@ Table of Contents:
 - [Rankings](#rankings)
 - [Table](#table)
 - [Tier List](#tier-list)
-- [Jack's Rankings](#jacks-rankings)
+- [Jack's Rankings](#jack)
 
 <h2 id="criteria">Methodology</h2>
 
@@ -80,7 +80,7 @@ Okay, without further ado.
 
 ### 30. Colorado Rapids
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/COL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/COL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -93,7 +93,7 @@ Shield is narrow and smaller than most, even when upscaled manually. Soccer ball
 
 ### 29. Sporting Kansas City
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/SKC_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/SKC_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -106,7 +106,7 @@ I don't have much to say about this one. I don't know if a casual observer would
 
 ### 28. Houston Dynamo FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/HOU_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/HOU_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -119,7 +119,7 @@ I like the color contrast and the meaning behind the identity (canals), but it's
 
 ### 27. Atlanta United FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/ATL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/ATL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -132,7 +132,7 @@ This could be anything. If you don't catch some of the European inspiration in t
 
 ### 26. New York Red Bulls
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/RBNY_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/RBNY_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -145,7 +145,7 @@ It's a recognizable brand, but not a soccer team. I mean, all kits haver sponsor
 
 ### 25. San Jose Earthquakes
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/SJ_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/SJ_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -158,7 +158,7 @@ Some identity to the place, at least by exposition. Not great contrast. No clue 
 
 ### 24. San Diego FC
 
-<img  height="400" class="logo-solo" src="/img/mls/SD_Logo_PRI_FC_RGB_800x800.png" />
+<img height="400" class="logo-solo" src="/img/mls/SD_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -171,7 +171,7 @@ I actually really like the San Diego crest. It works well large, and the identit
 
 ### 23. New England Revolution
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/NE_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/NE_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -184,7 +184,7 @@ Healthy contrast, but confusing imagery. There is a strike-through the R... do w
 
 ### 22. Charlotte FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/CLT_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/CLT_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -197,7 +197,7 @@ Great color, and reasonable identity speaking to the city's past. It effectively
 
 ### 21. CF Montréal
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/CFM_logo_complete_RGB.png" />
+<img width="400" class="logo-solo" src="/img/mls/CFM_logo_complete_RGB.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -210,7 +210,7 @@ This critique is similar to Charlottes, and they have the same score.
 
 ### 20. Toronto FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/TOR_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/TOR_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -223,7 +223,7 @@ I didn't know that was a maple leaf until I looked it up. This also reminds me a
 
 ### 19. Inter Miami CF
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/MIA_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/MIA_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -236,7 +236,7 @@ I mean this is the one everyone is looking for, right? Trying not to play any fa
 
 ### 18. Real Salt Lake
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/RSL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/RSL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -249,7 +249,7 @@ This is the highest soccer ball crest, and I really wavered on some of these mid
 
 ### 17. Philadelphia Union
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/PHI_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/PHI_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -262,7 +262,7 @@ I'm a fan, but I worry its got too much going on. It has a circle _and_ a shield
 
 ### 16. New York City FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/NYC_Logo_PRI_FC_RGB.png" />
+<img width="400" class="logo-solo" src="/img/mls/NYC_Logo_PRI_FC_RGB.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -275,7 +275,7 @@ Mmmmmmm. Okay, this is a nerd snipe, but I am still impartial (I think!). Heavy 
 
 ### 15. Vancouver Whitecaps FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/VAN_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/VAN_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -288,7 +288,7 @@ In the middle of the pack here, we gotta get picky to differentiate. I like the 
 
 ### 14. LA Galaxy
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/LA_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/LA_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -301,7 +301,7 @@ We can enjoy some simplicity here. The quasar roots the team in the early commun
 
 ### 13. FC Dallas
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/DAL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/DAL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -314,7 +314,7 @@ Gosh did I struggle with some of these animal-based crests. To draw this true to
 
 ### 12. FC Cincinnati
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/CIN_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/CIN_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -327,7 +327,7 @@ There's another log jam of stellar crests starting here. This is 2 of 4 in a row
 
 ### 11. D.C. United
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/DC_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/DC_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -340,7 +340,7 @@ Here again with the animals. I feel like this might be harder to draw than FC Ci
 
 ### 10. Minnesota United FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/MIN_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/MIN_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -353,7 +353,7 @@ A notable crest, like Vancouver or Columbus, in that it forges its own shape. No
 
 ### 9. St. Louis City SC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/STL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/STL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -366,7 +366,7 @@ Next level crests center their identity in place, but do so _showing_, not telli
 
 ### 8. Austin FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/ATX_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/ATX_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -379,7 +379,7 @@ A virtual tie with St. Louis, and for all the same reasons. The verdant green st
 
 ### 7. Orlando City SC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/ORL_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/ORL_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -392,7 +392,7 @@ We hit our first 5. Orlando's crest can pass for duotone. I didn't even know it 
 
 ### 6. Los Angeles FC (LAFC)
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/LAFC_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/LAFC_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -405,7 +405,7 @@ Really leaning into an art-deco aesthetic, LAFC's crest is a great example of ho
 
 ### 5. Nashville SC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/NSH_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/NSH_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -420,7 +420,7 @@ Nashville eeks into the top 5 with a simple but effective crest. The color stark
 
 ### 4. Columbus Crew
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/CLB_Logo_PRI_FC_LTBG_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/CLB_Logo_PRI_FC_LTBG_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -433,7 +433,7 @@ Now this is bold! Love the purposeful shape to the home state flag. Again, the s
 
 ### 3. Portland Timbers
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/POR_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/POR_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -446,7 +446,7 @@ The top three crests in MLS are not messing around. Portland's proves this with 
 
 ### 2. Chicago Fire FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/CHI_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/CHI_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
@@ -459,7 +459,7 @@ Yes. YES. Chicago's crest respects its community, advocating for its home and bu
 
 ### 1. Seattle Sounders FC
 
-<img width="400" height="400" class="logo-solo" src="/img/mls/SEA_Logo_PRI_FC_RGB_800x800.png" />
+<img width="400" class="logo-solo" src="/img/mls/SEA_Logo_PRI_FC_RGB_800x800.png" />
 
 | Metric           | Value |
 | ---------------- | ----- |
