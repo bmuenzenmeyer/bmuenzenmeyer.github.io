@@ -7,7 +7,6 @@ tags:
   - soccer
   - post
   - boythisishard
-
 ---
 
 Growing up, I played rec soccer, high school, and then more rec. The best moments were playing indoor with Jim. Professional soccer was 3 hours away in Chicago.
@@ -24,3 +23,5 @@ Notable moments:
 - Jack in the locker room as a pitch pal!
 - [Watching](https://youtu.be/FQ_iGTU60os?si=r2bDnc8qrnefgBk9) Messi score, and then beating him 4-1.
 - Jack gifting our new neighbor a jersey during his first game.
+
+Jack and I also [ranked all the MLS team crests](https://brianmuenzenmeyer.com/posts/2025-mls-team-crest-rankings/) if you are into that sort of thing.

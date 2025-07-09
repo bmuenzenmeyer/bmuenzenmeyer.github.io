@@ -221,6 +221,14 @@ article blockquote {
     margin-left: auto;
     margin-right: auto;
   }
+
+  #item__aside {
+    grid-row: 2 / 100;
+    grid-column: 2;
+    /* rotate the text so its vertical */
+    writing-mode: vertical-lr;
+    width: fit-content;
+  }
 }
 
 /* MASTHEAD / NAV */
@@ -274,6 +282,10 @@ article blockquote {
 
 #masthead__last {
   margin-top: -120px;
+}
+
+#home__about {
+  max-width: 60ch;
 }
 
 @media (min-width: 38rem) {
@@ -381,6 +393,8 @@ article blockquote {
   width: 45%;
   display: inline-block;
   height: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 38rem) {
@@ -544,7 +558,8 @@ article blockquote {
 }
 
 @media (min-width: 45rem) {
-  .footer__container {
+  .footer__container,
+  #home__about {
     max-width: 80ch;
     margin-left: auto;
     margin-right: auto;

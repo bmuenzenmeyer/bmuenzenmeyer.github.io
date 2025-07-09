@@ -11,5 +11,24 @@ layout: 'default.njk'
 <article class="article--{{type}}">
   <h1>{{title}}</h1>
   <small>{{summary}}</small>
+
+  <span id="item__extra">&nbsp;</span>
   {{ content | safe }}
+
+
+  <aside id="item__aside">
+    
+
+    <div>
+    {% if tags %}
+      Tags {% for tag in tags %} <a href="/tags/{{tag}}">{{tag}}</a>{% endfor %}
+    {% endif %}
+    </div>
+
+    Published <relative-time datetime="{{date}}">
+      {{date}}
+    </relative-time>
+
+  </aside>
+
 </article>
