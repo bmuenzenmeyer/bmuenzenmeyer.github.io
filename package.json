@@ -4,15 +4,13 @@
   "description": "bmuenzenmeyer.github.io\r =======================",
   "main": ".eleventy.js",
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0-beta.1",
-    "@11ty/eleventy-img": "1.0.0",
-    "@11ty/eleventy-plugin-rss": "1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-    "@borisschapira/eleventy-plugin-better-slug": "1.0.1",
-    "clean-css": "5.2.2",
-    "dotenv": "10.0.0",
+    "@11ty/eleventy": "3.1.2",
+    "@11ty/eleventy-img": "6.0.4",
+    "@11ty/eleventy-plugin-rss": "2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
+    "clean-css": "5.3.3",
     "eleventy-plugin-inline-link-favicon": "1.1.0",
-    "markdown-it": "12.3.0",
+    "markdown-it": "14.1.0",
     "netlify-plugin-minify-html": "0.3.1"
   },
   "scripts": {

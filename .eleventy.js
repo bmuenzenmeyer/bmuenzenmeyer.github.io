@@ -1,11 +1,9 @@
-const pluginBetterSlug = require("@borisschapira/eleventy-plugin-better-slug")
 const pluginRss = require("@11ty/eleventy-plugin-rss")
 const pluginInlineLinkFavicon = require("eleventy-plugin-inline-link-favicon")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 module.exports = function (eleventyConfig) {
   // plugins
-  eleventyConfig.addPlugin(pluginBetterSlug)
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(pluginInlineLinkFavicon)
   eleventyConfig.addPlugin(syntaxHighlight)
