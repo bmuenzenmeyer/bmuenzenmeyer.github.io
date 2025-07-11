@@ -456,6 +456,7 @@ article h1 + small {
   border-radius: 50%;
   margin-left: -0.25rem; /* half the width */
   margin-right: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .chip {
@@ -475,7 +476,12 @@ article h1 + small {
   color: white;
 }
 
-.date {
+.article--timeline .date {
+  margin-right: 1rem;
+}
+
+.date,
+.small-text {
   font-size: var(--size-300);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--theme-blue);
