@@ -397,6 +397,10 @@ article blockquote {
   margin-bottom: 0.5rem;
 }
 
+article h1 + small {
+  margin: 1.5rem 0 0 0;
+}
+
 @media (min-width: 38rem) {
   article > * {
     grid-column: 3 / 4;
@@ -419,6 +423,63 @@ article blockquote {
     flex-direction: row;
     align-items: center;
   }
+}
+
+.article--timeline ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  border-left: 1px solid var(--theme-yellow);
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.article--timeline ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.article--timeline ul li > * {
+  margin: 0 0.5rem;
+}
+
+/* make a little circle at each li */
+.article--timeline ul li::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--theme-orange);
+  border-radius: 50%;
+  margin-left: -0.25rem; /* half the width */
+  margin-right: 0.5rem;
+}
+
+.chip {
+  border-radius: var(--radius);
+  color: var(--theme-blue);
+  border: 1px solid var(--theme-yellow);
+  text-transform: uppercase;
+  font-size: var(--size-300);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--theme-yellow);
+}
+
+.chip--hot {
+  border-color: var(--theme-red);
+  background-color: var(--theme-red);
+  color: white;
+}
+
+.date {
+  font-size: var(--size-300);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--theme-blue);
+  text-transform: uppercase;
 }
 
 /* HOME */
@@ -727,4 +788,8 @@ article blockquote {
 
 .logo-solo {
   margin: 1rem auto;
+}
+
+.rounded-all {
+  border-radius: var(--radius);
 }
