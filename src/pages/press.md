@@ -32,6 +32,8 @@ A collection of appearances in the press, podcasts, and other media.
 
 - <span class="date">Nov 2016</span> <span class="chip">Book</span> _[Atomic Design](https://atomicdesign.bradfrost.com/)_ by Brad Frost
 
+- <span class="date">Aug 2016</span> <span class="chip">Screencast</span> [CSS Tricks](https://css-tricks.com/videos/149-quick-intro-pattern-lab-node-brian-muenzenmeyer/) _A Quick Intro to Pattern Lab Node_
+
 - <span class="date">Jul 2016</span> <span class="chip">Post</span> [Smashing Magazine](https://www.smashingmagazine.com/2016/07/building-maintaining-atomic-design-systems-pattern-lab/) _How To Make And Maintain Atomic Design Systems With Pattern Lab 2_
 
 - <span class="date">Jun 2016</span> <span class="chip">Workshop</span> [Web Design Day](https://webdesignday.com/atomic-design-workshop.html) _Creating Atomic Design Systems With Pattern Lab_
