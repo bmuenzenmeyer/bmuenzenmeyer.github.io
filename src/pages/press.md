@@ -12,6 +12,8 @@ A collection of appearances in the press, podcasts, and other media.
 
 - <span class="date">Oct 2025</span> <span class="chip">Talk</span> [All Things Open](https://2025.allthingsopen.org/sessions/finite-source-machines-contribution-for-busy-humans) _Finite Source Machines: Contribution for Busy Humans_
 
+- <span class="date">Sep 2025</span> <span class="chip">Talk</span> [JavaScript MN](https://www.meetup.com/javascriptmn/events/309201511/) _Node.js - You Don't Need a Dependency_
+
 - <span class="date">May 2025</span> <span class="chip">Talk</span> [Minnebar](https://sessions.minnestar.org/sessions/1812) _Do I still need this dependency for my Node.js app?_
 
 - <span class="date">Jan 2025</span> <span class="chip">Podcast</span> [Sustain OSS](https://podcast.sustainoss.org/262) _Approachable Open Source_
