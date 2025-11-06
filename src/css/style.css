@@ -819,3 +819,31 @@ article h1 + small {
 .rounded-all {
   border-radius: var(--radius);
 }
+
+/* Masonry Layout */
+.masonry {
+  column-count: 1;
+  column-gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+.masonry img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  border-radius: var(--radius);
+  display: block;
+}

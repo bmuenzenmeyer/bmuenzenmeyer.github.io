@@ -2,12 +2,16 @@
 layout: item
 title: Open Source
 permalink: hubs/opensource/index.html
-date: 2025-07-09T05:36:50.338Z
+date: 2025-11-06T05:36:50.338Z
 ---
 
 ## 15 Years of Open Source Experience
 
+<img src="/img/brian-jsconf1.png" style="max-width: 600px;" alt="Brian presenting at JS Conf 2025" class="rounded-all"/>
+
 I believe that participation in open source as a movement takes all of us working in whatever capacity we can. There are a lot of avenues to engage, and I've occupied roles as [user](#user), [contributor](#contributor), [maintainer](#maintainer), and [mentor](#mentor) during my career. We are part of something larger than our current issue, project, role, or company.
+
+<a href="https://approachableopensource.com/shop/" target="_blank" class="book__signup">Sound intriguing? I wrote a whole book about this!</a>
 
 It's the contributions, large and small, sustained and one-time, that add up to more. I share some of my work here as a chronicle of this spectrum of engagement. {% ai "https://github.com/bmuenzenmeyer"%}GitHub timelines{% endai %} only tell part of the story, so here's the rest:
 

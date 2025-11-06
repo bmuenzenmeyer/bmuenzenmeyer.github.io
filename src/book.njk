@@ -7,28 +7,17 @@ title: Book
 
   {% include "bookpromo.njk" %}
 
-  <img alt="A picture of the proof of Approachable Open Source by Brian Muenzenmeyer" src="/img/aos-proof.jpg" />
+  <h3>Check out <a href="https://approachableopensource.com/">approachableopensource.com!</a></h3>
 
-  <h2>Status</h2>
+  <a target="_blank" href="https://approachableopensource.com/"><img alt="A mock of the website" src="/img/aos-macbook-pro-mockup.png"/></a>
 
-  <p>Curious to know where we are in the process?</p>
+  <br/>
 
-  <ul>
-    <li>✅ Proposal Written</li>
-    <li>✅ Pitch Accepted</li>
-    <li>✅ Draft Complete</li>
-    <li>✅ Editing Round 1</li>
-    <li>✅ Editing Round 2</li>
-    <li>✅ Editing Round 3</li>
-    <li>🛑 <a href="https://brianmuenzenmeyer.com/posts/2024-open-source-open-doors/">ABA ceases new works</a>
-    <li>🗺️ Charting a new course</li>
-    <li>✅ Manuscript formatting</li>
-    <li>✅ Book producer found</li>
-    <li>✅ <a href="https://approachableopensource.com">approachableopensource built!</a></li>
-    <li>✅ Proofreading</li>
-    <li>✅ Foreward Written</li>
-    <li>✅ <a href="https://brianmuenzenmeyer.com/posts/2024-approachable-open-source/">Off to the printer!</a></li>    
-  </ul>
+  <section class="masonry">
+    {% for image in collections.all | getImageFiles('img/aos-gallery') %}
+      <img src="/{{ image }}" alt="Gallery image" />
+    {% endfor %}
+  </section>
 
 </article>
 

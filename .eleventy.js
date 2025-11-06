@@ -58,6 +58,22 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, limit)
   })
 
+  // Get image files from a directory
+  const fs = require("fs")
+  const path = require("path")
+  eleventyConfig.addFilter("getImageFiles", (collection, dirPath) => {
+    const fullPath = path.join("src", dirPath)
+    try {
+      const files = fs.readdirSync(fullPath)
+      return files
+        .filter((file) => /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(file))
+        .map((file) => path.join(dirPath, file))
+    } catch (err) {
+      console.error(`Error reading directory ${fullPath}:`, err)
+      return []
+    }
+  })
+
   // rss
   eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822)
 

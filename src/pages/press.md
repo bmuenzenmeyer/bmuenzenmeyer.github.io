@@ -2,11 +2,11 @@
 layout: item
 title: Press
 permalink: hubs/press/index.html
-date: 2025-07-11T12:23:23.024Z
+date: 2025-11-06T12:23:23.024Z
 type: timeline
 ---
 
-A collection of appearances in the press, podcasts, and other media.
+A collection of appearances in the press, talks, podcasts, and other media.
 
 <picture>
 <img
