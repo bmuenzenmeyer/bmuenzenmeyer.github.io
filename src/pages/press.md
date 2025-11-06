@@ -8,7 +8,18 @@ type: timeline
 
 A collection of appearances in the press, podcasts, and other media.
 
-- <span class="date">Oct 2025</span> <span class="chip">Talk</span> [JSConf](https://openjsf.org/blog/jsconf-25-speakers-announced) _Node.js - You Don't Need a Dependency_
+<picture>
+<img
+  sizes="(max-width: 600px) 100vw, 600px"
+  srcset="
+  /img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_200.jpg 200w,
+  /img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_636.jpg 636w"
+  src="/img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_636.jpg"
+  class="rounded-all"
+  alt="Brian Muenzenmeyer speaking at All Things Open 2025">
+</picture>
+
+- <span class="date">Oct 2025</span> <span class="chip">Talk</span> [JSConf](https://openjsf.org/blog/jsconf-25-speakers-announced) _Node.js - You Don't Need a Dependency_ 🎥 <span class="">[Video](https://youtu.be/hRxSvDbvnaI?si=EevVzSUzbGBfOslx)</span>
 
 - <span class="date">Oct 2025</span> <span class="chip">Talk</span> [All Things Open](https://2025.allthingsopen.org/sessions/finite-source-machines-contribution-for-busy-humans) _Finite Source Machines: Contribution for Busy Humans_
 
