@@ -14,7 +14,8 @@ button {
 body {
   font-size: 18px;
   margin: 0;
-  background-color: var(--softwhite);
+  background-color: #000;
+  color: white;
 }
 
 main {
@@ -156,7 +157,6 @@ article blockquote {
 
 /* LAYOUT */
 
-
 /* MASTHEAD / NAV */
 
 .masthead {
@@ -168,6 +168,7 @@ article blockquote {
 #masthead__name {
   grid-row: 1;
   grid-column: 1 / span 2;
+  text-align: center;
 }
 
 #masthead__nav {
@@ -185,11 +186,17 @@ article blockquote {
   }
 }
 
-#masthead__name {
+#masthead__hero {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 3;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 38em) {
-
   #masthead__nav {
     grid-row: 2;
     grid-column: 2;
@@ -201,17 +208,7 @@ article blockquote {
     grid-row: 1;
     grid-column: 1;
     margin: 1rem;
-    
-  }
-}
-
-#masthead__hero {
-  grid-row: 1 / span 3;
-  grid-column: 1 / span 3;
-  z-index: -1;
-  img { 
-    width: 100%;
-    height: auto;  
+    text-align: left;
   }
 }
 
@@ -220,6 +217,32 @@ article blockquote {
   }
   .nav li {
   }
+}
+
+#tetris {
+  display: flex;
+  position: relative;
+  min-height: 600px;
+  margin: 2rem auto;
+}
+
+#tetris .statement {
+  position: relative;
+  z-index: 10;
+  place-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.tetris-piece {
+  pointer-events: auto;
+  user-select: none;
+}
+
+.statement {
+  text-align: center;
+  margin: 5rem 1rem;
+  font-weight: normal;
 }
 
 /* ARTICLE */
@@ -418,7 +441,25 @@ article h1 + small {
   }
 }
 
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 60rem) {
+  .card-deck {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 .card {
+  border: 1px solid white;
+  margin: 0.5rem;
+  padding: 1rem;
+  max-width: 400px;
 }
 
 .card__header {
@@ -436,7 +477,13 @@ article h1 + small {
 .cage .heart {
 }
 
+/* BOOK */
+
 .book {
+}
+
+.book img {
+  filter: grayscale(100%);
 }
 
 .book blockquote {
