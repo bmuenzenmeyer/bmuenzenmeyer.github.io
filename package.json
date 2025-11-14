@@ -8,6 +8,8 @@
     "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-plugin-rss": "2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
+    "@thi.ng/pixel": "7.5.15",
+    "@thi.ng/pixel-dither": "1.1.183",
     "clean-css": "5.3.3",
     "eleventy-plugin-inline-link-favicon": "1.1.0",
     "markdown-it": "14.1.0",
@@ -16,7 +18,8 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve --incremental",
-    "format": "pnpm dlx prettier 'src/**/*.js' --write"
+    "format": "pnpm dlx prettier 'src/**/*.js' --write",
+    "dither": "node scripts/dither-images-sharp.js"
   },
   "repository": {
     "type": "git",

@@ -3,51 +3,29 @@ layout: default.njk
 ---
 
 <header class="masthead">
-  <figure id="masthead__img" style="view-transition-name: brian;">
-    <picture>
-      {# https://www.responsivebreakpoints.com/ #}
-        <img
-          sizes="(max-width: 1400px) 100vw, 1400px"
-          srcset="
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_200.jpg 200w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_336.jpg 336w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_440.jpg 440w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_539.jpg 539w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_619.jpg 619w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_776.jpg 776w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_849.jpg 849w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_943.jpg 943w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1029.jpg 1029w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1026.jpg 1026w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1254.jpg 1254w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1318.jpg 1318w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1337.jpg 1337w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1384.jpg 1384w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1398.jpg 1398w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1400.jpg 1400w"
-          src="/img/Muenzenmeyer-47_nohqhq_c_scale,w_1400.jpg"
-          alt="A portrait of Brian Muenzenmeyer. Brian is a 30-somthing bald white man wearing a plaid shirt, grey glasses, and a five o'lock shadow. Photo taken by Samantha Brinda Photography">
-      </picture>
-    {# <figcaption><small>CC BY-NC-SA 4.0 <a href="https://www.flickr.com/photos/allthingsopen/54901754654/">All Things Open</a></small></figcaption> #}
-    <figcaption><small>Photo credit <a href="https://www.samanthabrindaphotography.com/">Samantha Brinda</a></small></figcaption>
-  </figure>
 
-  <div id="masthead__intro">
-    <i>Golly—that’s a long name!</i>
-    <br/>
-    <br/>
+  <h1 id="masthead__name">
+    <span id="masthead__first">Brian</span>
+    <span id="masthead__last">Muenzenmeyer</span>
+  </h1>
 
-    {% include "bookpromo.njk" %} 
-
-  </div>
-
-  <span id="masthead__last">Muenzenmeyer</span>
-  <span id="masthead__first">Brian</span>
   <nav id="masthead__nav" style="view-transition-name: nav;">
     {% include "nav.njk" %} 
   </nav>
+
+  <figure id="masthead__hero" style="view-transition-name: brian;">
+    <img src="/img/dither-dist/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_1400-bayer-8x3.png"/>
+    <figcaption><small>CC BY-NC-SA 4.0 <a href="https://www.flickr.com/photos/allthingsopen/54901754654/">All Things Open</a></small></figcaption>
+  </figure>
+
   
 </header>
+
+<section id="section__intro">
+
+  {% include "bookpromo.njk" %} 
+
+</section>
 
 <section id="home__about">
   <h2>About</h2>

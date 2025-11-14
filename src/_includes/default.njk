@@ -30,68 +30,19 @@
   <!-- fonts -->
 
   <style>
-    @font-face {
-      font-family: Novela;
-      src: url('/fonts/novela-regular-webfont.woff2') format('woff2'),
-          url('/fonts/novela-regular-webfont.woff') format('woff');
-    }
-    @font-face {
-      font-family: Novela;
-      src: url('/fonts/novela-bold-webfont.woff2') format('woff2'),
-          url('/fonts/novela-bold-webfont.woff') format('woff');
-      font-weight: 700;
-    }
-
-    @font-face {
-      font-family: Novela;
-      src: url('/fonts/novela-regularitalic-webfont.woff2') format('woff2'),
-          url('/fonts/novela-regularitalic-webfont.woff') format('woff');
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: Novela;
-      src: url('/fonts/novela-bolditalic-webfont.woff2') format('woff2'),
-          url('/fonts/novela-bolditalic-webfont.woff') format('woff');
-      font-weight: 700;
-      font-style: italic;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
 
     body {
       font-family: serif;
     }
+
     .fonts-loaded body {
-      font-family: Novela, serif;
+      font-family: League Gothic, serif;
     }
   
   </style>
-
-  <script>
-    (function() {
-
-      // Optimization for Repeat Views
-      if( sessionStorage.fontsLoadedFoutWithClass ) {
-        document.documentElement.className += " fonts-loaded";
-        return;
-      }
-
-      if( "fonts" in document ) {
-        Promise.all([
-          document.fonts.load("1em Novela"),
-          document.fonts.load("700 1em Novela"),
-          document.fonts.load("italic 1em Novela"),
-          document.fonts.load("italic 700 1em Novela")
-        ]).then(function () {
-          document.documentElement.className += " fonts-loaded";
-
-          // Optimization for Repeat Views
-          sessionStorage.fontsLoadedFoutWithClass = true;
-        });
-      }
-    })();
-  </script>
-
-  <script defer async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 

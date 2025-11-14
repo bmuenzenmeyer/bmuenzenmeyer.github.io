@@ -20,6 +20,12 @@ importers:
       '@11ty/eleventy-plugin-syntaxhighlight':
         specifier: 5.0.1
         version: 5.0.1
+      '@thi.ng/pixel':
+        specifier: 7.5.15
+        version: 7.5.15
+      '@thi.ng/pixel-dither':
+        specifier: 1.1.183
+        version: 1.1.183
       clean-css:
         specifier: 5.3.3
         version: 5.3.3
@@ -216,6 +222,38 @@ packages:
   '@sindresorhus/transliterate@1.6.0':
     resolution: {integrity: sha512-doH1gimEu3A46VX6aVxpHTeHrytJAG6HgdxntYnCFiIFHEM/ZGpG8KiZGBChchjQmG0XFIBL552kBTjVcMZXwQ==}
     engines: {node: '>=12'}
+
+  '@thi.ng/api@8.12.7':
+    resolution: {integrity: sha512-FZf3hBfkJxKogUJgph0vWofd6kwNrZwY+12a0Mcj9ikt+LRtv3QeIciVhkkKLzCC8QAmRzLTTp2s021ZZa6vDg==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/canvas@1.0.28':
+    resolution: {integrity: sha512-6r2rDDpLApQ1wrGw6OU5vLngziWcDPFH5k13Jr2+xXVz815+8jSzclXnXVryt9vKE5h3bZnE9k2/a5K/K9Duow==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/checks@3.7.23':
+    resolution: {integrity: sha512-bGUBoYUWUZHXTG2ZlhSO86ofDjHnGxP+s9k3UJ2N1lzZ5fbyb1G6SppcIwBOw67KeEiMLb2BK7rBd5sUCyQ5OQ==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/errors@2.5.47':
+    resolution: {integrity: sha512-7UmCduMzb8HYZ1g26cvBNUvwquY48QhrAA7n8Ic5VdrpFvjuBIzS8hPtzCeXpnl59tdWdkYQflp9BdKBd3Y6MQ==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/math@5.13.4':
+    resolution: {integrity: sha512-RaVmx0tWwpkxUijXfFsz0zR/JCVOD8W0lmNgCGdY9v5BqGAkIEOZwffbBfuLGQsPNrM5Qepofz+EC17hiyXIpQ==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/pixel-dither@1.1.183':
+    resolution: {integrity: sha512-6OJbpaOe6FRCjcOgPgGTtJdCFOgEfX1xPpDhjUnV7wcnLd7tBkyDATWe1ap/Qb2bSJ0RvteIH9cRX1UprZPzoA==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/pixel@7.5.15':
+    resolution: {integrity: sha512-SHICeJVAM4h3usZpHSGaP+ig07R106p8wcFlycnemzkV+RrQBFwfKOlBSOR3Z/pmqrbVaQizT8iPaXe7tZYOIw==}
+    engines: {node: '>=18'}
+
+  '@thi.ng/porter-duff@2.1.119':
+    resolution: {integrity: sha512-F/xd+RMLiMPPgIQhygMaocwxu0Er7gXLXIGBaZMxmzSd+WdRQhNMfGKoxiY/E2dL0Mk2nE2q/zCoD2IP/BPW1A==}
+    engines: {node: '>=18'}
 
   a-sync-waterfall@1.0.1:
     resolution: {integrity: sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==}
@@ -1110,6 +1148,37 @@ snapshots:
   '@sindresorhus/transliterate@1.6.0':
     dependencies:
       escape-string-regexp: 5.0.0
+
+  '@thi.ng/api@8.12.7': {}
+
+  '@thi.ng/canvas@1.0.28': {}
+
+  '@thi.ng/checks@3.7.23': {}
+
+  '@thi.ng/errors@2.5.47': {}
+
+  '@thi.ng/math@5.13.4':
+    dependencies:
+      '@thi.ng/api': 8.12.7
+
+  '@thi.ng/pixel-dither@1.1.183':
+    dependencies:
+      '@thi.ng/checks': 3.7.23
+      '@thi.ng/math': 5.13.4
+      '@thi.ng/pixel': 7.5.15
+
+  '@thi.ng/pixel@7.5.15':
+    dependencies:
+      '@thi.ng/api': 8.12.7
+      '@thi.ng/canvas': 1.0.28
+      '@thi.ng/checks': 3.7.23
+      '@thi.ng/errors': 2.5.47
+      '@thi.ng/math': 5.13.4
+      '@thi.ng/porter-duff': 2.1.119
+
+  '@thi.ng/porter-duff@2.1.119':
+    dependencies:
+      '@thi.ng/api': 8.12.7
 
   a-sync-waterfall@1.0.1: {}
 
