@@ -511,7 +511,7 @@ Here's all of them again, but in a more comparative format.
 
 This is what the kids do these days, right? I am pretty happy with a rough bell curve here, even if some of the stratifications break within tied scores.
 
-![](/img/mls/tierlist.PNG)
+<img src="/img/mls/tierlist.PNG" class="no-filter" alt="MLS Crest Tier List" />
 
 <h2 id="jack">Jack's Rankings</h2>
 
