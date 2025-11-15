@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris Web Components Demo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        padding: 2rem;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .demo-section {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Styles for tetris-box */
+      tetris-box {
+        display: block;
+        position: relative;
+        min-height: 400px;
+        background: #fafafa;
+        border: 2px dashed #ddd;
+        margin: 2rem 0;
+      }
+
+      tetris-box .statement {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.5rem;
+        color: #333;
+      }
+
+      tetris-box .tetris-piece {
+        will-change: transform;
+        transition: transform 0.3s ease;
+      }
+
+      tetris-box .tetris-piece:hover {
+        filter: brightness(1.2);
+      }
+
+      /* Styles for tetris-piece */
+      tetris-piece {
+        display: inline-block;
+        margin: 1rem;
+      }
+
+      .footer-demo {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background: #2c3e50;
+        color: white;
+      }
+
+      code {
+        background: #f0f0f0;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+      }
+
+      pre {
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 1rem;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎮 Tetris Web Components</h1>
+
+    <div class="demo-section">
+      <h2>1. Full Tetris Box Component</h2>
+      <p>
+        The <code>&lt;tetris-box&gt;</code> component displays multiple tetris
+        pieces with collision detection:
+      </p>
+
+      <tetris-box
+        statement="I'm a multifaceted individual contributor and community leader.<br/><br/><em>I don't fit in a box anymore.</em>"
+        piece-count="21"
+        img-path="/img"
+      >
+      </tetris-box>
+
+      <h3>Usage:</h3>
+      <pre><code>&lt;tetris-box 
+  statement="Your text here"
+  piece-count="21"
+  img-path="/img"&gt;
+&lt;/tetris-box&gt;</code></pre>
+    </div>
+
+    <div class="demo-section">
+      <h2>2. Single Tetris Piece Component</h2>
+      <p>
+        The <code>&lt;tetris-piece&gt;</code> component displays a single random
+        piece:
+      </p>
+
+      <div style="text-align: center">
+        <tetris-piece img-path="/img"></tetris-piece>
+        <tetris-piece img-path="/img"></tetris-piece>
+        <tetris-piece img-path="/img"></tetris-piece>
+        <tetris-piece img-path="/img"></tetris-piece>
+      </div>
+
+      <h3>Usage:</h3>
+      <pre><code>&lt;tetris-piece img-path="/img"&gt;&lt;/tetris-piece&gt;</code></pre>
+    </div>
+
+    <div class="demo-section">
+      <h2>3. Specific Pieces with Rotation</h2>
+      <p>You can specify which piece and rotation:</p>
+
+      <div style="text-align: center">
+        <tetris-piece img-path="/img" piece="i" rotation="0deg"></tetris-piece>
+        <tetris-piece img-path="/img" piece="o" rotation="45deg"></tetris-piece>
+        <tetris-piece img-path="/img" piece="t" rotation="90deg"></tetris-piece>
+        <tetris-piece
+          img-path="/img"
+          piece="s"
+          rotation="180deg"
+        ></tetris-piece>
+        <tetris-piece
+          img-path="/img"
+          piece="z"
+          rotation="270deg"
+        ></tetris-piece>
+      </div>
+
+      <h3>Usage:</h3>
+      <pre><code>&lt;tetris-piece 
+  img-path="/img" 
+  piece="i" 
+  rotation="90deg"&gt;
+&lt;/tetris-piece&gt;</code></pre>
+    </div>
+
+    <div class="demo-section">
+      <h2>4. Footer Example</h2>
+      <p>Perfect for footers - just drop in a component:</p>
+
+      <div class="footer-demo">
+        <span>© 2025 Your Name</span>
+        <tetris-piece img-path="/img"></tetris-piece>
+        <span>Made with ❤️</span>
+      </div>
+
+      <h3>Usage:</h3>
+      <pre><code>&lt;footer&gt;
+  &lt;span&gt;© 2025 Your Name&lt;/span&gt;
+  &lt;tetris-piece img-path="/img"&gt;&lt;/tetris-piece&gt;
+  &lt;span&gt;Made with ❤️&lt;/span&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+
+    <div class="demo-section">
+      <h2>5. API Reference</h2>
+
+      <h3><code>&lt;tetris-box&gt;</code> Attributes:</h3>
+      <ul>
+        <li>
+          <code>statement</code> - HTML content to display as centered text
+        </li>
+        <li>
+          <code>piece-count</code> - Number of pieces to generate (default: 21)
+        </li>
+        <li>
+          <code>img-path</code> - Path to tetris SVG images (default: /img)
+        </li>
+      </ul>
+
+      <h3><code>&lt;tetris-piece&gt;</code> Attributes:</h3>
+      <ul>
+        <li>
+          <code>piece</code> - Specific piece name: i, o, t, s, z, j, l
+          (default: random)
+        </li>
+        <li>
+          <code>rotation</code> - CSS rotation value (e.g., "90deg", "180deg")
+        </li>
+        <li>
+          <code>block-size</code> - Size of each block in pixels (default: 25)
+        </li>
+        <li>
+          <code>img-path</code> - Path to tetris SVG images (default: /img)
+        </li>
+      </ul>
+
+      <h3>JavaScript API:</h3>
+      <pre><code>// Get reference to component
+const tetrisBox = document.querySelector('tetris-box');
+
+// Refresh/regenerate pieces
+tetrisBox.refresh();</code></pre>
+    </div>
+
+    <script src="/js/tetris-component.js"></script>
+  </body>
+</html>

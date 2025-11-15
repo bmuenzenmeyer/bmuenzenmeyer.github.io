@@ -189,7 +189,6 @@ article blockquote {
     grid-template-columns: 1fr 1fr 75ch 1fr 1fr;
   }
   aside {
-    width: 120ch;
     margin-left: auto;
     margin-right: auto;
   }
@@ -456,6 +455,11 @@ article a > img {
 
 /* HOME */
 
+.centered-container {
+  display: flex;
+  place-content: center;
+}
+
 .center-spaced {
   margin: 5rem 1rem;
   max-width: 60ch;
@@ -530,13 +534,6 @@ footer ul {
 
 .footer__fact {
   margin-bottom: 1rem;
-}
-
-#tetris-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto 0;
 }
 
 @media (min-width: 45rem) {

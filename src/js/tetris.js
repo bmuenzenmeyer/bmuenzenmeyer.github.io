@@ -7,20 +7,6 @@ const pieces = [
   { name: "z", width: 3, height: 2, color: "#f00000" },
   { name: "j", width: 2, height: 3, color: "#0000f0" },
   { name: "l", width: 2, height: 3, color: "#f0a000" },
-  { name: "i", width: 1, height: 4, color: "#00f0f0" },
-  { name: "o", width: 2, height: 2, color: "#f0f000" },
-  { name: "t", width: 3, height: 2, color: "#a000f0" },
-  { name: "s", width: 3, height: 2, color: "#00f000" },
-  { name: "z", width: 3, height: 2, color: "#f00000" },
-  { name: "j", width: 2, height: 3, color: "#0000f0" },
-  { name: "l", width: 2, height: 3, color: "#f0a000" },
-  { name: "i", width: 1, height: 4, color: "#00f0f0" },
-  { name: "o", width: 2, height: 2, color: "#f0f000" },
-  { name: "t", width: 3, height: 2, color: "#a000f0" },
-  { name: "s", width: 3, height: 2, color: "#00f000" },
-  { name: "z", width: 3, height: 2, color: "#f00000" },
-  { name: "j", width: 2, height: 3, color: "#0000f0" },
-  { name: "l", width: 2, height: 3, color: "#f0a000" },
 ]
 
 const blockSize = 25 // Each individual block is 25px
@@ -96,7 +82,10 @@ function findNonOverlappingPosition(
 
 function createTetrisPieces() {
   const tetrisElement = document.getElementById("tetris")
-  if (!tetrisElement) return
+  if (!tetrisElement) {
+    console.warn("Tetris element not found")
+    return
+  }
 
   // Clear any existing pieces
   tetrisElement.innerHTML = ""
@@ -152,9 +141,12 @@ function createTetrisPieces() {
 
     tetrisElement.appendChild(img)
   })
+}
 
-  // also grab #tetris-footer and generate a SINGLE tetris piece there
+function createTetrisFooter() {
+  // Grab #tetris-footer and generate a SINGLE tetris piece there
   const tetrisFooter = document.getElementById("tetris-footer")
+  if (tetrisFooter) {
     const piece = pieces[Math.floor(Math.random() * pieces.length)]
     const img = document.createElement("img")
     img.src = `/img/tetris-${piece.name}.svg`
@@ -166,9 +158,20 @@ function createTetrisPieces() {
   }
 }
 
-// Run on page load
+// Run on page load - handle both cases where DOM might already be loaded or not
+function init() {
+  // Wait for next tick to ensure DOM is fully ready
+  setTimeout(() => {
+    createTetrisPieces()
+    createTetrisFooter()
+  }, 0)
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", createTetrisPieces)
+  console.log("DOM not ready, adding listener")
+  document.addEventListener("DOMContentLoaded", init)
 } else {
-  createTetrisPieces()
+  // DOM already loaded, run immediately
+  console.log("DOM ready, running init()")
+  init()
 }
