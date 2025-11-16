@@ -3,8 +3,6 @@ layout: 'item.njk'
 
 title: "Arcade"
 permalink: /arcade/index.html
-date: 2020-08-27
-tags: ["project"]
 author: Brian Muenzenmeyer
 twitter: bmuenzenmeyer
 class: ""
@@ -73,6 +71,8 @@ games:
 <main>
 
 {% for game in games %}
+
+<div class="card-deck">
 
 <div class="game">
     <h3><a href="{{game.url}}">{{game.name}}</a></h3>

@@ -8,16 +8,11 @@ type: timeline
 
 A collection of appearances in the press, talks, podcasts, and other media.
 
-<picture>
 <img
-  sizes="(max-width: 600px) 100vw, 600px"
-  srcset="
-  /img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_200.jpg 200w,
-  /img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_636.jpg 636w"
+  style="max-width: 75ch;"
   src="/img/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_636.jpg"
-  class="rounded-all"
-  alt="Brian Muenzenmeyer speaking at All Things Open 2025">
-</picture>
+  class="gray"
+  alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
 - <span class="date">Oct 2025</span> <span class="chip">Talk</span> [JSConf](https://openjsf.org/blog/jsconf-25-speakers-announced) _Node.js - You Don't Need a Dependency_ 🎥 <span class="">[Video](https://youtu.be/hRxSvDbvnaI?si=EevVzSUzbGBfOslx)</span>
 

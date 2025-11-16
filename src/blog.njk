@@ -1,38 +1,28 @@
 ---
 layout: item.njk
 title: Blog
+type: hub
 ---
 
-<!--TODO: hubs as tags -->
+<div class="card-deck card-deck--posts">
+  {%- for page in collections.post | reverse | limit(10)  -%}
 
-<nav>
-  <ul class="collection">
-    {%- for page in collections.post | reverse | limit(10) -%}
-      <li class="collection__item">
-        <div class="collection__article">
-          <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
-          <p class="collection__summary">{{ page.data.summary }}</p>
-          <ul class="collection__tags">
-            <li class="pull--left">
-            <relative-time datetime="{{ page.data.date }}">
-            {{ page.data.date }}
-            </relative-time>
-            </li>
-          {% for tag in page.data.tags %}
-            <li>
-            <a href="/tags/{{tag}}">{{tag}}</a>
-            </li>
-          {%- endfor -%}
-          </ul>
-        </div>
-      </li>
-    {%- endfor -%}
+  <div class="card">
 
-    {% for tag in tags %}
-      <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
-    {% endfor %}
+    <h3 class="card__header">
+      <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
+    </h3>
+      
+    <p class="collection__summary">{{ page.data.summary }}</p>
 
-  </ul>
-</nav>
+    <relative-time datetime="{{ page.data.date }}">
+      {{ page.data.date }}
+    </relative-time>
 
-<a href="/archive/">All Posts</a>
+  </div>
+
+  {%- endfor -%}
+</div>
+
+
+<a class="button" href="/archive/">All Posts</a>

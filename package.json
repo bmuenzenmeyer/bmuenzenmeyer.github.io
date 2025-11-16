@@ -8,15 +8,19 @@
     "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-plugin-rss": "2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
+    "@thi.ng/pixel": "7.5.15",
+    "@thi.ng/pixel-dither": "1.1.183",
     "clean-css": "5.3.3",
     "eleventy-plugin-inline-link-favicon": "1.1.0",
     "markdown-it": "14.1.0",
-    "netlify-plugin-minify-html": "0.3.1"
+    "netlify-plugin-minify-html": "0.3.1",
+    "sharp": "0.34.5"
   },
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve --incremental",
-    "format": "npx prettier 'src/**/*.js' --write"
+    "format": "pnpm dlx prettier 'src/**/*.js' --write",
+    "dither": "node scripts/dither-images-sharp.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io/issues"
   },
-  "homepage": "https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io#readme"
+  "homepage": "https://github.com/bmuenzenmeyer/bmuenzenmeyer.github.io#readme",
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
 }

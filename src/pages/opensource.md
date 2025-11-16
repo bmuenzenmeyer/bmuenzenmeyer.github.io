@@ -7,7 +7,7 @@ date: 2025-11-06T05:36:50.338Z
 
 ## 15 Years of Open Source Experience
 
-<img src="/img/brian-jsconf1.png" style="max-width: 600px;" alt="Brian presenting at JS Conf 2025" class="rounded-all"/>
+<img src="/img/brian-jsconf1.png" style="max-width: 75ch;" alt="Brian presenting at JS Conf 2025" class="gray"/>
 
 I believe that participation in open source as a movement takes all of us working in whatever capacity we can. There are a lot of avenues to engage, and I've occupied roles as [user](#user), [contributor](#contributor), [maintainer](#maintainer), and [mentor](#mentor) during my career. We are part of something larger than our current issue, project, role, or company.
 

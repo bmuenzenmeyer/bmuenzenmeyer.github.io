@@ -3,58 +3,71 @@ layout: default.njk
 ---
 
 <header class="masthead">
-  <figure id="masthead__img" style="view-transition-name: brian;">
-    <picture>
-      {# https://www.responsivebreakpoints.com/ #}
-        <img
-          sizes="(max-width: 1400px) 100vw, 1400px"
-          srcset="
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_200.jpg 200w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_336.jpg 336w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_440.jpg 440w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_539.jpg 539w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_619.jpg 619w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_776.jpg 776w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_849.jpg 849w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_943.jpg 943w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1029.jpg 1029w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1026.jpg 1026w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1254.jpg 1254w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1318.jpg 1318w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1337.jpg 1337w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1384.jpg 1384w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1398.jpg 1398w,
-          /img/Muenzenmeyer-47_nohqhq_c_scale,w_1400.jpg 1400w"
-          src="/img/Muenzenmeyer-47_nohqhq_c_scale,w_1400.jpg"
-          alt="A portrait of Brian Muenzenmeyer. Brian is a 30-somthing bald white man wearing a plaid shirt, grey glasses, and a five o'lock shadow. Photo taken by Samantha Brinda Photography">
-      </picture>
-    {# <figcaption><small>CC BY-NC-SA 4.0 <a href="https://www.flickr.com/photos/allthingsopen/54901754654/">All Things Open</a></small></figcaption> #}
-    <figcaption><small>Photo credit <a href="https://www.samanthabrindaphotography.com/">Samantha Brinda</a></small></figcaption>
-  </figure>
 
-  <div id="masthead__intro">
-    <i>Golly—that’s a long name!</i>
-    <br/>
-    <br/>
+  <h1 id="masthead__name">
+    <span id="masthead__first">Brian</span>
+    <span id="masthead__last">Muenzenmeyer</span>
+  </h1>
 
-    {% include "bookpromo.njk" %} 
-
-  </div>
-
-  <span id="masthead__last">Muenzenmeyer</span>
-  <span id="masthead__first">Brian</span>
   <nav id="masthead__nav" style="view-transition-name: nav;">
     {% include "nav.njk" %} 
   </nav>
+
+  <figure id="masthead__hero" style="view-transition-name: brian;">
+    <img src="/img/dither-dist/54901754654_dee33ea2cf_o_ejip6b_c_scale,w_1400-bayer-8x3.png"/>
+    <figcaption><small>CC BY-NC-SA 4.0 <a href="https://www.flickr.com/photos/allthingsopen/54901754654/">All Things Open</a></small></figcaption>
+  </figure>
+
   
 </header>
 
-<section id="home__about">
-  <h2>About</h2>
+{# <section id="tetris">
+</section> #}
 
-  <p>Brian lives in Chanhassen, Minnesota but hails from Manitowoc, where it was always cooler by the lake and is now a fantastic ice-breaker at parties. He has four boys that keep him bald. He does a little of everything, and prefers it that way. Sometimes that’s called being a unicorn 🦄, duck 🦆, or a jack-of-all-trades 🧰, but he likes to land on the Seussical-form—Sneelock of the Circus 🎪!</p>
+<tetris-box
+  statement="I'm a multifaceted individual contributor and community leader.<br/><br/><em>I don't fit in a box anymore.</em>"
+  piece-count="21"
+  img-path="/img"
+>
+</tetris-box>
 
-  <p>With a career spanning many roles, from developer, UX team of one, product manager, analyst, and freelancer, Brian brings an experienced and broad approach to many disciplines. He and his wife Megan’s <a href="https://sweetloveadornments.com">small business</a> keeps them exhausted and grounded in customer delivery, innovation, and warrantee-voiding laser maintenance. He’s been published in <em>Smashing Magazine</em>, <em>CSS-Tricks</em>, <em>Shop Talk Show</em>, <em>Sustain</em>, and led workshops at Web Design Day and the Node.js Collaborator Summit. He maintains the {% ai "https://nodejs.org"%}Node.js website{% endai %}, and has organized consecutive Grace Hopper hackathons towards first contributions from attendees. Open source software threads into many aspects of his life, and has opened doors he’d never thought imaginable. It can do that for you too. Much of this culminated in the writing of {% ai "https://approachableopensource.com"%}<em>Approachable Open Source</em>{% endai %}. Give it a read.</p>
+<div class="centered-container">
+  <tetris-piece></tetris-piece>
+</div>
 
-  <p>When not writing or working within open source software, Brian lives out programming tropes of drinking coffee and {% ai "http://brianmuenzenmeyer.com/posts/2022-things-ive-come-to-value/" %}woodworking{% endai %}. He enjoys {% ai "https://brianmuenzenmeyer.com/posts/2025-soccer/" %}soccer{% endai %}, playing games with his sons, especially X-Wing or Chess, and never turns down a milkshake. Him and Megan spend as much time outside as they can muster, often playing with their kids, deepening the pickleball rivalry on their makeshift court, chasing clouds, or digging up the yard.</p>
+<p class="center-spaced">I excel at building communities and creating useful, intuitive, and delightful tools for others. I’m a T-shaped quick-learner that wears many hats and multitasks with high initiative. Watch me debug a transient dependency collision, mentor junior engineers on mocking within tests, stand up a GitHub Action workflow, plan the next sprint, consult on OSS licenses, and sell a concept to the C-Suite or a batch of interns, all in the same day.</p>
+
+<p class="center-spaced">Here's some things keeping me engaged lately.</p>
+
+<section class="card-deck">
+
+  {% include "bookpromo.njk" %} 
+  {% include "node.njk" %}
+
+</section>
+
+<section class="center-spaced" id="bios">
+  <h2>Bio</h2>
+
+  <details name="bio-details" open>
+    <summary class="stripes">Short</summary>
+    <p>Brian is a multifaceted community leader, engineer, and bald guy. He maintains the {% ai "https://nodejs.org"%}Node.js website{% endai %}. He wrote {% ai "https://approachableopensource.com"%}<em>Approachable Open Source</em>{% endai %}. Give it a read.</p>
+  </details>
+
+
+  <details name="bio-details">
+    <summary class="stripes">Medium</summary>
+    <p>Brian is a Principal Engineer active in the open source community. A father of four boys, he juggles roles like developer, bald curmudgeon, and coffee drinker. Brian maintains the {% ai "https://nodejs.org"%}Node.js website{% endai %}, organizes Grace Hopper hackathons, and is published in top web design outlets and podcasts. He wrote {% ai "https://approachableopensource.com"%}<em>Approachable Open Source</em>{% endai %}, the missing manual for newcomers and veterans alike. He and his wife Megan run a small business rooted in warranty-voiding laser maintenance. He enjoys woodworking, {% ai "https://brianmuenzenmeyer.com/posts/2025-soccer/" %}soccer{% endai %}, milkshakes, and pickleball. Open source has opened countless doors for him—and it can for you, too!</p>
+  </details>
+
+  <details name="bio-details">
+    <summary class="stripes">Long</summary>
+      <p>Brian lives in Chanhassen, Minnesota but hails from Manitowoc, where it was always cooler by the lake and is now a fantastic ice-breaker at parties. He has four boys that keep him bald. He does a little of everything, and prefers it that way. Sometimes that’s called being a unicorn 🦄, duck 🦆, or a jack-of-all-trades 🧰, but he likes to land on the Seussical-form—Sneelock of the Circus 🎪!</p>
+
+      <p>With a career spanning many roles, from developer, UX team of one, product manager, analyst, and freelancer, Brian brings an experienced and broad approach to many disciplines. He and his wife Megan’s <a href="https://sweetloveadornments.com">small business</a> keeps them exhausted and grounded in customer delivery, innovation, and warrantee-voiding laser maintenance. He’s been published in <em>Smashing Magazine</em>, <em>CSS-Tricks</em>, <em>Shop Talk Show</em>, <em>Sustain</em>, and led workshops at Web Design Day and the Node.js Collaborator Summit. He maintains the {% ai "https://nodejs.org"%}Node.js website{% endai %}, and has organized consecutive Grace Hopper hackathons towards first contributions from attendees. Open source software threads into many aspects of his life, and has opened doors he’d never thought imaginable. It can do that for you too. Much of this culminated in the writing of {% ai "https://approachableopensource.com"%}<em>Approachable Open Source</em>{% endai %}. Give it a read.</p>
+
+      <p>When not writing or working within open source software, Brian lives out programming tropes of drinking coffee and {% ai "http://brianmuenzenmeyer.com/posts/2022-things-ive-come-to-value/" %}woodworking{% endai %}. He enjoys {% ai "https://brianmuenzenmeyer.com/posts/2025-soccer/" %}soccer{% endai %}, playing games with his sons, especially X-Wing or Chess, and never turns down a milkshake. Him and Megan spend as much time outside as they can muster, often playing with their kids, deepening the pickleball rivalry on their makeshift court, chasing clouds, or digging up the yard.</p>
+    </details>
+
+
 </section>

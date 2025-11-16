@@ -5,17 +5,43 @@ title: Book
 
 <article>
 
-  {% include "bookpromo.njk" %}
+  <h1><em>Approachable Open Source</em></h1>
 
-  <h3>Check out <a href="https://approachableopensource.com/">approachableopensource.com!</a></h3>
+  <section class="book-intro">
 
-  <a target="_blank" href="https://approachableopensource.com/"><img alt="A mock of the website" src="/img/aos-macbook-pro-mockup.png"/></a>
+    <div>
 
-  <br/>
+      <p>
+        <em>Approachable Open Source</em> is a perennial, full-spectrum primer on the open source software landscape. Discover the broad connections between you, your team, your company, and your community. Learn how to approach and enable impactful, equitable, and attainable outcomes.
+      </p>
+
+      <p>
+        "I've written this book as a new entry in the compendium of open source thought. I don't fancy myself a thought-leader and for that we are all fortunate. But it is informed by years of success and failure working with open source software."
+      </p>
+
+    </div>
+
+    <img src="/img/AOS_PDF_CROP.png" class="gray fr" width="200px" />
+
+  </section>
+
+  <h2 class="statement">The advice is honest; the vision bold; the mandate modest.</h2>
+
+  {# {% include "bookpromo.njk" %} #}
+
+  <div class="book__actions">
+    <a class="button" href="https://approachableopensource.com/shop/" target="_blank">Purchase paperback, ebook, or bundled formats</a>
+    <a class="button" href="https://approachableopensource.com/read" target="_blank">Read it online for free</a>      
+  </div>
+
+  <p>Here you'll also find new content that illuminates sections of the book, updates, and other errata. Check it out!</p>
+
+  <a target="_blank" href="https://approachableopensource.com/"><img alt="A mock of the website" class="gray" src="/img/aos-macbook-pro-mockup.png"/></a>
+
 
   <section class="masonry">
     {% for image in collections.all | getImageFiles('img/aos-gallery') %}
-      <img src="/{{ image }}" alt="Gallery image" />
+      <img src="/{{ image }}" alt="Gallery image" class="gray" />
     {% endfor %}
   </section>
 
@@ -24,34 +50,25 @@ title: Book
 <aside>
   <h2>All posts related to the book</h2>
 
-  <nav>
-    <ul class="collection">
-      {%- for page in collections.book | reverse  -%}
-        <li class="collection__item">
-          <div class="collection__article">
-            <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
-            <p class="collection__summary">{{ page.data.summary }}</p>
-            <ul class="collection__tags">
-              <li class="pull--left">
-              <relative-time datetime="{{ page.data.date }}">
-              {{ page.data.date }}
-              </relative-time>
-              </li>
-            {% for tag in page.data.tags %}
-              <li>
-              <a href="/tags/{{tag}}">{{tag}}</a>
-              </li>
-            {%- endfor -%}
-            </ul>
-          </div>
-        </li>
+  <div class="card-deck card-deck--posts">
+    {%- for page in collections.book | reverse  -%}
+
+    <div class="card">
+
+      <h3 class="card__header">
+        <a class="collection__title" href="{{ page.url | url }}">{{ page.data.title }}</a>
+      </h3>
+        
+      <p class="collection__summary">{{ page.data.summary }}</p>
+
+      <relative-time datetime="{{ page.data.date }}">
+        {{ page.data.date }}
+      </relative-time>
+
+    </div>
+
       {%- endfor -%}
 
-      {% for tag in tags %}
-        <li class="black tag__link">All posts tagged <a href="/tags/{{tag.name}}">{{tag.name | toHumanUrl }}</a></li>
-      {% endfor %}
-
-    </ul>
-  </nav>
+  </div>
 
 </aside>

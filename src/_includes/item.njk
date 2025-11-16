@@ -3,9 +3,8 @@ layout: 'default.njk'
 ---
 
 <nav id="item__nav" style="view-transition-name: nav;">
-  <a href="/"><img class="avatar avatar--inline" src="https://www.gravatar.com/avatar/79024f1fe6d866159a95868721136084?s=200" alt="An image of Brian Muenzenmeyer" style="view-transition-name: brian;"/>Brian Muenzenmeyer</a>
+  <a href="/" class="home-link"><img class="avatar avatar--inline" src="https://www.gravatar.com/avatar/79024f1fe6d866159a95868721136084?s=200" alt="An image of Brian Muenzenmeyer" style="view-transition-name: brian;"/>Brian Muenzenmeyer</a>
   {% include "nav.njk" %}
-  <span id="item__extra">&nbsp;</span>
 </nav>
 
 <article class="article--{{type}}">
@@ -15,9 +14,8 @@ layout: 'default.njk'
   <span id="item__extra">&nbsp;</span>
   {{ content | safe }}
 
-
+  {% if tags or date %}
   <aside id="item__aside">
-    
 
     <div>
     {% if tags %}
@@ -25,10 +23,13 @@ layout: 'default.njk'
     {% endif %}
     </div>
 
+    {% if date %}
     Published <relative-time datetime="{{date}}">
       {{date}}
     </relative-time>
+    {% endif %}
 
   </aside>
+  {% endif %}
 
 </article>
