@@ -20,6 +20,19 @@
     var(--dot-color);
 }
 
+.stripes {
+  background-color: #323232;
+  opacity: 0.8;
+  background-size: 5px 5px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #d6d6d6 0,
+    #d6d6d6 0.5px,
+    #323232 0,
+    #323232 50%
+  );
+}
+
 * {
   box-sizing: border-box;
 }
@@ -167,6 +180,21 @@ td {
 
 aside,
 blockquote {
+}
+
+article h1 {
+  padding-left: .5rem;
+    background-color: #323232;
+    opacity: 0.8;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #d6d6d6 0,
+      #d6d6d6 0.5px,
+      #323232 0,
+      #323232 50%
+    );
+  }
 }
 
 article blockquote {
@@ -359,6 +387,12 @@ article h1 + small {
 
 article a > img {
   filter: none;
+}
+
+article img {
+  @media (max-width: 38rem) {
+    max-width: 100% !important;
+  }
 }
 
 @media (min-width: 38rem) {
