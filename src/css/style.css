@@ -495,9 +495,8 @@ article img {
 }
 
 .center-spaced {
-  margin: 5rem 1rem;
+  margin: 5rem auto;
   max-width: 60ch;
-  justify-self: center;
 }
 
 .wall {
