@@ -45,3 +45,4 @@ Jack and I also [ranked all the MLS team crests](https://brianmuenzenmeyer.com/p
 
 ![](/img/jacktyler.jpg)
 ![](/img/jack_pitch.jpg)
+![](/img/jack_pitch2.jpg)
