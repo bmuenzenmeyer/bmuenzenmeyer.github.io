@@ -229,9 +229,10 @@ article blockquote {
     width: fit-content;
     &:after {
       content: "";
-      position: absolute;
+      position: relative;
       display: block;
       clear: both;
+      margin-right: 1rem;
       background: linear-gradient(
             90deg,
             var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
