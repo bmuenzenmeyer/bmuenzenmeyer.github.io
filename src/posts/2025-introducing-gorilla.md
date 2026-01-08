@@ -13,7 +13,7 @@ tags:
 [Watch the getting started video on Gorilla.tube](https://gorilla.tube/docs/first-run/)
 
 So, I counted.
-I have 7 iPads in this house. _Seven_. School is a factor, as is the steady accrual of _stuff_.Readers will know we have four kids.
+I have 7 iPads in this house. _Seven_. School is a factor, as is the steady accrual of _stuff_. Readers will know we have four kids.
 I am not proud of this first fact, but the latter is a continual source of challenge and reward.
 
 It's perhaps then not a surprise that Megan and I don't have a lot of time. Yeah yeah everyone has the same amount of time. Those folks can shove it. Many afternoons are spent with the kids watching a screen, while Megan and I get something done, or steal away on an errand.
