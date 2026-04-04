@@ -1,0 +1,30 @@
+---
+layout: 'item.njk'
+
+title: "Play"
+permalink: /play/index.html
+author: Brian Muenzenmeyer
+twitter: bmuenzenmeyer
+class: ""
+summary: "A fully playable block-dropping game"
+customCSS: "arcade"
+comments: false
+---
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+<style>
+  .tetris-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+</style>
+
+<h2>Block Drop</h2>
+
+<div class="tetris-container">
+  <tetris-game cell-size="30"></tetris-game>
+</div>
+
+<script src="/js/tetris-game.js" defer></script>
