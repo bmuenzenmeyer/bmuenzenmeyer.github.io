@@ -111,13 +111,14 @@ figure {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --navlink-color: #0066cc;
+    --navlink-color: white;
   }
 
   body {
   }
 
   a {
+    color: var(--navlink-color)
   }
 
   a:visited {
