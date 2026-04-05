@@ -7,7 +7,7 @@ date: 2025-11-06T05:36:50.338Z
 
 ## 15 Years of Open Source Experience
 
-<img src="/img/brian-jsconf1.png" style="max-width: 75ch; grid-row: none;" alt="Brian presenting at JS Conf 2025" class="gray"/>
+<img alt="Brian speaking at JS Conf 2025" src="/img/brian-jsconf1.png" style="max-width: 75ch; grid-row: none;" class="gray"/>
 
 I believe that participation in open source as a movement takes all of us working in whatever capacity we can. There are a lot of avenues to engage, and I've occupied roles as [user](#user), [contributor](#contributor), [maintainer](#maintainer), and [mentor](#mentor) during my career. We are part of something larger than our current issue, project, role, or company.
 
@@ -52,3 +52,5 @@ I was fortunate enough to participate as a mentee in Mozilla's {% ai "https://fo
 My opportunity to mentor came from the experience of a lifetime, volunteering during {% ai "https://ghc.anitab.org/programs-and-awards/open-source-day/"%}Open Source Day at Grace Hopper celebration{% endai %}. I worked with dozens of attendees to get their local environment setup and ready to make contributions to the Node.js project. This felt so intimidating, (even to me!) but wow was it energizing to see new faces just as eager to engage in open source software. Again, it was so so great to be empowered to do this by my employer.
 
 Mentoring and enablement comes in many forms. One I am very proud of is {% ai "https://tech.target.com/blog/open-source-fund"%}Target's Open Source Fund{% endai %}. Our commitment to the open source ecosystem here is just the beginning, and I'm excited to see where it goes.
+
+<img alt="Brian speaking at Node.js Collab Summit Bilbao" src="/img/IMG_1610.jpg.png" style="max-width: 75ch; grid-row: none;" alt="Brian presenting at JS Conf 2025" class="gray"/>
