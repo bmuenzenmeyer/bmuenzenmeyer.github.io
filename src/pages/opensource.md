@@ -53,4 +53,4 @@ My opportunity to mentor came from the experience of a lifetime, volunteering du
 
 Mentoring and enablement comes in many forms. One I am very proud of is {% ai "https://tech.target.com/blog/open-source-fund"%}Target's Open Source Fund{% endai %}. Our commitment to the open source ecosystem here is just the beginning, and I'm excited to see where it goes.
 
-<img alt="Brian speaking at Node.js Collab Summit Bilbao" src="/img/IMG_1610.jpg" style="max-width: 75ch; grid-row: none;" alt="Brian presenting at JS Conf 2025" class="gray"/>
+<img alt="Brian speaking at Node.js Collab Summit Bilbao" src="/img/IMG_1610.jpg" style="max-width: 75ch; grid-row: auto;" alt="Brian presenting at JS Conf 2025" class="gray"/>
