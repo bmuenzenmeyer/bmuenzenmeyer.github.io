@@ -14,9 +14,11 @@ A collection of appearances in the press, talks, podcasts, and other media.
   class="gray"
   alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
+- <span class="date">May 2026</span> <span class="chip">Podcast</span> [Software Engineering Daily](https://softwareengineeringdaily.com/2026/05/14/open-source-sustainability/) _Open Source Sustainability_ 
+
 - <span class="date">Oct 2025</span> <span class="chip">Talk</span> [JSConf](https://openjsf.org/blog/jsconf-25-speakers-announced) _Node.js - You Don't Need a Dependency_ 🎥 <span class="">[Video](https://youtu.be/hRxSvDbvnaI?si=EevVzSUzbGBfOslx)</span>
 
-- <span class="date">Oct 2025</span> <span class="chip">Talk</span> [All Things Open](https://2025.allthingsopen.org/sessions/finite-source-machines-contribution-for-busy-humans) _Finite Source Machines: Contribution for Busy Humans_
+- <span class="date">Oct 2025</span> <span class="chip">Talk</span> [All Things Open](https://2025.allthingsopen.org/sessions/finite-source-machines-contribution-for-busy-humans) _Finite Source Machines: Contribution for Busy Humans_ 📖 <span class="">[Slides](https://approachableopensource.com/blog/2025-open-source-workshops/)</span>
 
 - <span class="date">Sep 2025</span> <span class="chip">Talk</span> [JavaScript MN](https://www.meetup.com/javascriptmn/events/309201511/) _Node.js - You Don't Need a Dependency_
 
