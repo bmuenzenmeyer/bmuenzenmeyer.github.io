@@ -14,6 +14,8 @@ A collection of appearances in the press, talks, podcasts, and other media.
   class="gray"
   alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
+- <span class="date">July 2026</span> <span class="chip">Podcast</span> [We ❤️ Open Source](https://allthingsopen.org/articles/ai-like-tnt-github-agent-mode-permission-contribute) _Think of AI like TNT, not magic_ 
+
 - <span class="date">May 2026</span> <span class="chip">Podcast</span> [Software Engineering Daily](https://softwareengineeringdaily.com/2026/05/14/open-source-sustainability/) _Open Source Sustainability_ 
 
 - <span class="date">Oct 2025</span> <span class="chip">Talk</span> [JSConf](https://openjsf.org/blog/jsconf-25-speakers-announced) _Node.js - You Don't Need a Dependency_ 🎥 <span class="">[Video](https://youtu.be/hRxSvDbvnaI?si=EevVzSUzbGBfOslx)</span>
