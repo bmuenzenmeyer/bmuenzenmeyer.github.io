@@ -14,7 +14,9 @@ A collection of appearances in the press, talks, podcasts, and other media.
   class="gray"
   alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
-- <span class="date">July 2026</span> <span class="chip">Podcast</span> [We ❤️ Open Source](https://allthingsopen.org/articles/ai-like-tnt-github-agent-mode-permission-contribute) _Think of AI like TNT, not magic_ 
+- <span class="date">Aug 2026</span> <span class="chip">Podcast</span> [Talking Drupal](https://talkingdrupal.com/564) _Approachable Open Source_
+
+- <span class="date">Jul 2026</span> <span class="chip">Podcast</span> [We ❤️ Open Source](https://allthingsopen.org/articles/ai-like-tnt-github-agent-mode-permission-contribute) _Think of AI like TNT, not magic_ 
 
 - <span class="date">May 2026</span> <span class="chip">Podcast</span> [Software Engineering Daily](https://softwareengineeringdaily.com/2026/05/14/open-source-sustainability/) _Open Source Sustainability_ 
 
