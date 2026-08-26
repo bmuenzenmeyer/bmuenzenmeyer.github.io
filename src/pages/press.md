@@ -14,7 +14,7 @@ A collection of appearances in the press, talks, podcasts, and other media.
   class="gray"
   alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
-- <span class="date">Aug 2026</span> <span class="chip">Talk</span> [Node.js Interactive at RenderATL]([https://openjsf.org/blog/jsconf-25-speakers-announced] _Replacing What Works: doc-kit and the Next 10 Years of Node.js Documentation_ 
+- <span class="date">Aug 2026</span> <span class="chip">Talk</span> [Node.js Interactive at RenderATL](https://openjsf.org/blog/jsconf-25-speakers-announced) _Replacing What Works: doc-kit and the Next 10 Years of Node.js Documentation_ 
 
 - <span class="date">Aug 2026</span> <span class="chip">Podcast</span> [Talking Drupal](https://talkingdrupal.com/564) _Approachable Open Source_
 
