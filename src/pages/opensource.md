@@ -43,7 +43,7 @@ Marty Henderson and I open sourced a tool called {% ai "https://www.npmjs.com/pa
 
 This work also re-invigorated my desire to maintain software again, which I've re-approached with {% ai "https://makeapullre.quest/"%}makeapullre.quest{% endai %} and {% ai "https://www.npmjs.com/package/eleventy-plugin-inline-link-favicon"%}`eleventy-plugin-inline-link-favicon`{% endai %}. You can see the later's output prominently on this page.
 
-Recently, I've joined the {% ai "https://nodejs.org"%}nodejs.org website team{% endai %}, an experience that is helping me [contribute and learn from others](https://brianmuenzenmeyer.com/posts/2023-joining-the-node-js-website-team/). 11 months of work in 2023 and 2024 culminated in a redesign of the site, and I'm so proud of the work we've done together. Truly a collective, open effort spanning the globe. I wrote a deep dive on the {% ai "https://nodejs.org/en/blog/announcements/diving-into-the-nodejs-website-redesign"%}Node.js blog{% endai %}.
+Recently, I've joined the {% ai "https://nodejs.org"%}nodejs.org website team{% endai %}, an experience that is helping me [contribute and learn from others](https://brianmuenzenmeyer.com/posts/2023-joining-the-node-js-website-team/). 11 months of work in 2023 and 2024 culminated in a redesign of the site, and I'm so proud of the work we've done together. Truly a collective, open effort spanning the globe. I wrote a deep dive on the {% ai "https://nodejs.org/en/blog/announcements/diving-into-the-nodejs-website-redesign"%}Node.js blog{% endai %}. I recently built [pr-age-gate](https://github.com/bmuenzenmeyer/pr-age-gate) to help make our governance more automated and accessible across timezones.
 
 <h3 id="mentor">Mentor</h3>
 
