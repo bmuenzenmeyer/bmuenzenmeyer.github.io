@@ -1,0 +1,34 @@
+{#- Renders src/_data/press.js. Whitespace control (-) keeps blank lines out so markdown leaves the HTML alone. -#}
+<section class="timeline" aria-label="Timeline">
+{%- for group in press.years %}
+  <section class="timeline__year" aria-labelledby="press-{{ group.year }}">
+    <h2 class="timeline__year-label" id="press-{{ group.year }}"><span>{{ group.year }}</span></h2>
+    <ol class="timeline__entries">
+    {%- for item in group.entries %}
+      <li class="timeline__entry{% if item.featured %} timeline__entry--featured{% endif %}">
+        <time class="timeline__date" datetime="{{ item.date }}">{{ item.month }}<span class="visually-hidden"> {{ item.year }}</span></time>
+        <div class="timeline__body">
+          <span class="timeline__kind">{{ item.kind }}</span>
+          {%- if item.venue %}
+          <p class="timeline__title">{{ item.title }}</p>
+          <p class="timeline__venue"><a href="{{ item.url }}">{{ item.venue }}</a></p>
+          {%- else %}
+          <p class="timeline__title"><a href="{{ item.url }}">{{ item.title }}</a></p>
+          {%- endif %}
+          {%- if item.byline %}
+          <p class="timeline__venue">{{ item.byline }}</p>
+          {%- endif %}
+          {%- if item.links %}
+          <ul class="timeline__links">
+            {%- for link in item.links %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </li>
+    {%- endfor %}
+    </ol>
+  </section>
+{%- endfor %}
+</section>
