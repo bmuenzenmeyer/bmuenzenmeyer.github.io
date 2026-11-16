@@ -14,6 +14,10 @@ A collection of appearances in the press, talks, podcasts, and other media.
   class="gray"
   alt="Brian Muenzenmeyer speaking at All Things Open 2025"/>
 
+- <span class="date">Nov 2026</span> <span class="chip">Post</span> [InfoQ](https://www.infoq.com/news/2026/11/nodejs-debounce-throttle/) _Node.js Brings Debounce, Throttle, and PKCS#12 Parsing into Core Modules_
+
+- <span class="date">Sep 2026</span> <span class="chip">Talk</span> [Node Conf EU 2026](https://nodeconf.eu/2026/program) _Replacing What Works: doc-kit and the Next 10 Years of Node.js Documentation_ 🎥 <span class="">[Video](https://www.youtube.com/watch?v=GJbhYjjoujU&t=0s)</span>
+
 - <span class="date">Aug 2026</span> <span class="chip">Talk</span> [Node.js Interactive at RenderATL](https://openjsf.org/blog/jsconf-25-speakers-announced) _Replacing What Works: doc-kit and the Next 10 Years of Node.js Documentation_ 
 
 - <span class="date">Aug 2026</span> <span class="chip">Podcast</span> [Talking Drupal](https://talkingdrupal.com/564) _Approachable Open Source_
